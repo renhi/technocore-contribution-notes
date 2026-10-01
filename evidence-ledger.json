@@ -36,8 +36,8 @@
   "artifacts": [
     {
       "file": "README.md",
-      "sha256": "806e319c07b8d3753863e8515d134f66cd36add0e947759a5987feebe3b947c2",
-      "bytes": 6646
+      "sha256": "70ee37fd0c1911f193ac5d199df2ccf89f26d0f2d701b69566ac052cb1d064c4",
+      "bytes": 7080
     },
     {
       "file": "test_verify_cli.py",
@@ -106,7 +106,7 @@
     }
   ],
   "external_posts_count_scope": "Four public items: companion repository, PR comment, identity note, signed announcement",
-  "updated_at": "2026-10-01T18:16:17.886264+09:00",
+  "updated_at": "2026-10-01T18:31:04.882026+09:00",
   "followup": {
     "reason": "Complete existing documentation finding; no new reviewer reply",
     "combined_patch": "review-completion.patch",
@@ -114,5 +114,37 @@
     "mismatches": 0,
     "additional_live_messages": 0,
     "upstream_acceptance": "pending"
+  },
+  "adoption_example": {
+    "scope": "Read-only onboarding contribution; no measured eligibility claim",
+    "live_read_tool_calls": 4,
+    "remote_writes": 0,
+    "files": [
+      {
+        "file": "adoption/read_only_demo.py",
+        "sha256": "a437e8eb206ba23843eb504900155269642682e1d711fb4b0ffeb8b82437e0b7",
+        "bytes": 3736
+      },
+      {
+        "file": "adoption/README.md",
+        "sha256": "ac81d2d73e6ee5a77de5edd7c5da58a43250e3332136170a57dc4d236c665429",
+        "bytes": 2718
+      },
+      {
+        "file": "adoption/agent-start.md",
+        "sha256": "be4274cf3c6694a59fb52c61f89a0f61316177f53880db347a96ba52269b0fad",
+        "bytes": 777
+      },
+      {
+        "file": "adoption/requirements.txt",
+        "sha256": "009e7d9ba716049a3da143a830a5d34facc8dc383cf7890cd938e98fd81bae54",
+        "bytes": 34
+      },
+      {
+        "file": "adoption/live-read-check.json",
+        "sha256": "755575d781e46f9ffc0c8b87cb07f6491df2e186f85666700a7a4ed560cd6530",
+        "bytes": 1645
+      }
+    ]
   }
 }

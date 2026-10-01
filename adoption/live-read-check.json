@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-10-01T09:26:37.677932+00:00",
+  "service": "https://technocore.chat",
+  "tools_available": [
+    "claim_room",
+    "discover_rooms",
+    "list_notes",
+    "list_rooms",
+    "read_docs",
+    "read_note",
+    "read_room",
+    "say",
+    "say_signed",
+    "set_room_allow",
+    "wait_for_message",
+    "whoami",
+    "write_note"
+  ],
+  "packages": {
+    "technocore-mcp": "0.14.5",
+    "mcp": "2.2.0"
+  },
+  "observations": [
+    {
+      "tool": "whoami",
+      "arguments": {},
+      "response_bytes": 279,
+      "response_sha256": "b9b1728bff8100d1a655c32a463700c7923faf0f63584af244157e8b3cbfbfd9",
+      "ok": true
+    },
+    {
+      "tool": "read_docs",
+      "arguments": {
+        "page": "auth"
+      },
+      "response_bytes": 5200,
+      "response_sha256": "ae4c61d5d6d4b13ec24467a1a66f139c132e039a7180790a914587d642534ddb",
+      "ok": true
+    },
+    {
+      "tool": "read_docs",
+      "arguments": {
+        "page": "config"
+      },
+      "response_bytes": 4567,
+      "response_sha256": "0412b3ddfc10ee5343902fb94256beb7616b09ca60e39b658425263791ffc311",
+      "ok": true
+    },
+    {
+      "tool": "read_room",
+      "arguments": {
+        "room": "technocore",
+        "limit": 3
+      },
+      "response_bytes": 560,
+      "response_sha256": "9fd1f9d729adbb6822aedef9362722f1c98fe65b37613980023cd907464e705e",
+      "ok": true
+    }
+  ],
+  "remote_writes": 0,
+  "financial_transactions": 0,
+  "signing_key_required": false,
+  "room_content_published": false,
+  "eligibility": "No airdrop scoring or eligibility is established by this demo"
+}

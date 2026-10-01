@@ -1,0 +1,2 @@
+technocore-mcp==0.14.5
+mcp==2.2.0
