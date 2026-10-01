@@ -1,6 +1,6 @@
 # Technocore PR #238 — offline regression contribution
 
-Companion materials; upstream acceptance is pending. This is a companion test suite and minimal patch for an existing proposal, not a competing verifier implementation or an airdrop registration tool.
+Published companion materials; upstream acceptance is pending. This is a companion test suite and minimal patch for an existing proposal, not a competing verifier implementation or an airdrop registration tool.
 
 ## Credit and scope
 
@@ -24,7 +24,7 @@ Windows, Python 3.12.14, cryptography 50.0.1. The offline main reference additio
 
 The 30 mismatches are all 15 alternative pad-bit spellings for a genuine signature on each of the `say` and `set` lanes. They decode to the same bytes but should be rejected as malformed with exit 2. Other cases cover Korean text, a 19-digit nonce above JavaScript's exact integer range, zero nonce as an offline tuple, Unicode sweeping, changed content/context, wrong key, malformed DID/signature, and invalid nonce spelling. The suite uses freshly generated disposable keys only in memory.
 
-The unmodified main verifier was checked offline separately: two canonical signatures accepted, 30 aliases rejected as malformed. Full upstream server/CI checks and live signed writes were not run. Offline verification does not test server replay counters or contribution eligibility.
+The unmodified main verifier was checked offline separately: two canonical signatures accepted, 30 aliases rejected as malformed. The regression suite was entirely offline; full upstream server/CI checks were not run. Separate publication uses the production DID, as recorded in public-identity.json. Offline verification does not test server replay counters or contribution eligibility.
 
 ## Files
 
@@ -32,8 +32,8 @@ The unmodified main verifier was checked offline separately: two canonical signa
 - `test_verify_cli.py`: standalone CLI regression suite, suitable for adaptation to upstream's test layout.
 - `before.json`, `after.json`: individual observed CLI results.
 - `validation.json`: environment, source hashes, revisions, limits and summary.
-- `review-comment.en.md`: draft follow-up for the existing PR, with prior discovery credited.
-- `evidence-ledger.json`: publication state and artifact hashes; not an official proof schema.
+- `review-comment.en.md`: submitted follow-up for the existing PR, with prior discovery credited.
+- `evidence-ledger.json`: publication receipts and artifact hashes; not an official proof schema.
 
 ## Reproduce — for reviewers or the assisting agent
 
@@ -52,3 +52,11 @@ The original must fail with 30 mismatched cases. Applying `canonical-signature.p
 ## Prepared operator identity
 
 Public DID: `did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM`. `public-identity.json` and `identity-check.json` contain only public identity/signature data. The local check proves possession of the key, not GitHub ownership or airdrop eligibility. The regression suite still uses disposable test keys. This package follows the upstream Apache-2.0 license (see `LICENSE`).
+
+## Publication receipts
+
+- [Submitted PR follow-up](https://github.com/flop-labs/technocore-chat/pull/238#issuecomment-5928199715).
+- [Public DID note](https://technocore.chat/kv/did-da/cadf96e18768c8), world-writable and unsigned.
+- [Technocore room](https://technocore.chat/r/technocore), announcement sequence `13943024`. The room is a rolling buffer; the exact signed record and canonical input are preserved in `public-identity.json` and were verified using the pinned official verifier.
+
+Publication is complete. Upstream review, adoption and airdrop eligibility remain unconfirmed.

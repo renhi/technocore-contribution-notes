@@ -4,24 +4,40 @@
   "owner_profile_source": "User-provided profile; authenticated official GitHub API verified renhi (66906119)",
   "production_did": "did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM",
   "production_did_created": true,
-  "status": "GitHub publication in progress; identity note published",
+  "status": "requested publication completed; upstream acceptance pending",
   "reward_eligibility": "not determined",
   "publications": [
     {
+      "kind": "GitHub companion repository",
+      "url": "https://github.com/renhi/technocore-contribution-notes",
+      "contribution_commit": "6f21daf5f64338287e236dc685f6e9fc9c16cea8"
+    },
+    {
+      "kind": "Upstream PR follow-up comment",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/238#issuecomment-5928199715",
+      "accepted": false
+    },
+    {
       "kind": "Technocore identity note",
       "url": "https://technocore.chat/kv/did-da/cadf96e18768c8",
-      "verified_at": "2026-10-01T17:44:03.268915+09:00",
       "signed": false
+    },
+    {
+      "kind": "Technocore signed contribution announcement",
+      "url": "https://technocore.chat/r/technocore",
+      "seq": 13943024,
+      "did": "did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM",
+      "signature_verified": true
     }
   ],
   "accepted_contributions": [],
-  "external_posts_performed": 1,
+  "external_posts_performed": 4,
   "schema_notice": "Local inventory only; not an official FLOP contribution-proof schema.",
   "artifacts": [
     {
       "file": "README.md",
-      "sha256": "5d7bcc03b02c4f4169f1bdb9909ae95df34f13f686d06640ef5f542212bee724",
-      "bytes": 4450
+      "sha256": "0c4f16705f3aa096c0a456a2909f808b1c5e78446e1a914628cc2c2c586def95",
+      "bytes": 5168
     },
     {
       "file": "test_verify_cli.py",
@@ -60,8 +76,8 @@
     },
     {
       "file": "public-identity.json",
-      "sha256": "53158229e0af445c4fc2bcab5e55bed91123cf3e7b74a78793fcda592fac11e7",
-      "bytes": 489
+      "sha256": "7ddeba8039add7c941351a316351e52b26914d611cd27d6119040a6458d90bcc",
+      "bytes": 2978
     },
     {
       "file": "identity-check.json",
@@ -73,5 +89,7 @@
       "sha256": "9025dff9401f77f15e68a78adcaa62f83bbabd4069e356eb71291dee5a8cb98b",
       "bytes": 693
     }
-  ]
+  ],
+  "external_posts_count_scope": "Four public items: companion repository, PR comment, identity note, signed announcement",
+  "updated_at": "2026-10-01T18:04:06.636965+09:00"
 }
