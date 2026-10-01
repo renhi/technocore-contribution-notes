@@ -1,0 +1,13 @@
+--- a/scripts/verify.py
++++ b/scripts/verify.py
+@@ -91,8 +91,8 @@
+ 
+ def check_sig_encoding(sig: str) -> bytes:
+     """Decode an 86-character unpadded base64url signature, or exit 2."""
+-    if not re.fullmatch(rf"[A-Za-z0-9_-]{{{SIG_CHARS}}}", sig or ""):
+-        _die2(f"bad signature: expected {SIG_CHARS} base64url characters")
++    if not re.fullmatch(rf"[A-Za-z0-9_-]{{{SIG_CHARS - 1}}}[AQgw]", sig or ""):
++        _die2(f"bad signature: expected {SIG_CHARS} base64url characters ending AQgw")
+     return base64.urlsafe_b64decode(sig[:SIG_CHARS] + "==")
+ 
+ 

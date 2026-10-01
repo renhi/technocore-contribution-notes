@@ -1,0 +1,46 @@
+{
+  "verified_at": "2026-09-30T15:02:33.524508+00:00",
+  "system": "Windows",
+  "python": "3.12.14",
+  "packages": {
+    "cryptography": "50.0.1",
+    "pynacl": "1.6.2",
+    "technocore-mcp": "0.14.5"
+  },
+  "upstream": "https://github.com/flop-labs/technocore-chat",
+  "main_commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "reviewed_pr": "https://github.com/flop-labs/technocore-chat/pull/238",
+  "reviewed_head": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+  "finding_credit": "https://github.com/flop-labs/technocore-chat/pull/238#issuecomment-5512590300",
+  "original_script_sha256": "81105b4c2d6db10387aa606247e550aee11f1aea4ab2c88540f24778a00476eb",
+  "scope": "Offline CLI regression suite and proposed patch for an unmerged PR; no live-service vulnerability claim.",
+  "before": {
+    "test_methods": 9,
+    "cli_cases": 47,
+    "mismatches": 30,
+    "errors": 0,
+    "success": false,
+    "external_requests": 0,
+    "production_identity_created": false
+  },
+  "after": {
+    "test_methods": 9,
+    "cli_cases": 47,
+    "mismatches": 0,
+    "errors": 0,
+    "success": true,
+    "external_requests": 0,
+    "production_identity_created": false
+  },
+  "official_main_offline_reference": {
+    "valid_signatures_accepted": 2,
+    "aliases_rejected_as_malformed": 30
+  },
+  "full_upstream_ci_run": false,
+  "external_posts": 0,
+  "production_did_created": false,
+  "publication_status": "prepared locally; not submitted or accepted",
+  "patch_applies_to_pinned_source": true,
+  "downloaded_source_matches_github_blob": true,
+  "original_git_blob": "ad0f5029aead19d156e6617c893ce4a71f6e0cc0"
+}

@@ -1,0 +1,246 @@
+{
+  "test_methods": 9,
+  "cli_cases": 47,
+  "mismatches": 0,
+  "errors": 0,
+  "success": true,
+  "external_requests": 0,
+  "production_identity_created": false,
+  "observations": [
+    {
+      "case": "say: nonzero pad bits 1",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 2",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 3",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 4",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 5",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 6",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 7",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 8",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 9",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 10",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 11",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 12",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 13",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 14",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: nonzero pad bits 15",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 1",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 2",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 3",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 4",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 5",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 6",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 7",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 8",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 9",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 10",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 11",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 12",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 13",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 14",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "set: nonzero pad bits 15",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: truncated",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: padded",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: invalid alphabet",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: malformed DID",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": "say: changed text",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "case": "set: changed text",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "case": "say: invalid nonce １２３",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": "say: invalid nonce 11111111111111111111",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": "say: invalid nonce -1",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": "say: Unicode sweep",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": "set: Unicode sweep",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": "say: Korean, exact 19-digit nonce",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": "set: Korean, exact 19-digit nonce",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": "say: wrong public key",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "case": "say: changed context",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "case": "set: changed context",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "case": "say: zero nonce tuple (not server replay admission)",
+      "expected": 0,
+      "actual": 0
+    }
+  ]
+}

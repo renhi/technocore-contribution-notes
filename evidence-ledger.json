@@ -1,0 +1,77 @@
+{
+  "prepared_at": "2026-10-01T17:31:14+09:00",
+  "owner_github_profile": "https://github.com/renhi",
+  "owner_profile_source": "User-provided profile; authenticated official GitHub API verified renhi (66906119)",
+  "production_did": "did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM",
+  "production_did_created": true,
+  "status": "GitHub publication in progress; identity note published",
+  "reward_eligibility": "not determined",
+  "publications": [
+    {
+      "kind": "Technocore identity note",
+      "url": "https://technocore.chat/kv/did-da/cadf96e18768c8",
+      "verified_at": "2026-10-01T17:44:03.268915+09:00",
+      "signed": false
+    }
+  ],
+  "accepted_contributions": [],
+  "external_posts_performed": 1,
+  "schema_notice": "Local inventory only; not an official FLOP contribution-proof schema.",
+  "artifacts": [
+    {
+      "file": "README.md",
+      "sha256": "5d7bcc03b02c4f4169f1bdb9909ae95df34f13f686d06640ef5f542212bee724",
+      "bytes": 4450
+    },
+    {
+      "file": "test_verify_cli.py",
+      "sha256": "be6e2b1b9535327b31bf028eed831ff6f131e0a72a3b74cb6c50c6a1c4c858d2",
+      "bytes": 6967
+    },
+    {
+      "file": "canonical-signature.patch",
+      "sha256": "390689736c19d5dfebeb6e9ce20828bd61f215eab6186dfeb7ca0eac5ab2eca5",
+      "bytes": 568
+    },
+    {
+      "file": "review-comment.en.md",
+      "sha256": "f730d0b8796459e155ffa1352a940a17e3daa46a19fa2904e32f05650f1e32ab",
+      "bytes": 2613
+    },
+    {
+      "file": "validation.json",
+      "sha256": "b578f929250d59ac111bd8f800b9946b822681f3a74389c9324ec8370b56c6ff",
+      "bytes": 1652
+    },
+    {
+      "file": "before.json",
+      "sha256": "1a80de07008d689441c0b8da9ec44fb47035c718d654343ae27c4b86eaade627",
+      "bytes": 4826
+    },
+    {
+      "file": "after.json",
+      "sha256": "185c75aae1352bc46ceaacd934f90e56397f2ae6de542259c629b3c655fc2e25",
+      "bytes": 4824
+    },
+    {
+      "file": "LICENSE",
+      "sha256": "71a29c9c68830e9bdad358fc981204f6f5e40e42635fff2406c56eb626849c4a",
+      "bytes": 11542
+    },
+    {
+      "file": "public-identity.json",
+      "sha256": "53158229e0af445c4fc2bcab5e55bed91123cf3e7b74a78793fcda592fac11e7",
+      "bytes": 489
+    },
+    {
+      "file": "identity-check.json",
+      "sha256": "05cc9462899fb2c728c9e4cc0ceb187e353aca5b0f5dfbf64e30e3a0afd8ff0e",
+      "bytes": 583
+    },
+    {
+      "file": "latest-review.json",
+      "sha256": "9025dff9401f77f15e68a78adcaa62f83bbabd4069e356eb71291dee5a8cb98b",
+      "bytes": 693
+    }
+  ]
+}

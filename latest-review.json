@@ -1,0 +1,17 @@
+{
+  "rechecked_at": "2026-10-01T17:31:14+09:00",
+  "pr_url": "https://github.com/flop-labs/technocore-chat/pull/238",
+  "pr_head": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+  "main_commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr_open": true,
+  "discussion_comments": 8,
+  "target_and_discussion_changed_since_review": false,
+  "regression_tests_rerun": false,
+  "reason": "Reviewed source and discussion unchanged; previous tests retained with their original timestamps.",
+  "publication_preflight": {
+    "checked_at": "2026-10-01T18:01:02.147907+09:00",
+    "pr_state": "open",
+    "pr_head": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+    "comments": 8
+  }
+}

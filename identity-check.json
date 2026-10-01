@@ -1,0 +1,11 @@
+{
+  "did": "did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM",
+  "key_reloaded": true,
+  "restricted_acl_verified": true,
+  "dpapi_integrity_refusal_verified": true,
+  "official_verifier_accepted_local_signature": true,
+  "canonical": "technocore-local-key-check-v1|did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM|https://github.com/renhi",
+  "signature": "XnuOgJk-j1X-WKsfJ9vRjUZYDXdMul1FtemOVNT-XiGtc1FM9am4D26vb0Z3v7tbZn_vYaIamvq5sBox515mAA",
+  "scope": "local identity possession check; not a posted message or airdrop proof",
+  "external_posts": 0
+}
