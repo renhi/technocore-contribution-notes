@@ -36,8 +36,8 @@
   "artifacts": [
     {
       "file": "README.md",
-      "sha256": "0c4f16705f3aa096c0a456a2909f808b1c5e78446e1a914628cc2c2c586def95",
-      "bytes": 5168
+      "sha256": "806e319c07b8d3753863e8515d134f66cd36add0e947759a5987feebe3b947c2",
+      "bytes": 6646
     },
     {
       "file": "test_verify_cli.py",
@@ -51,8 +51,8 @@
     },
     {
       "file": "review-comment.en.md",
-      "sha256": "f730d0b8796459e155ffa1352a940a17e3daa46a19fa2904e32f05650f1e32ab",
-      "bytes": 2613
+      "sha256": "c696668cec0571b0cc7f33364e918b7939f491601d22a896a28e3c0f0f6a1799",
+      "bytes": 4450
     },
     {
       "file": "validation.json",
@@ -88,8 +88,31 @@
       "file": "latest-review.json",
       "sha256": "9025dff9401f77f15e68a78adcaa62f83bbabd4069e356eb71291dee5a8cb98b",
       "bytes": 693
+    },
+    {
+      "file": "review-completion.patch",
+      "sha256": "c5c0b46ab9d5311ad885da6432089fc639a2dbc4e1e3431e734e86aeda5eb4d7",
+      "bytes": 2692
+    },
+    {
+      "file": "followup-after.json",
+      "sha256": "185c75aae1352bc46ceaacd934f90e56397f2ae6de542259c629b3c655fc2e25",
+      "bytes": 4824
+    },
+    {
+      "file": "followup-validation.json",
+      "sha256": "088d661497adb97ab198674b93bfb4f0472a4967430197d93f96c6d9986d8ff7",
+      "bytes": 1488
     }
   ],
   "external_posts_count_scope": "Four public items: companion repository, PR comment, identity note, signed announcement",
-  "updated_at": "2026-10-01T18:04:06.636965+09:00"
+  "updated_at": "2026-10-01T18:16:17.886264+09:00",
+  "followup": {
+    "reason": "Complete existing documentation finding; no new reviewer reply",
+    "combined_patch": "review-completion.patch",
+    "total_offline_cli_checks": 50,
+    "mismatches": 0,
+    "additional_live_messages": 0,
+    "upstream_acceptance": "pending"
+  }
 }

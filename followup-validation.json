@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-01T18:14:55.073184+09:00",
+  "reviewed_head": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+  "source_git_blob": "ad0f5029aead19d156e6617c893ce4a71f6e0cc0",
+  "patch": "review-completion.patch",
+  "patch_applied_cleanly": true,
+  "patched_source_sha256": "36a1943b9a8d0b16d256db76136f680488163606ed40ea3e73e6481ef243f258",
+  "git_working_copy_line_endings": "CRLF; normalized source matches proposed LF bytes",
+  "regression": {
+    "test_methods": 9,
+    "cli_cases": 47,
+    "mismatches": 0,
+    "errors": 0
+  },
+  "additional_offline_cases": [
+    {
+      "case": "Previously published real signed message re-verifies offline",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": "Original leading-zero tuple is cryptographically valid offline",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": "Integer-normalized nonce cannot reconstruct original signed bytes",
+      "expected": 3,
+      "actual": 3
+    }
+  ],
+  "total_cli_cases": 50,
+  "external_writes": 0,
+  "full_upstream_ci_run": false,
+  "original_finding_credit": "https://github.com/flop-labs/technocore-chat/pull/238#issuecomment-5512590300",
+  "scope": "Combined existing canonical-signature fix and documentation correction; no new reviewer reply, live write or upstream acceptance claim",
+  "initial_attempt_note": "An initial patch path/newline preparation issue was corrected before strict application and final checks."
+}

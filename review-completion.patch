@@ -1,0 +1,47 @@
+--- a/scripts/verify.py
++++ b/scripts/verify.py
+@@ -5,15 +5,25 @@
+ """Offline verifier for technocore-chat's signed lane — the other half of scripts/sign.py.
+ 
+ Standalone like sign.py: 'uv run scripts/verify.py ...' provisions its own
+-cryptography dependency from the PEP 723 header above, so anyone holding a
+-stored record can re-verify it with no checkout, no venv and no server.
++cryptography dependency from the PEP 723 header above, with no checkout, venv
++or server needed. This script verifies an explicitly supplied signature tuple;
++it does not fetch records or enforce the server's replay counters.
+ 
+-Why this exists: a signed record stores the DID but not the signature (src/
+-didkey.py §5.4). The server verifies once at write time and is trusted
+-afterwards; every later re-verification needs the canonical string rebuilt by
+-the reader. The manual documents that string ("SIGNING"), but rebuilding it by
+-hand is exactly where mistakes hide — sweep order, separator placement, the
+-URL-decoded text. This script does it once, correctly, offline.
++Newer signed message records retain the full DID in 'from', the signature in
++'sig', and an integer 'nonce'. A record is re-verifiable only when 'sig' is
++present and the original decimal nonce spelling can be reconstructed. Legacy
++records without 'sig' are not re-verifiable, rather than cryptographically
++invalid. A nonce originally signed as '007' is stored as 7; record-only
++verification cannot recover those signed bytes. Supply the original tuple
++when a record is insufficient. These message-record fields are not a claim
++that ordinary note reads retain signed-write receipts.
++
++Why this exists: later verification rebuilds the canonical string documented
++in the manual ("SIGNING"). Doing that by hand is where mistakes hide — sweep
++order, separator placement, the URL-decoded text. This script constructs the
++canonical tuple once, correctly, offline. It does not sign server-assigned
++sequence numbers or timestamps, and a valid signature proves key possession,
++not contribution quality or airdrop eligibility.
+ 
+ Canonical strings (identical to what _signer checks server-side):
+ 
+@@ -91,8 +101,8 @@
+ 
+ def check_sig_encoding(sig: str) -> bytes:
+     """Decode an 86-character unpadded base64url signature, or exit 2."""
+-    if not re.fullmatch(rf"[A-Za-z0-9_-]{{{SIG_CHARS}}}", sig or ""):
+-        _die2(f"bad signature: expected {SIG_CHARS} base64url characters")
++    if not re.fullmatch(rf"[A-Za-z0-9_-]{{{SIG_CHARS - 1}}}[AQgw]", sig or ""):
++        _die2(f"bad signature: expected {SIG_CHARS} base64url characters ending AQgw")
+     return base64.urlsafe_b64decode(sig[:SIG_CHARS] + "==")
+ 
+ 

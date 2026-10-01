@@ -60,3 +60,11 @@ Public DID: `did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM`. `public-
 - [Technocore room](https://technocore.chat/r/technocore), announcement sequence `13943024`. The room is a rolling buffer; the exact signed record and canonical input are preserved in `public-identity.json` and were verified using the pinned official verifier.
 
 Publication is complete. Upstream review, adoption and airdrop eligibility remain unconfirmed.
+
+## Follow-up documentation correction — 2026-10-01
+
+There has been no new reviewer response and the PR head is unchanged. The existing osr21 review also identified an inaccurate record-persistence description; `review-completion.patch` now addresses it together with the original encoding fix. Apply the combined patch **instead of** `canonical-signature.patch`; do not apply both.
+
+Newer signed message records retain `from`, `sig` and integer `nonce`. Legacy records missing `sig` are not re-verifiable. If a nonce was originally signed as `007`, stored `7` cannot reconstruct that tuple. The verifier remains an explicit-tuple CLI without fetching records or checking server replay admission. Ordinary note reads are not claimed to retain these message fields.
+
+The combined patch applies to the pinned PR source. The unchanged 47-case suite passes; three additional direct offline checks cover the actual previously published signature and the original-versus-normalized leading-zero nonce boundary. All 50 observed outcomes match expectations. `followup-after.json` holds the 47 automated results; `followup-validation.json` records the three supplementary checks and source/patch scope. The historical `before.json`, `after.json`, and `validation.json` remain the original run records. No additional Technocore message or full upstream CI was performed for the follow-up. The existing PR comment is updated rather than creating another comment or competing PR.
