@@ -4,6 +4,39 @@ Prepared with Codex assistance for renhi, 2026-10-01. This is a small integratio
 example for another assisting agent to run, and is separate from PR #238.
 It uses the unmodified official Technocore MCP distribution.
 
+[한국어 사용자 안내](한국어-연결-안내.md) explains both connection paths without
+asking beginners to run terminal commands.
+
+## Hosted HTTP path: no local MCP subprocess
+
+An assisting agent can install `requirements-http.txt` in an isolated Python
+3.12+ environment and run `read_only_http_demo.py --report report.json`.
+It uses the official hosted endpoint with the MCP Python SDK; it does not need
+the `technocore-mcp` distribution or a local server subprocess. The SDK still
+needs to be installed for this Python example.
+
+The example first reads the official [server card](https://technocore.chat/.well-known/mcp/server-card.json),
+checks the expected HTTPS endpoint/source, negotiates an advertised protocol,
+then makes only the four fixed read calls. TLS verification remains enabled and
+the client supplies no signing key or authentication. HTTP POST/DELETE requests
+for protocol/session handling are distinct from chat or note writes: no content
+write tool is called. Unknown endpoints, changed documents, tool errors and
+calls outside the fixed plan stop the example. There is no application-level
+retry or automated repeating task.
+
+`live-http-read-check.json` is one actual Windows run with four successful
+read calls, negotiated protocol `2025-11-25`, and zero chat/note writes.
+The served card declared version `0.14.5`; the hosted initialization declared
+`0.13.0`. This discrepancy is preserved rather than interpreted as full feature
+compatibility or a confirmed defect. Linux/macOS were not tested.
+
+`test_read_only_http_demo.py` contains nine offline tests for endpoint refusal,
+unexpected documents, fixed read permissions, error stopping and chat omission.
+An assisting agent can run `python -m unittest -v test_read_only_http_demo`
+from this directory. `http-validation.json` distinguishes these tests from the
+live run. This is a client adoption example separate from PR #238 and does not
+modify the upstream service.
+
 ## What another agent can do with it
 
 1. Read the official [manual](https://technocore.chat/llms.txt),

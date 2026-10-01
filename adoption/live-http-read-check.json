@@ -1,0 +1,78 @@
+{
+  "ok": true,
+  "checked_at": "2026-10-01T10:34:12.550774+00:00",
+  "transport": "streamable-http",
+  "endpoint": "https://mcp.technocore.chat/mcp",
+  "server_card_url": "https://technocore.chat/.well-known/mcp/server-card.json",
+  "server_card_sha256": "8dc3c4b82b43510edb5cd7e7dfc531770e66d11e710f82fca9ffffed1ea3844d",
+  "advertised_protocol_versions": [
+    "2024-11-05",
+    "2025-03-26",
+    "2025-06-18",
+    "2025-11-25"
+  ],
+  "negotiated_protocol_version": "2025-11-25",
+  "server_version": "0.13.0",
+  "tools_available": [
+    "claim_room",
+    "discover_rooms",
+    "list_notes",
+    "list_rooms",
+    "read_docs",
+    "read_note",
+    "read_room",
+    "say",
+    "say_signed",
+    "set_room_allow",
+    "wait_for_message",
+    "whoami",
+    "write_note"
+  ],
+  "packages": {
+    "mcp": "2.2.0",
+    "httpx2": "2.13.1"
+  },
+  "observations": [
+    {
+      "tool": "whoami",
+      "arguments": {},
+      "response_bytes": 267,
+      "response_sha256": "1c41631ee23459752062d73224b213ffbadc97cae957f72b646b28c63e2df60c",
+      "ok": true
+    },
+    {
+      "tool": "read_docs",
+      "arguments": {
+        "page": "auth"
+      },
+      "response_bytes": 5200,
+      "response_sha256": "ae4c61d5d6d4b13ec24467a1a66f139c132e039a7180790a914587d642534ddb",
+      "ok": true
+    },
+    {
+      "tool": "read_docs",
+      "arguments": {
+        "page": "config"
+      },
+      "response_bytes": 4567,
+      "response_sha256": "0412b3ddfc10ee5343902fb94256beb7616b09ca60e39b658425263791ffc311",
+      "ok": true
+    },
+    {
+      "tool": "read_room",
+      "arguments": {
+        "room": "technocore",
+        "limit": 3
+      },
+      "response_bytes": 588,
+      "response_sha256": "7db6f39c9f641b725429844a6fe39db26fdb837841e6d17e170afbed9ef08872",
+      "ok": true
+    }
+  ],
+  "remote_content_writes": 0,
+  "local_mcp_subprocesses": 0,
+  "signing_key_supplied": false,
+  "financial_transactions": 0,
+  "room_content_published": false,
+  "eligibility": "This connection check establishes no airdrop score or eligibility"
+}

@@ -1,0 +1,54 @@
+{
+  "recorded_at": "2026-10-01T19:37:45.803323+09:00",
+  "source_reference": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "scope": "Community hosted MCP client example; upstream server unchanged",
+  "platform_tested": "Windows",
+  "python": "3.12.14",
+  "offline_tests": {
+    "command": "python -m unittest -v test_read_only_http_demo",
+    "test_methods": 9,
+    "failures": 0,
+    "errors": 0,
+    "network_requests": 0,
+    "basis": "Actual unittest execution; separate from live observations"
+  },
+  "live_check": {
+    "file": "live-http-read-check.json",
+    "checked_at": "2026-10-01T10:34:12.550774+00:00",
+    "successful_read_tool_calls": 4,
+    "remote_content_writes": 0,
+    "local_mcp_subprocesses": 0,
+    "financial_transactions": 0,
+    "negotiated_protocol_version": "2025-11-25",
+    "packages": {
+      "mcp": "2.2.0",
+      "httpx2": "2.13.1"
+    }
+  },
+  "observed_version_metadata": {
+    "server_card_version": "0.14.5",
+    "hosted_initialize_version": "0.13.0",
+    "match": false,
+    "cause": "Not investigated; four read calls succeeded"
+  },
+  "limits": [
+    "Windows-only live observation",
+    "No full upstream server CI",
+    "No measured external adopters",
+    "No airdrop score or eligibility established"
+  ],
+  "tested_sources": [
+    {
+      "file": "read_only_http_demo.py",
+      "sha256": "d13c7a3994956f8ba81672be908098fe8638c70ecf62d4fe9cc99d239a574674"
+    },
+    {
+      "file": "test_read_only_http_demo.py",
+      "sha256": "ddd20410a4b7b74ad17ac32fcc8d6150b463042499286786d73036547a6cc09f"
+    },
+    {
+      "file": "requirements-http.txt",
+      "sha256": "01c771571873832ab0a9b1814fe45ca6d3b8cae24425c2c60102663ea5e11b70"
+    }
+  ]
+}

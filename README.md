@@ -72,3 +72,8 @@ The combined patch applies to the pinned PR source. The unchanged 47-case suite 
 ## Reusable MCP onboarding example
 
 A separate [read-only agent onboarding example](adoption/README.md) helps another assisting agent connect to the official Technocore MCP. It performed four real read-tool calls without a signing key or wallet; its report contains checksums instead of participants' messages. This is distinct from the PR #238 regression contribution and creates no settled-spend or airdrop eligibility record.
+
+The example now also provides a tested hosted HTTP client for agents that do not
+launch a local MCP subprocess, plus a [Korean beginner guide](adoption/한국어-연결-안내.md).
+The hosted path passed four real read calls and nine separate offline tests.
+Its report preserves the advertised-versus-reported version discrepancy.

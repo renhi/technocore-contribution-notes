@@ -36,8 +36,8 @@
   "artifacts": [
     {
       "file": "README.md",
-      "sha256": "70ee37fd0c1911f193ac5d199df2ccf89f26d0f2d701b69566ac052cb1d064c4",
-      "bytes": 7080
+      "sha256": "0ec3d9751bb1cacbcbce1250a928115e525b7fae3f6ca970732591ab287213bd",
+      "bytes": 7417
     },
     {
       "file": "test_verify_cli.py",
@@ -106,7 +106,7 @@
     }
   ],
   "external_posts_count_scope": "Four public items: companion repository, PR comment, identity note, signed announcement",
-  "updated_at": "2026-10-01T18:31:04.882026+09:00",
+  "updated_at": "2026-10-01T19:37:45.813328+09:00",
   "followup": {
     "reason": "Complete existing documentation finding; no new reviewer reply",
     "combined_patch": "review-completion.patch",
@@ -127,13 +127,13 @@
       },
       {
         "file": "adoption/README.md",
-        "sha256": "ac81d2d73e6ee5a77de5edd7c5da58a43250e3332136170a57dc4d236c665429",
-        "bytes": 2718
+        "sha256": "86727a74172d58d945e5a2ce5dd4f0eff1e3f782f9069314de61c28d9b2281f7",
+        "bytes": 4706
       },
       {
         "file": "adoption/agent-start.md",
-        "sha256": "be4274cf3c6694a59fb52c61f89a0f61316177f53880db347a96ba52269b0fad",
-        "bytes": 777
+        "sha256": "e03be75f1589a8380ee8372b88264f9990630d9d22914554d1a551233f5e72bf",
+        "bytes": 1203
       },
       {
         "file": "adoption/requirements.txt",
@@ -144,7 +144,46 @@
         "file": "adoption/live-read-check.json",
         "sha256": "755575d781e46f9ffc0c8b87cb07f6491df2e186f85666700a7a4ed560cd6530",
         "bytes": 1645
+      },
+      {
+        "file": "adoption/read_only_http_demo.py",
+        "sha256": "d13c7a3994956f8ba81672be908098fe8638c70ecf62d4fe9cc99d239a574674",
+        "bytes": 7351
+      },
+      {
+        "file": "adoption/requirements-http.txt",
+        "sha256": "01c771571873832ab0a9b1814fe45ca6d3b8cae24425c2c60102663ea5e11b70",
+        "bytes": 11
+      },
+      {
+        "file": "adoption/test_read_only_http_demo.py",
+        "sha256": "ddd20410a4b7b74ad17ac32fcc8d6150b463042499286786d73036547a6cc09f",
+        "bytes": 4520
+      },
+      {
+        "file": "adoption/live-http-read-check.json",
+        "sha256": "44869c7fd2eb64ed2ade9836bb795927da09f17cbfac9ad57d5242943c120010",
+        "bytes": 2112
+      },
+      {
+        "file": "adoption/한국어-연결-안내.md",
+        "sha256": "6f0952d378f4430e1574764e4027fb7fd474ace2119759cdf917c41e7baf66d1",
+        "bytes": 6018
+      },
+      {
+        "file": "adoption/http-validation.json",
+        "sha256": "9b9523e1eff993691d9672ab27f4e65e4307d9223b3b3e1469b41cb5c8f6b660",
+        "bytes": 1744
       }
-    ]
+    ],
+    "hosted_http": {
+      "live_read_tool_calls": 4,
+      "offline_test_methods": 9,
+      "remote_content_writes": 0,
+      "financial_transactions": 0,
+      "version_metadata_match": false,
+      "external_adopters_verified": 0,
+      "eligibility": "unconfirmed"
+    }
   }
 }

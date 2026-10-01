@@ -12,3 +12,10 @@ The beginner can ask an agent:
 
 This is a reusable user prompt, not a registered skill or official FLOP program.
 It does not grant an agent authority beyond the human user's actual request.
+
+Choose the hosted HTTP example if the agent environment cannot launch a local
+MCP subprocess but supports streamable HTTP. Read `requirements-http.txt`,
+`read_only_http_demo.py` and the official server card before running it. Explain
+that this Python client still requires its SDK, and verify the actual report
+rather than assuming an app accepted the endpoint. The Korean human-facing
+guide is `한국어-연결-안내.md`.
