@@ -77,3 +77,13 @@ The example now also provides a tested hosted HTTP client for agents that do not
 launch a local MCP subprocess, plus a [Korean beginner guide](adoption/한국어-연결-안내.md).
 The hosted path passed four real read calls and nine separate offline tests.
 Its report preserves the advertised-versus-reported version discrepancy.
+
+## Windows validation of a newer MCP fix — 2026-10-03
+
+[PR #944 Windows review](redirect-review/README.md) independently exercises the
+unchanged urllib transport and shared request layer through two local HTTP origins.
+The same 27-case checker has 16 expected failures on pinned main and zero failures
+on the pinned PR head. It covers redirected writes before/after fixture storage,
+missing Location, read controls and Korean JSON. No hosted writes or production
+keys are used. The original fix is credited to Bornoz and the integrated Worker
+supplement to almondous; this companion adds Windows evidence only.

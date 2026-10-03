@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-03T22:26:51.010340+09:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr_head": "82db3e9936860cfc2c3eff0a4cea98385dd93a29",
+  "pr_url": "https://github.com/flop-labs/technocore-chat/pull/944",
+  "same_checker_sha256": "7bbaa865340d908acb27932b3f4663d92fdb8e2db9dac20b6e747edca7a34676",
+  "before": {
+    "checked_at": "2026-10-03T13:24:46.760768+00:00",
+    "cases": 27,
+    "passed": 11,
+    "failed": 16
+  },
+  "after": {
+    "checked_at": "2026-10-03T13:24:48.030062+00:00",
+    "cases": 27,
+    "passed": 27,
+    "failed": 0
+  },
+  "source_files_git_blob_verified": 8,
+  "matching_before_after_case_order": true,
+  "production_key_used": false,
+  "hosted_service_writes": 0,
+  "full_upstream_ci": false,
+  "worker_runtime_tested": false,
+  "upstream_adoption": "unconfirmed",
+  "airdrop_eligibility": "unconfirmed",
+  "test_design_correction": "Initial HEAD preservation assumption was corrected to read-only following, preserving observed HEAD-to-GET behavior in final reports. Candidate unchanged."
+}

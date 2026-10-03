@@ -1,0 +1,522 @@
+{
+  "checked_at": "2026-10-03T13:24:48.030062+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "scope": "Actual CPython urllib plus shared _request against two loopback-only origins",
+  "source_sha256": {
+    "__init__.py": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009",
+    "fetch.py": "fccf8ae950e963519f91c73ef9ae15bce747e5d069b469cc0b0ce75eae8be9d1",
+    "server.py": "2ef0f03ad99fdb5cc03baee9a157e247c779ac052d6abf7c80fb7e1a06197acb",
+    "signing.py": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba"
+  },
+  "cases": 27,
+  "passed": 27,
+  "failed": 0,
+  "results": [
+    {
+      "case": "POST/301/not-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 301: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/301/already-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 301: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 1
+    },
+    {
+      "case": "POST/301/no-location",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 301: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "GET/301/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "HEAD/301/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/302/not-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 302: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/302/already-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 302: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 1
+    },
+    {
+      "case": "POST/302/no-location",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 302: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "GET/302/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "HEAD/302/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/303/not-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 303: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/303/already-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 303: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 1
+    },
+    {
+      "case": "POST/303/no-location",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 303: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "GET/303/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "HEAD/303/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/307/not-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 307: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/307/already-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 307: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 1
+    },
+    {
+      "case": "POST/307/no-location",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 307: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "GET/307/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "HEAD/307/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/308/not-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 308: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/308/already-stored",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 308: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 1
+    },
+    {
+      "case": "POST/308/no-location",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "outcome_is_unconfirmed": true,
+        "check_before_retrying": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": true,
+      "response": "HTTP 308: http://127.0.0.1:59657 returned a redirect, so this write was not confirmed; check whether it landed before retrying. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "GET/308/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "HEAD/308/follow",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_follows_as_read": true
+      },
+      "observed_error": false,
+      "response": "REDIRECT-TARGET-READ",
+      "origin_requests": 1,
+      "target_requests": 1,
+      "target_methods": [
+        "GET"
+      ],
+      "fixture_commits": 0
+    },
+    {
+      "case": "GET/301/no-location",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "redirect_target_not_contacted": true,
+        "read_appropriate_error": true
+      },
+      "observed_error": true,
+      "response": "HTTP 301: http://127.0.0.1:59657 returned a redirect, so this request was not completed. Set TECHNOCORE_URL to the final instance address.",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 0
+    },
+    {
+      "case": "POST/200/direct",
+      "passed": true,
+      "checks": {
+        "error_contract": true,
+        "one_origin_request": true,
+        "fixture_commit_count": true,
+        "direct_write_response": true,
+        "unicode_body_preserved_at_origin": true
+      },
+      "observed_error": false,
+      "response": "DIRECT-WRITE-CONFIRMED",
+      "origin_requests": 1,
+      "target_requests": 0,
+      "target_methods": [],
+      "fixture_commits": 1
+    }
+  ],
+  "production_keys_loaded": false,
+  "hosted_service_writes": 0,
+  "non_loopback_http_requests": 0,
+  "automatic_retries": 0,
+  "full_upstream_ci": false,
+  "cloudflare_runtime_tested": false
+}

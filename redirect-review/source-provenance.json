@@ -1,0 +1,55 @@
+{
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr_head": "82db3e9936860cfc2c3eff0a4cea98385dd93a29",
+  "pr_url": "https://github.com/flop-labs/technocore-chat/pull/944",
+  "files": [
+    {
+      "variant": "before",
+      "file": "__init__.py",
+      "git_blob": "7e8392fa506ebf84c724b212a98db81e599d8292",
+      "sha256": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009"
+    },
+    {
+      "variant": "before",
+      "file": "server.py",
+      "git_blob": "c402a78660a873d3d372abbcd421b92031b2655e",
+      "sha256": "53faacbae8feadc6a6d1824cefb34f06aa203ebb6d65ac9bb8947fac81f342c7"
+    },
+    {
+      "variant": "before",
+      "file": "fetch.py",
+      "git_blob": "1f15780264a35f145e6e7ff3132605cd4286b87b",
+      "sha256": "439194d28ccd1310365a74c18fda24a2c413ec411656f575973a0e4e2e64a7cd"
+    },
+    {
+      "variant": "before",
+      "file": "signing.py",
+      "git_blob": "0dfaae290cb2b2fd242701248c21f3fab9d5e731",
+      "sha256": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba"
+    },
+    {
+      "variant": "after",
+      "file": "__init__.py",
+      "git_blob": "7e8392fa506ebf84c724b212a98db81e599d8292",
+      "sha256": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009"
+    },
+    {
+      "variant": "after",
+      "file": "server.py",
+      "git_blob": "6f06f382ec2c64fc76749356d79a459fbff1f234",
+      "sha256": "2ef0f03ad99fdb5cc03baee9a157e247c779ac052d6abf7c80fb7e1a06197acb"
+    },
+    {
+      "variant": "after",
+      "file": "fetch.py",
+      "git_blob": "72ed998e61a471dc1060b8ecaea7ec9952a0794b",
+      "sha256": "fccf8ae950e963519f91c73ef9ae15bce747e5d069b469cc0b0ce75eae8be9d1"
+    },
+    {
+      "variant": "after",
+      "file": "signing.py",
+      "git_blob": "0dfaae290cb2b2fd242701248c21f3fab9d5e731",
+      "sha256": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba"
+    }
+  ]
+}
