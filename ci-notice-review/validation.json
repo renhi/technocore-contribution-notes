@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-04T04:46:09.789Z",
+  "pr": 735,
+  "head": "f45dd7b9229c3c6636c477d49087a2c03c80dcfa",
+  "source_sha256": "52fc6e8e5952ca7827b57782081e2aa945f2e46824cbd8fd66ed46bf57126238",
+  "checker_sha256": "8e539db49bb47d935fbdf179043107d9b47abd71309f92045059a2eb3cf0bab3",
+  "cases": 17,
+  "passed": 16,
+  "failed_invariants": 1,
+  "deterministic_failing_repetitions": 5,
+  "production_incident_established": false,
+  "patch_proposed": false,
+  "full_upstream_ci": false,
+  "real_api_mutations": 0,
+  "airdrop_eligibility": "unconfirmed"
+}

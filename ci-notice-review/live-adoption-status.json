@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-04T04:50:10.757303+00:00",
+  "scope": "Official repository state and exact-head workflow results; not eligibility",
+  "238": {
+    "state": "open",
+    "merged": false,
+    "head": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+    "updated_at": "2026-10-01T09:16:51Z",
+    "url": "https://github.com/flop-labs/technocore-chat/pull/238",
+    "latest_head_workflow_runs": [
+      {
+        "id": 33645461690,
+        "path": ".github/workflows/ci.yml",
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/flop-labs/technocore-chat/actions/runs/33645461690"
+      },
+      {
+        "id": 33645457848,
+        "path": ".github/workflows/queue-guard.yml",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/flop-labs/technocore-chat/actions/runs/33645457848"
+      }
+    ]
+  },
+  "944": {
+    "state": "open",
+    "merged": false,
+    "head": "82db3e9936860cfc2c3eff0a4cea98385dd93a29",
+    "updated_at": "2026-10-03T13:34:36Z",
+    "url": "https://github.com/flop-labs/technocore-chat/pull/944",
+    "latest_head_workflow_runs": [
+      {
+        "id": 37034982018,
+        "path": ".github/workflows/queue-guard.yml",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/flop-labs/technocore-chat/actions/runs/37034982018"
+      },
+      {
+        "id": 37034981438,
+        "path": ".github/workflows/pr-guards.yml",
+        "status": "completed",
+        "conclusion": "action_required",
+        "url": "https://github.com/flop-labs/technocore-chat/actions/runs/37034981438"
+      },
+      {
+        "id": 37034957307,
+        "path": ".github/workflows/pr-guards.yml",
+        "status": "completed",
+        "conclusion": "action_required",
+        "url": "https://github.com/flop-labs/technocore-chat/actions/runs/37034957307"
+      },
+      {
+        "id": 37034957274,
+        "path": ".github/workflows/ci.yml",
+        "status": "completed",
+        "conclusion": "action_required",
+        "url": "https://github.com/flop-labs/technocore-chat/actions/runs/37034957274"
+      },
+      {
+        "id": 37034952246,
+        "path": ".github/workflows/queue-guard.yml",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/flop-labs/technocore-chat/actions/runs/37034952246"
+      }
+    ]
+  }
+}

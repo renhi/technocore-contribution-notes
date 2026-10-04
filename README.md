@@ -87,3 +87,11 @@ on the pinned PR head. It covers redirected writes before/after fixture storage,
 missing Location, read controls and Korean JSON. No hosted writes or production
 keys are used. The original fix is credited to Bornoz and the integrated Worker
 supplement to almondous; this companion adds Windows evidence only.
+
+## Behavioural pending-CI notice review — 2026-10-04
+
+[PR #735 behavioural evidence](ci-notice-review/README.md) executes the two unchanged
+embedded JavaScript bodies against in-memory GitHub API fixtures. Sixteen controls
+pass; a cross-head notice-deletion invariant fails in five controlled repetitions.
+This adds an executable reproduction to earlier lifecycle/race reviews. It does
+not change the workflow, claim a deployed incident or establish an airdrop score.

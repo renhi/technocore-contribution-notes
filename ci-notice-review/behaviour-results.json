@@ -1,0 +1,738 @@
+{
+  "checked_at": "2026-10-04T04:46:09.789Z",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "source": {
+    "pr": 735,
+    "head": "f45dd7b9229c3c6636c477d49087a2c03c80dcfa",
+    "repository": "WIZARDspace/technocore-chat",
+    "path": ".github/workflows/queue-guard.yml",
+    "git_blob": "607bc0d808db6fb65e75a2a3a5bb7dc40246d794"
+  },
+  "source_sha256": "52fc6e8e5952ca7827b57782081e2aa945f2e46824cbd8fd66ed46bf57126238",
+  "checker_sha256": "8e539db49bb47d935fbdf179043107d9b47abd71309f92045059a2eb3cf0bab3",
+  "scope": "Execute two unchanged embedded github-script bodies against in-memory GitHub API fixtures",
+  "cases": 17,
+  "passed": 16,
+  "failed": 1,
+  "real_network_requests": 0,
+  "real_comment_writes": 0,
+  "workflow_approvals": 0,
+  "full_upstream_CI": false,
+  "actual_GitHub_Actions_runtime": false,
+  "workflow_triggers_and_permissions_tested": false,
+  "results": [
+    {
+      "case": "gated-creates-one-notice-and-repeat-does-not-duplicate",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "create",
+          "id": 2
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        }
+      ]
+    },
+    {
+      "case": "gated-updates-existing-notice",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "update",
+          "id": 1
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        }
+      ]
+    },
+    {
+      "case": "unknown-run-preserves-existing-notice",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        }
+      ]
+    },
+    {
+      "case": "unknown-run-does-not-invent-notice",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        }
+      ]
+    },
+    {
+      "case": "late-listed-gated-run-is-observed",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "create",
+          "id": 2
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        }
+      ]
+    },
+    {
+      "case": "unrelated-workflow-is-not-CI",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "simulated-delay",
+          "milliseconds": 10000
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        }
+      ]
+    },
+    {
+      "case": "observed-success-clears-old-notice",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "delete",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "case": "observed-failure-clears-old-notice",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "delete",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "case": "same-repository-PR-returns-without-API-calls",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "case": "human-marker-is-not-deleted-or-updated",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "create",
+          "id": 2
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        }
+      ]
+    },
+    {
+      "case": "same-head-release-during-write-is-reconciled",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "create",
+          "id": 2
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "delete",
+          "id": 2
+        }
+      ]
+    },
+    {
+      "case": "unknown-after-write-does-not-delete-notice",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        },
+        {
+          "actor": "notice",
+          "call": "list-comments"
+        },
+        {
+          "actor": "notice",
+          "call": "create",
+          "id": 2
+        },
+        {
+          "actor": "notice",
+          "call": "list-runs",
+          "head": "head-A"
+        }
+      ]
+    },
+    {
+      "case": "clear-ignores-gated-completion",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "case": "clear-ignores-main-push",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "case": "clear-resolves-fork-head-with-empty-pull-request-array",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "clear",
+          "call": "list-open-prs"
+        },
+        {
+          "actor": "clear",
+          "call": "list-comments"
+        },
+        {
+          "actor": "clear",
+          "call": "delete",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "case": "clear-for-old-head-preserves-new-head-notice",
+      "passed": true,
+      "evidence": [
+        {
+          "actor": "clear",
+          "call": "list-open-prs"
+        }
+      ]
+    },
+    {
+      "case": "older-notice-job-must-not-remove-newer-gated-head-notice",
+      "passed": false,
+      "assertion": "Current head B remains gated, but older head A removes its shared notice in all five controlled interleavings",
+      "evidence": [
+        {
+          "current_head": "head-B",
+          "current_CI_conclusion": "action_required",
+          "remaining_notices": 0,
+          "trace": [
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "create",
+              "id": 2
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-comments"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "delete",
+              "id": 2
+            }
+          ]
+        },
+        {
+          "current_head": "head-B",
+          "current_CI_conclusion": "action_required",
+          "remaining_notices": 0,
+          "trace": [
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "create",
+              "id": 2
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-comments"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "delete",
+              "id": 2
+            }
+          ]
+        },
+        {
+          "current_head": "head-B",
+          "current_CI_conclusion": "action_required",
+          "remaining_notices": 0,
+          "trace": [
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "create",
+              "id": 2
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-comments"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "delete",
+              "id": 2
+            }
+          ]
+        },
+        {
+          "current_head": "head-B",
+          "current_CI_conclusion": "action_required",
+          "remaining_notices": 0,
+          "trace": [
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "create",
+              "id": 2
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-comments"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "delete",
+              "id": 2
+            }
+          ]
+        },
+        {
+          "current_head": "head-B",
+          "current_CI_conclusion": "action_required",
+          "remaining_notices": 0,
+          "trace": [
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "create",
+              "id": 2
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-comments"
+            },
+            {
+              "actor": "newer-B",
+              "call": "list-runs",
+              "head": "head-B"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-runs",
+              "head": "head-A"
+            },
+            {
+              "actor": "older-A",
+              "call": "list-comments"
+            },
+            {
+              "actor": "older-A",
+              "call": "delete",
+              "id": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
