@@ -44,12 +44,15 @@ async function exercise(name, classification, fixture, check) {
       : fixture.read;
     assert.ok(response, 'Unexpected fetch: fixture exhausted');
     operations.push({lane: isExport ? 'export' : 'since', status: response.status,
-      generation: response.generation});
+      generation: response.generation, retry_after: response.retryAfter ?? null});
     return {
       ok: response.status >= 200 && response.status < 300,
       status: response.status,
-      headers: {get: key => key.toLowerCase() === 'x-room-generation'
-        ? String(response.generation) : null},
+      headers: {get: key => {
+        if (key.toLowerCase() === 'x-room-generation') return String(response.generation);
+        if (key.toLowerCase() === 'retry-after') return response.retryAfter ?? null;
+        return null;
+      }},
       json: async () => JSON.parse(JSON.stringify(response.body)),
       text: async () => response.text
     };
@@ -112,6 +115,12 @@ await exercise('malformed-export-line-must-not-be-silently-discarded', 'safety-i
   scenario([row(12)], [{text: JSON.stringify(row(11)) + '\nnot-json\n' + JSON.stringify(row(12)) + '\n'}]), incomplete);
 await exercise('incomplete-final-export-line-must-not-be-silently-discarded', 'safety-invariant',
   scenario([row(12)], [{text: JSON.stringify(row(11)) + '\n{"seq":12,"text":"unfinished'}]), incomplete);
+await exercise('export-429-must-not-be-immediately-retried', 'safety-invariant',
+  scenario([row(12)], [{status: 429, retryAfter: '60', text: 'Wait 60 seconds before retrying.'}]), (r, operations) => {
+    incomplete(r);
+    assert.equal(operations.filter(op => op.lane === 'export').length, 1,
+      '429 must stop/defer the export attempts until the stated delay; no fixture time advances');
+  });
 
 const report = {checked_at: new Date().toISOString(), node: process.version, platform: process.platform,
   source_url: comment.html_url, source_comment_id: comment.id, source_body_sha256: bodyHash,

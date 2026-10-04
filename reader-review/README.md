@@ -6,7 +6,7 @@ The subject is an example in an issue discussion, **not official server code or 
 
 ## Actual result
 
-On Windows and the Node version recorded in `behaviour-results.json`: **16 cases, 10 passing controls, 6 unmet consumer-safety requirements**. The checker exits 1 deliberately because these requirements remain unmet. These are not six confirmed production bugs, and no deployed-service incident, live recovery, fix or full upstream CI is claimed.
+On Windows and the Node version recorded in `behaviour-results.json`: **17 cases, 10 passing controls, 7 unmet consumer-safety requirements**. The checker exits 1 deliberately because these requirements remain unmet. These are not seven confirmed production bugs, and no deployed-service incident, live recovery, fix or full upstream CI is claimed. The initial 16-case publication was extended after checking the documented rate-limit guidance.
 
 The controls establish contiguous `since` reads, export recovery of a tail gap, explicit retention-floor and interior-export loss, empty-read fallback, cursor preservation after exhausted empty/error exports, bounded 503 attempts, subsequent successful recovery, exclusion of pre-cursor rows, and preservation of Korean/combining-character text. Every response comes from an in-memory fixture; no actual HTTP request is performed.
 
@@ -20,6 +20,9 @@ The controls establish contiguous `since` reads, export recovery of a tail gap, 
 | Read observes up to 15; subsequent export contains 11–13 | `ok: true`, cursor 13 | Do not label the entire observed interval recovered before covering its head |
 | Export has an invalid physical line between valid rows | Invalid line discarded; `ok: true` | Refuse or explicitly report malformed input rather than silently dropping it |
 | Final physical line is incomplete | Final line discarded; `ok: true` for the prefix | Distinguish a partial/malformed export from a complete verified interval |
+| Export returns 429 and `Retry-After: 60` | Three export attempts, with no wait/defer in the code | Stop/defer requests until the stated retry delay rather than treating 429 like 503 |
+
+The 429 case follows the [official rate-limit guidance](https://technocore.chat/llms.txt): read and honor the retry delay. The fixture supplies a 60-second delay without advancing time; the unchanged loop immediately continues on every non-2xx response. This is a demonstrated control-flow issue in the example, not an actual rate-limiting incident. No real 429 was provoked and no sleep or network request is used.
 
 The first generation case assumes the caller already has a `{generation: 7, cursor: 10}` checkpoint. The current function accepts only a numeric cursor and provides no generation reconciliation mechanism. That is the limitation being illustrated, not a claim it already promises a generation-aware contract.
 
@@ -45,6 +48,6 @@ Please clarify whether `ok` means a contiguous prefix or recovery through an obs
 
 ## 한국어 설명
 
-이번 기여는 대화를 이어서 읽는 예제의 추가 안전 조건을 검사하는 것입니다. 기본 상황 10개는 통과했습니다. 방이 다시 만들어졌거나 응답 중간에 빈 구간·잘못된 줄이 있는 등 추가 상황 6개에서는 확인이 부족한 채 성공을 표시했습니다. 일부 조건은 ‘어디까지 복구됐다고 볼 것인지’를 먼저 합의해야 합니다. 운영 서버에서 실제 오류가 발생했다거나 수정이 끝났다고 주장하지 않습니다.
+이번 기여는 대화를 이어서 읽는 예제의 추가 안전 조건을 검사하는 것입니다. 기본 상황 10개는 통과했습니다. 방이 다시 만들어졌거나 응답 중간에 빈 구간·잘못된 줄이 있는 등 추가 상황 7개에서는 확인이 부족한 채 성공을 표시했습니다. 일부 조건은 ‘어디까지 복구됐다고 볼 것인지’를 먼저 합의해야 합니다. 제한 응답의 대기 시간을 따르지 않고 다시 요청하는 동작도 포함됩니다. 운영 서버에서 실제 오류가 발생했다거나 수정이 끝났다고 주장하지 않습니다.
 
 Independently authored checker: Apache-2.0, see the companion repository root LICENSE. The external comment source is fetched separately and is not relicensed or republished here. Adoption, external usage and airdrop eligibility are unconfirmed.

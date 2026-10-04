@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-10-04T15:36:01.001Z",
+  "checked_at": "2026-10-04T15:44:07.920Z",
   "node": "v24.19.0",
   "platform": "win32",
   "source_url": "https://github.com/flop-labs/technocore-chat/issues/919#issuecomment-5980922352",
   "source_comment_id": 5980922352,
   "source_body_sha256": "301e6fc88bdaf9de2eb85c8f3c140bd5d8b63bdf515451b1179661d272a7a50c",
   "reader_sha256": "88a0b98a362577ded0eb19a6a0524d40dabbe9e25ddaa96be26b46a95715149a",
-  "checker_sha256": "cf4bfc4e44684f4704737243ab3a6e0b4e5fe4491cd368f055ec93c0c668277f",
-  "tests": 16,
+  "checker_sha256": "defddd2f97f142e1ce50e85f930e8c67e325b3e360d9e2f149b924535c11319e",
+  "tests": 17,
   "passed": 10,
-  "failed": 6,
+  "failed": 7,
   "cases": [
     {
       "name": "contiguous-since",
@@ -39,7 +39,8 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -77,12 +78,14 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -125,12 +128,14 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -169,12 +174,14 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -204,12 +211,14 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -233,22 +242,26 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -272,22 +285,26 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 503,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 503,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 503,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -326,17 +343,20 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 503,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -374,12 +394,14 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -413,12 +435,14 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -451,7 +475,8 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 8
+          "generation": 8,
+          "retry_after": null
         }
       ]
     },
@@ -490,12 +515,14 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 8
+          "generation": 8,
+          "retry_after": null
         }
       ]
     },
@@ -524,7 +551,8 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -559,12 +587,14 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -595,12 +625,14 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         }
       ]
     },
@@ -627,12 +659,58 @@
         {
           "lane": "since",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
         },
         {
           "lane": "export",
           "status": 200,
-          "generation": 7
+          "generation": 7,
+          "retry_after": null
+        }
+      ]
+    },
+    {
+      "name": "export-429-must-not-be-immediately-retried",
+      "classification": "safety-invariant",
+      "passed": false,
+      "failure": "429 must stop/defer the export attempts until the stated delay; no fixture time advances\n\n3 !== 1\n",
+      "result": {
+        "ok": false,
+        "rows": [],
+        "cursor": 10,
+        "via": "none",
+        "misses": [
+          "gap: cursor 10, reply starts at 12 (1 rows skipped)",
+          "export 429",
+          "export 429",
+          "export 429"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7,
+          "retry_after": null
+        },
+        {
+          "lane": "export",
+          "status": 429,
+          "generation": 7,
+          "retry_after": "60"
+        },
+        {
+          "lane": "export",
+          "status": 429,
+          "generation": 7,
+          "retry_after": "60"
+        },
+        {
+          "lane": "export",
+          "status": 429,
+          "generation": 7,
+          "retry_after": "60"
         }
       ]
     }

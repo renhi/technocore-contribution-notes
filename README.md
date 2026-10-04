@@ -100,3 +100,8 @@ not change the workflow, claim a deployed incident or establish an airdrop score
 ## Reader recovery boundaries — 2026-10-05
 
 [Independent issue #919 reader fixture review](reader-review/README.md): 10 controls pass; six additional consumer-safety requirements remain unmet in the corrected discussion example. Generation transitions, interior gaps, observed-head coverage and malformed lines are scoped separately. No production incident, adopted client, replacement fix or airdrop credit is claimed. The external source is fetched separately, not redistributed.
+
+
+### Reader review follow-up: rate-limit guidance
+
+The current reader-review report has 17 fixtures: 10 controls pass, seven consumer-safety requirements are unmet. The additional fixture shows that an export 429 with Retry-After 60 is retried three times without waiting/defer. Only in-memory responses were used. The preceding 16-case record is historical.
