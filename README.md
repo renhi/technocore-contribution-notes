@@ -95,3 +95,8 @@ embedded JavaScript bodies against in-memory GitHub API fixtures. Sixteen contro
 pass; a cross-head notice-deletion invariant fails in five controlled repetitions.
 This adds an executable reproduction to earlier lifecycle/race reviews. It does
 not change the workflow, claim a deployed incident or establish an airdrop score.
+
+
+## Reader recovery boundaries — 2026-10-05
+
+[Independent issue #919 reader fixture review](reader-review/README.md): 10 controls pass; six additional consumer-safety requirements remain unmet in the corrected discussion example. Generation transitions, interior gaps, observed-head coverage and malformed lines are scoped separately. No production incident, adopted client, replacement fix or airdrop credit is claimed. The external source is fetched separately, not redistributed.

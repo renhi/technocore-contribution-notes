@@ -1,0 +1,645 @@
+{
+  "checked_at": "2026-10-04T15:36:01.001Z",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "source_url": "https://github.com/flop-labs/technocore-chat/issues/919#issuecomment-5980922352",
+  "source_comment_id": 5980922352,
+  "source_body_sha256": "301e6fc88bdaf9de2eb85c8f3c140bd5d8b63bdf515451b1179661d272a7a50c",
+  "reader_sha256": "88a0b98a362577ded0eb19a6a0524d40dabbe9e25ddaa96be26b46a95715149a",
+  "checker_sha256": "cf4bfc4e44684f4704737243ab3a6e0b4e5fe4491cd368f055ec93c0c668277f",
+  "tests": 16,
+  "passed": 10,
+  "failed": 6,
+  "cases": [
+    {
+      "name": "contiguous-since",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 12,
+            "text": "record-12"
+          },
+          {
+            "seq": 13,
+            "text": "record-13"
+          }
+        ],
+        "cursor": 13,
+        "via": "since",
+        "misses": []
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "tail-gap-recovered",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 12,
+            "text": "record-12"
+          },
+          {
+            "seq": 13,
+            "text": "record-13"
+          },
+          {
+            "seq": 14,
+            "text": "record-14"
+          }
+        ],
+        "cursor": 14,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 13 (2 rows skipped)"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "retention-floor-loss-is-explicit",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": false,
+        "lost": [
+          11,
+          14
+        ],
+        "rows": [
+          {
+            "seq": 15,
+            "text": "record-15"
+          },
+          {
+            "seq": 16,
+            "text": "record-16"
+          },
+          {
+            "seq": 17,
+            "text": "record-17"
+          },
+          {
+            "seq": 18,
+            "text": "record-18"
+          }
+        ],
+        "cursor": 18,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 15 (4 rows skipped)",
+          "LOST 4 rows: the retention floor passed the cursor before the export ran — gone, not delayed; a retry cannot recover them"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "interior-export-loss-is-explicit",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": false,
+        "lost": [
+          12,
+          12
+        ],
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 13,
+            "text": "record-13"
+          },
+          {
+            "seq": 14,
+            "text": "record-14"
+          }
+        ],
+        "cursor": 14,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 14 (3 rows skipped)",
+          "gap inside the export"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "empty-since-falls-back",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 12,
+            "text": "record-12"
+          }
+        ],
+        "cursor": 12,
+        "via": "export",
+        "misses": [
+          "empty reply — cannot distinguish \"nothing newer survived the filter\" from \"nothing happened\"; cursor left unchanged"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "empty-export-preserves-cursor",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": false,
+        "rows": [],
+        "cursor": 10,
+        "via": "none",
+        "misses": [
+          "empty reply — cannot distinguish \"nothing newer survived the filter\" from \"nothing happened\"; cursor left unchanged",
+          "export returned no rows after the cursor",
+          "export returned no rows after the cursor",
+          "export returned no rows after the cursor"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "export-503-is-bounded",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": false,
+        "rows": [],
+        "cursor": 10,
+        "via": "none",
+        "misses": [
+          "gap: cursor 10, reply starts at 13 (2 rows skipped)",
+          "export 503",
+          "export 503",
+          "export 503"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 503,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 503,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 503,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "failed-export-then-recovery",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 12,
+            "text": "record-12"
+          },
+          {
+            "seq": 13,
+            "text": "record-13"
+          },
+          {
+            "seq": 14,
+            "text": "record-14"
+          }
+        ],
+        "cursor": 14,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 13 (2 rows skipped)",
+          "export 503"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 503,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "pre-cursor-records-excluded",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 12,
+            "text": "record-12"
+          },
+          {
+            "seq": 13,
+            "text": "record-13"
+          },
+          {
+            "seq": 14,
+            "text": "record-14"
+          }
+        ],
+        "cursor": 14,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 13 (2 rows skipped)"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "unicode-export-preserved",
+      "classification": "control",
+      "passed": true,
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "한글 원문"
+          },
+          {
+            "seq": 12,
+            "text": "한글"
+          },
+          {
+            "seq": 13,
+            "text": "é"
+          }
+        ],
+        "cursor": 13,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 13 (2 rows skipped)"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "new-generation-on-since-must-be-distinguished",
+      "classification": "safety-invariant",
+      "passed": false,
+      "failure": "Reader must not report verified recovery for this fixture\n\ntrue !== false\n",
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 12,
+            "text": "record-12"
+          },
+          {
+            "seq": 13,
+            "text": "record-13"
+          }
+        ],
+        "cursor": 13,
+        "via": "since",
+        "misses": []
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 8
+        }
+      ]
+    },
+    {
+      "name": "generation-changes-before-export-must-be-distinguished",
+      "classification": "safety-invariant",
+      "passed": false,
+      "failure": "Reader must not report verified recovery for this fixture\n\ntrue !== false\n",
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 12,
+            "text": "record-12"
+          },
+          {
+            "seq": 13,
+            "text": "record-13"
+          },
+          {
+            "seq": 14,
+            "text": "record-14"
+          }
+        ],
+        "cursor": 14,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 13 (2 rows skipped)"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 8
+        }
+      ]
+    },
+    {
+      "name": "interior-since-gap-must-not-be-success",
+      "classification": "safety-invariant",
+      "passed": false,
+      "failure": "Reader must not report verified recovery for this fixture\n\ntrue !== false\n",
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 13,
+            "text": "record-13"
+          }
+        ],
+        "cursor": 13,
+        "via": "since",
+        "misses": []
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "export-short-of-observed-head-must-not-be-complete",
+      "classification": "safety-invariant",
+      "passed": false,
+      "failure": "Reader must not report verified recovery for this fixture\n\ntrue !== false\n",
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 12,
+            "text": "record-12"
+          },
+          {
+            "seq": 13,
+            "text": "record-13"
+          }
+        ],
+        "cursor": 13,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 14 (3 rows skipped)"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "malformed-export-line-must-not-be-silently-discarded",
+      "classification": "safety-invariant",
+      "passed": false,
+      "failure": "Reader must not report verified recovery for this fixture\n\ntrue !== false\n",
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          },
+          {
+            "seq": 12,
+            "text": "record-12"
+          }
+        ],
+        "cursor": 12,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 12 (1 rows skipped)"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "name": "incomplete-final-export-line-must-not-be-silently-discarded",
+      "classification": "safety-invariant",
+      "passed": false,
+      "failure": "Reader must not report verified recovery for this fixture\n\ntrue !== false\n",
+      "result": {
+        "ok": true,
+        "rows": [
+          {
+            "seq": 11,
+            "text": "record-11"
+          }
+        ],
+        "cursor": 11,
+        "via": "export",
+        "misses": [
+          "gap: cursor 10, reply starts at 12 (1 rows skipped)"
+        ]
+      },
+      "operations": [
+        {
+          "lane": "since",
+          "status": 200,
+          "generation": 7
+        },
+        {
+          "lane": "export",
+          "status": 200,
+          "generation": 7
+        }
+      ]
+    }
+  ],
+  "real_network_requests": 0,
+  "production_incident_established": false,
+  "patch_proposed": false,
+  "full_upstream_ci": false,
+  "airdrop_eligibility": "unconfirmed"
+}
