@@ -48,6 +48,6 @@ Please clarify whether `ok` means a contiguous prefix or recovery through an obs
 
 ## 한국어 설명
 
-이번 기여는 대화를 이어서 읽는 예제의 추가 안전 조건을 검사하는 것입니다. 기본 상황 10개는 통과했습니다. 방이 다시 만들어졌거나 응답 중간에 빈 구간·잘못된 줄이 있는 등 추가 상황 7개에서는 확인이 부족한 채 성공을 표시했습니다. 일부 조건은 ‘어디까지 복구됐다고 볼 것인지’를 먼저 합의해야 합니다. 제한 응답의 대기 시간을 따르지 않고 다시 요청하는 동작도 포함됩니다. 운영 서버에서 실제 오류가 발생했다거나 수정이 끝났다고 주장하지 않습니다.
+이번 기여는 대화를 이어서 읽는 예제의 추가 안전 조건을 검사하는 것입니다. 기본 상황 10개는 통과했습니다. 방이 다시 만들어졌거나 응답 중간에 빈 구간·잘못된 줄이 있는 등 추가 상황 7개에서는 요구한 안전 조건을 충족하지 못했습니다. 일부 조건은 ‘어디까지 복구됐다고 볼 것인지’를 먼저 합의해야 합니다. 제한 응답의 대기 시간을 따르지 않고 다시 요청하는 동작도 포함됩니다. 운영 서버에서 실제 오류가 발생했다거나 수정이 끝났다고 주장하지 않습니다.
 
 Independently authored checker: Apache-2.0, see the companion repository root LICENSE. The external comment source is fetched separately and is not relicensed or republished here. Adoption, external usage and airdrop eligibility are unconfirmed.
