@@ -105,3 +105,8 @@ not change the workflow, claim a deployed incident or establish an airdrop score
 ### Reader review follow-up: rate-limit guidance
 
 The current reader-review report has 17 fixtures: 10 controls pass, seven consumer-safety requirements are unmet. The additional fixture shows that an export 429 with Retry-After 60 is retried three times without waiting/defer. Only in-memory responses were used. The preceding 16-case record is historical.
+
+
+## Windows native health-response validation — 2026-10-05
+
+[PR #957 native transport evidence](healthz-review/README.md): the unchanged 8-second deadline and real loopback HTTP/native fetch were exercised on Windows. Same nine modes: main 6 pass/3 fail; candidate 9 pass/0 fail. Stalled bodies, reset sockets and invalid gzip show the extra main fallback request removed by the candidate. Cloudflare runtime/full CI/production behavior were not claimed. Original fix and earlier tests remain credited to their authors.

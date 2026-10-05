@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-10-05T09:06:23.245Z",
+  "completed_at": "2026-10-05T09:06:39.630Z",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "origin_timeout_ms_unchanged": 8000,
+  "native_fetch_used": true,
+  "loopback_only": true,
+  "remote_service_requests": 0,
+  "routing_binding_supplied": true,
+  "cache_api_in_memory": true,
+  "cloudflare_runtime_executed": false,
+  "full_upstream_ci": false,
+  "new_patch_proposed": false,
+  "airdrop_eligibility": "unconfirmed",
+  "checker_sha256": "35bf13c39c3dbd83c5c79dfffdfb99506413005a16f80ab7621441d74465b659",
+  "summaries": {
+    "before": {
+      "tests": 9,
+      "passed": 6,
+      "failed": 3
+    },
+    "after": {
+      "tests": 9,
+      "passed": 9,
+      "failed": 0
+    }
+  },
+  "pr": 957,
+  "candidate": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+  "report_verified": true,
+  "upstream_acceptance": "unconfirmed"
+}

@@ -1,0 +1,402 @@
+{
+  "started_at": "2026-10-05T09:06:23.245Z",
+  "completed_at": "2026-10-05T09:06:39.630Z",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "source_provenance": {
+    "checked_at": "2026-10-05T09:03:41.054615+00:00",
+    "pr": 957,
+    "files": [
+      {
+        "label": "before",
+        "repository": "flop-labs/technocore-chat",
+        "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+        "path": "edge/src/worker.js",
+        "git_blob": "c20a2153bda16ac10ee94601cb9dfe7b8cf3660a",
+        "sha256": "235e491516d209b5454a5b9c0e13a1eb3158973a3d32582041044ab7a4e8dd21"
+      },
+      {
+        "label": "after",
+        "repository": "almondous/technocore-chat",
+        "commit": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+        "path": "edge/src/worker.js",
+        "git_blob": "a8195bbc2ce8d3880df1d8e86ce184bcc793bbb3",
+        "sha256": "fb95ec05915c826d8e4155f88156145d1420455049260ee63453133ef0f20d42"
+      }
+    ],
+    "source_unmodified_except_routing_import_binding_in_harness": true
+  },
+  "origin_timeout_ms_unchanged": 8000,
+  "native_fetch_used": true,
+  "loopback_only": true,
+  "remote_service_requests": 0,
+  "routing_binding_supplied": true,
+  "cache_api_in_memory": true,
+  "cloudflare_runtime_executed": false,
+  "full_upstream_ci": false,
+  "new_patch_proposed": false,
+  "airdrop_eligibility": "unconfirmed",
+  "checker_sha256": "35bf13c39c3dbd83c5c79dfffdfb99506413005a16f80ab7621441d74465b659",
+  "summaries": {
+    "before": {
+      "tests": 9,
+      "passed": 6,
+      "failed": 3
+    },
+    "after": {
+      "tests": 9,
+      "passed": 9,
+      "failed": 0
+    }
+  },
+  "cases": [
+    {
+      "label": "before",
+      "mode": "healthy",
+      "status": 200,
+      "body": "ok\n",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 1,
+      "cache_control": "public, max-age=0, s-maxage=10",
+      "elapsed_ms": 34.05,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "before",
+      "mode": "empty",
+      "status": 200,
+      "body": "",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 1,
+      "cache_control": "public, max-age=0, s-maxage=10",
+      "elapsed_ms": 16.66,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "before",
+      "mode": "refused",
+      "status": 503,
+      "body": "busy\n",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 3.65,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "before",
+      "mode": "head",
+      "status": 200,
+      "body": "",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 6.14,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "HEAD",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "before",
+      "mode": "cached",
+      "status": 200,
+      "body": "cached\n",
+      "calls": 0,
+      "server_requests": 0,
+      "puts": 0,
+      "cache_control": null,
+      "elapsed_ms": 0.89,
+      "fetches": [],
+      "passed": true
+    },
+    {
+      "label": "before",
+      "mode": "cache-match-error",
+      "status": 200,
+      "body": "ok\n",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 6.29,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "before",
+      "mode": "body-stall",
+      "status": 200,
+      "body": "ok\n",
+      "calls": 2,
+      "server_requests": 2,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 8032.17,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        },
+        {
+          "attempt": 2,
+          "method": "GET",
+          "has_deadline_signal": false
+        }
+      ],
+      "passed": false,
+      "failure": "One request must not escape into a second unbounded origin fetch\n\n2 !== 1\n"
+    },
+    {
+      "label": "before",
+      "mode": "body-reset",
+      "status": 200,
+      "body": "ok\n",
+      "calls": 2,
+      "server_requests": 2,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 46.25,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        },
+        {
+          "attempt": 2,
+          "method": "GET",
+          "has_deadline_signal": false
+        }
+      ],
+      "passed": false,
+      "failure": "One request must not escape into a second unbounded origin fetch\n\n2 !== 1\n"
+    },
+    {
+      "label": "before",
+      "mode": "invalid-gzip",
+      "status": 200,
+      "body": "ok\n",
+      "calls": 2,
+      "server_requests": 2,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 23.79,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        },
+        {
+          "attempt": 2,
+          "method": "GET",
+          "has_deadline_signal": false
+        }
+      ],
+      "passed": false,
+      "failure": "One request must not escape into a second unbounded origin fetch\n\n2 !== 1\n"
+    },
+    {
+      "label": "after",
+      "mode": "healthy",
+      "status": 200,
+      "body": "ok\n",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 1,
+      "cache_control": "public, max-age=0, s-maxage=10",
+      "elapsed_ms": 3.87,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "after",
+      "mode": "empty",
+      "status": 200,
+      "body": "",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 1,
+      "cache_control": "public, max-age=0, s-maxage=10",
+      "elapsed_ms": 2.9,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "after",
+      "mode": "refused",
+      "status": 503,
+      "body": "busy\n",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 3.51,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "after",
+      "mode": "head",
+      "status": 200,
+      "body": "",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 3.8,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "HEAD",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "after",
+      "mode": "cached",
+      "status": 200,
+      "body": "cached\n",
+      "calls": 0,
+      "server_requests": 0,
+      "puts": 0,
+      "cache_control": null,
+      "elapsed_ms": 0.26,
+      "fetches": [],
+      "passed": true
+    },
+    {
+      "label": "after",
+      "mode": "cache-match-error",
+      "status": 200,
+      "body": "ok\n",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 3.33,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "after",
+      "mode": "body-stall",
+      "status": 503,
+      "body": "origin unavailable\n",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 8046.99,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "after",
+      "mode": "body-reset",
+      "status": 503,
+      "body": "origin unavailable\n",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 39.9,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "after",
+      "mode": "invalid-gzip",
+      "status": 503,
+      "body": "origin unavailable\n",
+      "calls": 1,
+      "server_requests": 1,
+      "puts": 0,
+      "cache_control": "no-store",
+      "elapsed_ms": 7.16,
+      "fetches": [
+        {
+          "attempt": 1,
+          "method": "GET",
+          "has_deadline_signal": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

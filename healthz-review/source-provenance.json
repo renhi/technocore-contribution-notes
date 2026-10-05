@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-05T09:03:41.054615+00:00",
+  "pr": 957,
+  "files": [
+    {
+      "label": "before",
+      "repository": "flop-labs/technocore-chat",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "edge/src/worker.js",
+      "git_blob": "c20a2153bda16ac10ee94601cb9dfe7b8cf3660a",
+      "sha256": "235e491516d209b5454a5b9c0e13a1eb3158973a3d32582041044ab7a4e8dd21"
+    },
+    {
+      "label": "after",
+      "repository": "almondous/technocore-chat",
+      "commit": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+      "path": "edge/src/worker.js",
+      "git_blob": "a8195bbc2ce8d3880df1d8e86ce184bcc793bbb3",
+      "sha256": "fb95ec05915c826d8e4155f88156145d1420455049260ee63453133ef0f20d42"
+    }
+  ],
+  "source_unmodified_except_routing_import_binding_in_harness": true
+}
