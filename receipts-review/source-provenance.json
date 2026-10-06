@@ -1,0 +1,136 @@
+{
+  "repository": "HE-Lingfeng/technocore-receipts",
+  "commit": "e07820196035ce60aa34408052550ce11518a659",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha": "5193a4f831ff248b4425a3207e78c40db5f574b8",
+      "type": "blob"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha": "e9ecaf1e80e729d62bc2fbaea3db9ee6839945e0",
+      "type": "blob"
+    },
+    {
+      "path": "CONTRIBUTION_DRAFT.md",
+      "sha": "e966c1aec71cc2003eabe89401de7c87ab2d34fe",
+      "type": "blob"
+    },
+    {
+      "path": "LICENSE",
+      "sha": "28dfcf6c839e5f5e658b3761a8e8bfef94a383ad",
+      "type": "blob"
+    },
+    {
+      "path": "README.md",
+      "sha": "4592b0e919ee6d530cbc03bc6a8bf623c87385c1",
+      "type": "blob"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha": "c59b6a9c229195074584ee81f86aa40a5446d37a",
+      "type": "blob"
+    },
+    {
+      "path": "SUBMISSION.md",
+      "sha": "5c46ec02a88bed86d7e0147c88e877a2c71cac72",
+      "type": "blob"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha": "c96456d6511717db1df17f2ba72db86975005ce5",
+      "type": "blob"
+    },
+    {
+      "path": "examples",
+      "sha": "fe7d945701c0103d3584b1d65ca3fcbc8717aacc",
+      "type": "tree"
+    },
+    {
+      "path": "examples/make_demo.py",
+      "sha": "109edb90e496a52214050f705b9693098942a04c",
+      "type": "blob"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha": "c313f0a47316da253bc85ad40487b1381b608350",
+      "type": "blob"
+    },
+    {
+      "path": "technocore_receipts",
+      "sha": "222b26ca710c7bf32ec793d387076b70acf3afe5",
+      "type": "tree"
+    },
+    {
+      "path": "technocore_receipts/__init__.py",
+      "sha": "f1aeceb71e8c60f8d16923491ba8caeadc0e1757",
+      "type": "blob"
+    },
+    {
+      "path": "technocore_receipts/__main__.py",
+      "sha": "eb53e2f31b2f703ad32ef64b8a41faa3e7d18e08",
+      "type": "blob"
+    },
+    {
+      "path": "technocore_receipts/audit.py",
+      "sha": "a63f6dbbcd5dc809f0c7bb4a7bf33b27795c9f67",
+      "type": "blob"
+    },
+    {
+      "path": "technocore_receipts/cli.py",
+      "sha": "906d76c1dd2e8059da44b6c39f5139c11474a490",
+      "type": "blob"
+    },
+    {
+      "path": "tests",
+      "sha": "e912c16d7a9db812d48ec548cd1f9fa85e411775",
+      "type": "tree"
+    },
+    {
+      "path": "tests/test_audit.py",
+      "sha": "12b97a055b0b7bffaeb09e7dc86333f0032e927b",
+      "type": "blob"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "sha": "8db28b5444b6933b8548232cd3b983b2160a7c75",
+      "type": "blob"
+    }
+  ],
+  "issue_comments": [],
+  "official_main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "server_reference": [
+    {
+      "path": "src/app.py",
+      "lines": [
+        1267,
+        1391,
+        1400
+      ],
+      "meaning": "original nonce string verified, integer stored"
+    },
+    {
+      "path": "src/store.py",
+      "lines": [
+        2634,
+        2642
+      ],
+      "meaning": "integer nonce and supplied signature retained"
+    }
+  ],
+  "proposal_changed_paths": [
+    "technocore_receipts/audit.py",
+    "README.md",
+    "tests/test_nonce_recovery.py"
+  ],
+  "patch_sha256": "9c11558c880a05b4392d0a83b3de552d4d90cc0d1cc6a89106e05343125ee4fe",
+  "original_test_bodies_unchanged": true
+}

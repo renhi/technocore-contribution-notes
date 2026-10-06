@@ -1,0 +1,46 @@
+
+test_bad_did_is_not_echoed (test_audit.AuditTests.test_bad_did_is_not_echoed) ... ok
+test_blank_lines_and_crlf_are_in_raw_hash (test_audit.AuditTests.test_blank_lines_and_crlf_are_in_raw_hash) ... ok
+test_changed_nonce_is_rejected (test_audit.AuditTests.test_changed_nonce_is_rejected) ... ok
+test_changed_text_is_rejected (test_audit.AuditTests.test_changed_text_is_rejected) ... ok
+test_duplicate_and_decreasing_sequence (test_audit.AuditTests.test_duplicate_and_decreasing_sequence) ... ok
+test_duplicate_json_keys_and_nonfinite_values_are_rejected (test_audit.AuditTests.test_duplicate_json_keys_and_nonfinite_values_are_rejected) ... ok
+test_empty_input_cannot_pass (test_audit.AuditTests.test_empty_input_cannot_pass) ... ok
+test_file_commitment_mismatch_is_separate_from_valid_signatures (test_audit.AuditTests.test_file_commitment_mismatch_is_separate_from_valid_signatures) ... ok
+test_input_and_line_budgets_fail_without_partial_success_report (test_audit.AuditTests.test_input_and_line_budgets_fail_without_partial_success_report) ... ok
+test_integer_nonce_keeps_nineteen_digit_precision (test_audit.AuditTests.test_integer_nonce_keeps_nineteen_digit_precision) ... ok
+test_invalid_context_arguments_are_rejected (test_audit.AuditTests.test_invalid_context_arguments_are_rejected) ... ok
+test_invalid_metadata_does_not_disguise_valid_signature (test_audit.AuditTests.test_invalid_metadata_does_not_disguise_valid_signature) ... ok
+test_invalid_signature_cannot_poison_nonce_tracker (test_audit.AuditTests.test_invalid_signature_cannot_poison_nonce_tracker) ... ok
+test_leading_zero_nonce_is_verified_exactly (test_audit.AuditTests.test_leading_zero_nonce_is_verified_exactly) ... ok
+test_malformed_json_is_isolated_and_later_record_is_checked (test_audit.AuditTests.test_malformed_json_is_isolated_and_later_record_is_checked) ... ok
+test_message_body_is_never_in_report (test_audit.AuditTests.test_message_body_is_never_in_report) ... ok
+test_nonce_counters_are_per_signer (test_audit.AuditTests.test_nonce_counters_are_per_signer) ... ok
+test_nonce_order_tracks_high_water_mark (test_audit.AuditTests.test_nonce_order_tracks_high_water_mark) ... ok
+test_nonce_replay_is_detected_even_with_new_server_metadata (test_audit.AuditTests.test_nonce_replay_is_detected_even_with_new_server_metadata) ... ok
+test_noninteger_nonces_fail (test_audit.AuditTests.test_noninteger_nonces_fail) ... ok
+test_null_signature_is_invalid_not_unsigned (test_audit.AuditTests.test_null_signature_is_invalid_not_unsigned) ... ok
+test_partial_retained_export_is_not_claimed_as_complete_history (test_audit.AuditTests.test_partial_retained_export_is_not_claimed_as_complete_history) ... ok
+test_sequence_gap_is_reported_without_inventing_records (test_audit.AuditTests.test_sequence_gap_is_reported_without_inventing_records) ... ok
+test_server_metadata_is_not_authenticated_by_sender (test_audit.AuditTests.test_server_metadata_is_not_authenticated_by_sender) ... ok
+test_signature_base64_pad_bits_must_be_canonical (test_audit.AuditTests.test_signature_base64_pad_bits_must_be_canonical) ... ok
+test_stored_text_must_already_have_single_line_sweep (test_audit.AuditTests.test_stored_text_must_already_have_single_line_sweep) ... ok
+test_unexpected_valid_signer_is_separate_from_signature_failure (test_audit.AuditTests.test_unexpected_valid_signer_is_separate_from_signature_failure) ... ok
+test_unicode_normalization_is_never_applied (test_audit.AuditTests.test_unicode_normalization_is_never_applied) ... ok
+test_unsigned_cannot_satisfy_pinned_signer (test_audit.AuditTests.test_unsigned_cannot_satisfy_pinned_signer) ... ok
+test_unsigned_is_missing_not_invalid (test_audit.AuditTests.test_unsigned_is_missing_not_invalid) ... ok
+test_valid_export_and_exact_hash (test_audit.AuditTests.test_valid_export_and_exact_hash) ... ok
+test_wrong_room_is_rejected (test_audit.AuditTests.test_wrong_room_is_rejected) ... ok
+test_wrong_sender_is_rejected (test_audit.AuditTests.test_wrong_sender_is_rejected) ... ok
+test_bad_room_has_exit_two_without_report (test_cli.CliTests.test_bad_room_has_exit_two_without_report) ... ok
+test_empty_input_has_exit_one (test_cli.CliTests.test_empty_input_has_exit_one) ... ok
+test_file_and_stdin_reports_are_identical (test_cli.CliTests.test_file_and_stdin_reports_are_identical) ... ok
+test_missing_file_has_exit_two_without_echoing_path (test_cli.CliTests.test_missing_file_has_exit_two_without_echoing_path) ... ok
+test_missing_room_is_usage_error (test_cli.CliTests.test_missing_room_is_usage_error) ... ok
+test_stdin_and_demo (test_cli.CliTests.test_stdin_and_demo) ... ok
+test_wrong_room_has_exit_one_and_a_report (test_cli.CliTests.test_wrong_room_has_exit_one_and_a_report) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 2.469s
+
+OK

@@ -1,0 +1,1086 @@
+{
+  "test_methods": 9,
+  "cases": 76,
+  "matched": 34,
+  "mismatches": 42,
+  "errors": 0,
+  "success": false,
+  "observations": [
+    {
+      "case": "cli-demo-room",
+      "actual": {
+        "exit": 1,
+        "status": "failed"
+      },
+      "expected": {
+        "exit": 0,
+        "status": "passed"
+      },
+      "matched": false
+    },
+    {
+      "case": "cli-other-room",
+      "actual": {
+        "exit": 1,
+        "status": "failed"
+      },
+      "expected": {
+        "exit": 1,
+        "status": "failed"
+      },
+      "matched": true
+    },
+    {
+      "case": "explicit-string-007",
+      "actual": "passed",
+      "expected": "passed",
+      "matched": true
+    },
+    {
+      "case": "explicit-string-7",
+      "actual": "failed",
+      "expected": "failed",
+      "matched": true
+    },
+    {
+      "case": "bounded-failure-7",
+      "actual": {
+        "status": "failed",
+        "checks": 1
+      },
+      "expected": {
+        "status": "failed",
+        "checks": 19
+      },
+      "matched": false
+    },
+    {
+      "case": "bounded-failure-12",
+      "actual": {
+        "status": "failed",
+        "checks": 1
+      },
+      "expected": {
+        "status": "failed",
+        "checks": 18
+      },
+      "matched": false
+    },
+    {
+      "case": "bounded-failure-9007199254740993001",
+      "actual": {
+        "status": "failed",
+        "checks": 1
+      },
+      "expected": {
+        "status": "failed",
+        "checks": 1
+      },
+      "matched": true
+    },
+    {
+      "case": "hash-privacy-lf",
+      "actual": {
+        "status": "failed",
+        "file_hash": true,
+        "line_hash": true,
+        "body_omitted": true,
+        "history_verified": false
+      },
+      "expected": {
+        "status": "passed",
+        "file_hash": true,
+        "line_hash": true,
+        "body_omitted": true,
+        "history_verified": false
+      },
+      "matched": false
+    },
+    {
+      "case": "hash-privacy-crlf",
+      "actual": {
+        "status": "failed",
+        "file_hash": true,
+        "line_hash": true,
+        "body_omitted": true,
+        "history_verified": false
+      },
+      "expected": {
+        "status": "passed",
+        "file_hash": true,
+        "line_hash": true,
+        "body_omitted": true,
+        "history_verified": false
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-1",
+      "actual": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "7",
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "7",
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "matched": true
+    },
+    {
+      "case": "integer-7-width-2",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "07",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-3",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-4",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-5",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-6",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-7",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-8",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-9",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-10",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-11",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-12",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-13",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-14",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00000000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-15",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000000000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-16",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000000000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-17",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00000000000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-18",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000000000000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-7-width-19",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000000000000000007",
+        "recovered": true,
+        "stored_nonce": 7
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-2",
+      "actual": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "12",
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "12",
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "matched": true
+    },
+    {
+      "case": "integer-12-width-3",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-4",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-5",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-6",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-7",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-8",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-9",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-10",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-11",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-12",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-13",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-14",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00000000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-15",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000000000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-16",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000000000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-17",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "00000000000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-18",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "000000000000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-12-width-19",
+      "actual": {
+        "status": "failed",
+        "signature": "invalid",
+        "nonce": null,
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "0000000000000000012",
+        "recovered": true,
+        "stored_nonce": 12
+      },
+      "matched": false
+    },
+    {
+      "case": "integer-9007199254740993001-width-19",
+      "actual": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "9007199254740993001",
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "expected": {
+        "status": "passed",
+        "signature": "valid",
+        "nonce": "9007199254740993001",
+        "recovered": false,
+        "stored_nonce": null
+      },
+      "matched": true
+    },
+    {
+      "case": "invalid-nonce-0",
+      "actual": [
+        "invalid_nonce"
+      ],
+      "expected": [
+        "invalid_nonce"
+      ],
+      "matched": true
+    },
+    {
+      "case": "invalid-nonce-1",
+      "actual": [
+        "invalid_nonce"
+      ],
+      "expected": [
+        "invalid_nonce"
+      ],
+      "matched": true
+    },
+    {
+      "case": "invalid-nonce-2",
+      "actual": [
+        "invalid_nonce"
+      ],
+      "expected": [
+        "invalid_nonce"
+      ],
+      "matched": true
+    },
+    {
+      "case": "invalid-nonce-3",
+      "actual": [
+        "invalid_nonce"
+      ],
+      "expected": [
+        "invalid_nonce"
+      ],
+      "matched": true
+    },
+    {
+      "case": "invalid-nonce-4",
+      "actual": [
+        "invalid_nonce"
+      ],
+      "expected": [
+        "invalid_nonce"
+      ],
+      "matched": true
+    },
+    {
+      "case": "invalid-nonce-5",
+      "actual": [
+        "invalid_nonce"
+      ],
+      "expected": [
+        "invalid_nonce"
+      ],
+      "matched": true
+    },
+    {
+      "case": "invalid-nonce-6",
+      "actual": [
+        "invalid_nonce"
+      ],
+      "expected": [
+        "invalid_nonce"
+      ],
+      "matched": true
+    },
+    {
+      "case": "invalid-nonce-7",
+      "actual": [
+        "invalid_nonce"
+      ],
+      "expected": [
+        "invalid_nonce"
+      ],
+      "matched": true
+    },
+    {
+      "case": "nonce-order-0007",
+      "actual": {
+        "status": "failed",
+        "valid": 0,
+        "nonce_warning": false
+      },
+      "expected": {
+        "status": "failed",
+        "valid": 2,
+        "nonce_warning": true
+      },
+      "matched": false
+    },
+    {
+      "case": "nonce-order-0008",
+      "actual": {
+        "status": "failed",
+        "valid": 0,
+        "nonce_warning": false
+      },
+      "expected": {
+        "status": "passed",
+        "valid": 2,
+        "nonce_warning": false
+      },
+      "matched": false
+    },
+    {
+      "case": "padbit-alias-1",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-2",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-3",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-4",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-5",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-6",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-7",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-8",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-9",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-10",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-11",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-12",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-13",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-14",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "padbit-alias-15",
+      "actual": [
+        "invalid_signature_encoding"
+      ],
+      "expected": [
+        "invalid_signature_encoding"
+      ],
+      "matched": true
+    },
+    {
+      "case": "tampered-text",
+      "actual": "failed",
+      "expected": "failed",
+      "matched": true
+    },
+    {
+      "case": "tampered-nonce",
+      "actual": "failed",
+      "expected": "failed",
+      "matched": true
+    },
+    {
+      "case": "tampered-from",
+      "actual": "failed",
+      "expected": "failed",
+      "matched": true
+    },
+    {
+      "case": "tampered-room",
+      "actual": "failed",
+      "expected": "failed",
+      "matched": true
+    }
+  ],
+  "live_requests": 0,
+  "user_keys_accessed": false
+}
