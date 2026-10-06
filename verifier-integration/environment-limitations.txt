@@ -1,0 +1,7 @@
+Full Linux CI was not run.
+Windows CPython 3.12.14 with dependencies installed from current-main uv.lock.
+Plain ty check and explicit interpreter alternatives stopped before analysis: Windows sandbox canonicalization denied (exit 2).
+Full coverage run was attempted and stopped during collection: 19 missing-fcntl import errors (exit 2). fcntl was not replaced or mocked.
+The resulting coverage report reflects failed collection only and fails the project floor; it is not valid coverage or merge evidence.
+No WSL distribution is installed. Current gh OAuth scopes: gist, read:org, repo; workflow scope is absent. No workflow file was uploaded, no remote job was dispatched, and no additional account authorization was requested.
+No upstream CI, Cloudflare deployment, live writes, user keys, or official PR modification.

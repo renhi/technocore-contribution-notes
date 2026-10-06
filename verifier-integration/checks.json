@@ -1,0 +1,72 @@
+{
+  "ruff-check": {
+    "returncode": 0,
+    "command": [
+      "uv",
+      "run",
+      "ruff",
+      "check",
+      "."
+    ]
+  },
+  "ruff-format": {
+    "returncode": 0,
+    "command": [
+      "uv",
+      "run",
+      "ruff",
+      "format",
+      "--check",
+      "."
+    ]
+  },
+  "ty-check": {
+    "returncode": 2,
+    "reason": "Windows sandbox canonicalization denied"
+  },
+  "size-caps": {
+    "returncode": 0,
+    "command": [
+      "uv",
+      "run",
+      "sz.py",
+      "--caps"
+    ]
+  },
+  "pytest-after": {
+    "returncode": 0,
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/unit/test_verify_cli.py",
+      "-q"
+    ],
+    "tests": 139,
+    "passed": 139
+  },
+  "ruff-final": {
+    "returncode": 0
+  },
+  "format-final": {
+    "returncode": 0
+  },
+  "coverage-report-attempt": {
+    "returncode": 2
+  },
+  "main-apply-check": {
+    "returncode": 0
+  },
+  "pr-reverse-check": {
+    "returncode": 0
+  },
+  "diff-whitespace": {
+    "returncode": 0
+  },
+  "full-suite": {
+    "returncode": 2,
+    "reason": "19 collection errors, missing Linux fcntl"
+  }
+}

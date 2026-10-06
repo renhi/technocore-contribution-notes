@@ -110,3 +110,8 @@ The current reader-review report has 17 fixtures: 10 controls pass, seven consum
 ## Windows native health-response validation — 2026-10-05
 
 [PR #957 native transport evidence](healthz-review/README.md): the unchanged 8-second deadline and real loopback HTTP/native fetch were exercised on Windows. Same nine modes: main 6 pass/3 fail; candidate 9 pass/0 fail. Stalled bodies, reset sockets and invalid gzip show the extra main fallback request removed by the candidate. Cloudflare runtime/full CI/production behavior were not claimed. Original fix and earlier tests remain credited to their authors.
+
+
+## PR #238 project-test integration (2026-10-06)
+
+[Executable integration packet](verifier-integration/README.md) adds the correction and pytest integration of the byte-identical original 47-case fixture, 128 server/CLI terminal comparisons, and original-nonce spelling regressions. On pinned current main 0e47f770, 139 pytest items pass (179 CLI invocations). The unchanged original verifier produces 121 failures / 18 passes. A corrected but stale PR-head checkout still produces 120 server-parity failures; rebase to current main before incorporating the extension. Project lint, formatting and core caps passed; ty was blocked by Windows sandbox canonicalization and the full coverage suite could not collect without Linux fcntl. The official PR has not been updated, upstream CI was not run, and no adoption or airdrop eligibility is implied. Credit: dhasap (verifier), osr21 (canonical-signature finding), renhi (test integration and independent validation).

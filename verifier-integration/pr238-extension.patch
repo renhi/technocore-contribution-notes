@@ -1,0 +1,351 @@
+--- a/scripts/verify.py
++++ b/scripts/verify.py
+@@ -5,15 +5,25 @@
+ """Offline verifier for technocore-chat's signed lane — the other half of scripts/sign.py.
+ 
+ Standalone like sign.py: 'uv run scripts/verify.py ...' provisions its own
+-cryptography dependency from the PEP 723 header above, so anyone holding a
+-stored record can re-verify it with no checkout, no venv and no server.
++cryptography dependency from the PEP 723 header above, with no checkout, venv
++or server needed. This script verifies an explicitly supplied signature tuple;
++it does not fetch records or enforce the server's replay counters.
+ 
+-Why this exists: a signed record stores the DID but not the signature (src/
+-didkey.py §5.4). The server verifies once at write time and is trusted
+-afterwards; every later re-verification needs the canonical string rebuilt by
+-the reader. The manual documents that string ("SIGNING"), but rebuilding it by
+-hand is exactly where mistakes hide — sweep order, separator placement, the
+-URL-decoded text. This script does it once, correctly, offline.
++Newer signed message records retain the full DID in 'from', the signature in
++'sig', and an integer 'nonce'. A record is re-verifiable only when 'sig' is
++present and the original decimal nonce spelling can be reconstructed. Legacy
++records without 'sig' are not re-verifiable, rather than cryptographically
++invalid. A nonce originally signed as '007' is stored as 7; record-only
++verification cannot recover those signed bytes. Supply the original tuple
++when a record is insufficient. These message-record fields are not a claim
++that ordinary note reads retain signed-write receipts.
++
++Why this exists: later verification rebuilds the canonical string documented
++in the manual ("SIGNING"). Doing that by hand is where mistakes hide — sweep
++order, separator placement, the URL-decoded text. This script constructs the
++canonical tuple once, correctly, offline. It does not sign server-assigned
++sequence numbers or timestamps, and a valid signature proves key possession,
++not contribution quality or airdrop eligibility.
+ 
+ Canonical strings (identical to what _signer checks server-side):
+ 
+@@ -53,10 +63,12 @@
+ MAX_TEXT_CHARS = 4096  # messages
+ MAX_VALUE_CHARS = 8192  # notes
+ 
++
+ def _die2(msg: str) -> None:
+     """Exit 2 with reason on stderr — python's SystemExit(2, msg) prints to stdout."""
+     print(msg, file=sys.stderr)
+     raise SystemExit(2)
++
+ 
+ def swept(text: str, limit: int) -> str:
+     """The single-line sweep from src/store.py clean_text: invisibles -> spaces,
+@@ -91,8 +103,8 @@
+ 
+ def check_sig_encoding(sig: str) -> bytes:
+     """Decode an 86-character unpadded base64url signature, or exit 2."""
+-    if not re.fullmatch(rf"[A-Za-z0-9_-]{{{SIG_CHARS}}}", sig or ""):
+-        _die2(f"bad signature: expected {SIG_CHARS} base64url characters")
++    if not re.fullmatch(rf"[A-Za-z0-9_-]{{{SIG_CHARS - 1}}}[AQgw]", sig or ""):
++        _die2(f"bad signature: expected {SIG_CHARS} base64url characters ending AQgw")
+     return base64.urlsafe_b64decode(sig[:SIG_CHARS] + "==")
+ 
+ 
+--- /dev/null
++++ b/tests/unit/test_verify_cli.py
+@@ -0,0 +1,111 @@
++"""PR #238 regression integration: original cases plus server/CLI parity.
++
++Original pad-bit finding: osr21, PR #238 comment 5512590300.
++The verifier was written by dhasap; regression integration is by renhi.
++Only disposable in-memory keys are used. No HTTP requests or stored user keys.
++"""
++
++import base64
++import importlib.util
++import subprocess
++import sys
++import unittest
++from importlib.machinery import SourceFileLoader
++from pathlib import Path
++
++import pytest
++from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
++
++import didkey
++
++ROOT = Path(__file__).resolve().parents[2]
++VERIFIER = ROOT / "scripts" / "verify.py"
++B64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
++METHODS = (
++    "test_valid_korean_say_and_set",
++    "test_all_noncanonical_padbit_aliases",
++    "test_changed_text_is_rejected",
++    "test_wrong_room_or_namespace_is_rejected",
++    "test_wrong_key_is_rejected",
++    "test_bad_encoding_is_rejected",
++    "test_nonce_format_is_rejected",
++    "test_zero_nonce_is_valid_for_offline_tuple",
++    "test_sweep_matches_signed_visible_text",
++)
++
++
++@pytest.fixture(scope="module")
++def companion():
++    """Keep the already-published 47-case suite byte-identical."""
++    path = ROOT / "tests" / "fixtures" / "verify_cli_regression.txt"
++    loader = SourceFileLoader("verify_cli_regression", str(path))
++    spec = importlib.util.spec_from_loader(loader.name, loader)
++    assert spec is not None and spec.loader is not None
++    module = importlib.util.module_from_spec(spec)
++    spec.loader.exec_module(module)
++    module.VERIFIER = VERIFIER
++    return module
++
++
++@pytest.mark.parametrize("method", METHODS)
++def test_original_regression_method(companion, method):
++    result = unittest.TestResult()
++    unittest.TestSuite([companion.VerifyCLI(method)]).run(result)
++    assert result.testsRun == 1
++    assert result.wasSuccessful(), result.failures + result.errors
++
++
++@pytest.fixture(scope="module")
++def signed_key(companion):
++    key = Ed25519PrivateKey.generate()
++    return key, companion.did_for(key)
++
++
++def signed_arguments(signed_key, lane, nonce="9007199254740993001"):
++    key, did = signed_key
++    fields = ["offline-review"] if lane == "say" else ["offline-review", "result"]
++    text = "한글 원래 서명 입력"
++    canonical = "|".join([*fields, nonce, text])
++    signature = base64.urlsafe_b64encode(key.sign(canonical.encode())).decode().rstrip("=")
++    return [lane, did, signature, nonce, *fields, text], canonical
++
++
++def cli(arguments):
++    return subprocess.run(
++        [sys.executable, "-X", "utf8", str(VERIFIER), *arguments],
++        capture_output=True,
++        text=True,
++        encoding="utf-8",
++        timeout=10,
++    )
++
++
++@pytest.mark.parametrize("lane", ["say", "set"])
++@pytest.mark.parametrize("terminal", list(B64))
++def test_every_signature_terminal_matches_server(signed_key, lane, terminal):
++    arguments, canonical = signed_arguments(signed_key, lane)
++    original = arguments[2]
++    arguments[2] = original[:-1] + terminal
++    if terminal == original[-1]:
++        expected = 0
++        didkey.verify(arguments[1], arguments[2], canonical)
++    elif terminal in "AQgw":
++        expected = 3
++        with pytest.raises(didkey.SignatureError):
++            didkey.verify(arguments[1], arguments[2], canonical)
++    else:
++        expected = 2
++        with pytest.raises(didkey.DidError):
++            didkey.verify(arguments[1], arguments[2], canonical)
++    completed = cli(arguments)
++    assert completed.returncode == expected, (completed.stdout, completed.stderr)
++    assert ("OK " in completed.stdout) == (expected == 0)
++
++
++@pytest.mark.parametrize("lane", ["say", "set"])
++def test_original_nonce_spelling_is_required(signed_key, lane):
++    arguments, _ = signed_arguments(signed_key, lane, nonce="007")
++    assert cli(arguments).returncode == 0
++    arguments[3] = str(int(arguments[3]))
++    assert arguments[3] == "7"
++    assert cli(arguments).returncode == 3
+--- /dev/null
++++ b/tests/fixtures/verify_cli_regression.txt
+@@ -0,0 +1,174 @@
++"""Offline regression contribution for technocore-chat PR #238.
++
++Builds on osr21's existing canonical-base64 finding, not a new vulnerability report:
++https://github.com/flop-labs/technocore-chat/pull/238#issuecomment-5512590300
++
++Run with Python 3.12+ and cryptography installed:
++    python test_verify_cli.py --verifier /path/to/scripts/verify.py
++
++All signing keys are disposable test keys, generated only in memory. This suite
++does not contact Technocore, write keys, or claim any contribution credit.
++"""
++
++from __future__ import annotations
++
++import argparse
++import base64
++import json
++from pathlib import Path
++import subprocess
++import sys
++import unittest
++
++from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
++
++
++B58 = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
++B64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
++VERIFIER: Path
++OBSERVATIONS: list[dict] = []
++
++
++def did_for(key: Ed25519PrivateKey) -> str:
++    n = int.from_bytes(b"\xed\x01" + key.public_key().public_bytes_raw(), "big")
++    encoded = ""
++    while n:
++        n, remainder = divmod(n, 58)
++        encoded = B58[remainder] + encoded
++    return "did:key:z" + encoded
++
++
++class VerifyCLI(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.key = Ed25519PrivateKey.generate()
++        cls.did = did_for(cls.key)
++        cls.nonce = "9007199254740993001"  # 19 digits, beyond exact JS Number range.
++        cls.text = "한글 서명 검증 · 안녕하세요"
++        cls.room = "offline-review"
++        cls.namespace = "offline-review"
++        cls.note_key = "result"
++
++    def signature(self, canonical: str) -> str:
++        return base64.urlsafe_b64encode(self.key.sign(canonical.encode("utf-8"))).decode().rstrip("=")
++
++    def arguments(self, lane: str, text: str | None = None):
++        value = self.text if text is None else text
++        fields = [self.room] if lane == "say" else [self.namespace, self.note_key]
++        canonical = "|".join([*fields, self.nonce, value])
++        sig = self.signature(canonical)
++        return [lane, self.did, sig, self.nonce, *fields, value]
++
++    def check_cli(self, args: list[str], expected: int, case: str):
++        completed = subprocess.run(
++            [sys.executable, "-X", "utf8", str(VERIFIER), *args],
++            capture_output=True, text=True, encoding="utf-8", timeout=10,
++        )
++        OBSERVATIONS.append({"case": case, "expected": expected, "actual": completed.returncode})
++        self.assertEqual(
++            completed.returncode, expected,
++            f"{case}: stdout={completed.stdout!r}; stderr={completed.stderr!r}",
++        )
++        if expected == 0:
++            self.assertIn(f"OK {self.did}", completed.stdout)
++        if expected == 2:
++            self.assertNotIn("OK ", completed.stdout)
++            self.assertTrue(completed.stderr.strip())
++
++    def test_valid_korean_say_and_set(self):
++        for lane in ("say", "set"):
++            with self.subTest(lane=lane):
++                self.check_cli(self.arguments(lane), 0, f"{lane}: Korean, exact 19-digit nonce")
++
++    def test_all_noncanonical_padbit_aliases(self):
++        for lane in ("say", "set"):
++            args = self.arguments(lane)
++            original = args[2]
++            start = B64.index(original[-1])
++            self.assertEqual(start % 16, 0)
++            raw = base64.urlsafe_b64decode(original + "==")
++            for delta in range(1, 16):
++                with self.subTest(lane=lane, pad_bits=delta):
++                    alias = original[:-1] + B64[start + delta]
++                    self.assertEqual(base64.urlsafe_b64decode(alias + "=="), raw)
++                    altered = [*args]
++                    altered[2] = alias
++                    self.check_cli(altered, 2, f"{lane}: nonzero pad bits {delta}")
++
++    def test_changed_text_is_rejected(self):
++        for lane in ("say", "set"):
++            with self.subTest(lane=lane):
++                args = self.arguments(lane)
++                args[-1] += " 변경"
++                self.check_cli(args, 3, f"{lane}: changed text")
++
++    def test_wrong_room_or_namespace_is_rejected(self):
++        for lane in ("say", "set"):
++            with self.subTest(lane=lane):
++                args = self.arguments(lane)
++                args[4] = "another-context"
++                self.check_cli(args, 3, f"{lane}: changed context")
++
++    def test_wrong_key_is_rejected(self):
++        args = self.arguments("say")
++        args[1] = did_for(Ed25519PrivateKey.generate())
++        self.check_cli(args, 3, "say: wrong public key")
++
++    def test_bad_encoding_is_rejected(self):
++        args = self.arguments("say")
++        for label, sig in (("truncated", args[2][:-1]), ("padded", args[2] + "=="),
++                           ("invalid alphabet", "!" + args[2][1:])):
++            with self.subTest(label=label):
++                modified = [*args]
++                modified[2] = sig
++                self.check_cli(modified, 2, f"say: {label}")
++        args[1] = "did:key:invalid"
++        self.check_cli(args, 2, "say: malformed DID")
++
++    def test_nonce_format_is_rejected(self):
++        for nonce in ("１２３", "1" * 20, "-1"):
++            with self.subTest(nonce=nonce):
++                args = self.arguments("say")
++                args[3] = nonce
++                self.check_cli(args, 1, f"say: invalid nonce {nonce}")
++
++    def test_zero_nonce_is_valid_for_offline_tuple(self):
++        args = self.arguments("say")
++        args[3] = "0"
++        args[2] = self.signature(f"{self.room}|0|{self.text}")
++        self.check_cli(args, 0, "say: zero nonce tuple (not server replay admission)")
++
++    def test_sweep_matches_signed_visible_text(self):
++        for lane in ("say", "set"):
++            with self.subTest(lane=lane):
++                args = self.arguments(lane, "안녕 하세요")
++                args[-1] = "  안녕\u200b하세요\n"
++                self.check_cli(args, 0, f"{lane}: Unicode sweep")
++
++
++def main():
++    global VERIFIER
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--verifier", required=True, type=Path)
++    parser.add_argument("--json-report", type=Path)
++    args = parser.parse_args()
++    VERIFIER = args.verifier.resolve(strict=True)
++    suite = unittest.defaultTestLoader.loadTestsFromTestCase(VerifyCLI)
++    result = unittest.TextTestRunner(verbosity=2).run(suite)
++    report = {
++        "test_methods": result.testsRun,
++        "cli_cases": len(OBSERVATIONS),
++        "mismatches": sum(row["expected"] != row["actual"] for row in OBSERVATIONS),
++        "errors": len(result.errors),
++        "success": result.wasSuccessful(),
++        "external_requests": 0,
++        "production_identity_created": False,
++        "observations": OBSERVATIONS,
++    }
++    if args.json_report:
++        args.json_report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
++    raise SystemExit(0 if result.wasSuccessful() else 1)
++
++
++if __name__ == "__main__":
++    main()

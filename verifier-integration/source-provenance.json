@@ -1,0 +1,60 @@
+{
+  "upstream_repository": "flop-labs/technocore-chat",
+  "pr": 238,
+  "pr_author": "dhasap",
+  "original_canonical_encoding_finding": "osr21",
+  "regression_integration_author": "renhi",
+  "pr_head": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+  "pr_base": "019b57ad8ea051e44411f465e366c163536e71fc",
+  "current_main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "sources": [
+    {
+      "label": "original-verifier",
+      "commit": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+      "git_blob_lf": "ad0f5029aead19d156e6617c893ce4a71f6e0cc0",
+      "runtime_sha256": "81105b4c2d6db10387aa606247e550aee11f1aea4ab2c88540f24778a00476eb",
+      "lf_sha256": "81105b4c2d6db10387aa606247e550aee11f1aea4ab2c88540f24778a00476eb",
+      "crlf_conversion": false
+    },
+    {
+      "label": "server-pr-head",
+      "commit": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+      "git_blob_lf": "f2fcdabf31698954fa8b4aa2a1ae6a2c833cf8a8",
+      "runtime_sha256": "f6cc3af0a93a06b90537c63ce83539582e499025d6a58a720c7db880ad4146d5",
+      "lf_sha256": "f6cc3af0a93a06b90537c63ce83539582e499025d6a58a720c7db880ad4146d5",
+      "crlf_conversion": false
+    },
+    {
+      "label": "server-pr-base",
+      "commit": "019b57ad8ea051e44411f465e366c163536e71fc",
+      "git_blob_lf": "242ad599db58dca9df1be5a1fa6745baff8583fc",
+      "runtime_sha256": "651d5585905ef211aacddaf70e2bd26559f14bc46148677af2e4e788aea5ed96",
+      "lf_sha256": "651d5585905ef211aacddaf70e2bd26559f14bc46148677af2e4e788aea5ed96",
+      "crlf_conversion": false
+    },
+    {
+      "label": "server-main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "git_blob_lf": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+      "runtime_sha256": "0323c1c87a57a8e6cbea8f50dacf71b786091d486b4665f8aa730bfb4104a8aa",
+      "lf_sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6",
+      "crlf_conversion": true
+    }
+  ],
+  "original_regression_fixture_sha256": "be6e2b1b9535327b31bf028eed831ff6f131e0a72a3b74cb6c50c6a1c4c858d2",
+  "test_fixture_preserved_byte_identically": true,
+  "changed_paths": [
+    "scripts/verify.py",
+    "tests/unit/test_verify_cli.py",
+    "tests/fixtures/verify_cli_regression.txt"
+  ],
+  "patches": {
+    "pr238-extension.patch": "8789c3500c229f5a8fef1c34845ce471e1bb0321b6f7cea433c8fecfb47f1839",
+    "main-integration.patch": "33f7f4dec381df21c7b30d1dee7d2a61cf5162644e9ebdb7dad93c6b9410cc82"
+  },
+  "official_documents": {
+    "llms.txt": "ae3a86c884c1932a8efe181942a050fd5b5bbbc0093fcaa70a9574bed1ee21d6",
+    "auth.md": "ae4c61d5d6d4b13ec24467a1a66f139c132e039a7180790a914587d642534ddb",
+    "patterns.md": "45ab2f9d0aac7e6b920699cd30382af7f1eacaa0d6adc90d0e8567523e493370"
+  }
+}

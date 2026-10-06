@@ -1,0 +1,6 @@
+main-integration.patch: git apply --check on unmodified current main 0e47f770: exit 0
+pr238-extension.patch: applied on exact PR head 93bdfd03; reverse --check: exit 0
+Patched script and added tests agree byte-for-byte after LF normalization.
+Original 47-case fixture preserved byte-for-byte.
+git diff --check: exit 0
+The stale head server remains incompatible; rebasing to current main is required.

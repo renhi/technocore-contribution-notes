@@ -1,0 +1,25 @@
+Latest-main integration, locked ruff 0.16.8:
+All checks passed!
+
+99 files already formatted
+
+
+Core size caps:
+file                        raw   code  comments  tok/line
+core/app.py                2259   1040       358      8.09
+core/config.py              367     63       248     12.86
+core/didkey.py              148     59        42      8.14
+core/limit.py               513    186       110      8.44
+core/store.py              2867   1030       644      8.24
+extra/manifest.py          2285   1580       266      3.86
+core total (code)                 2378
+
+file                       code    cap  headroom
+core/app.py                1040   1040         0
+core/config.py               63     73        10
+core/didkey.py               59     67         8
+core/limit.py               186    193         7
+core/store.py              1030   1030         0
+extra/manifest.py          1580      - 
+core total (code)          2378   3010       632
+

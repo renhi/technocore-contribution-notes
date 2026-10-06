@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-06T12:05:33.541005+00:00",
+  "platform": "Windows",
+  "python": "3.12.14",
+  "dependency_environment": "Latest-main uv.lock, uv sync --frozen --python <existing CPython 3.12.14> --no-managed-python",
+  "target": "main 0e47f770b13cc27e1e2e199d4cdf70a4778c97cc + proposed verifier and integrated regressions",
+  "before_original_verifier_on_current_main": {
+    "tests": 139,
+    "failures": 121,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 18,
+    "seconds": 46.642
+  },
+  "after_current_main_integration": {
+    "tests": 139,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 139,
+    "seconds": 48.351
+  },
+  "stale_pr_head_plus_extension": {
+    "tests": 139,
+    "failures": 120,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 19,
+    "seconds": 28.355
+  },
+  "test_design": {
+    "pytest_items": 139,
+    "original_methods": 9,
+    "original_cli_cases": 47,
+    "terminal_server_cli_comparisons": 128,
+    "original_nonce_spelling_tests": 2,
+    "nonce_cli_invocations": 4,
+    "total_cli_invocations_after": 179,
+    "total_cli_invocations_before": 179,
+    "stale_pr_cli_invocations": 59,
+    "note": "The stale head fails 120 assertions against its obsolete server verifier before invoking the CLI for those cases."
+  },
+  "scope": {
+    "live_writes": 0,
+    "hosted_service_requests_by_tests": 0,
+    "user_identity_accessed": false,
+    "keys": "disposable in-memory Ed25519 keys",
+    "upstream_ci_run": false,
+    "full_repository_tests_passed": false,
+    "full_type_checks_passed": false,
+    "official_pr_updated": false,
+    "new_pr_created": false,
+    "upstream_comment_posted": false,
+    "official_adoption": "unconfirmed",
+    "airdrop_eligibility": "unconfirmed"
+  },
+  "checks": {
+    "frozen_dependencies": "installed",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "core_size_caps": "passed",
+    "main_patch_apply_check": "passed",
+    "pr_extension_reverse_apply_check": "passed",
+    "diff_whitespace": "passed",
+    "ty_check": "blocked before analysis by sandbox Windows canonicalization denial",
+    "full_coverage_suite": "attempted; 19 collection errors due missing Linux fcntl; no suite verdict",
+    "coverage_report": "not meaningful after collection failure; below project floor",
+    "linux_ci": "not run; no local Linux installation and current gh OAuth scopes do not include workflow"
+  },
+  "recommended_integration": "Rebase existing PR to verified current main; then apply pr238-extension.patch. Alternatively main-integration.patch carries the original proposed script plus correction and tests onto pinned current main. Do not apply both patches."
+}
