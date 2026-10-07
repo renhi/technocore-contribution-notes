@@ -120,3 +120,7 @@ The current reader-review report has 17 fixtures: 10 controls pass, seven consum
 ## External receipts tool: integer nonce recovery (2026-10-06)
 
 [Independent reproduction and proposed correction](receipts-review/README.md) reviews HE-Lingfeng/technocore-receipts e0782019, introduced in upstream issue #965. A tuple signed with nonce 007 can be stored as integer 7 and falsely fail the auditor. The proposed bounded recovery accepts only a cryptographically verified original spelling (at most 19 checks), preserves exact string handling and numeric ordering, and records recovered versus stored nonce. Original 40 author tests pass unchanged; nine new methods cover 76 fixtures (original 34 matched / 42 unmet, candidate all 76 matched); combined candidate suite has 49 passing methods. Synthetic offline evidence only; no full native-server CI, live participant records, user keys, upstream changes, new PR/comments, adoption or airdrop eligibility. Credit to HE-Lingfeng for the auditor and original tests.
+
+
+## Korean Windows signer validation (PR #966)
+See [signer-encoding-review](signer-encoding-review/) for a native Windows CP949/CP932/ASCII/CP1252/UTF-8 matrix of Packae's existing fix. 40 child-process runs: base 14 successful / 6 known encoding failures; candidate 20 successful. Also 34 valid signatures, 34 tamper rejections and 42 note-consumer assertions. No production writes, full Linux CI, adoption or reward claim.

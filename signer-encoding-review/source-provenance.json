@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-07T00:15:59.134457+00:00",
+  "pr": 966,
+  "head": "6f3b7cb6f9e53676da8807d17e4d5cfbd3a6f922",
+  "base": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "author": "Packae",
+  "files": [
+    {
+      "lane": "before",
+      "repository": "flop-labs/technocore-chat",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "scripts/sign.py",
+      "git_blob": "f700533ad174edf3fe2f3d314929db940cf8c87d",
+      "sha256": "301c4184046467f305e33ba202073fd9ef8f36713d7c5854410012d09303abac",
+      "bytes": 26161
+    },
+    {
+      "lane": "candidate",
+      "repository": "Packae/technocore-chat",
+      "commit": "6f3b7cb6f9e53676da8807d17e4d5cfbd3a6f922",
+      "path": "scripts/sign.py",
+      "git_blob": "1ad976758ad40ad4202aa5c2c72c256c6cc4627a",
+      "sha256": "0b4a2ffef9077802657c3ff60bc6ec54f1ad84b3f4ec807a994f35c668bc0075",
+      "bytes": 26157
+    },
+    {
+      "lane": "candidate",
+      "repository": "Packae/technocore-chat",
+      "commit": "6f3b7cb6f9e53676da8807d17e4d5cfbd3a6f922",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a",
+      "bytes": 2929
+    },
+    {
+      "lane": "candidate",
+      "repository": "Packae/technocore-chat",
+      "commit": "6f3b7cb6f9e53676da8807d17e4d5cfbd3a6f922",
+      "path": "tests/http/test_signer.py",
+      "git_blob": "f37f8e51df339f916922a084a3b46e1d54f7884c",
+      "sha256": "d336520790189658f706bf2c44262c1c46f12d04b2e16c487d84993c2833625e",
+      "bytes": 9028
+    }
+  ],
+  "script_delta": "Exactly two guidance em dashes changed to ASCII hyphens",
+  "source_changed_by_us": false
+}

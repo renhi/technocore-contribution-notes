@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-10-07T00:17:49.108429+00:00",
+  "target_pr": "https://github.com/flop-labs/technocore-chat/pull/966",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr_head": "6f3b7cb6f9e53676da8807d17e4d5cfbd3a6f922",
+  "prs": {
+    "238": {
+      "state": "open",
+      "merged": false,
+      "head": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+      "base": "019b57ad8ea051e44411f465e366c163536e71fc"
+    },
+    "735": {
+      "state": "open",
+      "merged": false,
+      "head": "f45dd7b9229c3c6636c477d49087a2c03c80dcfa",
+      "base": "e4c4f73f3b28612d7161170b11e08e580b02123a"
+    },
+    "944": {
+      "state": "open",
+      "merged": false,
+      "head": "82db3e9936860cfc2c3eff0a4cea98385dd93a29",
+      "base": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc"
+    },
+    "957": {
+      "state": "open",
+      "merged": false,
+      "head": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+      "base": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc"
+    },
+    "966": {
+      "state": "open",
+      "merged": false,
+      "head": "6f3b7cb6f9e53676da8807d17e4d5cfbd3a6f922",
+      "base": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc"
+    }
+  },
+  "source_blobs_verified": true,
+  "process_runs": 40,
+  "base_encoding_failures": 6,
+  "candidate_successes": 20,
+  "signature_checks": 34,
+  "tamper_rejections": 34,
+  "note_consumer_assertions": 42,
+  "korean_say_set_successes": 20,
+  "checks": [
+    {
+      "tool": "ruff check",
+      "exit_code": 0,
+      "output": "All checks passed!"
+    },
+    {
+      "tool": "ruff format --check",
+      "exit_code": 0,
+      "output": "1 file already formatted"
+    }
+  ],
+  "check_scope": "Independent checker only",
+  "full_repository_ci": "Not run: Linux server imports require fcntl",
+  "upstream_source_changed": false,
+  "upstream_comment_posted": false,
+  "official_adoption": "unconfirmed",
+  "airdrop_eligibility": "unconfirmed"
+}
