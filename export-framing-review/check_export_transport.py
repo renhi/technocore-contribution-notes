@@ -15,7 +15,7 @@ import platform
 import threading
 import time
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -235,7 +235,7 @@ def run(fetch_path, server_path):
         httpd.server_close()
         thread.join()
     return {
-        "checked_at": datetime.now(timezone.utc).isoformat(),
+        "checked_at": datetime.now(UTC).isoformat(),
         "platform": platform.platform(),
         "python": platform.python_version(),
         "fetch_sha256": hashlib.sha256(fetch_path.read_bytes()).hexdigest(),
