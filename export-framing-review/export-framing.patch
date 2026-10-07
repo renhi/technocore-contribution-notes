@@ -1,0 +1,32 @@
+--- a/mcp/src/technocore_mcp/fetch.py
++++ b/mcp/src/technocore_mcp/fetch.py
+@@ -21,6 +21,7 @@
+ 
+ from __future__ import annotations
+ 
++import http.client
+ import json
+ import urllib.error
+ import urllib.request
+@@ -106,9 +107,20 @@
+                 lines.append(raw)
+                 if len(lines) > limit:
+                     break
++            else:
++                # HTTPResponse iteration can reach EOF without enforcing Content-Length.
++                # Only check at natural EOF: bounded pagination intentionally stops early.
++                if getattr(response, "length", 0):
++                    raise OSError("incomplete export response: Content-Length not satisfied")
+             return status, b"".join(lines).decode("utf-8", "replace"), response_headers
+     except urllib.error.HTTPError as exc:
+-        return exc.code, exc.read().decode("utf-8", "replace"), dict(exc.headers.items())
++        try:
++            with exc:
++                return exc.code, exc.read().decode("utf-8", "replace"), dict(exc.headers.items())
++        except http.client.HTTPException as error:
++            raise OSError(f"incomplete export response: {error}") from None
++    except http.client.HTTPException as exc:
++        raise OSError(f"incomplete export response: {exc}") from None
+     except urllib.error.URLError as exc:
+         raise OSError(exc.reason) from None
+ 

@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-07T00:44:40.999229+00:00",
+  "repository": "burak33bb/technocore-chat",
+  "pr": 842,
+  "head": "7dd9c8f7353bc21ce54a945aceb40a5761eb9a47",
+  "base": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a",
+      "bytes": 2929
+    },
+    {
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713",
+      "bytes": 7334
+    },
+    {
+      "path": "mcp/src/technocore_mcp/fetch.py",
+      "git_blob": "ea924961a2941d47cb96ac2bb743da43ebcc2421",
+      "sha256": "db18d82bc73060f2412703806399c2daced08c3302a791d232e71bd43918750d",
+      "bytes": 5773
+    },
+    {
+      "path": "mcp/src/technocore_mcp/server.py",
+      "git_blob": "f50f4ff49a2c63cee53677b840c399b912e06ee9",
+      "sha256": "5015a97a6118a11293fca73d1bc25cdee86f5976dece70b46bab521fea6b1b0a",
+      "bytes": 48547
+    },
+    {
+      "path": "tests/test_mcp.py",
+      "git_blob": "6a676de2fba657507a3778f6270cadbaf3629515",
+      "sha256": "b730598a22da30439c5fc057f71dc225ecfbf4db07a78f92a102f0246f4fcdb3",
+      "bytes": 84629
+    },
+    {
+      "path": "tests/test_mcp_export_deadline.py",
+      "git_blob": "7a325b281475e7dfdbb8e2c3c9a8ff2dc02cd3ac",
+      "sha256": "b7daa23aec0f060a01aa26e159f88fdef90bd43bee81846330559e7f85a3377a",
+      "bytes": 4920
+    }
+  ],
+  "source_modified": false,
+  "proposed_source_sha256": "e5e513f9ae1a450c1285a1f7e6ac1acbd24d6289908f0d7ef23029e77a79b9cd"
+}

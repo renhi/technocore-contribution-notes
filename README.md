@@ -124,3 +124,7 @@ The current reader-review report has 17 fixtures: 10 controls pass, seven consum
 
 ## Korean Windows signer validation (PR #966)
 See [signer-encoding-review](signer-encoding-review/) for a native Windows CP949/CP932/ASCII/CP1252/UTF-8 matrix of Packae's existing fix. 40 child-process runs: base 14 successful / 6 known encoding failures; candidate 20 successful. Also 34 valid signatures, 34 tamper rejections and 42 note-consumer assertions. No production writes, full Linux CI, adoption or reward claim.
+
+
+## Native CPython export framing review (PR #842)
+See [export-framing-review](export-framing-review/) for a real Windows loopback HTTP regression and scoped Content-Length/exception correction. Original head14/20 expectations matched; proposal19/20. One missing chunked terminator remains unresolved, explicitly documented. No full Linux/MCP SDK CI, production writes, upstream change or airdrop claim.
