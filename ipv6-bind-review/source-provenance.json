@@ -1,0 +1,141 @@
+{
+  "retrieved_at": "2026-10-08T03:27:46.502411+00:00",
+  "repository": "flop-labs/technocore-chat",
+  "pr": 946,
+  "pr_author": "Bornoz",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "head": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+  "files": [
+    {
+      "version": "before",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "AGENTS.md",
+      "blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a",
+      "bytes": 2929
+    },
+    {
+      "version": "before",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "pyproject.toml",
+      "blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713",
+      "bytes": 7334
+    },
+    {
+      "version": "before",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "mcp/pyproject.toml",
+      "blob": "b8072121fd865dfa550463060ac0f169de672760",
+      "sha256": "66178d887eabd64576d69ebbfd8714f03d13ec6d5c6364f0f621f1b3759b4cda",
+      "bytes": 3926
+    },
+    {
+      "version": "before",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "tests/test_mcp.py",
+      "blob": "07f7fc3303acca6d807c96c36a8810a77c336d11",
+      "sha256": "768425a2ac9846bab37f1f8584eb686b7ccb8d0b225c0f98a317afe1c2dfdcd5",
+      "bytes": 74408
+    },
+    {
+      "version": "before",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "mcp/src/technocore_mcp/__init__.py",
+      "blob": "7e8392fa506ebf84c724b212a98db81e599d8292",
+      "sha256": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009",
+      "bytes": 368
+    },
+    {
+      "version": "before",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "mcp/src/technocore_mcp/server.py",
+      "blob": "c402a78660a873d3d372abbcd421b92031b2655e",
+      "sha256": "53faacbae8feadc6a6d1824cefb34f06aa203ebb6d65ac9bb8947fac81f342c7",
+      "bytes": 43998
+    },
+    {
+      "version": "before",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "mcp/src/technocore_mcp/fetch.py",
+      "blob": "1f15780264a35f145e6e7ff3132605cd4286b87b",
+      "sha256": "439194d28ccd1310365a74c18fda24a2c413ec411656f575973a0e4e2e64a7cd",
+      "bytes": 3649
+    },
+    {
+      "version": "before",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "mcp/src/technocore_mcp/signing.py",
+      "blob": "0dfaae290cb2b2fd242701248c21f3fab9d5e731",
+      "sha256": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba",
+      "bytes": 5784
+    },
+    {
+      "version": "after",
+      "commit": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+      "path": "AGENTS.md",
+      "blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a",
+      "bytes": 2929
+    },
+    {
+      "version": "after",
+      "commit": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+      "path": "pyproject.toml",
+      "blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713",
+      "bytes": 7334
+    },
+    {
+      "version": "after",
+      "commit": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+      "path": "mcp/pyproject.toml",
+      "blob": "b8072121fd865dfa550463060ac0f169de672760",
+      "sha256": "66178d887eabd64576d69ebbfd8714f03d13ec6d5c6364f0f621f1b3759b4cda",
+      "bytes": 3926
+    },
+    {
+      "version": "after",
+      "commit": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+      "path": "tests/test_mcp.py",
+      "blob": "b8f0f30bcac66e0f83a3e0f1856ae03c275d520c",
+      "sha256": "58a2fbc25acd06b1231e84fe224a3b832ec72ca15dceca27008568da364f0ccc",
+      "bytes": 75366
+    },
+    {
+      "version": "after",
+      "commit": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+      "path": "mcp/src/technocore_mcp/__init__.py",
+      "blob": "7e8392fa506ebf84c724b212a98db81e599d8292",
+      "sha256": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009",
+      "bytes": 368
+    },
+    {
+      "version": "after",
+      "commit": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+      "path": "mcp/src/technocore_mcp/server.py",
+      "blob": "e9c39a30e8e3f36dc4789a7d9d60bdd15772445e",
+      "sha256": "1ac86958d37f0205b4ce9dfc70d053a8dc51d866f02e56c2d890dcf1b7fee959",
+      "bytes": 44241
+    },
+    {
+      "version": "after",
+      "commit": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+      "path": "mcp/src/technocore_mcp/fetch.py",
+      "blob": "1f15780264a35f145e6e7ff3132605cd4286b87b",
+      "sha256": "439194d28ccd1310365a74c18fda24a2c413ec411656f575973a0e4e2e64a7cd",
+      "bytes": 3649
+    },
+    {
+      "version": "after",
+      "commit": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+      "path": "mcp/src/technocore_mcp/signing.py",
+      "blob": "0dfaae290cb2b2fd242701248c21f3fab9d5e731",
+      "sha256": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba",
+      "bytes": 5784
+    }
+  ],
+  "git_blobs_verified": true,
+  "source_modified": false,
+  "scope": "Native Windows loopback HTTP MCP initialize and tools/list; no tool calls"
+}

@@ -128,3 +128,7 @@ See [signer-encoding-review](signer-encoding-review/) for a native Windows CP949
 
 ## Native CPython export framing review (PR #842)
 See [export-framing-review](export-framing-review/) for a real Windows loopback HTTP regression and scoped Content-Length/exception correction. Original head14/20 expectations matched; proposal19/20. One missing chunked terminator remains unresolved, explicitly documented. No full Linux/MCP SDK CI, production writes, upstream change or airdrop claim.
+
+
+## Native Windows MCP IPv6 compatibility (PR #946)
+See [ipv6-bind-review](ipv6-bind-review/) for real MCP initialize/tools-list and Host/Origin guards on seven working Windows listener spellings. Both main and PR head work here, including bracketed IPv6: the reported startup defect was NOT reproduced on this Windows machine. An eighth setting (127.1) is unsupported here in both versions. No upstream source edits, tool calls, public-service requests, Linux CI or airdrop claim.

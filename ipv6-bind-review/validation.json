@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-08T03:35:48.879648+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "head": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+  "pr": 946,
+  "scenarios_per_version": 8,
+  "successful_listener_styles_per_version": 7,
+  "mcp_http_requests_per_version": 35,
+  "checks_per_version": 36,
+  "tool_count": 13,
+  "bracketed_startup_failure_reproduced_on_this_windows": false,
+  "shorthand_ipv4_unsupported_in_both_versions": true,
+  "source_modified": false,
+  "production_key_access": 0,
+  "upstream_http_requests": 0,
+  "tool_calls": 0,
+  "linux_ci": false,
+  "cloudflare_runtime": false,
+  "full_upstream_ci": false,
+  "exact_pr_original_tests_run": false,
+  "sdk_and_uvicorn_substituted": false,
+  "checks": {
+    "ruff_check": {
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    "ruff_format": {
+      "exit_code": 0,
+      "stdout": "1 file already formatted\n",
+      "stderr": ""
+    }
+  },
+  "official_adoption": "unconfirmed",
+  "airdrop_eligibility": "unconfirmed",
+  "artifact_sha256": {
+    "check_native_bind.py": "33d28903975b73799a7aaeef93901d3fffdaab2a3c1a7628873df3dcbb88f384",
+    "native-results.json": "a92f9c41238629975ed9124b6faa218de4b3a2db19eda6806ead622403347839",
+    "source-provenance.json": "c2914167b591daa317fb1e078a598a095bc7e714f34f6a72e4452c0c55e55a16"
+  }
+}

@@ -1,0 +1,914 @@
+{
+  "started_at": "2026-10-08T03:33:16.125690+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "ipv6_loopback_preflight_passed": true,
+  "versions": {
+    "before": [
+      {
+        "name": "bracketed-short-ipv6",
+        "host_setting": "[::1]",
+        "connection_address": "::1",
+        "port": 65526,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2531.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "bracketed-expanded-ipv6",
+        "host_setting": "[0:0:0:0:0:0:0:1]",
+        "connection_address": "::1",
+        "port": 61526,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2250.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "short-ipv6-control",
+        "host_setting": "::1",
+        "connection_address": "::1",
+        "port": 61549,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2407.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "expanded-ipv6-control",
+        "host_setting": "0:0:0:0:0:0:0:1",
+        "connection_address": "::1",
+        "port": 58245,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2281.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "ipv4-control",
+        "host_setting": "127.0.0.1",
+        "connection_address": "127.0.0.1",
+        "port": 58269,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2375.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "localhost-control",
+        "host_setting": "localhost",
+        "connection_address": "127.0.0.1",
+        "port": 58293,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2563.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "alternate-ipv4-loopback",
+        "host_setting": "127.0.0.2",
+        "connection_address": "127.0.0.2",
+        "port": 58318,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2422.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "shorthand-ipv4-loopback",
+        "host_setting": "127.1",
+        "connection_address": "127.0.0.1",
+        "port": 59147,
+        "started": false,
+        "checks": [
+          {
+            "name": "platform-shorthand-refusal",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "platform_observation": "Windows shorthand IPv4 lookup refused in both versions",
+        "elapsed_ms": 2813.0,
+        "process_exit_code": 3,
+        "process_stopped": true
+      }
+    ],
+    "after": [
+      {
+        "name": "bracketed-short-ipv6",
+        "host_setting": "[::1]",
+        "connection_address": "::1",
+        "port": 59169,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2422.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "bracketed-expanded-ipv6",
+        "host_setting": "[0:0:0:0:0:0:0:1]",
+        "connection_address": "::1",
+        "port": 59194,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2594.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "short-ipv6-control",
+        "host_setting": "::1",
+        "connection_address": "::1",
+        "port": 59219,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2516.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "expanded-ipv6-control",
+        "host_setting": "0:0:0:0:0:0:0:1",
+        "connection_address": "::1",
+        "port": 53213,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2438.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "ipv4-control",
+        "host_setting": "127.0.0.1",
+        "connection_address": "127.0.0.1",
+        "port": 52420,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2500.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "localhost-control",
+        "host_setting": "localhost",
+        "connection_address": "127.0.0.1",
+        "port": 52444,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2625.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "alternate-ipv4-loopback",
+        "host_setting": "127.0.0.2",
+        "connection_address": "127.0.0.2",
+        "port": 56103,
+        "started": true,
+        "checks": [
+          {
+            "name": "initialize",
+            "passed": true,
+            "status": 200,
+            "server_info": {
+              "name": "technocore-chat",
+              "version": "0.14.5"
+            },
+            "content_type": "text/event-stream"
+          },
+          {
+            "name": "tools-list",
+            "passed": true,
+            "status": 200,
+            "tool_count": 13,
+            "names": [
+              "claim_room",
+              "discover_rooms",
+              "list_notes",
+              "list_rooms",
+              "read_docs",
+              "read_note",
+              "read_room",
+              "say",
+              "say_signed",
+              "set_room_allow",
+              "wait_for_message",
+              "whoami",
+              "write_note"
+            ]
+          },
+          {
+            "name": "local-origin-accepted",
+            "passed": true,
+            "status": 200
+          },
+          {
+            "name": "foreign-host-refused",
+            "passed": true,
+            "status": 421
+          },
+          {
+            "name": "foreign-origin-refused",
+            "passed": true,
+            "status": 403
+          }
+        ],
+        "passed": true,
+        "elapsed_ms": 2593.0,
+        "process_exit_code": 1,
+        "process_stopped": true
+      },
+      {
+        "name": "shorthand-ipv4-loopback",
+        "host_setting": "127.1",
+        "connection_address": "127.0.0.1",
+        "port": 56128,
+        "started": false,
+        "checks": [
+          {
+            "name": "platform-shorthand-refusal",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "platform_observation": "Windows shorthand IPv4 lookup refused in both versions",
+        "elapsed_ms": 2797.0,
+        "process_exit_code": 3,
+        "process_stopped": true
+      }
+    ]
+  },
+  "summaries": {
+    "before": {
+      "scenarios": 8,
+      "passed": 8,
+      "failed": 0,
+      "successful_checks": 36
+    },
+    "after": {
+      "scenarios": 8,
+      "passed": 8,
+      "failed": 0,
+      "successful_checks": 36
+    }
+  },
+  "real_http": true,
+  "source_bytes_verified": true,
+  "mcp_protocol": "2025-11-25",
+  "production_key_access": 0,
+  "tool_calls": 0,
+  "cloudflare_runtime": false,
+  "full_upstream_ci": false,
+  "source_modified": false,
+  "airdrop_eligibility": "unconfirmed",
+  "dependencies": {
+    "mcp": "2.2.0",
+    "uvicorn": "0.54.0",
+    "starlette": "1.7.0",
+    "pydantic": "2.13.5"
+  },
+  "windows_bracketed_lookup": {
+    "[::1]": [
+      "::1"
+    ],
+    "[0:0:0:0:0:0:0:1]": [
+      "::1"
+    ]
+  },
+  "upstream_http_requests": [],
+  "completed_at": "2026-10-08T03:33:57.309622+00:00",
+  "checker_sha256": "33d28903975b73799a7aaeef93901d3fffdaab2a3c1a7628873df3dcbb88f384"
+}
