@@ -1,0 +1,741 @@
+{
+  "schema": "renhi-technocore-evidence-index-v1",
+  "created_at": "2026-10-09T13:57:21.667328+00:00",
+  "did": "did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM",
+  "github_profile": "https://github.com/renhi",
+  "prepared_with": "Codex assistance",
+  "scope": "Historical results at pinned versions. Not fresh reruns, production incidents, merge approval, official role, or airdrop eligibility.",
+  "prior_signed_announcement_seq": 13943024,
+  "prior_first_47_case_announcement_not_reposted": true,
+  "evidence_repository_commit": "61d0f601aa63240f7e9faf242a0b84affc91be5f",
+  "evidence_tree": "61d0f601aa63240f7e9faf242a0b84affc91be5f",
+  "artifact_inventory": {
+    "LICENSE": "7b1b86872e6c51f69cf02dff56c30d0834e4bd54",
+    "README.md": "8b168372061f1925374dbc0e7182734b8829ea55",
+    "adoption/README.md": "11645b121aa95d0d817788b74e4c97c93f74dff0",
+    "adoption/agent-start.md": "425d71322fdd743e111aa18a7a068e2c24e81a7a",
+    "adoption/http-validation.json": "676705cc72a654ff67e9ad7022a310258cf8616c",
+    "adoption/live-http-read-check.json": "1b0a4480bccc50d1a919c38c1ef9add862ff20a4",
+    "adoption/live-read-check.json": "175fcb9caa708a12087af1ae51f4fd7eba139a9d",
+    "adoption/read_only_demo.py": "717159c1169168be50dda0896c0d100f208d4709",
+    "adoption/read_only_http_demo.py": "ff10e0dcc7f9c5a566a0624971453dae4398dbbb",
+    "adoption/requirements-http.txt": "f70426e71d11ea5ddff8cce7965885e56eea2559",
+    "adoption/requirements.txt": "45cf7a93bf3c9d9c894d8c3396a573862aaf0350",
+    "adoption/test_read_only_http_demo.py": "21b839a5d5fc06dad304602639bdc1344a0652b0",
+    "adoption/한국어-연결-안내.md": "0d60ec482b0cbf70af08839142fc27e0c4b6bb4c",
+    "after.json": "e7d51e221e9ef60f649d975318cff674a837b6e6",
+    "before.json": "70f100d68c58dc18e4dabf9cf9497f83f36439e1",
+    "canonical-signature.patch": "3c88500f5682d1a64e610825c7227f7db62a447b",
+    "ci-notice-review/README.md": "5650e4cff9a066ee2cbbcda7b1e493ba7489f596",
+    "ci-notice-review/behaviour-results.json": "e543506d32b740c2f98292c514c1ae5f5659c87f",
+    "ci-notice-review/live-adoption-status.json": "19a7c3c4c8952127e9b1f47dc59f64c1681b8a7b",
+    "ci-notice-review/source-provenance.json": "aac4f2053b70e28b664d5722142fa5e14e01d5e1",
+    "ci-notice-review/test_notice_behaviour.mjs": "e353475c05f02985f8881a9e0a328e549cd034f9",
+    "ci-notice-review/validation.json": "38c17d3842a0b2352c5ded1861cfcab8e882e1b9",
+    "evidence-ledger.json": "df87efca926e1524f46f35117273b4ae64ca97ce",
+    "export-framing-review/README.md": "bde6019dce9e433fda88a30e8c843a4c5477d1a3",
+    "export-framing-review/after.json": "ef0b26dc5f71dbe7386f1080bc3ce67b1ad06b40",
+    "export-framing-review/before.json": "37dde03fa539d375113c586ea551569f8aa5b311",
+    "export-framing-review/check_export_transport.py": "c41600a32b34b170c51fdc2afdf68fd3336a4b73",
+    "export-framing-review/export-framing.patch": "e8f28eeca9fc4100c9950a36c56d4c7a4710d3a5",
+    "export-framing-review/source-provenance.json": "20a27c79cc48acbd1aa3df8444e0947dbd5ffb0a",
+    "export-framing-review/validation.json": "834d682f1f723955defe253e312547df4bdcb103",
+    "followup-after.json": "e7d51e221e9ef60f649d975318cff674a837b6e6",
+    "followup-validation.json": "b1bb740d89742db970a9390a15f2e91639482df1",
+    "header-config-review/README.md": "42a31e1715d5689a32aa3fcde7371bee8018d4c5",
+    "header-config-review/check_header_config.py": "53f3229f4fe3a7879727d501854df8ae9cab2b10",
+    "header-config-review/native-results.json": "cd7493c943c1bc8e567930b7bcd6cc3b15c81aa6",
+    "header-config-review/source-provenance.json": "58a80984be2ab56d87b41db51e6dd880bf9dc938",
+    "header-config-review/validation.json": "d9b93cbbdaa831b005f8cf8edcee209e693c3a31",
+    "healthz-review/README.md": "c503204128c3ff71d3d9609d90d3c67368980707",
+    "healthz-review/native-results.json": "1ff5e53cde9ce01a88b620ac65fa987855ee4bd0",
+    "healthz-review/native_healthz_probe.mjs": "30b521ad2ee4220fdb59e1e5cb40a5206af79476",
+    "healthz-review/source-provenance.json": "0db9cf9be70ad3cf4ccbc536473f6f3ec78219ad",
+    "healthz-review/validation.json": "fc99fe4a35b9261e17ff10bad9ab441e1ec68fb9",
+    "identity-check.json": "b2b88ca775ec55a34a777a74589c4ff3a0bf1081",
+    "ipv6-bind-review/README.md": "d4a5731663422b944ec20cab4178dab2623635a9",
+    "ipv6-bind-review/check_native_bind.py": "589641b63af36a64102c799a5805322fa13da779",
+    "ipv6-bind-review/native-results.json": "70627c384a084a7a1a546d213cc258d6b39f2bb7",
+    "ipv6-bind-review/source-provenance.json": "2dc04b72d9a541820996fa351ab1cd37f782d1d7",
+    "ipv6-bind-review/validation.json": "df4513bfd3ee7ab9f5a6126d035640f4badb7142",
+    "latest-review.json": "60f4c3c800191b3dd67c6d919ea27ebd4a4e05d6",
+    "nonce-transport-review/README.md": "c01d7ccae9744effc67e4403fef33891f69fb54a",
+    "nonce-transport-review/check_native_nonce.py": "b7886229974d01044ae7bfe071aaedc82775bc00",
+    "nonce-transport-review/native-results.json": "c0b596e13646e36f77bb5abe8ca4c2532cbe61d7",
+    "nonce-transport-review/source-provenance.json": "2cfafe29bb154227d33bf1efca6955a4fe76fb47",
+    "nonce-transport-review/validation.json": "907cb287f03c26837ad717042b96f129cff1af8c",
+    "public-identity.json": "44a88f2fc6c827168e27cf210fb9116842c1096b",
+    "reader-review/README.md": "b683a9b8b077767a3b1437107f6cb12581f686c9",
+    "reader-review/behaviour-results.json": "db182efffdd629f55defb6f55baf5b2996e5f1b5",
+    "reader-review/check_reader.mjs": "1c507c80930a80d0cfc74e98500dc56d11026374",
+    "reader-review/source-provenance.json": "345d3731b0696ae51f977645c9963b304de42bf6",
+    "reader-review/validation.json": "baed0671387cc9d42a8a3a02e9b9fd29a4360f1e",
+    "receipts-review/README.md": "84450e6c87cda671124365e62e119757a31d5f6c",
+    "receipts-review/after.json": "7c5823e07d4054927b9a3874754e1184d8064ead",
+    "receipts-review/before.json": "dd6d1931b3a00480bde692f1af444b573b586676",
+    "receipts-review/check_nonce_recovery.py": "0db4cb12b3c4163e80cbdab55677bf5f018cfb8e",
+    "receipts-review/nonce-recovery.patch": "c5e13cfd3502a43d4eba91feef4f046d4efea9e1",
+    "receipts-review/original-suite.txt": "26c9a657b8692f90c0afd8e74819b9fc6e3250f5",
+    "receipts-review/patched-suite.txt": "0df3c348e947273b1c6ecc7556e551862ecd3765",
+    "receipts-review/source-provenance.json": "088a2a1ce18367dcc8d20ed2b6b563de18cf7dfa",
+    "receipts-review/test_nonce_recovery.py": "84e6bd9350c8a2694fbd44cae6122b75d03e263b",
+    "receipts-review/upstream-LICENSE.txt": "28dfcf6c839e5f5e658b3761a8e8bfef94a383ad",
+    "receipts-review/validation.json": "af8c4e0fd038b78cc5745ca6c2dd2e422670de5a",
+    "redirect-review/README.md": "92b69a59ad260420b4ddfd56fdfdf18c255be492",
+    "redirect-review/after.json": "f0daa3ee479bc1c2efb2cab7a839013823e88336",
+    "redirect-review/before.json": "e01c50b9284d7083cdab2e5a6b00c902f8712f0d",
+    "redirect-review/check_write_redirects.py": "b115c9491430b065405db307612f3ecefc43bdec",
+    "redirect-review/source-provenance.json": "eb5939f7c860c9c8d5980c46aef9ccfb06f7feb5",
+    "redirect-review/validation.json": "ead3df63b3df9ab0759b3c625176cbea9b966a49",
+    "review-comment.en.md": "bfd60fb84d97682fe3e34d412f4680fdb41485cd",
+    "review-completion.patch": "443b53c07a7034341ab9f00693ad7c19ece322ba",
+    "signer-encoding-review/README.md": "cdedea8481508b2b1760536153f36bb65b5de965",
+    "signer-encoding-review/check_encoding.py": "314c33a594b11bf1fa8c61e493c6802cf3c9ac1b",
+    "signer-encoding-review/results.json": "8bdab1f7cbebb7edefe6aed033650fdc79ee2bb7",
+    "signer-encoding-review/source-provenance.json": "7fd1c42130ac0b037cbc7b35110c969a765ae577",
+    "signer-encoding-review/validation.json": "20202efe483508a339f24ee004397ad033f1254e",
+    "test_verify_cli.py": "e56546277840a035a0f7d8fb067335dfc91ba717",
+    "validation.json": "a28160a9a73f7450a0628c893c6dd643e6cf6936",
+    "verifier-integration/README.md": "cf77c7084b892d78dbb0587bf236e724111a6c7a",
+    "verifier-integration/apply-checks.txt": "eb28218d0a1178afc2074d298853966e5c63118b",
+    "verifier-integration/checks.json": "29a20226b90df1242d761dd6b54a2e0eb2b43835",
+    "verifier-integration/environment-limitations.txt": "c51a20d0eab727a709f3d024ce9c42b48245f07c",
+    "verifier-integration/main-integration.patch": "760c54fc5fd2bf0783abaab2a961cc2f3d88af4b",
+    "verifier-integration/pr238-extension.patch": "421fd1dfa3a95594b22899060794fc80ead38e4d",
+    "verifier-integration/pytest-after.txt": "fd13e6aefed3e713c5e2f985ad06d27f4c015501",
+    "verifier-integration/pytest-after.xml": "fe5309f95405955dbc0f1a36ae8a27daaab97eb8",
+    "verifier-integration/pytest-before-summary.json": "1ab7e0d68e1fb326ffeefc246da069e9f2f88b59",
+    "verifier-integration/pytest-pr-head-summary.json": "9aab65db48f68f3a5aefbd6a671256afbf6d871b",
+    "verifier-integration/source-provenance.json": "d09f77a60505fa8c5a45d11c779aee0efd96d4bb",
+    "verifier-integration/static-checks.txt": "1d80037e71d2e291e7a0cbbae6352e38e60733ba",
+    "verifier-integration/test_verify_cli.py": "1063dd09cb1962ec56ff2c568699b64326c863bf",
+    "verifier-integration/validation.json": "bc7ed70bcbcfe279a82789b88b9749d9454ca53c",
+    "verifier-integration/verify_cli_regression.txt": "e56546277840a035a0f7d8fb067335dfc91ba717"
+  },
+  "bundles": [
+    {
+      "directory": "adoption",
+      "result_summary": "HTTP MCP read-only example: 9 offline tests; 4 successful hosted read calls.",
+      "limits": "Windows observation; published card and initialize versions differ; cause not investigated.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/adoption",
+      "validation_path": "adoption/http-validation.json",
+      "validation_git_blob": "676705cc72a654ff67e9ad7022a310258cf8616c",
+      "validation_sha256": "9b9523e1eff993691d9672ab27f4e65e4307d9223b3b3e1469b41cb5c8f6b660",
+      "validation": {
+        "recorded_at": "2026-10-01T19:37:45.803323+09:00",
+        "source_reference": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+        "scope": "Community hosted MCP client example; upstream server unchanged",
+        "platform_tested": "Windows",
+        "python": "3.12.14",
+        "offline_tests": {
+          "command": "python -m unittest -v test_read_only_http_demo",
+          "test_methods": 9,
+          "failures": 0,
+          "errors": 0,
+          "network_requests": 0,
+          "basis": "Actual unittest execution; separate from live observations"
+        },
+        "live_check": {
+          "file": "live-http-read-check.json",
+          "checked_at": "2026-10-01T10:34:12.550774+00:00",
+          "successful_read_tool_calls": 4,
+          "remote_content_writes": 0,
+          "local_mcp_subprocesses": 0,
+          "financial_transactions": 0,
+          "negotiated_protocol_version": "2025-11-25",
+          "packages": {
+            "mcp": "2.2.0",
+            "httpx2": "2.13.1"
+          }
+        },
+        "observed_version_metadata": {
+          "server_card_version": "0.14.5",
+          "hosted_initialize_version": "0.13.0",
+          "match": false,
+          "cause": "Not investigated; four read calls succeeded"
+        },
+        "limits": [
+          "Windows-only live observation",
+          "No full upstream server CI",
+          "No measured external adopters",
+          "No airdrop score or eligibility established"
+        ],
+        "tested_sources": [
+          {
+            "file": "read_only_http_demo.py",
+            "sha256": "d13c7a3994956f8ba81672be908098fe8638c70ecf62d4fe9cc99d239a574674"
+          },
+          {
+            "file": "test_read_only_http_demo.py",
+            "sha256": "ddd20410a4b7b74ad17ac32fcc8d6150b463042499286786d73036547a6cc09f"
+          },
+          {
+            "file": "requirements-http.txt",
+            "sha256": "01c771571873832ab0a9b1814fe45ca6d3b8cae24425c2c60102663ea5e11b70"
+          }
+        ]
+      }
+    },
+    {
+      "directory": "redirect-review",
+      "result_summary": "PR944 native urllib redirects: main11/27, candidate27/27 expected outcomes.",
+      "limits": "Loopback origins; no Worker or full server CI.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/redirect-review",
+      "validation_path": "redirect-review/validation.json",
+      "validation_git_blob": "ead3df63b3df9ab0759b3c625176cbea9b966a49",
+      "validation_sha256": "22632992bd6b16b14a11f45b13f3fa8500f008b14e4f802a0f1b00430efdda13",
+      "validation": {
+        "recorded_at": "2026-10-03T22:26:51.010340+09:00",
+        "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+        "pr_head": "82db3e9936860cfc2c3eff0a4cea98385dd93a29",
+        "pr_url": "https://github.com/flop-labs/technocore-chat/pull/944",
+        "same_checker_sha256": "7bbaa865340d908acb27932b3f4663d92fdb8e2db9dac20b6e747edca7a34676",
+        "before": {
+          "checked_at": "2026-10-03T13:24:46.760768+00:00",
+          "cases": 27,
+          "passed": 11,
+          "failed": 16
+        },
+        "after": {
+          "checked_at": "2026-10-03T13:24:48.030062+00:00",
+          "cases": 27,
+          "passed": 27,
+          "failed": 0
+        },
+        "source_files_git_blob_verified": 8,
+        "matching_before_after_case_order": true,
+        "production_key_used": false,
+        "hosted_service_writes": 0,
+        "full_upstream_ci": false,
+        "worker_runtime_tested": false,
+        "upstream_adoption": "unconfirmed",
+        "airdrop_eligibility": "unconfirmed",
+        "test_design_correction": "Initial HEAD preservation assumption was corrected to read-only following, preserving observed HEAD-to-GET behavior in final reports. Candidate unchanged."
+      }
+    },
+    {
+      "directory": "ci-notice-review",
+      "result_summary": "PR735 notice race: 16 controls pass; one invariant fails in 5 repetitions.",
+      "limits": "Embedded job scripts with an in-memory API; not a production incident. Author later explicitly credited renhi's interleaving.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/ci-notice-review",
+      "validation_path": "ci-notice-review/validation.json",
+      "validation_git_blob": "38c17d3842a0b2352c5ded1861cfcab8e882e1b9",
+      "validation_sha256": "6eff355244f231c85b395660ab14519653828cfc65b2cd8d19b5d31eac5af0e8",
+      "validation": {
+        "checked_at": "2026-10-04T04:46:09.789Z",
+        "pr": 735,
+        "head": "f45dd7b9229c3c6636c477d49087a2c03c80dcfa",
+        "source_sha256": "52fc6e8e5952ca7827b57782081e2aa945f2e46824cbd8fd66ed46bf57126238",
+        "checker_sha256": "8e539db49bb47d935fbdf179043107d9b47abd71309f92045059a2eb3cf0bab3",
+        "cases": 17,
+        "passed": 16,
+        "failed_invariants": 1,
+        "deterministic_failing_repetitions": 5,
+        "production_incident_established": false,
+        "patch_proposed": false,
+        "full_upstream_ci": false,
+        "real_api_mutations": 0,
+        "airdrop_eligibility": "unconfirmed"
+      }
+    },
+    {
+      "directory": "reader-review",
+      "result_summary": "Issue919 reader: 10 controls pass; 7 additional safety requirements unmet.",
+      "limits": "Scripted input; not seven confirmed production bugs.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/reader-review",
+      "validation_path": "reader-review/validation.json",
+      "validation_git_blob": "baed0671387cc9d42a8a3a02e9b9fd29a4360f1e",
+      "validation_sha256": "ba4dbb092f2f69e0008d4d588d4bf57e2bd73e660070e23a3588dc2294e60241",
+      "validation": {
+        "checked_at": "2026-10-04T15:44:07.920Z",
+        "node": "v24.19.0",
+        "platform": "win32",
+        "source_url": "https://github.com/flop-labs/technocore-chat/issues/919#issuecomment-5980922352",
+        "source_comment_id": 5980922352,
+        "source_body_sha256": "301e6fc88bdaf9de2eb85c8f3c140bd5d8b63bdf515451b1179661d272a7a50c",
+        "reader_sha256": "88a0b98a362577ded0eb19a6a0524d40dabbe9e25ddaa96be26b46a95715149a",
+        "checker_sha256": "defddd2f97f142e1ce50e85f930e8c67e325b3e360d9e2f149b924535c11319e",
+        "tests": 17,
+        "passed": 10,
+        "failed": 7,
+        "real_network_requests": 0,
+        "production_incident_established": false,
+        "patch_proposed": false,
+        "full_upstream_ci": false,
+        "airdrop_eligibility": "unconfirmed",
+        "scope": "10 controls pass; 7 additional consumer-safety requirements unmet, not seven established production bugs",
+        "raw_source_redistributed": false,
+        "rate_limit_fixture": "429 with Retry-After 60 produces three export attempts with no delay/defer mechanism"
+      }
+    },
+    {
+      "directory": "healthz-review",
+      "result_summary": "PR957 healthz response-body guard: main6/9, candidate9/9.",
+      "limits": "Native Node loopback HTTP; in-memory cache and supplied routing binding, not Cloudflare deployment.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/healthz-review",
+      "validation_path": "healthz-review/validation.json",
+      "validation_git_blob": "fc99fe4a35b9261e17ff10bad9ab441e1ec68fb9",
+      "validation_sha256": "7efd0b945006765e958f858181a6134cb1e94912f50a5996c887641134beb7df",
+      "validation": {
+        "started_at": "2026-10-05T09:06:23.245Z",
+        "completed_at": "2026-10-05T09:06:39.630Z",
+        "node": "v24.19.0",
+        "platform": "win32",
+        "origin_timeout_ms_unchanged": 8000,
+        "native_fetch_used": true,
+        "loopback_only": true,
+        "remote_service_requests": 0,
+        "routing_binding_supplied": true,
+        "cache_api_in_memory": true,
+        "cloudflare_runtime_executed": false,
+        "full_upstream_ci": false,
+        "new_patch_proposed": false,
+        "airdrop_eligibility": "unconfirmed",
+        "checker_sha256": "35bf13c39c3dbd83c5c79dfffdfb99506413005a16f80ab7621441d74465b659",
+        "summaries": {
+          "before": {
+            "tests": 9,
+            "passed": 6,
+            "failed": 3
+          },
+          "after": {
+            "tests": 9,
+            "passed": 9,
+            "failed": 0
+          }
+        },
+        "pr": 957,
+        "candidate": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+        "report_verified": true,
+        "upstream_acceptance": "unconfirmed"
+      }
+    },
+    {
+      "directory": "verifier-integration",
+      "result_summary": "PR238 companion integration on pinned main: original18/139, proposed139/139; 179 CLI invocations per version.",
+      "limits": "Proposed companion patch; not incorporated into the checked PR. Full Linux coverage/type gates not passed.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/verifier-integration",
+      "validation_path": "verifier-integration/validation.json",
+      "validation_git_blob": "bc7ed70bcbcfe279a82789b88b9749d9454ca53c",
+      "validation_sha256": "fd67efb40aed1ef3d7f44602e1b2ebb6f201fcbc493eda3ad8a2fc00c2c4dbcf",
+      "validation": {
+        "checked_at": "2026-10-06T12:05:33.541005+00:00",
+        "platform": "Windows",
+        "python": "3.12.14",
+        "dependency_environment": "Latest-main uv.lock, uv sync --frozen --python <existing CPython 3.12.14> --no-managed-python",
+        "target": "main 0e47f770b13cc27e1e2e199d4cdf70a4778c97cc + proposed verifier and integrated regressions",
+        "before_original_verifier_on_current_main": {
+          "tests": 139,
+          "failures": 121,
+          "errors": 0,
+          "skipped": 0,
+          "passed": 18,
+          "seconds": 46.642
+        },
+        "after_current_main_integration": {
+          "tests": 139,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "passed": 139,
+          "seconds": 48.351
+        },
+        "stale_pr_head_plus_extension": {
+          "tests": 139,
+          "failures": 120,
+          "errors": 0,
+          "skipped": 0,
+          "passed": 19,
+          "seconds": 28.355
+        },
+        "test_design": {
+          "pytest_items": 139,
+          "original_methods": 9,
+          "original_cli_cases": 47,
+          "terminal_server_cli_comparisons": 128,
+          "original_nonce_spelling_tests": 2,
+          "nonce_cli_invocations": 4,
+          "total_cli_invocations_after": 179,
+          "total_cli_invocations_before": 179,
+          "stale_pr_cli_invocations": 59,
+          "note": "The stale head fails 120 assertions against its obsolete server verifier before invoking the CLI for those cases."
+        },
+        "scope": {
+          "live_writes": 0,
+          "hosted_service_requests_by_tests": 0,
+          "user_identity_accessed": false,
+          "keys": "disposable in-memory Ed25519 keys",
+          "upstream_ci_run": false,
+          "full_repository_tests_passed": false,
+          "full_type_checks_passed": false,
+          "official_pr_updated": false,
+          "new_pr_created": false,
+          "upstream_comment_posted": false,
+          "official_adoption": "unconfirmed",
+          "airdrop_eligibility": "unconfirmed"
+        },
+        "checks": {
+          "frozen_dependencies": "installed",
+          "ruff_check": "passed",
+          "ruff_format": "passed",
+          "core_size_caps": "passed",
+          "main_patch_apply_check": "passed",
+          "pr_extension_reverse_apply_check": "passed",
+          "diff_whitespace": "passed",
+          "ty_check": "blocked before analysis by sandbox Windows canonicalization denial",
+          "full_coverage_suite": "attempted; 19 collection errors due missing Linux fcntl; no suite verdict",
+          "coverage_report": "not meaningful after collection failure; below project floor",
+          "linux_ci": "not run; no local Linux installation and current gh OAuth scopes do not include workflow"
+        },
+        "recommended_integration": "Rebase existing PR to verified current main; then apply pr238-extension.patch. Alternatively main-integration.patch carries the original proposed script plus correction and tests onto pinned current main. Do not apply both patches."
+      }
+    },
+    {
+      "directory": "receipts-review",
+      "result_summary": "Issue965 external receipt auditor: original34/76, proposal76/76; 49 combined unittest methods pass.",
+      "limits": "Synthetic producer-compatible records; no real server write admission. Recovery can require 19 signature checks.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/receipts-review",
+      "validation_path": "receipts-review/validation.json",
+      "validation_git_blob": "af8c4e0fd038b78cc5745ca6c2dd2e422670de5a",
+      "validation_sha256": "f50287f9d99373d9731df755efb756f430df82df7e758d278a090c5e6d81f962",
+      "validation": {
+        "checked_at": "2026-10-06T12:20:44.413572+00:00",
+        "target_repository": "HE-Lingfeng/technocore-receipts",
+        "target_commit": "e07820196035ce60aa34408052550ce11518a659",
+        "issue": 965,
+        "platform": "Windows",
+        "python": "3.12.14",
+        "cryptography": "50.0.1",
+        "baseline_existing_tests": 40,
+        "patched_existing_plus_new_methods": 49,
+        "new_test_methods": 9,
+        "new_fixture_cases": 76,
+        "baseline_matched": 34,
+        "baseline_mismatches": 42,
+        "proposed_matched": 76,
+        "proposed_mismatches": 0,
+        "patch_apply_check": 0,
+        "original_test_files_preserved": true,
+        "recovery_bound": "At most 19 total Ed25519 checks per integer record; explicit nonce strings are never padded.",
+        "producer_validation": "Original 007 tuple passes actual upstream didkey.verify; JSON record shape and int conversion follow pinned app/store source; whole server write admission is not executed.",
+        "limits": {
+          "live_requests_by_tests": 0,
+          "live_writes": 0,
+          "user_keys_accessed": false,
+          "upstream_source_changed": false,
+          "new_pr_created": false,
+          "upstream_comment_posted": false,
+          "full_official_server_ci_run": false,
+          "financial_or_rules_changes": false,
+          "performance_benchmark_run": false,
+          "official_adoption": "unconfirmed",
+          "airdrop_eligibility": "unconfirmed"
+        },
+        "original_suite_source": "40 pre-existing tests belong to HE-Lingfeng; independent rerun, not newly authored cases",
+        "failure_interpretation": "42 unmet assertions are multiple manifestations and recovery-bound expectations around one missing nonce-spelling recovery path, not 42 bugs."
+      }
+    },
+    {
+      "directory": "signer-encoding-review",
+      "result_summary": "PR966 signer encoding: original14/20 process successes, candidate20/20; 34 valid and 34 altered signatures checked.",
+      "limits": "Forced stdout codecs in 40 captured child processes, not physical IME or default-console detection.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/signer-encoding-review",
+      "validation_path": "signer-encoding-review/validation.json",
+      "validation_git_blob": "20202efe483508a339f24ee004397ad033f1254e",
+      "validation_sha256": "77bdda092281727ca79d83fe72abff1d14f70a71c385b716be5fafaa4ffb678a",
+      "validation": {
+        "checked_at": "2026-10-07T00:17:49.108429+00:00",
+        "target_pr": "https://github.com/flop-labs/technocore-chat/pull/966",
+        "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+        "pr_head": "6f3b7cb6f9e53676da8807d17e4d5cfbd3a6f922",
+        "prs": {
+          "238": {
+            "state": "open",
+            "merged": false,
+            "head": "93bdfd0331de9c30c2693141a0ce166cfb69f186",
+            "base": "019b57ad8ea051e44411f465e366c163536e71fc"
+          },
+          "735": {
+            "state": "open",
+            "merged": false,
+            "head": "f45dd7b9229c3c6636c477d49087a2c03c80dcfa",
+            "base": "e4c4f73f3b28612d7161170b11e08e580b02123a"
+          },
+          "944": {
+            "state": "open",
+            "merged": false,
+            "head": "82db3e9936860cfc2c3eff0a4cea98385dd93a29",
+            "base": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc"
+          },
+          "957": {
+            "state": "open",
+            "merged": false,
+            "head": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+            "base": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc"
+          },
+          "966": {
+            "state": "open",
+            "merged": false,
+            "head": "6f3b7cb6f9e53676da8807d17e4d5cfbd3a6f922",
+            "base": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc"
+          }
+        },
+        "source_blobs_verified": true,
+        "process_runs": 40,
+        "base_encoding_failures": 6,
+        "candidate_successes": 20,
+        "signature_checks": 34,
+        "tamper_rejections": 34,
+        "note_consumer_assertions": 42,
+        "korean_say_set_successes": 20,
+        "checks": [
+          {
+            "tool": "ruff check",
+            "exit_code": 0,
+            "output": "All checks passed!"
+          },
+          {
+            "tool": "ruff format --check",
+            "exit_code": 0,
+            "output": "1 file already formatted"
+          }
+        ],
+        "check_scope": "Independent checker only",
+        "full_repository_ci": "Not run: Linux server imports require fcntl",
+        "upstream_source_changed": false,
+        "upstream_comment_posted": false,
+        "official_adoption": "unconfirmed",
+        "airdrop_eligibility": "unconfirmed"
+      }
+    },
+    {
+      "directory": "export-framing-review",
+      "result_summary": "PR842 export framing: original14/20, proposal19/20.",
+      "limits": "Missing final chunk terminator remains unresolved; not a complete backup/framing fix. AST wrapper bodies unchanged; SDK boundary supplied.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/export-framing-review",
+      "validation_path": "export-framing-review/validation.json",
+      "validation_git_blob": "834d682f1f723955defe253e312547df4bdcb103",
+      "validation_sha256": "1aea64dc65ac76f70028ee7bfcdb0b95e7da113ff717631ee58284ca79205116",
+      "validation": {
+        "checked_at": "2026-10-07T00:46:05.994618+00:00",
+        "pr": 842,
+        "head": "7dd9c8f7353bc21ce54a945aceb40a5761eb9a47",
+        "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+        "state": "open",
+        "merged": false,
+        "cases_per_version": 20,
+        "before_matched": 14,
+        "before_mismatches": 6,
+        "after_matched": 19,
+        "after_mismatches": 1,
+        "corrected_cases": [
+          "cut_mid_line",
+          "cut_at_boundary",
+          "cut_empty",
+          "chunked_mid_chunk",
+          "cut_refusal429"
+        ],
+        "unresolved_cases": [
+          "chunked_no_end"
+        ],
+        "patch_scope": "Natural EOF Content-Length enforcement plus HTTPException translation in CPython export only",
+        "framing_limitation": "Chunked missing final zero chunk can still be accepted by HTTPResponse line iteration; patch is not a complete framing fix",
+        "request_count_each_case": 1,
+        "automatic_retries": 0,
+        "native_loopback_http": true,
+        "wrapper_ast_bodies_unchanged": true,
+        "socket_timeout_seconds": 0.2,
+        "total_wall_clock_deadline_claimed": false,
+        "full_mcp_sdk_run": false,
+        "full_repository_ci": false,
+        "linux_server_run": false,
+        "cloudflare_runtime_run": false,
+        "original_project_test_module_run": false,
+        "upstream_source_modified": false,
+        "production_identity_key_accessed": false,
+        "remote_service_requests": 0,
+        "checks": [
+          {
+            "tool": "native HTTP before",
+            "exit_code": 1,
+            "output": "20 native HTTP cases: 14 matched / 6 mismatched\ncut_mid_line success expected tool_error\ncut_at_boundary success expected tool_error\ncut_empty success expected tool_error\nchunked_no_end success expected tool_error\nchunked_mid_chunk untranslated_IncompleteRead expected tool_error\ncut_refusal429 untranslated_IncompleteRead expected tool_error",
+            "nonzero_expected": "Six baseline failures"
+          },
+          {
+            "tool": "native HTTP after",
+            "exit_code": 1,
+            "output": "20 native HTTP cases: 19 matched / 1 mismatched\nchunked_no_end success expected tool_error",
+            "nonzero_expected": "One intentionally documented unresolved chunked framing failure"
+          },
+          {
+            "tool": "ruff check",
+            "exit_code": 0,
+            "output": "All checks passed!"
+          },
+          {
+            "tool": "ruff format --check",
+            "exit_code": 0,
+            "output": "2 files already formatted"
+          },
+          {
+            "tool": "git apply --check on pinned source",
+            "exit_code": 0
+          }
+        ],
+        "official_adoption": "unconfirmed",
+        "airdrop_eligibility": "unconfirmed"
+      }
+    },
+    {
+      "directory": "ipv6-bind-review",
+      "result_summary": "PR946 binding: 7 listener styles and 36 expected checks pass in each version; 70 real MCP HTTP requests.",
+      "limits": "127.1 unsupported in both. Bracketed IPv6 startup failure does not reproduce on Windows; compatibility evidence, not causal fix evidence.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/ipv6-bind-review",
+      "validation_path": "ipv6-bind-review/validation.json",
+      "validation_git_blob": "df4513bfd3ee7ab9f5a6126d035640f4badb7142",
+      "validation_sha256": "c47cb733c215c18337e58ac7a8c792c778ab757a171741727ae40bd869aba66e",
+      "validation": {
+        "recorded_at": "2026-10-08T03:35:48.879648+00:00",
+        "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+        "head": "509de7dca711098ac40b2cdd7dea9cd09d79a0c3",
+        "pr": 946,
+        "scenarios_per_version": 8,
+        "successful_listener_styles_per_version": 7,
+        "mcp_http_requests_per_version": 35,
+        "checks_per_version": 36,
+        "tool_count": 13,
+        "bracketed_startup_failure_reproduced_on_this_windows": false,
+        "shorthand_ipv4_unsupported_in_both_versions": true,
+        "source_modified": false,
+        "production_key_access": 0,
+        "upstream_http_requests": 0,
+        "tool_calls": 0,
+        "linux_ci": false,
+        "cloudflare_runtime": false,
+        "full_upstream_ci": false,
+        "exact_pr_original_tests_run": false,
+        "sdk_and_uvicorn_substituted": false,
+        "checks": {
+          "ruff_check": {
+            "exit_code": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": ""
+          },
+          "ruff_format": {
+            "exit_code": 0,
+            "stdout": "1 file already formatted\n",
+            "stderr": ""
+          }
+        },
+        "official_adoption": "unconfirmed",
+        "airdrop_eligibility": "unconfirmed",
+        "artifact_sha256": {
+          "check_native_bind.py": "33d28903975b73799a7aaeef93901d3fffdaab2a3c1a7628873df3dcbb88f384",
+          "native-results.json": "a92f9c41238629975ed9124b6faa218de4b3a2db19eda6806ead622403347839",
+          "source-provenance.json": "c2914167b591daa317fb1e078a598a095bc7e714f34f6a72e4452c0c55e55a16"
+        }
+      }
+    },
+    {
+      "directory": "nonce-transport-review",
+      "result_summary": "PR930 nonce recovery: main18/27, candidate27/27; 78 origin signatures and 78 altered canonicals checked.",
+      "limits": "Real MCP/urllib/PyNaCl against a scripted loopback origin, not production ownership/store/concurrent-isolate behavior.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/nonce-transport-review",
+      "validation_path": "nonce-transport-review/validation.json",
+      "validation_git_blob": "907cb287f03c26837ad717042b96f129cff1af8c",
+      "validation_sha256": "580d47528bdf685f85996bf7e494549a84354b5b14d7c592d033544dac6ffac0",
+      "validation": {
+        "recorded_at": "2026-10-09T08:18:58.822070+00:00",
+        "pr": 930,
+        "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+        "head": "f2eb208eb6fdf150cf7aaac161d1b196f68f8676",
+        "cases_per_version": 27,
+        "before_matched": 18,
+        "before_mismatches": 9,
+        "after_matched": 27,
+        "after_mismatches": 0,
+        "actual_mcp_http_requests": 62,
+        "actual_origin_http_posts": 78,
+        "signatures_verified": 78,
+        "tampered_canonical_rejected": 78,
+        "source_or_sdk_replaced": false,
+        "origin_is_scripted_fixture": true,
+        "maximum_contended_attempts_in_candidate": 3,
+        "retry_429_422_409_observed": false,
+        "external_signature_re_signed": false,
+        "full_upstream_linux_ci": false,
+        "original_pr_test_modules_run": false,
+        "live_server_or_worker_tested": false,
+        "source_modified": false,
+        "production_key_access": 0,
+        "remote_service_http_requests": 0,
+        "official_adoption": "unconfirmed",
+        "airdrop_eligibility": "unconfirmed",
+        "checks": {
+          "ruff_check": {
+            "exit_code": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": ""
+          },
+          "ruff_format": {
+            "exit_code": 0,
+            "stdout": "1 file already formatted\n",
+            "stderr": ""
+          }
+        },
+        "artifact_sha256": {
+          "check_native_nonce.py": "e435c60748ee73ea4e8ac00dad747ef5f956beeb7d3092e93b03f2281099e29c",
+          "native-results.json": "aa8faf414efdd82600cd79c065359b3a7830fddb73f58a6c1dceea18d52857d0",
+          "source-provenance.json": "57bc6461fb22c6dbeb77b06da5821aba580f6d4ec69077f8c5e070b5851bcc06"
+        }
+      }
+    },
+    {
+      "directory": "header-config-review",
+      "result_summary": "PR923 config import: main175/418, candidate418/418; 836 child imports.",
+      "limits": "175 accepted,243 refused; preserves existing strip/lower convention. No full server or live proxy test.",
+      "evidence_url": "https://github.com/renhi/technocore-contribution-notes/tree/61d0f601aa63240f7e9faf242a0b84affc91be5f/header-config-review",
+      "validation_path": "header-config-review/validation.json",
+      "validation_git_blob": "d9b93cbbdaa831b005f8cf8edcee209e693c3a31",
+      "validation_sha256": "ba21e8ee537f284d57559190185daf2ef9fefd8da653384893251a775ed1b967",
+      "validation": {
+        "completed_at": "2026-10-09T13:15:52.749590+00:00",
+        "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+        "head": "58c08a469fad95e02aa0a35f32c01abcc710ddc2",
+        "pr": 923,
+        "cases_per_version": 418,
+        "native_child_process_imports": 836,
+        "expected_accepts": 175,
+        "expected_refusals": 243,
+        "before_matched": 175,
+        "before_mismatched": 243,
+        "after_matched": 418,
+        "after_mismatched": 0,
+        "before_unexpected_process_errors": 0,
+        "after_unexpected_process_errors": 0,
+        "source_blob_hashes_verified": 8,
+        "checker_matches_executed_hash": true,
+        "original_test_files_modified": false,
+        "full_repository_ci": false,
+        "full_server_or_live_proxy": false,
+        "production_key_accessed": false,
+        "remote_technocore_requests": 0,
+        "official_adoption": "unconfirmed",
+        "airdrop_eligibility": "unconfirmed",
+        "artifact_sha256": {
+          "README.md": "216124b37ae51567d56be0db42bec9060009d86839636305fb0c102396657274",
+          "check_header_config.py": "c3c11d925f5199bb788ba3f3a04e25a6e8b31afc615fa58a3e1e78dc87866d96",
+          "native-results.json": "5bffb5e6d6d306aed46863330990ffeb4da9e39e344b3fba6c0d76e3d8e0ee8b",
+          "source-provenance.json": "efe6147cec47ea42330d8d77f1e9b3b646577cee659cd47656265808947ee801"
+        }
+      }
+    }
+  ],
+  "ci_notice_author_acknowledgment": {
+    "url": "https://github.com/flop-labs/technocore-chat/pull/735#issuecomment-6079248034",
+    "author": "WIZARDspace",
+    "body_sha256": "b75016a857c77f09602f09d08fdf8848b74353e5e23b902bb4eaf667eb0f860c",
+    "scope": "Author says renhi's interleaving is covered; not proof of main merge or reward approval."
+  },
+  "credit": "Original authors and prior reviewers are credited in each linked README; renhi's work is additional validation and companion proposals."
+}

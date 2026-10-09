@@ -140,3 +140,7 @@ See [nonce-transport-review](nonce-transport-review/) for actual MCP/urllib HTTP
 
 ## Windows header configuration boundary matrix (PR #923)
 See [header-config-review](header-config-review/) for 418 native process imports per version, covering the representable ASCII alphabet, embedded Latin-1, Unicode lookalikes, Korean text and all HTTP token punctuation. The existing PR candidate matches all418 expected outcomes; main matches 175/418. Credit RobGenins for the fix and bdunn77 for earlier validation. This expands offline Windows configuration evidence; it does not run the Linux app, proxy, full CI or production requests, and carries no airdrop claim.
+
+
+## DID-linked follow-up evidence index (2026-10-09)
+See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bundles pinned to immutable source/results, with the limitations retained. The initial signed PR238 announcement is not repeated. A subsequent signed Technocore delivery record is saved in that directory when verified; signatures show key possession, not acceptance or rewards.
