@@ -132,3 +132,7 @@ See [export-framing-review](export-framing-review/) for a real Windows loopback 
 
 ## Native Windows MCP IPv6 compatibility (PR #946)
 See [ipv6-bind-review](ipv6-bind-review/) for real MCP initialize/tools-list and Host/Origin guards on seven working Windows listener spellings. Both main and PR head work here, including bracketed IPv6: the reported startup defect was NOT reproduced on this Windows machine. An eighth setting (127.1) is unsupported here in both versions. No upstream source edits, tool calls, public-service requests, Linux CI or airdrop claim.
+
+
+## Native Windows MCP nonce recovery (PR #930)
+See [nonce-transport-review](nonce-transport-review/) for actual MCP/urllib HTTP and upstream PyNaCl checks against a controlled local origin. The existing PR's recovery gap appears in nine scenarios: main18/27, candidate27/27. All78 origin signatures verify, 78 altered canonicals refuse; external signatures and tested 429/422/409 bodies are not retried. The origin is a scripted fixture, not the real Linux server. No live-service calls, user keys, source edits, full Linux CI or airdrop claim.

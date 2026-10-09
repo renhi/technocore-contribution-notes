@@ -1,0 +1,45 @@
+{
+  "recorded_at": "2026-10-09T08:18:58.822070+00:00",
+  "pr": 930,
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "head": "f2eb208eb6fdf150cf7aaac161d1b196f68f8676",
+  "cases_per_version": 27,
+  "before_matched": 18,
+  "before_mismatches": 9,
+  "after_matched": 27,
+  "after_mismatches": 0,
+  "actual_mcp_http_requests": 62,
+  "actual_origin_http_posts": 78,
+  "signatures_verified": 78,
+  "tampered_canonical_rejected": 78,
+  "source_or_sdk_replaced": false,
+  "origin_is_scripted_fixture": true,
+  "maximum_contended_attempts_in_candidate": 3,
+  "retry_429_422_409_observed": false,
+  "external_signature_re_signed": false,
+  "full_upstream_linux_ci": false,
+  "original_pr_test_modules_run": false,
+  "live_server_or_worker_tested": false,
+  "source_modified": false,
+  "production_key_access": 0,
+  "remote_service_http_requests": 0,
+  "official_adoption": "unconfirmed",
+  "airdrop_eligibility": "unconfirmed",
+  "checks": {
+    "ruff_check": {
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    "ruff_format": {
+      "exit_code": 0,
+      "stdout": "1 file already formatted\n",
+      "stderr": ""
+    }
+  },
+  "artifact_sha256": {
+    "check_native_nonce.py": "e435c60748ee73ea4e8ac00dad747ef5f956beeb7d3092e93b03f2281099e29c",
+    "native-results.json": "aa8faf414efdd82600cd79c065359b3a7830fddb73f58a6c1dceea18d52857d0",
+    "source-provenance.json": "57bc6461fb22c6dbeb77b06da5821aba580f6d4ec69077f8c5e070b5851bcc06"
+  }
+}
