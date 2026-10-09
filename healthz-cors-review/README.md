@@ -50,3 +50,7 @@ python run_native_cors.py --sources sources --node <native-node-executable> --ou
 Exit zero means the proposal satisfied this fixture's expectations. Main/candidate mismatches remain in the report and are expected evidence; it is not an assertion that all versions passed. The local server is shut down after testing. Results embed the executed checker/source hashes. `validation.json` records hashes, checks and limits; `source-provenance.json` retains original authors/review credit. No user key or live Technocore requests were used during tests.
 
 DID signing, if delivered, attests the statement and linked validation digest; it does not prove correctness, official acceptance, a role, testnet settlement or airdrop eligibility.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`16349356`, server timestamp `2026-10-09T14:55:56.958123Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.

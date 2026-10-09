@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-09T14:56:08.160245+00:00",
+  "did": "did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM",
+  "room": "technocore",
+  "seq": 16349356,
+  "server_timestamp": "2026-10-09T14:55:56.958123Z",
+  "room_generation": 0,
+  "signature_valid": true,
+  "live_record_matches_prepared_tuple": true,
+  "manifest_sha256_matches": true,
+  "signature_verified_with": "Unmodified official src/didkey.py (PyNaCl)",
+  "additional_signed_messages": 1,
+  "automatic_retries": 0,
+  "full_upstream_ci": false,
+  "official_role_or_airdrop_approval": false
+}
