@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-10-09T13:10:09.655063+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "head": "58c08a469fad95e02aa0a35f32c01abcc710ddc2",
+  "pr": 923,
+  "author": "RobGenins",
+  "pr_state": "open",
+  "merged": false,
+  "files": [
+    {
+      "lane": "before",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/config.py",
+      "git_blob": "dc1143b3d9bd66c71bebcdf729151c14e4d3ca6c",
+      "sha256": "0927bf331b631db488a542f16542bde0195ac7fc22dca01d1ebf9f070c2181e3"
+    },
+    {
+      "lane": "before",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "lane": "before",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "lane": "before",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "tests/unit/test_config_knobs.py",
+      "git_blob": "a9b750f6507e9e852eac17154387288af8492a06",
+      "sha256": "f3895cb1fee70383c3409fe3886491c7b8ef5bc563bc64eecd9599cd08bcef65"
+    },
+    {
+      "lane": "after",
+      "ref": "58c08a469fad95e02aa0a35f32c01abcc710ddc2",
+      "path": "src/config.py",
+      "git_blob": "17f92e231506863aa8f80e3e987e653f2e0d5d47",
+      "sha256": "8570bcfe42a17cafdfbb17cb8a9cb5b473544d368a5948b6e4742f47ec35df69"
+    },
+    {
+      "lane": "after",
+      "ref": "58c08a469fad95e02aa0a35f32c01abcc710ddc2",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "lane": "after",
+      "ref": "58c08a469fad95e02aa0a35f32c01abcc710ddc2",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "lane": "after",
+      "ref": "58c08a469fad95e02aa0a35f32c01abcc710ddc2",
+      "path": "tests/unit/test_config_knobs.py",
+      "git_blob": "e7fd17791fc99fcaddf76a6de227e8cf9f647497",
+      "sha256": "820be47dc1ee967f7bb3f0dd7b8d129cea5fd4f12262d219e823ed3381d3872d"
+    }
+  ],
+  "credits": [
+    "RobGenins: proposed configuration validation and project tests",
+    "bdunn77: earlier independent Linux validation"
+  ],
+  "scope": "Byte-verified source snapshots; full server and existing Linux-dependent test module are not executed."
+}

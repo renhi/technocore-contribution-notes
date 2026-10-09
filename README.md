@@ -136,3 +136,7 @@ See [ipv6-bind-review](ipv6-bind-review/) for real MCP initialize/tools-list and
 
 ## Native Windows MCP nonce recovery (PR #930)
 See [nonce-transport-review](nonce-transport-review/) for actual MCP/urllib HTTP and upstream PyNaCl checks against a controlled local origin. The existing PR's recovery gap appears in nine scenarios: main18/27, candidate27/27. All78 origin signatures verify, 78 altered canonicals refuse; external signatures and tested 429/422/409 bodies are not retried. The origin is a scripted fixture, not the real Linux server. No live-service calls, user keys, source edits, full Linux CI or airdrop claim.
+
+
+## Windows header configuration boundary matrix (PR #923)
+See [header-config-review](header-config-review/) for 418 native process imports per version, covering the representable ASCII alphabet, embedded Latin-1, Unicode lookalikes, Korean text and all HTTP token punctuation. The existing PR candidate matches all418 expected outcomes; main matches 175/418. Credit RobGenins for the fix and bdunn77 for earlier validation. This expands offline Windows configuration evidence; it does not run the Linux app, proxy, full CI or production requests, and carries no airdrop claim.

@@ -1,0 +1,31 @@
+{
+  "completed_at": "2026-10-09T13:15:52.749590+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "head": "58c08a469fad95e02aa0a35f32c01abcc710ddc2",
+  "pr": 923,
+  "cases_per_version": 418,
+  "native_child_process_imports": 836,
+  "expected_accepts": 175,
+  "expected_refusals": 243,
+  "before_matched": 175,
+  "before_mismatched": 243,
+  "after_matched": 418,
+  "after_mismatched": 0,
+  "before_unexpected_process_errors": 0,
+  "after_unexpected_process_errors": 0,
+  "source_blob_hashes_verified": 8,
+  "checker_matches_executed_hash": true,
+  "original_test_files_modified": false,
+  "full_repository_ci": false,
+  "full_server_or_live_proxy": false,
+  "production_key_accessed": false,
+  "remote_technocore_requests": 0,
+  "official_adoption": "unconfirmed",
+  "airdrop_eligibility": "unconfirmed",
+  "artifact_sha256": {
+    "README.md": "216124b37ae51567d56be0db42bec9060009d86839636305fb0c102396657274",
+    "check_header_config.py": "c3c11d925f5199bb788ba3f3a04e25a6e8b31afc615fa58a3e1e78dc87866d96",
+    "native-results.json": "5bffb5e6d6d306aed46863330990ffeb4da9e39e344b3fba6c0d76e3d8e0ee8b",
+    "source-provenance.json": "efe6147cec47ea42330d8d77f1e9b3b646577cee659cd47656265808947ee801"
+  }
+}
