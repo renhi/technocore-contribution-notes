@@ -1,0 +1,99 @@
+{
+  "retrieved_at": "2026-10-09T14:43:11.619866+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr": 754,
+  "head": "8cf6d7d71df4b62ef1c6ba99c659a440f24f6c97",
+  "author": "luch91",
+  "files": [
+    {
+      "label": "main",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "label": "main",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "label": "main",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "edge/src/worker.js",
+      "git_blob": "c20a2153bda16ac10ee94601cb9dfe7b8cf3660a",
+      "sha256": "235e491516d209b5454a5b9c0e13a1eb3158973a3d32582041044ab7a4e8dd21"
+    },
+    {
+      "label": "main",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "edge/snapshot.py",
+      "git_blob": "39e36bcd03cda797877e8018eca295c11e49dbd8",
+      "sha256": "b4ecee619f4c2f02f6118ddd530a06d8e280582f5a59efff2c506a690df04128"
+    },
+    {
+      "label": "main",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "edge/wrangler.jsonc",
+      "git_blob": "8c9dbd0a4ca6a4b3a08b0c8a395cc3ec1f216edb",
+      "sha256": "265a6dd5206fc3d1e4eb9ff9b908ac977e08fbfe2cdb12d71e89d6f692bf58fa"
+    },
+    {
+      "label": "main",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "tests/edge/test_edge_worker.py",
+      "git_blob": "6419961f17d3eac49e12d207f8bb7255e4d2d462",
+      "sha256": "e5d3d3f49243cc80b712adc96c28a33a6ca8d6d1cf57eb6f652d954c012a0735"
+    },
+    {
+      "label": "candidate",
+      "ref": "8cf6d7d71df4b62ef1c6ba99c659a440f24f6c97",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "label": "candidate",
+      "ref": "8cf6d7d71df4b62ef1c6ba99c659a440f24f6c97",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "label": "candidate",
+      "ref": "8cf6d7d71df4b62ef1c6ba99c659a440f24f6c97",
+      "path": "edge/src/worker.js",
+      "git_blob": "e9872fd602aeb389711566430203f0245302c4ba",
+      "sha256": "64cc42f19da675454fbdae0bdec132a6cadfd79161e563f62d73f5cd12270d90"
+    },
+    {
+      "label": "candidate",
+      "ref": "8cf6d7d71df4b62ef1c6ba99c659a440f24f6c97",
+      "path": "edge/snapshot.py",
+      "git_blob": "bca710cf187e653c842cea7022430de23ee00af9",
+      "sha256": "e81e35a411bbd80656730fa0f06420786dba7a5f78c42f45ec5a1843c937f5de"
+    },
+    {
+      "label": "candidate",
+      "ref": "8cf6d7d71df4b62ef1c6ba99c659a440f24f6c97",
+      "path": "edge/wrangler.jsonc",
+      "git_blob": "810f8ac610a855875a68f9d3ce9846ede9fc2130",
+      "sha256": "48987aa6181af370f7fffee157f92ec3986f0c879911e9d5be479e29241640db"
+    },
+    {
+      "label": "candidate",
+      "ref": "8cf6d7d71df4b62ef1c6ba99c659a440f24f6c97",
+      "path": "tests/edge/test_edge_worker.py",
+      "git_blob": "ae02d199644dca1daef9aecaee1068e413f01da2",
+      "sha256": "e8680295f415bc8528767dc73fdab3f224427b2902d6051092ad657bd67d8b48"
+    }
+  ],
+  "prior_finding": {
+    "author": "yukkie3276",
+    "url": "https://github.com/flop-labs/technocore-chat/pull/754#issuecomment-6073595328",
+    "body": "**`/healthz` still shares CORS response headers across allowed origins (head `8cf6d7d71df4b62ef1c6ba99c659a440f24f6c97`).**\n\nWith `CHAT_CORS_ORIGINS` containing two origins, the app's `CORSMiddleware` varies `Access-Control-Allow-Origin` and sends `Vary: Origin`. This PR forwards the caller's `Origin` on the *origin fetch*, but `edge_key()[\"/healthz\"]` is `{}` and `cacheKey()` creates a headerless URL-only `Request` for both `cache.match()` and `cache.put()`. The first caller's ACAO therefore remains in the shared cached response.\n\nI ran a bounded local Node fixture using the exact `cacheKey()`/`edgeCached()` logic at this head, a URL-keyed cache, and an origin returning `Vary: Origin`: requests from allowed origins A then B produced **one origin fetch, ACAO=A for both responses**. B's browser cannot read the otherwise permitted health response. This is the `/healthz` sibling of #743 (`/rooms`); #756's `vary: [\"Origin\"]` only covers `/rooms` and does not change `/healthz`'s empty key spec.\n\nPlease keep `/healthz` query-insensitive while handling CORS per caller (for example, an origin-neutral cached body with per-request CORS headers, or bypassing shared caching for Origin-bearing requests). A two-allowed-origin regression should assert each caller receives its own ACAO on a cache hit. No live service was touched."
+  },
+  "scope": "Windows native Node fetch with full Worker script; platform routing binding and Cache API substitute; actual Starlette CORSMiddleware loopback origin."
+}

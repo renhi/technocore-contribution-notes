@@ -1,0 +1,2772 @@
+{
+  "completed_at": "2026-10-09T14:47:27.486Z",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "source_metadata": {
+    "main": {
+      "source_sha256": "235e491516d209b5454a5b9c0e13a1eb3158973a3d32582041044ab7a4e8dd21",
+      "routing": {
+        "static_first": [
+          "/patterns.md",
+          "/skill.md"
+        ],
+        "edge_cached": {
+          "/healthz": 10
+        },
+        "edge_revalidate": {
+          "/rooms": 5
+        },
+        "edge_only": [
+          "/favicon.ico"
+        ],
+        "types": {},
+        "edge_key": {
+          "/rooms": {
+            "match": {
+              "format": "json"
+            },
+            "clamped": {
+              "limit": {
+                "min": 1,
+                "max": 200
+              }
+            }
+          }
+        }
+      }
+    },
+    "candidate": {
+      "source_sha256": "64cc42f19da675454fbdae0bdec132a6cadfd79161e563f62d73f5cd12270d90",
+      "routing": {
+        "static_first": [
+          "/patterns.md",
+          "/skill.md"
+        ],
+        "edge_cached": {
+          "/healthz": 10
+        },
+        "edge_revalidate": {
+          "/rooms": 5
+        },
+        "edge_only": [
+          "/favicon.ico"
+        ],
+        "types": {},
+        "edge_key": {
+          "/healthz": {},
+          "/rooms": {
+            "match": {
+              "format": "json"
+            },
+            "clamped": {
+              "limit": {
+                "min": 1,
+                "max": 200
+              }
+            }
+          }
+        }
+      }
+    },
+    "proposed": {
+      "source_sha256": "8866cda696ccc14aa63567f4ca74616e468193b71f66c18e87d38e2da4f1484d",
+      "routing": {
+        "static_first": [
+          "/patterns.md",
+          "/skill.md"
+        ],
+        "edge_cached": {
+          "/healthz": 10
+        },
+        "edge_revalidate": {
+          "/rooms": 5
+        },
+        "edge_only": [
+          "/favicon.ico"
+        ],
+        "types": {},
+        "edge_key": {
+          "/healthz": {},
+          "/rooms": {
+            "match": {
+              "format": "json"
+            },
+            "clamped": {
+              "limit": {
+                "min": 1,
+                "max": 200
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "checker_sha256": "e3a30c59d1ba75757e1493368c9013f642d626e1c96839f172513001be00e316",
+  "native_fetch": true,
+  "origin": "Actual Starlette CORSMiddleware + Uvicorn on loopback",
+  "origin_policy": {
+    "allowed": [
+      "https://allowed-a.example",
+      "https://allowed-b.example"
+    ],
+    "credentials": false
+  },
+  "cache_api": "In-memory substitute modeling URL and Vary request-header matching; no TTL/eviction/isolate/deployed Cache API test",
+  "complete_worker_script_executed": true,
+  "routing_binding_supplied": true,
+  "cloudflare_runtime_executed": false,
+  "actual_browser_cors_enforcement_executed": false,
+  "full_repository_ci": false,
+  "protected_user_key_used_by_tests": false,
+  "remote_technocore_requests_by_tests": 0,
+  "summaries": {
+    "main": {
+      "scenarios": 16,
+      "passed": 15,
+      "failed": 1,
+      "native_origin_requests": 31
+    },
+    "candidate": {
+      "scenarios": 16,
+      "passed": 8,
+      "failed": 8,
+      "native_origin_requests": 20
+    },
+    "proposed": {
+      "scenarios": 16,
+      "passed": 16,
+      "failed": 0,
+      "native_origin_requests": 32
+    }
+  },
+  "results": [
+    {
+      "label": "main",
+      "scenario": "no-origin-query-collapse",
+      "passed": false,
+      "failures": [
+        "origin calls3, expected1"
+      ],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "?n=2",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 2,
+          "site": null,
+          "query": "?n=%E2%98%83&x=3",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "n=1",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "n=2",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "n=%E2%98%83&x=3",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 3,
+      "cache_matches": 3,
+      "cache_hits": 0,
+      "cache_puts": 3,
+      "cache_entries": 3
+    },
+    {
+      "label": "main",
+      "scenario": "no-origin-exact-cache-hit",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "main",
+      "scenario": "allowed-a-b-a-same-key",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-b.example"
+        },
+        {
+          "position": 2,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 3,
+      "cache_hits": 1,
+      "cache_puts": 2,
+      "cache_entries": 2
+    },
+    {
+      "label": "main",
+      "scenario": "allowed-b-a-same-key",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-b.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 2,
+      "cache_hits": 0,
+      "cache_puts": 2,
+      "cache_entries": 2
+    },
+    {
+      "label": "main",
+      "scenario": "no-origin-then-allowed",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 2,
+      "cache_hits": 0,
+      "cache_puts": 2,
+      "cache_entries": 2
+    },
+    {
+      "label": "main",
+      "scenario": "allowed-then-no-origin",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 2,
+      "cache_hits": 0,
+      "cache_puts": 2,
+      "cache_entries": 2
+    },
+    {
+      "label": "main",
+      "scenario": "denied-then-allowed",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://denied.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 2,
+      "cache_hits": 0,
+      "cache_puts": 2,
+      "cache_entries": 2
+    },
+    {
+      "label": "main",
+      "scenario": "allowed-then-denied",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://denied.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 2,
+      "cache_hits": 0,
+      "cache_puts": 2,
+      "cache_entries": 2
+    },
+    {
+      "label": "main",
+      "scenario": "empty-origin-then-allowed",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 2,
+      "cache_hits": 0,
+      "cache_puts": 2,
+      "cache_entries": 2
+    },
+    {
+      "label": "main",
+      "scenario": "allowed-query-variants",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "?n=2",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-b.example"
+        },
+        {
+          "position": 2,
+          "site": "https://allowed-a.example",
+          "query": "?x=%ED%95%9C%EA%B8%80",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "n=1",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "n=2",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "x=%ED%95%9C%EA%B8%80",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 3,
+      "cache_matches": 3,
+      "cache_hits": 0,
+      "cache_puts": 3,
+      "cache_entries": 3
+    },
+    {
+      "label": "main",
+      "scenario": "allowed-same-site-repeat",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "n=1",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "main",
+      "scenario": "denied-repeat",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://denied.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "main",
+      "scenario": "head-allowed-sites",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "HEAD",
+          "extra": {},
+          "status": 200,
+          "body": "",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "?n=2",
+          "method": "HEAD",
+          "extra": {},
+          "status": 200,
+          "body": "",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-b.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "HEAD",
+          "query": "n=1",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "HEAD",
+          "query": "n=2",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "main",
+      "scenario": "preflight-allowed-sites",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "OPTIONS",
+          "extra": {
+            "Access-Control-Request-Method": "GET"
+          },
+          "status": 200,
+          "body": "OK",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Request-Private-Network",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "OPTIONS",
+          "extra": {
+            "Access-Control-Request-Method": "GET"
+          },
+          "status": 200,
+          "body": "OK",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Request-Private-Network",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-b.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "OPTIONS",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "OPTIONS",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "main",
+      "scenario": "post-not-cached",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "POST",
+          "extra": {},
+          "status": 405,
+          "body": "Method Not Allowed",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "POST",
+          "extra": {},
+          "status": 405,
+          "body": "Method Not Allowed",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-b.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "POST",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "POST",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "main",
+      "scenario": "503-not-cached",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {
+            "X-Status": "503"
+          },
+          "status": 503,
+          "body": "busy\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {
+            "X-Status": "503"
+          },
+          "status": 503,
+          "body": "busy\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 2,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "candidate",
+      "scenario": "no-origin-query-collapse",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "?n=2",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 2,
+          "site": null,
+          "query": "?n=%E2%98%83&x=3",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 3,
+      "cache_hits": 2,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "no-origin-exact-cache-hit",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "allowed-a-b-a-same-key",
+      "passed": false,
+      "failures": [
+        "request1: ACAO=https://allowed-a.example, expected https://allowed-b.example"
+      ],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-b.example"
+        },
+        {
+          "position": 2,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 3,
+      "cache_hits": 2,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "allowed-b-a-same-key",
+      "passed": false,
+      "failures": [
+        "request1: ACAO=https://allowed-b.example, expected https://allowed-a.example"
+      ],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-b.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "no-origin-then-allowed",
+      "passed": false,
+      "failures": [
+        "request1: ACAO=null, expected https://allowed-a.example"
+      ],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "allowed-then-no-origin",
+      "passed": false,
+      "failures": [
+        "request1: ACAO=https://allowed-a.example, expected null"
+      ],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "denied-then-allowed",
+      "passed": false,
+      "failures": [
+        "request1: ACAO=null, expected https://allowed-a.example"
+      ],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://denied.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "allowed-then-denied",
+      "passed": false,
+      "failures": [
+        "request1: ACAO=https://allowed-a.example, expected null"
+      ],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "empty-origin-then-allowed",
+      "passed": false,
+      "failures": [
+        "request1: ACAO=null, expected https://allowed-a.example"
+      ],
+      "observations": [
+        {
+          "position": 0,
+          "site": "",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "allowed-query-variants",
+      "passed": false,
+      "failures": [
+        "request1: ACAO=https://allowed-a.example, expected https://allowed-b.example"
+      ],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "?n=2",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-b.example"
+        },
+        {
+          "position": 2,
+          "site": "https://allowed-a.example",
+          "query": "?x=%ED%95%9C%EA%B8%80",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 3,
+      "cache_hits": 2,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "allowed-same-site-repeat",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "denied-repeat",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://denied.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "candidate",
+      "scenario": "head-allowed-sites",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "HEAD",
+          "extra": {},
+          "status": 200,
+          "body": "",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "?n=2",
+          "method": "HEAD",
+          "extra": {},
+          "status": 200,
+          "body": "",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-b.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "HEAD",
+          "query": "n=1",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "HEAD",
+          "query": "n=2",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "candidate",
+      "scenario": "preflight-allowed-sites",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "OPTIONS",
+          "extra": {
+            "Access-Control-Request-Method": "GET"
+          },
+          "status": 200,
+          "body": "OK",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Request-Private-Network",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "OPTIONS",
+          "extra": {
+            "Access-Control-Request-Method": "GET"
+          },
+          "status": 200,
+          "body": "OK",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Request-Private-Network",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-b.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "OPTIONS",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "OPTIONS",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "candidate",
+      "scenario": "post-not-cached",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "POST",
+          "extra": {},
+          "status": 405,
+          "body": "Method Not Allowed",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "POST",
+          "extra": {},
+          "status": 405,
+          "body": "Method Not Allowed",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-b.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "POST",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "POST",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "candidate",
+      "scenario": "503-not-cached",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {
+            "X-Status": "503"
+          },
+          "status": 503,
+          "body": "busy\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {
+            "X-Status": "503"
+          },
+          "status": 503,
+          "body": "busy\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 2,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "no-origin-query-collapse",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "?n=2",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 2,
+          "site": null,
+          "query": "?n=%E2%98%83&x=3",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 3,
+      "cache_hits": 2,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "proposed",
+      "scenario": "no-origin-exact-cache-hit",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 1,
+      "cache_matches": 2,
+      "cache_hits": 1,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "proposed",
+      "scenario": "allowed-a-b-a-same-key",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-b.example"
+        },
+        {
+          "position": 2,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 3,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "allowed-b-a-same-key",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-b.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "no-origin-then-allowed",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 1,
+      "cache_hits": 0,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "proposed",
+      "scenario": "allowed-then-no-origin",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "public, max-age=0, s-maxage=10",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 1,
+      "cache_hits": 0,
+      "cache_puts": 1,
+      "cache_entries": 1
+    },
+    {
+      "label": "proposed",
+      "scenario": "denied-then-allowed",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://denied.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "allowed-then-denied",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://denied.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "empty-origin-then-allowed",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "allowed-query-variants",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "?n=2",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-b.example"
+        },
+        {
+          "position": 2,
+          "site": "https://allowed-a.example",
+          "query": "?x=%ED%95%9C%EA%B8%80",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 3,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "allowed-same-site-repeat",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "denied-repeat",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": "https://denied.example",
+          "query": "",
+          "method": "GET",
+          "extra": {},
+          "status": 200,
+          "body": "ok\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://denied.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "https://denied.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "head-allowed-sites",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "?n=1",
+          "method": "HEAD",
+          "extra": {},
+          "status": 200,
+          "body": "",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "?n=2",
+          "method": "HEAD",
+          "extra": {},
+          "status": 200,
+          "body": "",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": "https://allowed-b.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "HEAD",
+          "query": "n=1",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "HEAD",
+          "query": "n=2",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "preflight-allowed-sites",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "OPTIONS",
+          "extra": {
+            "Access-Control-Request-Method": "GET"
+          },
+          "status": 200,
+          "body": "OK",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Request-Private-Network",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "OPTIONS",
+          "extra": {
+            "Access-Control-Request-Method": "GET"
+          },
+          "status": 200,
+          "body": "OK",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Request-Private-Network",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-b.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "OPTIONS",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "OPTIONS",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "post-not-cached",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": "https://allowed-a.example",
+          "query": "",
+          "method": "POST",
+          "extra": {},
+          "status": 405,
+          "body": "Method Not Allowed",
+          "acao": "https://allowed-a.example",
+          "vary": "Origin",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-a.example"
+        },
+        {
+          "position": 1,
+          "site": "https://allowed-b.example",
+          "query": "",
+          "method": "POST",
+          "extra": {},
+          "status": 405,
+          "body": "Method Not Allowed",
+          "acao": "https://allowed-b.example",
+          "vary": "Origin",
+          "cache_control": null,
+          "expectedOrigin": "https://allowed-b.example"
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "POST",
+          "query": "",
+          "origin": "https://allowed-a.example",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "POST",
+          "query": "",
+          "origin": "https://allowed-b.example",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 0,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    },
+    {
+      "label": "proposed",
+      "scenario": "503-not-cached",
+      "passed": true,
+      "failures": [],
+      "observations": [
+        {
+          "position": 0,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {
+            "X-Status": "503"
+          },
+          "status": 503,
+          "body": "busy\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        },
+        {
+          "position": 1,
+          "site": null,
+          "query": "",
+          "method": "GET",
+          "extra": {
+            "X-Status": "503"
+          },
+          "status": 503,
+          "body": "busy\n",
+          "acao": null,
+          "vary": "Origin",
+          "cache_control": "no-store",
+          "expectedOrigin": null
+        }
+      ],
+      "origin_requests": [
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        },
+        {
+          "method": "GET",
+          "query": "",
+          "origin": "",
+          "probe": "native-cors-boundary"
+        }
+      ],
+      "fetches": 2,
+      "cache_matches": 2,
+      "cache_hits": 0,
+      "cache_puts": 0,
+      "cache_entries": 0
+    }
+  ],
+  "python_fixture_source": "run_native_cors.py",
+  "local_origin_thread_shutdown_confirmed": true
+}

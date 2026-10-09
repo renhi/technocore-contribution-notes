@@ -1,0 +1,25 @@
+--- a/edge/src/worker.js
++++ b/edge/src/worker.js
+@@ -140,7 +140,10 @@
+ async function edgeCached(request, pathname, seconds) {
+   const cache = caches.default;
+   const key = cacheKey(new URL(request.url), pathname) ?? request;
+-  const hit = await cache.match(key);
++  // Origin-bearing replies carry caller-specific CORS headers. Keep them outside
++  // the shared health cache, while retaining the query-insensitive origin URL.
++  const callerSpecific = request.headers.has("Origin");
++  const hit = callerSpecific ? undefined : await cache.match(key);
+   if (hit) return hit;
+ 
+   let fresh;
+@@ -173,8 +176,8 @@
+     // this copy. A bare `max-age` would let a browser, a monitoring client or a downstream
+     // proxy reuse `ok` without contacting the edge at all — liveness staleness outside
+     // Cloudflare's control, and beyond the reach of a purge.
+-    headers.set("Cache-Control", `public, max-age=0, s-maxage=${seconds}`);
+-    await cache.put(key, new Response(body, { status: 200, headers }));
++    headers.set("Cache-Control", callerSpecific ? "no-store" : `public, max-age=0, s-maxage=${seconds}`);
++    if (!callerSpecific) await cache.put(key, new Response(body, { status: 200, headers }));
+     return new Response(body, { status: 200, headers });
+   }
+   return fresh;

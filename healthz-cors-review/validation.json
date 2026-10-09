@@ -1,0 +1,52 @@
+{
+  "completed_at": "2026-10-09T14:53:37.532413+00:00",
+  "target_pr": 754,
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "head": "8cf6d7d71df4b62ef1c6ba99c659a440f24f6c97",
+  "summaries": {
+    "main": {
+      "scenarios": 16,
+      "passed": 15,
+      "failed": 1,
+      "native_origin_requests": 31
+    },
+    "candidate": {
+      "scenarios": 16,
+      "passed": 8,
+      "failed": 8,
+      "native_origin_requests": 20
+    },
+    "proposed": {
+      "scenarios": 16,
+      "passed": 16,
+      "failed": 0,
+      "native_origin_requests": 32
+    }
+  },
+  "native_health_http_requests": 83,
+  "source_git_blobs_verified": 12,
+  "checks": {
+    "executed_checker_and_worker_hashes_match": true,
+    "python_checker_ruff_lint_and_format": "passed",
+    "node_checker_and_proposed_worker_syntax": "passed",
+    "patch_git_apply_check_on_pinned_candidate": "passed (LF patch bytes)",
+    "loopback_origin_stopped": true
+  },
+  "artifact_sha256": {
+    "check_cors_cache.mjs": "e3a30c59d1ba75757e1493368c9013f642d626e1c96839f172513001be00e316",
+    "run_native_cors.py": "55732ea824b5b3713524be80524fdc78213d2821949833d49796263bac14b71e",
+    "cors-cache-bypass.patch": "9fe9214d3763dac116632771229c746624508365b166ce59af3397b460c65dec",
+    "native-results.json": "45118b6a65b0a76c2107ab6d25281ce928471773c9c6e3b35fc5cc2bd60208b2",
+    "source-provenance.json": "538c98959d022f1887d5cbdd759153a72173070d5a2ca27fe721d57c24462c7a"
+  },
+  "scope": "Complete Worker module; generated routing; real native fetch to Starlette CORS loopback origin; Vary-aware substitute cache.",
+  "credit": "luch91 original patch; yukkie3276 prior CORS/cache finding; renhi independent local regression and companion bypass proposal.",
+  "full_upstream_ci": false,
+  "cloudflare_runtime_or_deployment": false,
+  "actual_browser_cors_enforcement": false,
+  "cache_ttl_eviction_isolate_validation": false,
+  "live_technocore_test_requests": 0,
+  "user_key_used_by_tests": false,
+  "official_acceptance_or_airdrop_eligibility": false,
+  "tradeoff": "Origin-bearing GETs bypass shared cache and reach origin each time; 32 versus20 native health requests in this fixture."
+}

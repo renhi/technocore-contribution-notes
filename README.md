@@ -144,3 +144,7 @@ See [header-config-review](header-config-review/) for 418 native process imports
 
 ## DID-linked follow-up evidence index (2026-10-09)
 See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bundles pinned to immutable source/results, with the limitations retained. The initial signed PR238 announcement is not repeated. A subsequent signed Technocore delivery record is saved in that directory when verified; signatures show key possession, not acceptance or rewards.
+
+
+## Native local-origin CORS/cache review (2026-10-09)
+[PR754 regression and companion proposal](healthz-cors-review/) extends yukkie3276's prior finding on luch91's query-key change. Real Starlette CORS origin and full Worker module, with a Vary-aware substitute cache: main15/16, PR8/16, proposal16/16. The eight candidate mismatches manifest one known gap. Origin-bearing bypass increases upstream requests. Cloudflare deployment, browser enforcement and full Linux CI were not run; no acceptance or rewards are claimed.
