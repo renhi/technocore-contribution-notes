@@ -35,3 +35,7 @@ Native Windows CPython urllib sockets and full standalone example execution were
 The exact DID line check fits the current text note banner/value/footer layout, but is not cryptographic ownership evidence. This is a demonstration completion check, not a robust resumable client. Persistent key safety, rollback and ambiguous delivery remain outside the change. The original author should review the proposal, add actual-server failure-path integration where appropriate, and run repository gates before incorporation. No new PR, author comment or CI workflow was created for this contribution; no adoption is claimed.
 
 Original example/protocol credit remains with xamdkx and the project. Independent tests/proposal were prepared by renhi with Codex. No official role, settled testnet computing or airdrop qualification is implied. `source-provenance.json`, `before.json`, `after.json` and `validation.json` retain hashes and limits; the separately authorized public DID summary and its verified receipt will be appended after delivery.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`16576503`, server timestamp `2026-10-10T12:07:36.523306Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.

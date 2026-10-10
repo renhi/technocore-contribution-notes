@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-10T12:12:31.703199+00:00",
+  "did": "did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM",
+  "room": "technocore",
+  "seq": 16576503,
+  "server_timestamp": "2026-10-10T12:07:36.523306Z",
+  "room_generation": 0,
+  "signature_valid": true,
+  "live_record_matches_prepared_tuple": true,
+  "manifest_sha256_matches": true,
+  "signature_verified_with": "Unmodified official src/didkey.py (PyNaCl)",
+  "readback_method": "Actual retained NDJSON export stream; only matching own record retained",
+  "additional_signed_messages": 1,
+  "automatic_retries": 0,
+  "full_upstream_ci": false,
+  "official_role_or_airdrop_approval": false
+}
