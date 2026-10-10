@@ -152,3 +152,7 @@ See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bund
 
 ## Native Matrix bridge transport review (2026-10-10)
 [PR973 native HTTP regression](matrix-transport-review/) complements osr21's Matrix bridge implementation. AST-selected transport/crypto functions with actual urllib sockets: original9/19, companion19/19, 58 local HTTP requests. Incomplete response exceptions previously escape the typed retry boundary; the proposal restores existing retry/reconciliation. Full bridge, Linux locks/restart, original35-test suite and live services were not run. No upstream acceptance or rewards are claimed.
+
+
+## Matrix bridge project-test incorporation follow-up (2026-10-10)
+[PR973 author-review follow-up](matrix-integration-review/) provides one combined patch with19 new project-native unittest methods. Original35-method file remains byte-identical. Patch/lint/syntax checks and Windows selected-function fixture validation pass. Full-module/Linux54-test execution remains for the author; no adoption or upstreamCI result is claimed. One explicitly authorized author-review request and its subsequent DID-signed delivery record are retained there.

@@ -1,0 +1,40 @@
+{
+  "prepared_at": "2026-10-10T07:23:17.198562+00:00",
+  "pr": 973,
+  "head": "5d5c7fcbdb350ede03b8a62ed54362c38d666049",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "status": "project_native_test_and_combined_patch_prepared_for_author_review",
+  "new_project_test_methods": 19,
+  "unchanged_original_test_methods": 35,
+  "original_test_file_byte_identical": true,
+  "checks": {
+    "ruff_lint": {
+      "exit_code": 0,
+      "stdout": "All checks passed!\n"
+    },
+    "ruff_format": {
+      "exit_code": 0,
+      "stdout": "1 file already formatted\n"
+    },
+    "git_apply_check": {
+      "exit_code": 0
+    },
+    "proposal_and_new_test_syntax": true
+  },
+  "windows_fixture_original_passed": 9,
+  "windows_fixture_proposal_passed": 19,
+  "windows_execution_boundary": "New project test fixtures executed on Windows with full-module bootstrap replaced by prior AST-selected transport namespace. Not complete bridge import, Linux test suite or upstream CI.",
+  "complete_bridge_or_original_suite_run": false,
+  "full_linux_ci": false,
+  "linux_ci_limitation": "Current GitHub OAuth scopes repo/read:org/gist lack workflow scope; no new CI workflow or permission bypass attempted. WSL unavailable locally.",
+  "author_validation_required": "Apply combined patch to PR973 then run unchanged35+new19 unittest methods on Linux and relevant upstream gates.",
+  "upstream_incorporation": "not yet confirmed",
+  "official_role_or_airdrop_approval": false,
+  "credit": "osr21 original Matrix bridge; renhi Codex-assisted transport regression and project test integration proposal",
+  "artifact_sha256": {
+    "test_transport.py": "e1dc8b5ff9e0c37d33c2549ad3c6773ed1899bcc6efdd014554412856dba8d87",
+    "integration.patch": "7d31b3dfa0a5ecd72620e3756909032b99d783380b090f9e05b833522eb12b85",
+    "source-provenance.json": "5641a97763f7951f662a69afcabe8cf847428127175dd2fa5659d01fbfce20b5",
+    "windows-fixture-check.json": "124626278c42d1ce58dbbd85bc4798adb634c47819ce8629dd33fbb12191c54e"
+  }
+}

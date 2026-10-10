@@ -1,0 +1,322 @@
+--- a/contrib/technocore-matrix/bridge.py
++++ b/contrib/technocore-matrix/bridge.py
+@@ -9,6 +9,7 @@
+ import contextlib
+ import fcntl
+ import hashlib
++import http.client
+ import json
+ import math
+ import os
+@@ -311,7 +312,7 @@
+                 time.sleep(_retry_after(exc, attempt))
+         except (
+             urllib.error.URLError, OSError, TimeoutError, UnicodeError,
+-            json.JSONDecodeError, RecursionError,
++            json.JSONDecodeError, RecursionError, http.client.HTTPException,
+         ) as exc:
+             last = exc
+             if attempt + 1 < attempts:
+@@ -354,7 +355,7 @@
+             last = exc
+             if attempt < 3:
+                 time.sleep(_retry_after(exc, attempt))
+-        except (urllib.error.URLError, OSError, TimeoutError) as exc:
++        except (urllib.error.URLError, OSError, TimeoutError, http.client.HTTPException) as exc:
+             last = exc
+             if attempt < 3:
+                 time.sleep(min(.25 * (2**attempt), 4))
+--- /dev/null
++++ b/contrib/technocore-matrix/tests/test_transport.py
+@@ -0,0 +1,291 @@
++"""Native urllib response framing regressions for the complete Matrix bridge module."""
++
++from __future__ import annotations
++
++import base64
++import importlib.util
++import json
++import threading
++import unittest
++import urllib.error
++import urllib.request
++from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
++from pathlib import Path
++
++from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
++
++MODULE = Path(__file__).parents[1] / "bridge.py"
++SPEC = importlib.util.spec_from_file_location("matrix_native_transport", MODULE)
++bridge = importlib.util.module_from_spec(SPEC)
++SPEC.loader.exec_module(bridge)
++
++
++def run_transport_case(lane, mode):
++    state = {"mode": mode, "requests": [], "records": [], "verified_posts": 0}
++    key = Ed25519PrivateKey.generate()
++    ns = vars(bridge)
++    did = bridge.did_from_private_key(key)
++
++    class Handler(BaseHTTPRequestHandler):
++        def log_message(self, *_args):
++            pass
++
++        def respond(self, status, body, mode="complete"):
++            raw = (
++                json.dumps(body, ensure_ascii=False).encode()
++                if not isinstance(body, bytes)
++                else body
++            )
++            self.send_response(status)
++            self.send_header("Content-Type", "application/json")
++            self.send_header("Connection", "close")
++            if mode in {"missing_chunk_end", "mid_chunk"}:
++                self.send_header("Transfer-Encoding", "chunked")
++            else:
++                self.send_header(
++                    "Content-Length", str(len(raw) + (9 if mode == "short_length" else 0))
++                )
++            if status == 429:
++                self.send_header("Retry-After", "0")
++            self.end_headers()
++            if mode == "missing_chunk_end":
++                self.wfile.write(f"{len(raw):x}\r\n".encode() + raw + b"\r\n")
++            elif mode == "mid_chunk":
++                self.wfile.write(f"{len(raw) + 9:x}\r\n".encode() + raw)
++            else:
++                self.wfile.write(raw)
++            self.wfile.flush()
++            self.close_connection = True
++
++        def do_GET(self):  # noqa: N802
++            state["requests"].append({"method": "GET", "path": self.path})
++            if state["mode"].startswith("signed_"):
++                self.respond(200, {"messages": state["records"]})
++            else:
++                self.generic()
++
++        def generic(self):
++            mode = state["mode"]
++            status = int(mode[6:]) if mode.startswith("error_") else 200
++            body = (
++                b"{" if mode == "bad_json" else ([] if mode == "non_object" else {"ok": "한글🙂"})
++            )
++            if mode == "put_recover":
++                mode = "short_length" if len(state["requests"]) == 1 else "complete"
++            self.respond(status, body, mode)
++
++        def do_PUT(self):  # noqa: N802
++            size = int(self.headers.get("Content-Length", "0"))
++            body = json.loads(self.rfile.read(size))
++            state["requests"].append({"method": "PUT", "path": self.path, "body": body})
++            self.generic()
++
++        def do_POST(self):  # noqa: N802
++            body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
++            nonce = body["nonce"]
++            assert (
++                isinstance(nonce, str) and nonce.isascii() and nonce.isdigit() and len(nonce) <= 19
++            )
++            signature = base64.urlsafe_b64decode(body["sig"] + "==")
++            key.public_key().verify(signature, f"lobby|{nonce}|{body['text']}".encode())
++            state["verified_posts"] += 1
++            state["requests"].append({"method": "POST", "path": self.path, "nonce": nonce})
++            posts = sum(row["method"] == "POST" for row in state["requests"])
++            landed = state["mode"] != "signed_not_landed_then_ok" or posts > 1
++            if landed:
++                state["records"].append(
++                    {
++                        "seq": len(state["records"]) + 1,
++                        "from": body["did"],
++                        "nonce": int(nonce),
++                        "text": body["text"],
++                        "sig": body["sig"],
++                    }
++                )
++            mode = (
++                "complete"
++                if posts > 1
++                else (
++                    "missing_chunk_end"
++                    if state["mode"] == "signed_landed_chunk"
++                    else "short_length"
++                )
++            )
++            self.respond(200, {"posted": {"seq": len(state["records"])}}, mode)
++
++    server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
++    thread = threading.Thread(target=server.serve_forever, daemon=True)
++    thread.start()
++    base = f"http://127.0.0.1:{server.server_port}"
++    try:
++        state.update(mode=mode, requests=[], records=[], verified_posts=0)
++        failure = None
++        outcome = "returned"
++        value = None
++        try:
++            if lane == "json":
++                value = ns["_http_json"](
++                    urllib.request.Request(base + "/probe"), timeout=2, attempts=1
++                )
++            elif lane == "get":
++                value = ns["technocore_get"](base, "/probe", timeout=2)
++            elif lane == "put":
++                value = ns["matrix_request"](
++                    base,
++                    "PUT",
++                    "/send/m.room.message/stable-transaction",
++                    "disposable-fixture-token",
++                    {"body": "한글🙂"},
++                    timeout=2,
++                )
++            else:
++                value = ns["technocore_say_signed"](
++                    base, key, did, "lobby", "한글🙂 [mx:fixture]", marker="[mx:fixture]"
++                )
++        except Exception as error:
++            outcome = type(error).__name__
++            retryable = isinstance(error, ns["MatrixError"]) and error.retryable
++            if lane == "json":
++                if mode in {
++                    "short_length",
++                    "missing_chunk_end",
++                    "mid_chunk",
++                    "bad_json",
++                    "error_429",
++                    "error_503",
++                }:
++                    failure = (
++                        None if retryable else "Expected retryable MatrixError, got " + outcome
++                    )
++                elif mode == "error_400":
++                    failure = (
++                        None
++                        if isinstance(error, ns["MatrixError"])
++                        and error.status == 400
++                        and not error.retryable
++                        else "Permanent400 contract changed"
++                    )
++                elif mode == "non_object":
++                    failure = (
++                        None
++                        if isinstance(error, ns["BridgeError"])
++                        and not isinstance(error, ns["MatrixError"])
++                        else "Non-object contract changed"
++                    )
++                else:
++                    failure = "Unexpected complete-response error " + outcome
++            elif lane == "get":
++                if mode == "error_404":
++                    failure = (
++                        None
++                        if isinstance(error, urllib.error.HTTPError) and error.code == 404
++                        else "Permanent404 contract changed"
++                    )
++                elif mode == "complete":
++                    failure = "Unexpected complete GET error " + outcome
++                else:
++                    failure = (
++                        None
++                        if isinstance(error, ns["RetryableError"])
++                        else "Expected RetryableError, got " + outcome
++                    )
++            else:
++                failure = "Expected successful retry/reconciliation, got " + outcome
++        else:
++            if lane in {"json", "get"} and mode != "complete":
++                failure = "Incomplete/error response treated as success"
++            elif lane == "json" and value != {"ok": "한글🙂"}:
++                failure = "Complete JSON changed"
++            elif lane == "get" and json.loads(value) != {"ok": "한글🙂"}:
++                failure = "Complete GET changed"
++            elif lane == "signed":
++                expected_posts = 2 if mode == "signed_not_landed_then_ok" else 1
++                expected_value = 1 if expected_posts == 2 else 0
++                if (
++                    value != expected_value
++                    or len(state["records"]) != 1
++                    or sum(r["method"] == "POST" for r in state["requests"]) != expected_posts
++                ):
++                    failure = "Signed recovery did not preserve one accepted record"
++            elif lane == "put":
++                if (
++                    value != {"ok": "한글🙂"}
++                    or len(state["requests"]) != 2
++                    or state["requests"][0] != state["requests"][1]
++                ):
++                    failure = "PUT retry changed transaction path/body or count"
++        expected_requests = 1
++        if lane == "get" and mode in {
++            "short_length",
++            "missing_chunk_end",
++            "mid_chunk",
++            "error_503",
++        }:
++            expected_requests = 4
++        elif lane == "signed":
++            expected_requests = 3 if mode == "signed_not_landed_then_ok" else 2
++        elif lane == "put":
++            expected_requests = 2
++        if len(state["requests"]) != expected_requests:
++            failure = (
++                failure + "; " if failure else ""
++            ) + f"Expected {expected_requests} HTTP requests, got {len(state['requests'])}"
++        return {
++            "failure": failure,
++            "requests": len(state["requests"]),
++            "verified_posts": state["verified_posts"],
++        }
++    finally:
++        server.shutdown()
++        server.server_close()
++        thread.join(timeout=5)
++        assert not thread.is_alive(), "Loopback fixture did not stop"
++
++
++class NativeTransportTest(unittest.TestCase):
++    """Each scenario has its own real listener and disposable signing key."""
++
++
++def make_test(lane, mode):
++    def test(self):
++        result = run_transport_case(lane, mode)
++        self.assertIsNone(result["failure"], result["failure"])
++
++    return test
++
++
++SCENARIOS = [
++    ("json", mode)
++    for mode in (
++        "complete",
++        "short_length",
++        "missing_chunk_end",
++        "mid_chunk",
++        "bad_json",
++        "non_object",
++        "error_400",
++        "error_429",
++        "error_503",
++    )
++]
++SCENARIOS += [
++    ("get", mode)
++    for mode in (
++        "complete",
++        "short_length",
++        "missing_chunk_end",
++        "mid_chunk",
++        "error_404",
++        "error_503",
++    )
++]
++SCENARIOS += [
++    ("signed", mode)
++    for mode in ("signed_landed_length", "signed_landed_chunk", "signed_not_landed_then_ok")
++]
++SCENARIOS.append(("put", "put_recover"))
++for test_lane, test_mode in SCENARIOS:
++    setattr(NativeTransportTest, f"test_{test_lane}_{test_mode}", make_test(test_lane, test_mode))
++
++if __name__ == "__main__":
++    unittest.main()
