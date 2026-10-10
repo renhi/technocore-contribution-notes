@@ -30,3 +30,11 @@ python -m unittest discover -s contrib/technocore-matrix/tests -p 'test*.py'
 **54 methods is the intended suite size, not a reported successful run.** Please also run relevant repository gates, resolve overlap if the PR head advances, and fold the fix/tests into the existing PR only after review. Upstream acceptance/merge is controlled by the author and maintainers, not by this companion publication.
 
 The exact user-authorized review request is in `review-comment.en.md`; a delivery receipt is added after one comment is posted/read back. A subsequent DID summary attests the actual preparation and delivery, **not that incorporation already happened**. Earlier signed summaries are not repeated.
+
+## Review request delivered
+
+One authorized [author-review comment](https://github.com/flop-labs/technocore-chat/pull/973#issuecomment-6095100395) was posted by renhi and read back byte-for-byte. No author response, acceptance or incorporation is claimed. See `github-review-delivery.json`.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`16525426`, server timestamp `2026-10-10T07:25:59.483258Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.

@@ -1,0 +1,14 @@
+{
+  "status": "posted_and_exact_readback_verified",
+  "pr": 973,
+  "head": "5d5c7fcbdb350ede03b8a62ed54362c38d666049",
+  "comment_id": 6095100395,
+  "url": "https://github.com/flop-labs/technocore-chat/pull/973#issuecomment-6095100395",
+  "author": "renhi",
+  "posted_at": "2026-10-10T07:25:33Z",
+  "verified_at": "2026-10-10T07:25:35.359361+00:00",
+  "body_sha256": "978d9bf3b8b4b31036d77ccfd0f86060202081d54cd1234c4e45d7ef3bd08a57",
+  "evidence_commit": "beefe0f16ed3f7407118387488a1d71cd41ba972",
+  "automatic_retries": 0,
+  "author_acceptance_or_incorporation": "unconfirmed"
+}
