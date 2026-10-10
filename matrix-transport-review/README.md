@@ -44,3 +44,7 @@ python -X utf8 check_transport.py --source source/contrib/technocore-matrix/brid
 Exit zero requires all proposal expectations. Original failures are deliberately retained, not hidden. A fixture-only Ed25519 key is created in memory and never persisted or printed. No user's protected key is touched during tests. `validation.json` pins the checker, output, patch and provenance hashes and records the narrower validation boundary.
 
 DID signing, if delivered, attests the supplied statement and immutable validation digest. It is not correctness, upstream acceptance, an official role, testnet settlement or airdrop approval.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`16522065`, server timestamp `2026-10-10T07:08:23.714737Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
