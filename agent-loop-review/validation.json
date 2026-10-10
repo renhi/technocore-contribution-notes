@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-10-10T12:05:27.311025+00:00",
+  "pr": 288,
+  "head": "775e99be8f9c48a0e5ce5ffbc0d513088de98df7",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "author_credit": "xamdkx: original standalone example and disposable actual-server happy-path CI evidence; bdunn77: earlier production-use caution.",
+  "contribution": "Failure-path regression evidence and a companion fail-fast demo patch; not a claim of a new server vulnerability.",
+  "original": {
+    "scenarios": 19,
+    "passed": 2,
+    "http_requests": 91,
+    "verified_signed_requests": 36,
+    "unexpected_unittest_errors": 0
+  },
+  "proposal": {
+    "scenarios": 19,
+    "passed": 19,
+    "http_requests": 57,
+    "verified_signed_requests": 19,
+    "unexpected_unittest_errors": 0
+  },
+  "retained_comparison_http_requests": 148,
+  "retained_comparison_verified_signed_requests": 55,
+  "count_scope": "Counts sum the final retained before/after reports only; development runs are excluded. 17 failing conditions are variants of demo failure reporting/continuation and owner matching, not 17 production bugs.",
+  "checks": [
+    {
+      "check": "check --config",
+      "passed": true
+    },
+    {
+      "check": "format --check",
+      "passed": true
+    },
+    {
+      "check": "-C C:\\Users\\nury3\\Documents\\Codex\\2026-09-30\\flop-labs-technocore-https-technocore-chat\\work\\agent-loop-review\\original",
+      "passed": true
+    },
+    {
+      "check": "syntax compilation without modifying source",
+      "passed": true
+    }
+  ],
+  "all_original_source_git_blobs_unchanged": true,
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Windows",
+    "cryptography": "50.0.1",
+    "pynacl": "1.6.2",
+    "ruff": "0.16.1"
+  },
+  "execution": "Complete original/proposed example executed as normal Python subprocesses with no AST extraction, platform shim, urllib monkeypatch or source bootstrap substitution. Real loopback TCP HTTP. Real ephemeral Ed25519 signing and unchanged official PyNaCl verification.",
+  "limitations": [
+    "Controlled HTTP response fixture; not actual Technocore server/storage/authorization/limiter/replay execution.",
+    "Fault bodies intentionally include a DID to test rejection precedence and substring false positives; not evidence those bodies occur in production.",
+    "HTTP200 + an exact DID value line is demo confirmation under the documented note layout, not a cryptographic ownership proof.",
+    "Earlier accepted writes remain; fail-fast does not roll back, reconcile uncertain delivery, persist keys or resume safely.",
+    "No actual-server new failure-path integration tests, Linux full repository checks, upstream CI, main merge or author adoption.",
+    "No public-service test writes, user protected key or wallet in the local tests; only a separately authorized factual DID announcement follows.",
+    "No official role, testnet settlement or airdrop eligibility established."
+  ],
+  "artifact_sha256": {
+    "test_agent_loop.py": "8a25c70deee0dc2f4cc4df96e0241b5cf3782c3f36a11449bd17492b71989ce0",
+    "fail-closed.patch": "279c96a116e6973f67278535024cc7f70d5d653f7c872f52a927bd4c51dd2ea1",
+    "before.json": "6094bf68f7dbd1f775dd1a8fb19537c07fa464fa0dcbeb83145c5b915270bb28",
+    "after.json": "143498097a590397393f306aa6740ca3b8051d32a7780b86edc5c34cbeec925d",
+    "source-provenance.json": "e231c1de70cd567822550ade44ed9bd998fbf806b4c926546e9a242537c7d6bf"
+  }
+}

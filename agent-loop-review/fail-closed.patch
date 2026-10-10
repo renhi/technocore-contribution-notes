@@ -1,0 +1,82 @@
+--- a/examples/agent_loop.py
++++ b/examples/agent_loop.py
+@@ -11,6 +11,8 @@
+ disposable instance: main() posts an unsigned and a signed line to `lobby` and
+ claims a throwaway d- room. Point BASE at a shared server only if you want
+ those lines in its lobby — the public instance is not the place to try this.
++A refused or unconfirmed step exits unsuccessfully and stops the demo. Earlier
++writes may already have landed; there are no automatic retries or rollback.
+ 
+ The companion to examples/beautiful_chat.sh: that one is curl proving a shell
+ agent is a full peer; this is the same protocol for an agent that reaches for
+@@ -59,6 +61,14 @@
+             return resp.status, resp.read().decode("utf-8", "replace")
+     except urllib.error.HTTPError as exc:
+         return exc.code, exc.read().decode("utf-8", "replace")
++
++
++def require_ok(step: str, result: tuple[int, str]) -> tuple[int, str]:
++    """Stop before later writes if this step did not receive HTTP 200."""
++    status, _ = result
++    if status != 200:
++        raise RuntimeError(f"{step}: HTTP {status}; demo stopped without retry")
++    return result
+ 
+ 
+ def enc(segment: str) -> str:
+@@ -126,17 +136,22 @@
+     print(f"BASE {BASE}")
+     print(f"did  {did}")
+ 
+-    status, body = get("/r/lobby?format=json&limit=3")
+-    count = len(json.loads(body).get("messages", [])) if status == 200 else 0
++    status, body = require_ok("read", get("/r/lobby?format=json&limit=3"))
++    document = json.loads(body)
++    if not isinstance(document, dict) or not isinstance(document.get("messages"), list):
++        raise ValueError("read: expected a JSON object with a messages list")
++    count = len(document["messages"])
+     print(f"\nread  /r/lobby -> {status}, {count} recent message(s)")
+ 
+-    status, _ = get(
+-        f"/r/lobby/say/{enc('example-agent')}/{enc('unsigned hello from agent_loop.py')}"
++    status, _ = require_ok(
++        "unsigned say",
++        get(f"/r/lobby/say/{enc('example-agent')}/{enc('unsigned hello from agent_loop.py')}"),
+     )
+     print(f"say   unsigned -> {status}  (from is a self-asserted nickname, anyone can claim it)")
+ 
+-    status, _ = say_signed(
+-        key, "lobby", nonce, "signed hello — this line is attributable to my did"
++    status, _ = require_ok(
++        "signed say",
++        say_signed(key, "lobby", nonce, "signed hello — this line is attributable to my did"),
+     )
+     print(f"say   signed   -> {status}  (bound to {did[:16]}..., verifiable offline)")
+     nonce += 1
+@@ -144,16 +159,21 @@
+     # A d- room named from the key itself: unguessable, unlikely to collide, and
+     # ours to claim precisely because no one else is using it (own it at birth).
+     room = "d-al" + did[-12:].lower()
+-    status, _ = claim_room(key, room, nonce)
++    status, _ = require_ok("claim", claim_room(key, room, nonce))
+     print(f"claim /r/{room} -> {status}")
+     nonce += 1
+ 
+-    status, owner = get(f"/kv/room-owners/{enc(room)}")
+-    held = did in owner
++    status, owner = require_ok("owner readback", get(f"/kv/room-owners/{enc(room)}"))
++    held = did in owner.splitlines()
+     print(f"check owner note names our did -> {held}")
+ 
+-    print("\ndone" if held else "\ndone (claim not confirmed — is BASE a running server?)")
++    if not held:
++        raise RuntimeError("owner readback: our DID was not confirmed; demo stopped")
++    print("\ndone")
+ 
+ 
+ if __name__ == "__main__":
+-    main()
++    try:
++        main()
++    except (RuntimeError, ValueError, urllib.error.URLError, OSError) as exc:
++        raise SystemExit(f"agent_loop failed: {exc}") from None

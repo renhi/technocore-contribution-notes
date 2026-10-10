@@ -1,0 +1,683 @@
+{
+  "scenarios": 19,
+  "passed": 2,
+  "http_requests": 91,
+  "verified_signed_requests": 36,
+  "unexpected_unittest_errors": 0,
+  "results": [
+    {
+      "scenario": "claim403",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 403
+        },
+        {
+          "step": "owner",
+          "status": 404
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step"
+      ],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "claim409",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 409
+        },
+        {
+          "step": "owner",
+          "status": 404
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step"
+      ],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "claim429",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 429
+        },
+        {
+          "step": "owner",
+          "status": 404
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step"
+      ],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "happy",
+      "expected_success": true,
+      "passed": true,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "owner404_with_did",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 404
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "owner429_with_did",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 429
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "owner_embedded_did",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "owner_other",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure"
+      ],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "read403",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 403
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "read429",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 429
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "read503",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 503
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "read_bad_json",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 1,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 0,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "read_bad_shape",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "signed403",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 403
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "signed429",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 429
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "signed503",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 503
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "unsigned403",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 403
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "unsigned429",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 429
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "unsigned503",
+      "expected_success": false,
+      "passed": false,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 503
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [
+        "exit code reports success on failure",
+        "later requests continued after the failed step",
+        "unqualified done printed on failure"
+      ],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    }
+  ],
+  "example_sha256": "fa0a17d2d86d64c7cf2c499e99c53b611ce41919a4dd2a084275a7c890595993",
+  "verifier_sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6",
+  "scope": "Complete example subprocess plus real urllib TCP HTTP; controlled response fixture, not actual server storage, authorization, limiter, replay or upstream CI; ephemeral generated test keys only."
+}

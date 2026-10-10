@@ -1,0 +1,487 @@
+{
+  "scenarios": 19,
+  "passed": 19,
+  "http_requests": 57,
+  "verified_signed_requests": 19,
+  "unexpected_unittest_errors": 0,
+  "results": [
+    {
+      "scenario": "claim403",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 4,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 403
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "claim409",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 4,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 409
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "claim429",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 4,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 429
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "happy",
+      "expected_success": true,
+      "passed": true,
+      "exit_code": 0,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [],
+      "printed_unqualified_done": true,
+      "printed_owner_confirmed": true
+    },
+    {
+      "scenario": "owner404_with_did",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 404
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "owner429_with_did",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 429
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "owner_embedded_did",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "owner_other",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 5,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 200
+        },
+        {
+          "step": "claim",
+          "status": 200
+        },
+        {
+          "step": "owner",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 2,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "read403",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 1,
+      "requests": [
+        {
+          "step": "read",
+          "status": 403
+        }
+      ],
+      "verified_signed_requests": 0,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "read429",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 1,
+      "requests": [
+        {
+          "step": "read",
+          "status": 429
+        }
+      ],
+      "verified_signed_requests": 0,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "read503",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 1,
+      "requests": [
+        {
+          "step": "read",
+          "status": 503
+        }
+      ],
+      "verified_signed_requests": 0,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "read_bad_json",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 1,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 0,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "read_bad_shape",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 1,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        }
+      ],
+      "verified_signed_requests": 0,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "signed403",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 3,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 403
+        }
+      ],
+      "verified_signed_requests": 1,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "signed429",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 3,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 429
+        }
+      ],
+      "verified_signed_requests": 1,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "signed503",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 3,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 200
+        },
+        {
+          "step": "signed",
+          "status": 503
+        }
+      ],
+      "verified_signed_requests": 1,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "unsigned403",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 2,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 403
+        }
+      ],
+      "verified_signed_requests": 0,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "unsigned429",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 2,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 429
+        }
+      ],
+      "verified_signed_requests": 0,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    },
+    {
+      "scenario": "unsigned503",
+      "expected_success": false,
+      "passed": true,
+      "exit_code": 1,
+      "http_requests": 2,
+      "requests": [
+        {
+          "step": "read",
+          "status": 200
+        },
+        {
+          "step": "unsigned",
+          "status": 503
+        }
+      ],
+      "verified_signed_requests": 0,
+      "failures": [],
+      "printed_unqualified_done": false,
+      "printed_owner_confirmed": false
+    }
+  ],
+  "example_sha256": "5cbb4d1398cf34bc93f14ff243b17f344955c8438c71ff1b3f1f182d725c92b7",
+  "verifier_sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6",
+  "scope": "Complete example subprocess plus real urllib TCP HTTP; controlled response fixture, not actual server storage, authorization, limiter, replay or upstream CI; ephemeral generated test keys only."
+}

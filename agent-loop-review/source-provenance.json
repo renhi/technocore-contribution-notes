@@ -1,0 +1,58 @@
+{
+  "retrieved_at": "2026-10-10T11:59:16.488631+00:00",
+  "repository": "flop-labs/technocore-chat",
+  "pr": 288,
+  "author": "xamdkx",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "head": "775e99be8f9c48a0e5ce5ffbc0d513088de98df7",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a",
+      "bytes": 2929
+    },
+    {
+      "path": "src/didkey.py",
+      "git_blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+      "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6",
+      "bytes": 7261
+    },
+    {
+      "path": "src/store.py",
+      "git_blob": "fd499dc0e93cb00f38e8d299b3ce120ee930c843",
+      "sha256": "589a1cbfdfc80c9246a6038168800e7455f0d8eec9419fffabe4bf5954369f65",
+      "bytes": 157139
+    },
+    {
+      "path": "src/app.py",
+      "git_blob": "3252a2d7d1cfbaf97b41603461e1eed799bfe061",
+      "sha256": "9d0d6d14db44adeac0ebffa594a84a0ccdbf76e5cc87de3c1ff991596229486f",
+      "bytes": 115288
+    },
+    {
+      "path": "examples/agent_loop.py",
+      "git_blob": "b85b1e02f53b84fc529f233cbfd9f2d8d5596c01",
+      "sha256": "fa0a17d2d86d64c7cf2c499e99c53b611ce41919a4dd2a084275a7c890595993",
+      "bytes": 6590
+    },
+    {
+      "path": "pyproject.toml",
+      "git_blob": "00682ba9bb7bcabf386094615d5a27fe19f2c646",
+      "sha256": "cf6552fd53e08272c2e9b5ce63e7cec0d08030dbddcbee31cccb9dab3de42043",
+      "bytes": 6144
+    }
+  ],
+  "all_git_blobs_verified": true,
+  "prior_evidence": [
+    {
+      "author": "bdunn77",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/288#issuecomment-5567468559"
+    },
+    {
+      "author": "xamdkx",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/288#issuecomment-5652517499"
+    }
+  ],
+  "scope": "Whole standalone example subprocess; native urllib sockets to a controlled loopback response fixture; unmodified official DID verifier. Not full server or upstream CI."
+}

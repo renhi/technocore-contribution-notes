@@ -156,3 +156,7 @@ See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bund
 
 ## Matrix bridge project-test incorporation follow-up (2026-10-10)
 [PR973 author-review follow-up](matrix-integration-review/) provides one combined patch with19 new project-native unittest methods. Original35-method file remains byte-identical. Patch/lint/syntax checks and Windows selected-function fixture validation pass. Full-module/Linux54-test execution remains for the author; no adoption or upstreamCI result is claimed. One explicitly authorized author-review request and its subsequent DID-signed delivery record are retained there.
+
+
+## Standalone agent-loop failure-path verification (2026-10-10)
+[PR #288 failure-path evidence](agent-loop-review/) executes the entire Python example normally against a disposable loopback HTTP fixture. Original2/19 versus companion proposal19/19; retained comparison148 HTTP requests and55 officially verified ephemeral-key tuples. The patch makes required-step refusal or unconfirmed owner readback stop the demo with a failing exit code. Controlled responses are not actual server integration or upstream CI. Author adoption and airdrop eligibility remain unconfirmed.
