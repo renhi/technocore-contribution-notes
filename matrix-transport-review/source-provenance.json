@@ -1,0 +1,38 @@
+{
+  "pr": 973,
+  "head": "5d5c7fcbdb350ede03b8a62ed54362c38d666049",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "author": "osr21",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "path": "contrib/technocore-matrix/bridge.py",
+      "git_blob": "e12f0488cb01f9af17be0c70d16ab056798839dc",
+      "sha256": "de5cec486c93896627888231fbe7f6bbd8eb59e45c4d3c4d61b693bd2b9b5f9a"
+    },
+    {
+      "path": "contrib/technocore-matrix/README.md",
+      "git_blob": "d9062d2c14812920aede8be8ec90d4b040ff5d43",
+      "sha256": "72053d2fe13d9173059bc0f14e42e1bcc3d15ae215232902a3bd694b65d77bb0"
+    },
+    {
+      "path": "contrib/technocore-matrix/requirements.txt",
+      "git_blob": "0d38bc5ea2591b0363e24090a1631afa3da2c14e",
+      "sha256": "28d693f929f62b8bb135a11b7ba9987439f7a960cc969e32f8cb567c1ef79c97"
+    },
+    {
+      "path": "contrib/technocore-matrix/tests/test_bridge.py",
+      "git_blob": "26d10646a4ff3769f9bdbed76b5bc19a63f93de1",
+      "sha256": "f4f05e6fe95b7151de5c6dab08a368721abb89a9e549ac621e7415da482716d0"
+    }
+  ]
+}

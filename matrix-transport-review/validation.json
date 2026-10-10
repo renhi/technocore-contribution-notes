@@ -1,0 +1,71 @@
+{
+  "completed_at": "2026-10-10T07:01:46.587888+00:00",
+  "pr": 973,
+  "head": "5d5c7fcbdb350ede03b8a62ed54362c38d666049",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "summaries": {
+    "original": {
+      "scenarios": 19,
+      "passed": 9,
+      "http_requests": 22
+    },
+    "proposal": {
+      "scenarios": 19,
+      "passed": 19,
+      "http_requests": 36
+    }
+  },
+  "native_http_requests": 58,
+  "disposable_signed_posts_verified": 7,
+  "source_git_blobs_verified": 6,
+  "selected_definitions": [
+    "BridgeError",
+    "MatrixError",
+    "RetryableError",
+    "_fresh_nonce",
+    "_http_json",
+    "_retry_after",
+    "base58btc_decode",
+    "base58btc_encode",
+    "did_from_private_key",
+    "matrix_request",
+    "sanitize_line",
+    "sign_message",
+    "signed_frame_landed",
+    "technocore_get",
+    "technocore_read_room",
+    "technocore_say_signed",
+    "valid_ed25519_did",
+    "verified_record_did"
+  ],
+  "checks": {
+    "ruff_lint": {
+      "exit_code": 0,
+      "stdout": "All checks passed!\n"
+    },
+    "ruff_format": {
+      "exit_code": 0,
+      "stdout": "1 file already formatted\n"
+    },
+    "git_apply_check": {
+      "exit_code": 0
+    },
+    "proposal_syntax_compiles_without_import": true
+  },
+  "scope": "AST-selected original transport/crypto functions; actual urllib sockets, framing fixture, real crypto/sleeps; complete bridge cannot run here.",
+  "credit": "osr21 original Matrix bridge/durable retry implementation; renhi independent native transport regression and narrow companion proposal.",
+  "full_bridge_or_original_suite_executed": false,
+  "full_linux_ci": false,
+  "durable_restart_or_locks_tested": false,
+  "live_matrix_or_technocore_test_requests": 0,
+  "user_key_used_by_tests": false,
+  "general_exactly_once_guarantee": false,
+  "upstream_fix_or_acceptance": false,
+  "official_role_or_airdrop_approval": false,
+  "artifact_sha256": {
+    "check_transport.py": "f2830de220e2a71d8ff0ebbf3643c606bf2f1ff35f1a15e8c0aed037b65f78c8",
+    "native-results.json": "e8a48103b5479bcd6d01b06e8145e965a2c7a278c24d3842c4921d6c34a63072",
+    "source-provenance.json": "a2d9ab3614b57a194aa1f8e51d4ef94ba58fa6f06b99bb3c91f018d19fd0a62a",
+    "incomplete-http.patch": "f7811f0eaa0c187f1a6c5e725477e7f0d54817e48f7ab444c7f0d30289d0636c"
+  }
+}

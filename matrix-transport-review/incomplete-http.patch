@@ -1,0 +1,28 @@
+--- a/contrib/technocore-matrix/bridge.py
++++ b/contrib/technocore-matrix/bridge.py
+@@ -9,6 +9,7 @@
+ import contextlib
+ import fcntl
+ import hashlib
++import http.client
+ import json
+ import math
+ import os
+@@ -311,7 +312,7 @@
+                 time.sleep(_retry_after(exc, attempt))
+         except (
+             urllib.error.URLError, OSError, TimeoutError, UnicodeError,
+-            json.JSONDecodeError, RecursionError,
++            json.JSONDecodeError, RecursionError, http.client.HTTPException,
+         ) as exc:
+             last = exc
+             if attempt + 1 < attempts:
+@@ -354,7 +355,7 @@
+             last = exc
+             if attempt < 3:
+                 time.sleep(_retry_after(exc, attempt))
+-        except (urllib.error.URLError, OSError, TimeoutError) as exc:
++        except (urllib.error.URLError, OSError, TimeoutError, http.client.HTTPException) as exc:
+             last = exc
+             if attempt < 3:
+                 time.sleep(min(.25 * (2**attempt), 4))

@@ -148,3 +148,7 @@ See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bund
 
 ## Native local-origin CORS/cache review (2026-10-09)
 [PR754 regression and companion proposal](healthz-cors-review/) extends yukkie3276's prior finding on luch91's query-key change. Real Starlette CORS origin and full Worker module, with a Vary-aware substitute cache: main15/16, PR8/16, proposal16/16. The eight candidate mismatches manifest one known gap. Origin-bearing bypass increases upstream requests. Cloudflare deployment, browser enforcement and full Linux CI were not run; no acceptance or rewards are claimed.
+
+
+## Native Matrix bridge transport review (2026-10-10)
+[PR973 native HTTP regression](matrix-transport-review/) complements osr21's Matrix bridge implementation. AST-selected transport/crypto functions with actual urllib sockets: original9/19, companion19/19, 58 local HTTP requests. Incomplete response exceptions previously escape the typed retry boundary; the proposal restores existing retry/reconciliation. Full bridge, Linux locks/restart, original35-test suite and live services were not run. No upstream acceptance or rewards are claimed.

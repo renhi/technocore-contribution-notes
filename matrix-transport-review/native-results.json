@@ -1,0 +1,749 @@
+{
+  "summaries": {
+    "original": {
+      "scenarios": 19,
+      "passed": 9,
+      "http_requests": 22
+    },
+    "proposal": {
+      "scenarios": 19,
+      "passed": 19,
+      "http_requests": 36
+    }
+  },
+  "results": [
+    {
+      "version": "original",
+      "lane": "json",
+      "mode": "complete",
+      "outcome": "returned",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "json",
+      "mode": "short_length",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected retryable MatrixError, got IncompleteRead",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "json",
+      "mode": "missing_chunk_end",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected retryable MatrixError, got IncompleteRead",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "json",
+      "mode": "mid_chunk",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected retryable MatrixError, got IncompleteRead",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "json",
+      "mode": "bad_json",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "json",
+      "mode": "non_object",
+      "outcome": "BridgeError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "json",
+      "mode": "error_400",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "json",
+      "mode": "error_429",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "json",
+      "mode": "error_503",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "get",
+      "mode": "complete",
+      "outcome": "returned",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "get",
+      "mode": "short_length",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected RetryableError, got IncompleteRead; Expected 4 HTTP requests, got 1",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "get",
+      "mode": "missing_chunk_end",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected RetryableError, got IncompleteRead; Expected 4 HTTP requests, got 1",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "get",
+      "mode": "mid_chunk",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected RetryableError, got IncompleteRead; Expected 4 HTTP requests, got 1",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "get",
+      "mode": "error_404",
+      "outcome": "HTTPError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "get",
+      "mode": "error_503",
+      "outcome": "RetryableError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "original",
+      "lane": "signed",
+      "mode": "signed_landed_length",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected successful retry/reconciliation, got IncompleteRead; Expected 2 HTTP requests, got 1",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/r/lobby?format=json",
+          "nonce": "1791615575278115100"
+        }
+      ],
+      "accepted_records": 1,
+      "verified_posts": 1
+    },
+    {
+      "version": "original",
+      "lane": "signed",
+      "mode": "signed_landed_chunk",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected successful retry/reconciliation, got IncompleteRead; Expected 2 HTTP requests, got 1",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/r/lobby?format=json",
+          "nonce": "1791615575281092400"
+        }
+      ],
+      "accepted_records": 1,
+      "verified_posts": 1
+    },
+    {
+      "version": "original",
+      "lane": "signed",
+      "mode": "signed_not_landed_then_ok",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected successful retry/reconciliation, got IncompleteRead; Expected 3 HTTP requests, got 1",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/r/lobby?format=json",
+          "nonce": "1791615575284095500"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 1
+    },
+    {
+      "version": "original",
+      "lane": "put",
+      "mode": "put_recover",
+      "outcome": "IncompleteRead",
+      "passed": false,
+      "failure": "Expected successful retry/reconciliation, got IncompleteRead; Expected 2 HTTP requests, got 1",
+      "requests": [
+        {
+          "method": "PUT",
+          "path": "/send/m.room.message/stable-transaction",
+          "body": {
+            "body": "한글🙂"
+          }
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "json",
+      "mode": "complete",
+      "outcome": "returned",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "json",
+      "mode": "short_length",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "json",
+      "mode": "missing_chunk_end",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "json",
+      "mode": "mid_chunk",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "json",
+      "mode": "bad_json",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "json",
+      "mode": "non_object",
+      "outcome": "BridgeError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "json",
+      "mode": "error_400",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "json",
+      "mode": "error_429",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "json",
+      "mode": "error_503",
+      "outcome": "MatrixError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "get",
+      "mode": "complete",
+      "outcome": "returned",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "get",
+      "mode": "short_length",
+      "outcome": "RetryableError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "get",
+      "mode": "missing_chunk_end",
+      "outcome": "RetryableError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "get",
+      "mode": "mid_chunk",
+      "outcome": "RetryableError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "get",
+      "mode": "error_404",
+      "outcome": "HTTPError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "get",
+      "mode": "error_503",
+      "outcome": "RetryableError",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        },
+        {
+          "method": "GET",
+          "path": "/probe"
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    },
+    {
+      "version": "proposal",
+      "lane": "signed",
+      "mode": "signed_landed_length",
+      "outcome": "returned",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/r/lobby?format=json",
+          "nonce": "1791615582434236600"
+        },
+        {
+          "method": "GET",
+          "path": "/r/lobby?format=json&limit=200&n=33492e5bdc76c6ce"
+        }
+      ],
+      "accepted_records": 1,
+      "verified_posts": 1
+    },
+    {
+      "version": "proposal",
+      "lane": "signed",
+      "mode": "signed_landed_chunk",
+      "outcome": "returned",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/r/lobby?format=json",
+          "nonce": "1791615582462213400"
+        },
+        {
+          "method": "GET",
+          "path": "/r/lobby?format=json&limit=200&n=56a8698f2538b86d"
+        }
+      ],
+      "accepted_records": 1,
+      "verified_posts": 1
+    },
+    {
+      "version": "proposal",
+      "lane": "signed",
+      "mode": "signed_not_landed_then_ok",
+      "outcome": "returned",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/r/lobby?format=json",
+          "nonce": "1791615582487891400"
+        },
+        {
+          "method": "GET",
+          "path": "/r/lobby?format=json&limit=200&n=894c05fa236cd910"
+        },
+        {
+          "method": "POST",
+          "path": "/r/lobby?format=json",
+          "nonce": "1791615582746398100"
+        }
+      ],
+      "accepted_records": 1,
+      "verified_posts": 2
+    },
+    {
+      "version": "proposal",
+      "lane": "put",
+      "mode": "put_recover",
+      "outcome": "returned",
+      "passed": true,
+      "failure": null,
+      "requests": [
+        {
+          "method": "PUT",
+          "path": "/send/m.room.message/stable-transaction",
+          "body": {
+            "body": "한글🙂"
+          }
+        },
+        {
+          "method": "PUT",
+          "path": "/send/m.room.message/stable-transaction",
+          "body": {
+            "body": "한글🙂"
+          }
+        }
+      ],
+      "accepted_records": 0,
+      "verified_posts": 0
+    }
+  ],
+  "checker_sha256": "f2830de220e2a71d8ff0ebbf3643c606bf2f1ff35f1a15e8c0aed037b65f78c8",
+  "source_sha256": {
+    "original": "de5cec486c93896627888231fbe7f6bbd8eb59e45c4d3c4d61b693bd2b9b5f9a",
+    "proposal": "07b0010f01e718589aa6e056a15cf9ef45a11eb55a48977242879bd7c5dd478a"
+  },
+  "selected_definitions": [
+    "BridgeError",
+    "MatrixError",
+    "RetryableError",
+    "_fresh_nonce",
+    "_http_json",
+    "_retry_after",
+    "base58btc_decode",
+    "base58btc_encode",
+    "did_from_private_key",
+    "matrix_request",
+    "sanitize_line",
+    "sign_message",
+    "signed_frame_landed",
+    "technocore_get",
+    "technocore_read_room",
+    "technocore_say_signed",
+    "valid_ed25519_did",
+    "verified_record_did"
+  ],
+  "server_stopped": true,
+  "user_key_used": false,
+  "full_bridge_executed": false,
+  "live_service_requests": 0
+}
