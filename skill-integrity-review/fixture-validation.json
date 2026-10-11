@@ -1,0 +1,699 @@
+{
+  "cases": 34,
+  "passed": 34,
+  "http_requests": 48,
+  "unexpected_errors": 0,
+  "auditor_sha256": "51c065629c484e12d34a2cc69b5683783fee9f7128e91dc9dbdcdef51b9497cd",
+  "test_sha256": "7336f2a61a4fb26ad656bf78a22f16670205b0a8cefd5f22bbc2698c233b6326",
+  "results": [
+    {
+      "case": "added_bom",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "served raw skill bytes do not match the pinned/index digest"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "changed_byte",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "served raw skill bytes do not match the pinned/index digest"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "correct_crlf_pin",
+      "passed": true,
+      "expected_success": true,
+      "exit_code": 0,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": true,
+        "index_url": "http://127.0.0.1:63035/.well-known/agent-skills/index.json",
+        "skill_url": "http://127.0.0.1:63035/skill.md",
+        "expected_version": "fixture-v1",
+        "index_sha256": "a595df2cae3a63dfd14510d7912508e458aeb8e11dbc714481bb90546a3cde38",
+        "skill_sha256": "20d3ab78475d71068a381bd3681f1e661bdcf86a1b3077cece36b88226bcbe57",
+        "skill_bytes": 48,
+        "index_matches_external_pin": true,
+        "served_bytes_match_external_pin": true,
+        "redirects_followed": 0,
+        "http_method": "GET",
+        "scope": "Raw-byte distribution integrity, not correctness of instructions, complete discovery-schema validation, source authorship, adoption or reward eligibility."
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "correct_lf",
+      "passed": true,
+      "expected_success": true,
+      "exit_code": 0,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": true,
+        "index_url": "http://127.0.0.1:63038/.well-known/agent-skills/index.json",
+        "skill_url": "http://127.0.0.1:63038/skill.md",
+        "expected_version": "fixture-v1",
+        "index_sha256": "e00b9fc4e1335c9ecd6c48fa42de199f90827faf21fa8f0fe09cc46296bfbfc0",
+        "skill_sha256": "941a88203393dcbe9b2abc19aa057408a4c8edf59ce44cc14f79c17c68bd095e",
+        "skill_bytes": 44,
+        "index_matches_external_pin": true,
+        "served_bytes_match_external_pin": true,
+        "redirects_followed": 0,
+        "http_method": "GET",
+        "scope": "Raw-byte distribution integrity, not correctness of instructions, complete discovery-schema validation, source authorship, adoption or reward eligibility."
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "crlf_changed_after_lf_pin",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "served raw skill bytes do not match the pinned/index digest"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "cross_origin_url",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index URL is not the exact same-origin /skill.md path"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "duplicate_target_entry",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "expected exactly one technocore-chat entry"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "index404",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "HTTP/transport observation failed: HTTP Error 404: Not Found"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "index429",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "HTTP/transport observation failed: HTTP Error 429: Too Many Requests"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "index_not_object",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index must contain a skills array"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "index_oversize",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "invalid or oversized declared response length"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "index_redirect",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "HTTP/transport observation failed: HTTP Error 302: Found"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "index_wrong_media",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "unexpected content type"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "invalid_json",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index is not UTF-8 JSON"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "invalid_utf8",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index is not UTF-8 JSON"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "missing_digest",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index digest differs from the independently pinned source"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "missing_target_entry",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "expected exactly one technocore-chat entry"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "non_object_entry",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "each skill entry must be an object"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "query_url",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index URL is not the exact same-origin /skill.md path"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "removed_trailing_newline",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "served raw skill bytes do not match the pinned/index digest"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "self_consistent_wrong_document",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index digest differs from the independently pinned source"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "skill404",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "HTTP/transport observation failed: HTTP Error 404: Not Found"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "skill429",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "HTTP/transport observation failed: HTTP Error 429: Too Many Requests"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "skill_oversize",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "invalid or oversized declared response length"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "skill_redirect",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "HTTP/transport observation failed: HTTP Error 302: Found"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "skill_short_content_length",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "body does not match its declared response length"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "skill_unexpected_encoding",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "unexpected content encoding; raw bytes must be comparable"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "skill_wrong_media",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "unexpected content type"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "skills_not_array",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index must contain a skills array"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "unicode_normalization_change",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        },
+        {
+          "method": "GET",
+          "path": "/skill.md"
+        }
+      ],
+      "request_count": 2,
+      "result": {
+        "passed": false,
+        "error": "served raw skill bytes do not match the pinned/index digest"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "wrong_digest",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index digest differs from the independently pinned source"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "wrong_path_url",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index URL is not the exact same-origin /skill.md path"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "wrong_type",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "unexpected skill type"
+      },
+      "fixture_errors": []
+    },
+    {
+      "case": "wrong_version",
+      "passed": true,
+      "expected_success": false,
+      "exit_code": 1,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/.well-known/agent-skills/index.json"
+        }
+      ],
+      "request_count": 1,
+      "result": {
+        "passed": false,
+        "error": "index version differs from the independently pinned version"
+      },
+      "fixture_errors": []
+    }
+  ],
+  "scope": "Full auditor subprocess and actual loopback TCP HTTP. Synthetic document/index fixtures, not evidence of production corruption. No retries, writes, installed skills, protected keys or source execution."
+}

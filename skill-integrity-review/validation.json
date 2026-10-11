@@ -1,0 +1,53 @@
+{
+  "prepared_at": "2026-10-11T04:40:57.597244+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "related_pr": 935,
+  "related_head": "a2ae93f901cff0bb4149adcaab358ca516b36a8d",
+  "related_author_credit": "zkasuran: existing server-side tests pin SKILL room/idle constants; this independent auditor adds deployed raw-byte distribution checks.",
+  "contribution": "New stdlib-only read-only official skill distribution integrity auditor and reproducible fault tests; live check passes, no production integrity defect found.",
+  "live_audit_passed": true,
+  "skill_sha256": "f2616b7195eeacbbba21ca493211866f0768ea2bea7e0d4059d7045da7bcffe3",
+  "skill_bytes": 6631,
+  "version": "0.14.5",
+  "fixture_cases": 34,
+  "fixture_passed": 34,
+  "fixture_HTTP_requests": 48,
+  "unexpected_fixture_errors": 0,
+  "local_execution": "Complete auditor subprocesses with native CPython urllib HTTP sockets against loopback fixtures; no patched fetch, source extraction, user keys or skill execution.",
+  "checks": {
+    "ruff_lint": {
+      "passed": true,
+      "stdout": "All checks passed!"
+    },
+    "ruff_format": {
+      "passed": true,
+      "stdout": "2 files already formatted"
+    },
+    "syntax": true
+  },
+  "source_originals_unchanged": true,
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Windows",
+    "ruff": "0.16.1"
+  },
+  "development_note": "Initial harness runs32/34 then33/34: request-count expectations first missed skill404/skill429, then an overly broad label prefix included skills_not_array. Exact case classification corrected; auditor rejection behavior was already correct. Development logs retained locally; only final34/34 run counted here.",
+  "limitations": [
+    "Digest equality proves byte identity under the separately trusted pin, not that all prose claims are correct or that the source is trustworthy.",
+    "Discovery checks cover this service's documented one skill entry, exact URL, type, digest/version; not a complete generic Agent Skills schema validator.",
+    "Strict identity content encoding/no redirects/size limits are conservative auditor policy, not alleged server defects or a universal installer specification.",
+    "Live sequential reads are a point-in-time observation and may observe shared caches; no deployment atomicity or future freshness guarantee.",
+    "Fixtures are synthetic negative cases, not observed public-service corruption or vulnerabilities. Loopback tests do not validate hostile TLS or proxies.",
+    "Byte caps and socket timeout are used; there is no total wall-clock deadline or automated retries. HTTP429 is reported without retry.",
+    "PR935's full app constant tests and full Linux/upstream repository gates were not executed; no upstream source change, author adoption, new PR/comment or workflow.",
+    "Local/source/live audits use no DID seed or wallet. The protected existing key is used only separately for the explicitly authorized factual DID summary.",
+    "No official role, settled testnet compute or airdrop eligibility established."
+  ],
+  "artifact_sha256": {
+    "audit_skill.py": "51c065629c484e12d34a2cc69b5683783fee9f7128e91dc9dbdcdef51b9497cd",
+    "test_audit_skill.py": "7336f2a61a4fb26ad656bf78a22f16670205b0a8cefd5f22bbc2698c233b6326",
+    "fixture-validation.json": "31f708357ac66182b8b2f3459d15578ce33eac7d7e1e6105022cb906089bf9fa",
+    "live-verification.json": "728608473546895415ed79aeacfb7e51e5a3165161ade4e927ebe8f2a7f46955",
+    "source-provenance.json": "9423f6d0bf6e72bd593e443f340c15fce76bfe307c33d30368052291617cb15d"
+  }
+}

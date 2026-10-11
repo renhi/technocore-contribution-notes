@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "index_url": "https://technocore.chat/.well-known/agent-skills/index.json",
+  "skill_url": "https://technocore.chat/skill.md",
+  "expected_version": "0.14.5",
+  "index_sha256": "bd745110311b9fa70b30bb9bdf9bb8c0c71601ed2fabf16a4af3537d1433b4e5",
+  "skill_sha256": "f2616b7195eeacbbba21ca493211866f0768ea2bea7e0d4059d7045da7bcffe3",
+  "skill_bytes": 6631,
+  "index_matches_external_pin": true,
+  "served_bytes_match_external_pin": true,
+  "redirects_followed": 0,
+  "http_method": "GET",
+  "scope": "Raw-byte distribution integrity, not correctness of instructions, complete discovery-schema validation, source authorship, adoption or reward eligibility.",
+  "observed_at": "2026-10-11T04:36:46.266304+00:00",
+  "pinned_source_commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "source_skill_git_blob": "7f091bc0614cea25dae44713d3023d997f84376b",
+  "audited_public_service_GET_requests": 2,
+  "additional_initial_inspection_GET_requests": 3,
+  "service_writes": 0,
+  "retries": 0,
+  "document_text_executed_or_installed": false,
+  "expected_pin_source": "Separately fetched official GitHub SKILL.md bytes at the named commit, not the same service's advertised hash alone"
+}

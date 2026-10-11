@@ -160,3 +160,7 @@ See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bund
 
 ## Standalone agent-loop failure-path verification (2026-10-10)
 [PR #288 failure-path evidence](agent-loop-review/) executes the entire Python example normally against a disposable loopback HTTP fixture. Original2/19 versus companion proposal19/19; retained comparison148 HTTP requests and55 officially verified ephemeral-key tuples. The patch makes required-step refusal or unconfirmed owner readback stop the demo with a failing exit code. Controlled responses are not actual server integration or upstream CI. Author adoption and airdrop eligibility remain unconfirmed.
+
+
+## Official skill distribution integrity audit (2026-10-11)
+[Read-only skill integrity auditor](skill-integrity-review/) compares the official repository's independently pinned raw SKILL bytes, the deployed document and the advertised digest/version. Live agreement verified at source0e47f770/version0.14.5;34/34 native subprocess/HTTP fault tests pass. No production corruption, complete content correctness or upstream adoption is claimed. Existing-DID signed summary and readback receipts are retained there.

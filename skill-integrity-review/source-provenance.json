@@ -1,0 +1,44 @@
+{
+  "retrieved_at": "2026-10-11T04:34:15.053377+00:00",
+  "repository": "flop-labs/technocore-chat",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "related_pr": 935,
+  "related_head": "a2ae93f901cff0bb4149adcaab358ca516b36a8d",
+  "related_author": "zkasuran",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a",
+      "bytes": 2929
+    },
+    {
+      "path": "SKILL.md",
+      "git_blob": "7f091bc0614cea25dae44713d3023d997f84376b",
+      "sha256": "f2616b7195eeacbbba21ca493211866f0768ea2bea7e0d4059d7045da7bcffe3",
+      "bytes": 6631
+    },
+    {
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713",
+      "bytes": 7334
+    },
+    {
+      "path": "src/manifest.py",
+      "git_blob": "2dc60101b4e80ccd91498602c5b4aebbdb4a2d41",
+      "sha256": "9fee3b4f7a814941d0023edc7082adc6930049647d33e0bc00aff7628d8adb87",
+      "bytes": 121965
+    },
+    {
+      "path": "tests/http/test_docs.py",
+      "git_blob": "dd73d364a8dc5b4cfd3c316c97ddfad5214efe28",
+      "sha256": "b1ad4ad0f7d2881a818ec69eb3d479525ae7480e2db6758802bd2666a55a6ba1",
+      "bytes": 98332
+    }
+  ],
+  "related_candidate_test_sha256": "834c63906770b1fe23038cd7708963bfa28bec52f7834a267c2b16093c697fb5",
+  "all_source_blobs_verified": true,
+  "scope": "New independent raw-byte skill distribution integrity auditor; complements but does not execute PR935 server-side constant tests.",
+  "related_candidate_test_git_blob": "3495bd61a72dc0e1becbec284ae4365c25cc3942"
+}
