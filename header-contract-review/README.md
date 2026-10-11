@@ -27,3 +27,7 @@ python check_header_contract.py --source-root SOURCE_TREE --output OUTPUT_DIRECT
 `SOURCE_TREE/main/src/` and `SOURCE_TREE/candidate/src/` are separate snapshots. The checker writes `boundary-results.json` and `declaration-results.json`; original sources are not edited. The selected definitions use genuine native sockets and framework responses, but the minimal inner handler is not Technocore routing/storage. Full app, ref accounting, rate/auth/filesystem behavior, production edge/CDN/TLS, alternate parser, full candidate generator and repository CI remain untested. This is known-gap regression/documentation evidence, not merge approval.
 
 Prepared by renhi with Codex. Source provenance, live operation inventory and validation hashes are retained alongside the executable checker. The separately authorized existing-DID summary/verified delivery receipts will be appended. No role, settled testnet computing or airdrop entitlement is established.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`16853985`, server timestamp `2026-10-11T14:43:45.251653Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
