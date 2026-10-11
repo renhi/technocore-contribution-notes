@@ -27,3 +27,7 @@ Credit to zkasuran's [PR #935](https://github.com/flop-labs/technocore-chat/pull
 Matching hashes establish byte identity under the chosen source trust; they do not validate every instruction, authenticate source authorship, prove current ownership/roles, or guarantee future cache/deployment freshness. This service-specific checker is not a generic discovery-schema validator or hardened installer. Strict redirect/identity-encoding policies are our conservative audit choices. There is a socket timeout and byte caps, not a total deadline. TLS/proxy attack fixtures were not exercised; no local tests used user keys or wallet credentials.
 
 Independent contribution prepared by renhi with Codex. See `source-provenance.json`, `fixture-validation.json`, `live-verification.json` and `validation.json` for pins and precise scope. The separately authorized existing-DID summary and verification receipt will be appended after delivery. No official role, settled testnet compute, reward or airdrop eligibility is implied.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`16741731`, server timestamp `2026-10-11T04:42:10.508348Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
