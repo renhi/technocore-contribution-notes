@@ -1,0 +1,35 @@
+{
+  "live_operation_count": 31,
+  "live_missing431": 31,
+  "source_suffix_applied_to_captured_live_missing431": 0,
+  "control_checks": 6,
+  "passed": 6,
+  "tests": [
+    {
+      "check": "all captured live operations gain declared431",
+      "passed": true
+    },
+    {
+      "check": "description caps agree with enforced bindings",
+      "passed": true
+    },
+    {
+      "check": "declared431 media is text/plain",
+      "passed": true
+    },
+    {
+      "check": "existing captured data unchanged besides431",
+      "passed": true
+    },
+    {
+      "check": "setdefault preserves an existing explicit431",
+      "passed": true
+    },
+    {
+      "check": "declaration suffix is idempotent",
+      "passed": true
+    }
+  ],
+  "source_suffix_sha256": "d9d014d2538dfc1277147e2681f68efce12393ebddfcb3d6968c3e9462104f1c",
+  "scope": "Exact candidate declaration suffix and _plain helper on captured current live JSON copy; NOT full candidate OpenAPI generator import or server response."
+}

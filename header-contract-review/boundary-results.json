@@ -1,0 +1,342 @@
+{
+  "main": {
+    "cases": 14,
+    "passed": 14,
+    "native_local_HTTP_requests": 14,
+    "selected_definition_sha256": {
+      "MAX_HEADERS": "de4fb289e96765381b6b444c63c801555521167130416d09e064ea93679dca43",
+      "MAX_HEADER_BYTES": "36bf09316c439a274014e63a6a211da5846257c2d8bbe3f918233cee4a79de69",
+      "text": "b251f4d99477062dafc2a3abcc77cb51d6dd47f7980bf1ebcb83586ea5fea958",
+      "_REF": "f236c78d84c30ca3363c590b37b6f7e5ae2cb4e96659be60ead10d972dd46803",
+      "HeaderLimits": "8c0532ad4e0f5d6c0c2235ac69c1ba16f681aed2007bc70567325cee8c2da044"
+    },
+    "source_sha256": "1727d167afd24e2ad053e34e00181675b874b861ab3bd9608e460d03396f347f",
+    "results": [
+      {
+        "case": "count47",
+        "count": 47,
+        "bytes": 303,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "count48",
+        "count": 48,
+        "bytes": 309,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "count49",
+        "count": 49,
+        "bytes": 315,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "bytes8191",
+        "count": 2,
+        "bytes": 8191,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "bytes8192",
+        "count": 2,
+        "bytes": 8192,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "bytes8193",
+        "count": 2,
+        "bytes": 8193,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "both_exact",
+        "count": 48,
+        "bytes": 8192,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "count_only_over",
+        "count": 49,
+        "bytes": 8192,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "bytes_only_over",
+        "count": 48,
+        "bytes": 8193,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "duplicate_header_sum",
+        "count": 3,
+        "bytes": 8193,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "utf8_value_exact",
+        "count": 2,
+        "bytes": 8192,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "utf8_value_over",
+        "count": 2,
+        "bytes": 8193,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "post_before_handler",
+        "count": 2,
+        "bytes": 8193,
+        "method": "POST",
+        "path": "/fixture-write",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "unknown_route_before_handler",
+        "count": 49,
+        "bytes": 315,
+        "method": "GET",
+        "path": "/absent",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      }
+    ],
+    "scope": "Unchanged selected class/text/constant definitions with actual Starlette response and Uvicorn/h11 TCP HTTP. Minimal inner app fixture only; full official app, filesystem, rate/ref accounting and production edge are not exercised."
+  },
+  "candidate": {
+    "cases": 14,
+    "passed": 14,
+    "native_local_HTTP_requests": 14,
+    "selected_definition_sha256": {
+      "MAX_HEADERS": "0049b68089d6b44d754aad532f47149cea910097240672583488e3538326dc77",
+      "MAX_HEADER_BYTES": "0b95b78129f07a91ac19106cd93975f1fe2a2ee41795c5ba138924510ace1fcf",
+      "text": "b251f4d99477062dafc2a3abcc77cb51d6dd47f7980bf1ebcb83586ea5fea958",
+      "_REF": "f236c78d84c30ca3363c590b37b6f7e5ae2cb4e96659be60ead10d972dd46803",
+      "HeaderLimits": "8c0532ad4e0f5d6c0c2235ac69c1ba16f681aed2007bc70567325cee8c2da044"
+    },
+    "source_sha256": "768663e5c19604da233704871b957183aa7ceca0843e865e033f78802efb1984",
+    "results": [
+      {
+        "case": "count47",
+        "count": 47,
+        "bytes": 303,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "count48",
+        "count": 48,
+        "bytes": 309,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "count49",
+        "count": 49,
+        "bytes": 315,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "bytes8191",
+        "count": 2,
+        "bytes": 8191,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "bytes8192",
+        "count": 2,
+        "bytes": 8192,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "bytes8193",
+        "count": 2,
+        "bytes": 8193,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "both_exact",
+        "count": 48,
+        "bytes": 8192,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "count_only_over",
+        "count": 49,
+        "bytes": 8192,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "bytes_only_over",
+        "count": 48,
+        "bytes": 8193,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "duplicate_header_sum",
+        "count": 3,
+        "bytes": 8193,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "utf8_value_exact",
+        "count": 2,
+        "bytes": 8192,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 200,
+        "actual_status": 200,
+        "inner_handler_calls": 1,
+        "passed": true
+      },
+      {
+        "case": "utf8_value_over",
+        "count": 2,
+        "bytes": 8193,
+        "method": "GET",
+        "path": "/healthz",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "post_before_handler",
+        "count": 2,
+        "bytes": 8193,
+        "method": "POST",
+        "path": "/fixture-write",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      },
+      {
+        "case": "unknown_route_before_handler",
+        "count": 49,
+        "bytes": 315,
+        "method": "GET",
+        "path": "/absent",
+        "expected_status": 431,
+        "actual_status": 431,
+        "inner_handler_calls": 0,
+        "passed": true
+      }
+    ],
+    "scope": "Unchanged selected class/text/constant definitions with actual Starlette response and Uvicorn/h11 TCP HTTP. Minimal inner app fixture only; full official app, filesystem, rate/ref accounting and production edge are not exercised."
+  }
+}

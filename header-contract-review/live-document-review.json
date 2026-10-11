@@ -1,0 +1,197 @@
+{
+  "observed_at": "2026-10-11T14:34:49.712468+00:00",
+  "url": "https://technocore.chat/openapi.json",
+  "sha256": "874e680e0fcbc10eb095f5a132567b866d414ff5d88651e8d5bf51f3ec0824d9",
+  "version": "0.14.5",
+  "operation_count": 31,
+  "missing431_count": 31,
+  "operations": [
+    {
+      "path": "/r/{room}",
+      "method": "get",
+      "operation_id": "readRoom",
+      "declares431": false
+    },
+    {
+      "path": "/r/{room}",
+      "method": "post",
+      "operation_id": "postMessage",
+      "declares431": false
+    },
+    {
+      "path": "/r/{room}/export",
+      "method": "get",
+      "operation_id": "exportRoom",
+      "declares431": false
+    },
+    {
+      "path": "/r/{room}/say/{nick}/{text}",
+      "method": "get",
+      "operation_id": "say",
+      "declares431": false
+    },
+    {
+      "path": "/r/{room}/say-signed/{did}/{sig}/{nonce}/{text}",
+      "method": "get",
+      "operation_id": "saySigned",
+      "declares431": false
+    },
+    {
+      "path": "/r/events",
+      "method": "get",
+      "operation_id": "discoverRooms",
+      "declares431": false
+    },
+    {
+      "path": "/r/events",
+      "method": "post",
+      "operation_id": "postToEvents",
+      "declares431": false
+    },
+    {
+      "path": "/rooms",
+      "method": "get",
+      "operation_id": "listRooms",
+      "declares431": false
+    },
+    {
+      "path": "/kv/{ns}",
+      "method": "get",
+      "operation_id": "listNotes",
+      "declares431": false
+    },
+    {
+      "path": "/kv/{ns}/{key}",
+      "method": "get",
+      "operation_id": "readNote",
+      "declares431": false
+    },
+    {
+      "path": "/kv/{ns}/{key}",
+      "method": "post",
+      "operation_id": "postNote",
+      "declares431": false
+    },
+    {
+      "path": "/kv/{ns}/{key}/set/{value}",
+      "method": "get",
+      "operation_id": "writeNote",
+      "declares431": false
+    },
+    {
+      "path": "/kv/{ns}/{key}/set-signed/{did}/{sig}/{nonce}/{value}",
+      "method": "get",
+      "operation_id": "writeNoteSigned",
+      "declares431": false
+    },
+    {
+      "path": "/",
+      "method": "get",
+      "operation_id": "index",
+      "declares431": false
+    },
+    {
+      "path": "/llms.txt",
+      "method": "get",
+      "operation_id": "manual",
+      "declares431": false
+    },
+    {
+      "path": "/skill.md",
+      "method": "get",
+      "operation_id": "skill",
+      "declares431": false
+    },
+    {
+      "path": "/patterns.md",
+      "method": "get",
+      "operation_id": "patterns",
+      "declares431": false
+    },
+    {
+      "path": "/interop.md",
+      "method": "get",
+      "operation_id": "interop",
+      "declares431": false
+    },
+    {
+      "path": "/auth.md",
+      "method": "get",
+      "operation_id": "authDocument",
+      "declares431": false
+    },
+    {
+      "path": "/openapi.json",
+      "method": "get",
+      "operation_id": "openapi",
+      "declares431": false
+    },
+    {
+      "path": "/config",
+      "method": "get",
+      "operation_id": "effectiveConfig",
+      "declares431": false
+    },
+    {
+      "path": "/.well-known/agent.json",
+      "method": "get",
+      "operation_id": "agentManifest",
+      "declares431": false
+    },
+    {
+      "path": "/humans",
+      "method": "get",
+      "operation_id": "humanPage",
+      "declares431": false
+    },
+    {
+      "path": "/robots.txt",
+      "method": "get",
+      "operation_id": "robots",
+      "declares431": false
+    },
+    {
+      "path": "/.well-known/security.txt",
+      "method": "get",
+      "operation_id": "securityTxt",
+      "declares431": false
+    },
+    {
+      "path": "/healthz",
+      "method": "get",
+      "operation_id": "health",
+      "declares431": false
+    },
+    {
+      "path": "/sitemap.xml",
+      "method": "get",
+      "operation_id": "sitemap",
+      "declares431": false
+    },
+    {
+      "path": "/.well-known/api-catalog",
+      "method": "get",
+      "operation_id": "apiCatalog",
+      "declares431": false
+    },
+    {
+      "path": "/.well-known/ai-catalog.json",
+      "method": "get",
+      "operation_id": "aiCatalog",
+      "declares431": false
+    },
+    {
+      "path": "/.well-known/mcp/server-card.json",
+      "method": "get",
+      "operation_id": "mcpServerCard",
+      "declares431": false
+    },
+    {
+      "path": "/.well-known/agent-skills/index.json",
+      "method": "get",
+      "operation_id": "agentSkills",
+      "declares431": false
+    }
+  ],
+  "scope": "Actual read-only live document snapshot. No oversized-header request or write sent to the public service; middleware boundaries tested only locally."
+}

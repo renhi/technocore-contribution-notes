@@ -1,0 +1,73 @@
+{
+  "retrieved_at": "2026-10-11T14:34:49.712468+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr": 622,
+  "head": "1b3c3fb2bb433502fb552e75903521e4a5e5ff4c",
+  "author": "Elfet",
+  "state": "open",
+  "merged": false,
+  "files": [
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/app.py",
+      "git_blob": "d60fe0e5dabaa355f66f8b9eea46f15d90b6d98c",
+      "sha256": "1727d167afd24e2ad053e34e00181675b874b861ab3bd9608e460d03396f347f"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/manifest.py",
+      "git_blob": "2dc60101b4e80ccd91498602c5b4aebbdb4a2d41",
+      "sha256": "9fee3b4f7a814941d0023edc7082adc6930049647d33e0bc00aff7628d8adb87"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/manual.md",
+      "git_blob": "54fe06f07b1c737612a3ec915c63ad90a8b84650",
+      "sha256": "488e05310f497718a83d276110261cd81b37360c9468fd31b55d578ae3781260"
+    },
+    {
+      "version": "candidate",
+      "commit": "1b3c3fb2bb433502fb552e75903521e4a5e5ff4c",
+      "path": "src/app.py",
+      "git_blob": "6497fff506d34190c10ae067d731e9a1d582fbca",
+      "sha256": "768663e5c19604da233704871b957183aa7ceca0843e865e033f78802efb1984"
+    },
+    {
+      "version": "candidate",
+      "commit": "1b3c3fb2bb433502fb552e75903521e4a5e5ff4c",
+      "path": "src/manifest.py",
+      "git_blob": "9d2f8f2265bab91a16a2d377d4202d290a2425bb",
+      "sha256": "21315c10c4e7a2626e9802373a8134fe6cc380dcbe61e5b9c6a4dfc0a1f9522d"
+    }
+  ],
+  "prior_comments": [
+    {
+      "author": "Elfet",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/622#issuecomment-5572299601"
+    },
+    {
+      "author": "Elfet",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/622#issuecomment-5807367830"
+    }
+  ],
+  "live_openapi_sha256": "874e680e0fcbc10eb095f5a132567b866d414ff5d88651e8d5bf51f3ec0824d9",
+  "live_document_GET_requests": 1,
+  "public_oversized_header_probes_or_test_writes": 0
+}

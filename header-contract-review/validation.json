@@ -1,0 +1,58 @@
+{
+  "prepared_at": "2026-10-11T14:39:35.848788+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr": 622,
+  "head": "1b3c3fb2bb433502fb552e75903521e4a5e5ff4c",
+  "credit": "Elfet original PR622 and prior discovery of undocumented431; renhi Codex-assisted independent exact-threshold/duplicate/byte-count and declaration controls.",
+  "finding_scope": "Independent confirmation and strengthening of an already reported documentation gap; not a new server vulnerability or31 independent bugs.",
+  "live_operations": 31,
+  "live_operations_missing431": 31,
+  "local_main_boundary_cases": 14,
+  "local_main_passed": 14,
+  "local_candidate_boundary_cases": 14,
+  "local_candidate_passed": 14,
+  "native_local_HTTP_requests": 28,
+  "declaration_controls": 6,
+  "declaration_controls_passed": 6,
+  "candidate_suffix_missing431_on_live_copy": 0,
+  "header_count_limit": 48,
+  "header_byte_limit": 8192,
+  "byte_count_rule": "sum(len(raw_name)+len(raw_value)+4) per ASGI header tuple; duplicates count separately",
+  "checks": {
+    "ruff_lint": {
+      "passed": true,
+      "stdout": "All checks passed!"
+    },
+    "ruff_format": {
+      "passed": true,
+      "stdout": "1 file already formatted"
+    },
+    "syntax": true
+  },
+  "source_blobs_verified_and_unchanged": 7,
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Windows",
+    "starlette": "1.7.0",
+    "uvicorn": "0.54.0",
+    "ruff": "0.16.1"
+  },
+  "limitations": [
+    "Unchanged selected HeaderLimits/text/constant bodies execute in a minimal real Starlette/Uvicorn/h11 loopback fixture; full Linux-dependent app is not imported.",
+    "Candidate manifest literal caps bind its app's original manifest.MAX_* expressions via a constant-only namespace; not a full manifest module replacement or server run.",
+    "No ref-token accounting, filesystem, auth, rate limiting, production reverse proxy/CDN, hostile TLS or alternative HTTP parser tested.",
+    "Candidate declaration suffix and _plain helper executed only on captured live JSON copies; full candidate openapi_document generation and endpoint are not executed.",
+    "POST is only a local oversized-header case blocked before the minimal fixture handler; no public-service test writes or oversized probes.",
+    "Thirty-one missing declarations are manifestations of one shared document gap; local boundary results confirm existing behavior, not a behavior change.",
+    "No full Linux repository tests, upstream CI, original branch modification, new PR/comment or author adoption; the existing PR still needs reviewer gates.",
+    "No user key or wallet used for tests. Protected existing key is used separately only for the explicitly authorized factual DID summary.",
+    "No official role, airdrop qualification or testnet compute settlement established."
+  ],
+  "artifact_sha256": {
+    "check_header_contract.py": "921f282095b6817bf2b906cb4e1958c28cc71bf1f93126b2baf24386a5c8e320",
+    "source-provenance.json": "2b269f18c50147c949f233d9e3d1f28fc268caabab85ebc6080319db4ff184e4",
+    "live-document-review.json": "acfd578c845497fb6cdd18aa01eecf252a788bcf5a483e745f7bc2c4700820ac",
+    "boundary-results.json": "b5570984c178e2d0f05337e1bbfe98134ff46f4f03467855fdce622121fb08c8",
+    "declaration-results.json": "225d1d0eb86e2f43e072dd47480012afd70488bc0b2df547900ca1f689169443"
+  }
+}

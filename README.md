@@ -164,3 +164,7 @@ See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bund
 
 ## Official skill distribution integrity audit (2026-10-11)
 [Read-only skill integrity auditor](skill-integrity-review/) compares the official repository's independently pinned raw SKILL bytes, the deployed document and the advertised digest/version. Live agreement verified at source0e47f770/version0.14.5;34/34 native subprocess/HTTP fault tests pass. No production corruption, complete content correctness or upstream adoption is claimed. Existing-DID signed summary and readback receipts are retained there.
+
+
+## Official header limit documentation review (2026-10-11)
+[Header limit documentation review](header-contract-review/) independently strengthens Elfet's existing PR622 finding. The captured live OpenAPI has31 operations without431 declarations; selected unchanged header-limit code passes14/14 cases per pinned version over28 local HTTP requests. Six declaration-suffix controls pass on captured document copies. This is not a full app or candidate generator run, new vulnerability, upstream adoption or airdrop approval. Existing-DID summary and independently checked readback receipts are retained there.
