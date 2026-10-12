@@ -168,3 +168,7 @@ See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bund
 
 ## Official header limit documentation review (2026-10-11)
 [Header limit documentation review](header-contract-review/) independently strengthens Elfet's existing PR622 finding. The captured live OpenAPI has31 operations without431 declarations; selected unchanged header-limit code passes14/14 cases per pinned version over28 local HTTP requests. Six declaration-suffix controls pass on captured document copies. This is not a full app or candidate generator run, new vulnerability, upstream adoption or airdrop approval. Existing-DID summary and independently checked readback receipts are retained there.
+
+
+## DID mailbox whole-MCP contract review (2026-10-12)
+[DID mailbox client contract review](mailbox-contract-review/) supports maho0638's known PR917 guard and credits the prior spaced-form reviewer. Whole unmodified Windows MCP processes over real SDK/TCP HTTP: main71/149 and candidate149/149 expected outcomes; 78 malformed variants rejected before candidate origin access.304 MCP requests and220 local recorder POSTs, no production test writes. No full Linux server/CI, upstream incorporation or reward approval. Existing-DID summary and verified receipt retained.

@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-12T12:49:58.676390+00:00",
+  "documents": [
+    {
+      "url": "https://technocore.chat/llms.txt",
+      "sha256": "ae3a86c884c1932a8efe181942a050fd5b5bbbc0093fcaa70a9574bed1ee21d6",
+      "bytes": 26493
+    },
+    {
+      "url": "https://technocore.chat/auth.md",
+      "sha256": "ae4c61d5d6d4b13ec24467a1a66f139c132e039a7180790a914587d642534ddb",
+      "bytes": 5200
+    },
+    {
+      "url": "https://technocore.chat/patterns.md",
+      "sha256": "45ab2f9d0aac7e6b920699cd30382af7f1eacaa0d6adc90d0e8567523e493370",
+      "bytes": 14282
+    }
+  ],
+  "official_grammar": "^[a-z0-9][a-z0-9_-]{0,47}$",
+  "documented_spaced_and_compact_mailbox_forms": true,
+  "main_mcp_scope_mismatches": 78,
+  "candidate_scope_mismatches": 0,
+  "scope": "Whole native MCP note-tool validation/forwarding, not actual server note storage or peer contactability.",
+  "explicit_boundaries": [
+    "Only lowercase mailbox: at a token boundary is a field; Mailbox:, notmailbox: and colon-prefixed data are not fields.",
+    "Only did and did-<two lowercase hex> namespaces get the new guard; generic namespaces remain free-form.",
+    "The room value is one whitespace-delimited token after the official sweep; following metadata is not part of that name.",
+    "Valid room grammar does not establish room existence, DID-note fingerprint validity, ownership, authenticated contact or encryption.",
+    "Raw values/conditions are forwarded unchanged; server storage sweep is not executed by the local recorder.",
+    "Generic note errors409/422/429 are preserved with one origin request; no error retries.",
+    "Peer uses of world-writable mailbox hints still need authenticated binding when security depends on them; no new binding is supplied."
+  ],
+  "credit": "maho0638 PR917 / TCLK152 original unusable-room report; Minh3132 spaced-form reproduction/fix feedback. Prior exact-head hosted CI is author-reported, not our execution."
+}

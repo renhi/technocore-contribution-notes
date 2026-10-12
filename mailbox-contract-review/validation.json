@@ -1,0 +1,54 @@
+{
+  "prepared_at": "2026-10-12T12:50:00.497524+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr": 917,
+  "head": "6550f676a1cb44e9f0dae26360fbd6f4052c52bb",
+  "credit": "maho0638 original client guard / TCLK152; Minh3132 documented spaced-form review; renhi independent native Windows full-module and ASCII/boundary controls.",
+  "finding_scope": "Strengthens a known client validation gap;78 variants of the same guard gap, not78 new bugs. No additional candidate defect found in tested cases.",
+  "scenarios_per_version": 149,
+  "main_matched": 71,
+  "main_mismatched": 78,
+  "candidate_matched": 149,
+  "candidate_mismatched": 0,
+  "mcp_HTTP_requests": 304,
+  "local_origin_POST_requests": 220,
+  "candidate_invalid_cases_rejected_before_network": 78,
+  "visible_ASCII_embedded_character_cases_per_version": 94,
+  "source_blobs_verified_and_unchanged": 22,
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Windows",
+    "mcp": "2.2.0",
+    "starlette": "1.7.0",
+    "uvicorn": "0.54.0"
+  },
+  "checks": {
+    "ruff_lint": {
+      "passed": true,
+      "stdout": "All checks passed!"
+    },
+    "ruff_format": {
+      "passed": true,
+      "stdout": "1 file already formatted"
+    },
+    "syntax": true
+  },
+  "limitations": [
+    "Whole MCP modules and real SDK/HTTP/urllib exercised. Origin is a nonpersisting loopback recorder, not full Technocore Linux server.",
+    "A generated disposable public DID is only note text; its private bytes were not extracted or configured and no test request was signed.",
+    "Fixture namespace/key is not a DID-fingerprint slot; actual server fingerprint policy/storage, room creation, ownership or peer delivery are not tested.",
+    "Unsigned world-writable identity metadata is not authenticated by grammar validation; no encryption or paid-session claim.",
+    "Original repository test module/full Linux gates/upstream CI/Worker/browser/proxy/TLS/concurrent calls not executed.",
+    "First harness attempt used a wrong whoami no-key string assertion before any write_note call; corrected. Initial149-case synthetic placeholder DID report retained locally, final149-case run uses disposable valid public DID.",
+    "No official server test writes, upstream edit/newPR/reviewer comment/incorporation or public programme application.",
+    "User protected key reserved for separately authorized one factual summary signature; no wallet or settled compute.",
+    "No official role, airdrop qualification, payout or programme acceptance established."
+  ],
+  "artifact_sha256": {
+    "check_mailbox_contract.py": "ba8b737a87c6235861748c36d1027d96ddc075c63ac515d7c824160a3062b8bc",
+    "source-provenance.json": "ae106dcf120d8f4ff08c2acbfdfba417958fc6bf402a3288744e1baace35f851",
+    "native-results.json": "9460d1fbb1bd7b5fa5657cc0445ba684486fdbbf4dd08de17259286836152a30",
+    "document-contract-review.json": "6a77067b2433fbc10927694ac859ba32c12cf510c484d50ba2127d973962c8c0",
+    "official-participation-review.json": "e123afdd7fd2996aa033a8c5f7d575115728ea3066abee5208db322cc4fabd1e"
+  }
+}

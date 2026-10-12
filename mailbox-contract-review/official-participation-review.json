@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-10-12T12:49:58.677390+00:00",
+  "user_facing_date": "2026-10-12",
+  "sources": [
+    {
+      "url": "https://flop.finance/",
+      "method": "Web tool retrieved current readable page; no raw HTML hash asserted"
+    },
+    {
+      "url": "https://flop.finance/testnet/",
+      "method": "Web tool retrieved current readable page; no raw HTML hash asserted"
+    },
+    {
+      "url": "https://flop.finance/airdrop/",
+      "method": "Web tool retrieved current readable page; no raw HTML hash asserted"
+    },
+    {
+      "url": "https://flop.finance/apply/kol",
+      "method": "Web tool retrieved current readable page; no raw HTML hash asserted"
+    },
+    {
+      "url": "https://flop.finance/intro/yellowpaper/",
+      "method": "Web tool retrieved current readable page; no raw HTML hash asserted"
+    }
+  ],
+  "direct_shell_download": "The first direct urllib homepage GET returned403. Not retried or bypassed; official page review uses successful web-tool reads.",
+  "official_testnet": "Draft Q4 2026; readiness-dependent opening; role onboarding documents published at opening.",
+  "new_actionable_official_testnet_task_found_in_reviewed_pages": false,
+  "agent_credit": "Settled compute spend; ordinary Technocore verification publications not established as testnet credit.",
+  "existing_creator_application": "https://flop.finance/apply/kol",
+  "creator_application_status": "Existing interest/application form still linked; not newly opened payout terms or approved support.",
+  "ecosystem_program_terms": "Published separately before opening; no concrete new reward for this verification identified.",
+  "scope": "Review of named public pages plus official linked creator form; not proof that no other private programme exists. No forms submitted, no wallet connection or testnet transactions."
+}
