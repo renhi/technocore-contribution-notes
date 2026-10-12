@@ -31,3 +31,7 @@ This launches two loopback MCP listeners and local recorders and stops them afte
 The named official testnet/airdrop pages still describe draft/readiness-gated opening and role guides at launch. No new actionable official testnet task or reward for this verification was found in these pages. The creator interest form remains linked; no form was submitted. See `official-participation-review.json`. This is ecosystem contribution evidence, not settled compute/testnet points or airdrop eligibility.
 
 Public source provenance, native results, document scope and hashes are retained here. A separately authorized existing-DID summary and checked readback receipts will be appended.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`17101661`, server timestamp `2026-10-12T12:51:48.297526Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
