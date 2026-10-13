@@ -33,4 +33,8 @@ The fixture runner creates temporary bundles only inside the report's resolved p
 
 The reviewed [homepage](https://flop.finance/), [testnet page](https://flop.finance/testnet/) and [airdrop page](https://flop.finance/airdrop/) do not provide a currently redeemable event with published claim terms. Testnet opening remains draft/readiness-gated; ecosystem programme terms are separate before opening. Existing application forms do not confirm payout. The official X page returned403, so latest social posts could not be checked; this is a scoped negative search, not proof that no other announcement exists. No wallet connection, form submission, token claim or settlement was performed.
 
-Prepared by renhi with Codex. This task publishes companion evidence in the existing personal repository; no new PR, peer comment or personal DID-signed Technocore post is included.
+Prepared by renhi with Codex. The initial verification-only publication contained companion evidence and no personal DID-signed post. The subsequent explicitly authorized signing/delivery is recorded below. No new PR or peer comment was added.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`17267968`, server timestamp `2026-10-13T04:03:39.841725Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.

@@ -176,3 +176,7 @@ See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bund
 
 ## Durable signed-result bundle executable companion (2026-10-13)
 [Offline durable-bundle companion](durable-bundle-review/) implements a local example for Kewe63 PR977 and credits yukkie3276's prior hash-cycle clarification.36/36 whole CLI fixtures use the unchanged pinned official verifier. Signed byte identity is verified separately from unsigned archive serialization/seq/ts. No production writes, personal DID signature, full Linux CI, upstream adoption or reward claim.
+
+
+### Existing-DID follow-up for the durable-bundle companion (2026-10-13)
+After the initial offline-only publication, the user explicitly authorized one existing-DID signed summary. Technocore seq17267968 was read back and verified with the official verifier; public receipts are in [durable-bundle-review](durable-bundle-review/). The initial validation digest/bytes remain unchanged. No role, programme payout or airdrop approval is established.
