@@ -1,0 +1,69 @@
+{
+  "retrieved_at": "2026-10-13T03:51:44.508272+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr": 977,
+  "head": "017122d0f60dca3268eddc03b07dee6f54e3a0ec",
+  "author": "Kewe63",
+  "state": "open",
+  "merged": false,
+  "files": [
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/didkey.py",
+      "git_blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+      "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/patterns.md",
+      "git_blob": "266b514da279ce27153b21a9e682630cc65f4e59",
+      "sha256": "af7e851d6eee9a3a8da4f602e3feead3d2e9a8ab68e39735c74d5552fda34ef8"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/manual.md",
+      "git_blob": "54fe06f07b1c737612a3ec915c63ad90a8b84650",
+      "sha256": "488e05310f497718a83d276110261cd81b37360c9468fd31b55d578ae3781260"
+    },
+    {
+      "version": "candidate",
+      "commit": "017122d0f60dca3268eddc03b07dee6f54e3a0ec",
+      "path": "src/patterns.md",
+      "git_blob": "40209287e9f9d521eed469a077604b38c359c811",
+      "sha256": "61071ac9c4b762b53c9993a88739d41512929254073e73a438242f87b65d0f2f"
+    },
+    {
+      "version": "candidate",
+      "commit": "017122d0f60dca3268eddc03b07dee6f54e3a0ec",
+      "path": "tests/http/test_docs.py",
+      "git_blob": "b758ed3e21b362e7eef9e3da853cd564077ba220",
+      "sha256": "e511bc5a768897348fbe185048c82e2009e68dc7c9693f71384df95a5c5871fb"
+    }
+  ],
+  "live_patterns_sha256": "45ab2f9d0aac7e6b920699cd30382af7f1eacaa0d6adc90d0e8567523e493370",
+  "prior_comments": [
+    {
+      "author": "yukkie3276",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/977#issuecomment-6119400090"
+    }
+  ],
+  "credit": "Kewe63 original durable-bundle proposal; yukkie3276 prior hash-cycle clarification and executable-fixture suggestion.",
+  "service_test_writes": 0
+}

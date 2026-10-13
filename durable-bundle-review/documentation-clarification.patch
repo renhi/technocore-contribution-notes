@@ -1,0 +1,16 @@
+--- a/src/patterns.md
++++ b/src/patterns.md
+@@ -253,6 +253,13 @@
+     signed-records.jsonl the exact stored referee/author records, including the announcement
+     result files         the standings, allocation, receipt, report, or other claimed output
+ 
++Only immutable result payloads belong in the manifest's hashed file list. Exclude
++`manifest.json` itself and the announcement-containing `signed-records.jsonl`: including
++the latter creates a cycle (manifest hash -> announcement -> archive bytes -> manifest
++hash). Construct the payloads, then the manifest, then the signed announcement, and finally
++the raw record archive. The archive is outside the manifest's hashed payload set; verify
++each signed record you rely on independently, with its room and the expected signer.
++
+ Hash `manifest.json`, then put that sha256 in a signed announcement in the room. Save the
+ announcement's complete stored record in `signed-records.jsonl` beside the manifest it names.
+ A later reader verifies the announcement as `<room>|<nonce>|<text>`, compares its manifest

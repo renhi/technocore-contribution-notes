@@ -1,0 +1,55 @@
+{
+  "prepared_at": "2026-10-13T03:58:11.506211+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr": 977,
+  "head": "017122d0f60dca3268eddc03b07dee6f54e3a0ec",
+  "credit": "Kewe63 original durable-bundle proposal; yukkie3276 prior hash-cycle clarification and executable-fixture suggestion.",
+  "scope": "Executable companion to an existing durable-bundle documentation proposal and prior hash-cycle review, not new server vulnerability.",
+  "fixture_cases": 36,
+  "fixture_passed": 36,
+  "accepted_controls": 6,
+  "refusal_controls": 30,
+  "complete_CLI_subprocesses": 36,
+  "original_source_blobs_verified_unchanged": 7,
+  "official_verifier_executed_whole": true,
+  "official_verifier_sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6",
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Windows",
+    "PyNaCl": "1.6.2",
+    "cryptography": "50.0.1"
+  },
+  "checks": {
+    "patch_apply_check": true,
+    "syntax": true,
+    "ruff_lint": {
+      "passed": true,
+      "stdout": "All checks passed!"
+    },
+    "ruff_format": {
+      "passed": true,
+      "stdout": "2 files already formatted"
+    }
+  },
+  "limitations": [
+    "Local profile/manifest schema/announcement marker are companion example choices, not an official Technocore wire standard.",
+    "Whole CLI subprocesses and unchanged pinned official DID verifier execute offline; all archives/room absence are synthetic, no actual room expiry/export observation.",
+    "Only the externally chosen DID/room announcement is verified; other archived records, extra unlisted files, unsigned seq/ts and raw JSON serialization are not authenticated.",
+    "Raw fixture archive bytes copied before tampering; valid reserialization remains signature-valid. Signature does not prove original export serialization.",
+    "Original string nonce007 remains verifiable; an integer7 record cannot recover that original signed spelling. Missing sig cannot be recovered.",
+    "Path/duplicate/size checks are a conservative local profile; symlink/reparse refusal code is present but actual link creation and hostile concurrent filesystem races not tested.",
+    "Explicit external verifier digest and expected DID/room must come from independent trust, not from an untrusted bundle; pinned verifier source is executed.",
+    "No real private keys or credentials in artifacts. Disposable fixture keys stay internal; user protected DID key never accessed.",
+    "No full Linux repository/original doc tests/upstreamCI, original branch modification/newPR/reviewer comment or adoption.",
+    "Initial fixture attempt was blocked in Windows sandbox default Temp before key creation; final run uses an explicitly checked workspace scratch path.",
+    "Official event review found no currently documented redeemable event in named pages; X latest posts inaccessible403. Existing forms are interest registration, not payout approval.",
+    "No personal DID-signed public message, wallet/testnet settlement, official role or airdrop eligibility established by this task."
+  ],
+  "artifact_sha256": {
+    "verify_bundle.py": "bb56d831b0c8c9dd175e48f500b8daa85744095cfc8d378fbdceb6fad9ff5860",
+    "test_bundle.py": "930c96e6969fb0ae17dfe8b280a949f755dc3e880c61acca164f0243672e5128",
+    "source-provenance.json": "aac225921541f680521c8d293e86a10e8135b0f21deb6821665a74f02fec8ade",
+    "fixture-results.json": "5407c108655770ac8e0ed1496d7f6b9313c4ef5dda2a57b99a08a33cddfdade2",
+    "documentation-clarification.patch": "cb824661c25528d4311ed6bd7b64a2ea647260654aab53457dd0a5858630db3f"
+  }
+}

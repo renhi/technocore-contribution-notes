@@ -172,3 +172,7 @@ See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bund
 
 ## DID mailbox whole-MCP contract review (2026-10-12)
 [DID mailbox client contract review](mailbox-contract-review/) supports maho0638's known PR917 guard and credits the prior spaced-form reviewer. Whole unmodified Windows MCP processes over real SDK/TCP HTTP: main71/149 and candidate149/149 expected outcomes; 78 malformed variants rejected before candidate origin access.304 MCP requests and220 local recorder POSTs, no production test writes. No full Linux server/CI, upstream incorporation or reward approval. Existing-DID summary and verified receipt retained.
+
+
+## Durable signed-result bundle executable companion (2026-10-13)
+[Offline durable-bundle companion](durable-bundle-review/) implements a local example for Kewe63 PR977 and credits yukkie3276's prior hash-cycle clarification.36/36 whole CLI fixtures use the unchanged pinned official verifier. Signed byte identity is verified separately from unsigned archive serialization/seq/ts. No production writes, personal DID signature, full Linux CI, upstream adoption or reward claim.

@@ -1,0 +1,481 @@
+{
+  "checked_at": "2026-10-13T03:56:04.183892+00:00",
+  "cases": 36,
+  "passed": 36,
+  "accepted_controls": 6,
+  "refusal_controls": 30,
+  "complete_CLI_subprocesses": 36,
+  "official_verifier_sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6",
+  "checker_sha256": "bb56d831b0c8c9dd175e48f500b8daa85744095cfc8d378fbdceb6fad9ff5860",
+  "test_sha256": "930c96e6969fb0ae17dfe8b280a949f755dc3e880c61acca164f0243672e5128",
+  "rows": [
+    {
+      "name": "valid-no-room-present",
+      "expected_accept": true,
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "ok": true,
+        "signature_valid": true,
+        "manifest_sha256": "557b0a39d9b4ef7ee486e1fcfa2984c97e308173950ddd5b4af209bde54ecf4e",
+        "payloads_verified": [
+          "payloads/결과.txt",
+          "payloads/raw.bin"
+        ],
+        "expected_did": "did:key:z6MkuTtDTNHsYznooxJpfGcdbgqiy5sM9ryKaXQfosZ4nRHm",
+        "room": "durable-fixture",
+        "seq_ts_authenticated": false,
+        "raw_archive_byte_authenticity_established": false,
+        "other_archive_records_authenticated": false,
+        "file_content_truth_or_official_approval": false
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "changed-payload",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "payload digest mismatch"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "missing-payload",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "missing bundle path"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "changed-manifest-bytes",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "signed manifest digest mismatch"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "changed-announcement-text",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "selected announcement signature invalid"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "changed-signature",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "selected announcement signature invalid"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "signature-padbit-alias",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "selected announcement signature invalid"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "missing-signature",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "missing signature"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "nonce-changed",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "selected announcement signature invalid"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "original-string-nonce007",
+      "expected_accept": true,
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "ok": true,
+        "signature_valid": true,
+        "manifest_sha256": "557b0a39d9b4ef7ee486e1fcfa2984c97e308173950ddd5b4af209bde54ecf4e",
+        "payloads_verified": [
+          "payloads/결과.txt",
+          "payloads/raw.bin"
+        ],
+        "expected_did": "did:key:z6MkkHYh1rrtpVbn5yRotSaKweyqaJaFuFWr7q2JrNZHkYyx",
+        "room": "durable-fixture",
+        "seq_ts_authenticated": false,
+        "raw_archive_byte_authenticity_established": false,
+        "other_archive_records_authenticated": false,
+        "file_content_truth_or_official_approval": false
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "stored-integer-loses-signed007",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "selected announcement signature invalid"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "wrong-external-room",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "selected announcement signature invalid"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "wrong-external-did",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "expected exactly one selected announcement"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "wrong-verifier-pin",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "external verifier pin mismatch"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "changed-unsigned-seq-ts",
+      "expected_accept": true,
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "ok": true,
+        "signature_valid": true,
+        "manifest_sha256": "557b0a39d9b4ef7ee486e1fcfa2984c97e308173950ddd5b4af209bde54ecf4e",
+        "payloads_verified": [
+          "payloads/결과.txt",
+          "payloads/raw.bin"
+        ],
+        "expected_did": "did:key:z6MkpC3t8Y2EgDCdA6mfvMS3miwsXkd9eJDgUfg1CqCJkxfR",
+        "room": "durable-fixture",
+        "seq_ts_authenticated": false,
+        "raw_archive_byte_authenticity_established": false,
+        "other_archive_records_authenticated": false,
+        "file_content_truth_or_official_approval": false
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "reserialized-archive-still-signature-valid",
+      "expected_accept": true,
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "ok": true,
+        "signature_valid": true,
+        "manifest_sha256": "557b0a39d9b4ef7ee486e1fcfa2984c97e308173950ddd5b4af209bde54ecf4e",
+        "payloads_verified": [
+          "payloads/결과.txt",
+          "payloads/raw.bin"
+        ],
+        "expected_did": "did:key:z6Mki7rwjgnpag7411XKxv6vEKwwyqfmwEdHdGWjNNDaHmtr",
+        "room": "durable-fixture",
+        "seq_ts_authenticated": false,
+        "raw_archive_byte_authenticity_established": false,
+        "other_archive_records_authenticated": false,
+        "file_content_truth_or_official_approval": false
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "extra-unselected-record-not-authenticated",
+      "expected_accept": true,
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "ok": true,
+        "signature_valid": true,
+        "manifest_sha256": "557b0a39d9b4ef7ee486e1fcfa2984c97e308173950ddd5b4af209bde54ecf4e",
+        "payloads_verified": [
+          "payloads/결과.txt",
+          "payloads/raw.bin"
+        ],
+        "expected_did": "did:key:z6MkvnoDs83BRccpoQcDUmm8LPHkVfFzfpptjHfPbVdTZExW",
+        "room": "durable-fixture",
+        "seq_ts_authenticated": false,
+        "raw_archive_byte_authenticity_established": false,
+        "other_archive_records_authenticated": false,
+        "file_content_truth_or_official_approval": false
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "duplicate-selected-announcement",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "expected exactly one selected announcement"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "archive-nonobject",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "archive record is not an object"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "archive-missing-final-lf",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "archive requires complete JSONL lines"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "duplicate-manifest-json-key",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "duplicate JSON object key"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "nonfinite-manifest",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "nonfinite JSON"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "unknown-profile",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "unknown local profile"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "empty-file-list",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "bad payload list"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "unsafe-dotdot-path",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "path traversal"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "absolute-payload-path",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "path traversal"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "windows-drive-path",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "nonrelative path"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "windows-backslash-path",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "nonrelative path"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "duplicate-payload-path",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "duplicate or case-ambiguous payload path"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "case-ambiguous-payload-path",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "duplicate or case-ambiguous payload path"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "archive-in-manifest-cycle-refused",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "manifest or announcement archive cannot be a hashed payload"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "manifest-in-manifest-self-refused",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "manifest or announcement archive cannot be a hashed payload"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "oversized-payload",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "file exceeds local profile cap"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "oversized-manifest",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "file exceeds local profile cap"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "oversized-archive",
+      "expected_accept": false,
+      "passed": true,
+      "returncode": 1,
+      "result": {
+        "ok": false,
+        "reason": "file exceeds local profile cap"
+      },
+      "unexpected_stderr": ""
+    },
+    {
+      "name": "invalid-utf8-payload-is-raw-valid",
+      "expected_accept": true,
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "ok": true,
+        "signature_valid": true,
+        "manifest_sha256": "557b0a39d9b4ef7ee486e1fcfa2984c97e308173950ddd5b4af209bde54ecf4e",
+        "payloads_verified": [
+          "payloads/결과.txt",
+          "payloads/raw.bin"
+        ],
+        "expected_did": "did:key:z6Mkw6nMLpGR1RFAnu7qe1ssexbdLwQLxwwnr3b5yZoS4R5g",
+        "room": "durable-fixture",
+        "seq_ts_authenticated": false,
+        "raw_archive_byte_authenticity_established": false,
+        "other_archive_records_authenticated": false,
+        "file_content_truth_or_official_approval": false
+      },
+      "unexpected_stderr": ""
+    }
+  ],
+  "test_keys": "Disposable generated in memory; no private bytes output, args, configured server or public artifact.",
+  "live_service_requests": 0,
+  "user_protected_key_access": false,
+  "room_export_is_synthetic": true,
+  "full_Linux_or_upstream_CI": false,
+  "historical_missing_signature_recovery": false
+}
