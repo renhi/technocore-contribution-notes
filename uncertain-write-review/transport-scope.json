@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-14T07:38:56.061565+00:00",
+  "user_facing_date": "2026-10-14",
+  "mechanism": "Native urllib success-body read with advertised Content-Length greater than sent bytes bypasses candidate OSError boundary; SDK result is a generic tool error. Companion translates only success-branch IncompleteRead to OSError.",
+  "local_acceptance": "Volatile nonpersisting fixture records payload receipt before dropping headers/body; later separate read tool observes count1 or0. Not actual server persistence or a guarantee of real landing.",
+  "no_automatic_write_retries": true,
+  "scope_exclusions": [
+    "Partial HTTP-error bodies remain unchanged/untested",
+    "BadStatusLine/other HTTPException classes not broadly caught",
+    "Real timeouts/DNS/refused-connection/Worker/TLS/production proxies untested",
+    "No semantic note ownership/allow/CAS/store/retention behavior tested"
+  ],
+  "official_event_review": {
+    "sources": [
+      "https://flop.finance/",
+      "https://flop.finance/testnet/",
+      "https://flop.finance/airdrop/"
+    ],
+    "redeemable_event_found_in_named_pages": false,
+    "testnet": "draft/readiness-gated opening",
+    "ecosystem_terms": "Separate before programme opening; existing forms are interest registration",
+    "official_X_latest_posts_verified": false,
+    "X_limitation": "Profile returned403; no bypass or absolute absence claim",
+    "wallet_connection_or_token_claim": false
+  }
+}

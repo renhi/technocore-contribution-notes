@@ -1,0 +1,58 @@
+{
+  "prepared_at": "2026-10-14T07:38:56.063558+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr": 987,
+  "head": "1d6f682249f0b15a97be539c3990e562b1fa79de",
+  "credit": "osr21 PR987; vanilla3 issue982; bdunn77/vanilla3/ShalyX prior mocked-boundary and Linux validation.",
+  "cases_per_version": 34,
+  "main_matched": 18,
+  "main_mismatched": 16,
+  "candidate_matched": 28,
+  "candidate_mismatched": 6,
+  "proposed_matched": 34,
+  "proposed_mismatched": 0,
+  "failure_scope": "OSError wording gap already reported; six framing manifestations of a single success-body IncompleteRead seam gap, not six vulnerabilities.",
+  "native_MCP_HTTP_requests": 201,
+  "local_origin_POST_requests": 90,
+  "local_origin_GET_requests": 102,
+  "disposable_signature_checks": 54,
+  "whole_unmodified_MCP_modules": true,
+  "SDK_or_transport_mocked": false,
+  "source_blobs_verified_unchanged": 18,
+  "runtime": {
+    "python": "3.12.14",
+    "mcp": "2.2.0",
+    "starlette": "1.7.0",
+    "uvicorn": "0.54.0",
+    "cryptography": "50.0.1",
+    "PyNaCl": "1.6.2"
+  },
+  "checks": {
+    "ruff_lint": {
+      "passed": true,
+      "stdout": "All checks passed!"
+    },
+    "ruff_format": {
+      "passed": true,
+      "stdout": "2 files already formatted"
+    },
+    "syntax": true,
+    "patch_apply": true
+  },
+  "limitations": [
+    "Local fixture counters/observer reads are not real storage/auth/owner/CAS or durability evidence.",
+    "Original and candidate modules unchanged; proposal is an unapplied companion on top of PR987, success-framing only, no catch-all HTTPException or retries.",
+    "SDK hides the incomplete-read detail in generic tool text; native framing construction plus the narrow companion establish this tested boundary.",
+    "Complete200/422/429 controls preserve behavior; partial error bodies and other framing/TLS/timeout/proxy/Worker/concurrent paths untested.",
+    "Full Linux/server/original81-test suite/upstreamCI not run; prior reviewer counts are not this task executions.",
+    "No upstream change/newPR/peer comment/incorporation/production tests; protected user key reserved only for separately authorized factual summary.",
+    "No wallet, financial claim, settled compute, official role or airdrop qualification."
+  ],
+  "artifact_sha256": {
+    "check_native_uncertainty.py": "fd21cc740b5b396d18fa4bca02438acf5ea940847ff4919c19ba9e97b5a97995",
+    "source-provenance.json": "3257125ec0020e6cd3ffa14c6bd965db14dfed222522337ba195b39b9d5aa62a",
+    "native-results.json": "ee4e40b29e69cb1caa2ca5a40062d12f63f403ed7358efef692e6bb30951287b",
+    "successful-framing-companion.patch": "d787493ea18ea458c2768755cf035516b70245bc88f39684b98f4c4ea6c6a671",
+    "transport-scope.json": "02c2375e02b1c681dbfb57fad2e4eecea45119fe0cc4b20a7b8f99c4b263a7a3"
+  }
+}

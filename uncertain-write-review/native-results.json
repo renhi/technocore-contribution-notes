@@ -1,0 +1,2392 @@
+{
+  "checked_at": "2026-10-14T07:36:22.238410+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "head": "1d6f682249f0b15a97be539c3990e562b1fa79de",
+  "versions": [
+    {
+      "version": "main",
+      "cases": 34,
+      "matched": 18,
+      "mismatched": 16,
+      "mcp_HTTP_requests": 67,
+      "origin_POST_requests": 30,
+      "origin_GET_requests": 34,
+      "disposable_signatures_verified": 18,
+      "process_stopped": true,
+      "rows": [
+        {
+          "name": "say/complete",
+          "tool": "say",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say/accepted-close",
+          "tool": "say",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool say: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "say/notaccepted-close",
+          "tool": "say",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool say: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": false
+        },
+        {
+          "name": "say/truncated200",
+          "tool": "say",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool say",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "say/error422",
+          "tool": "say",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say/error429",
+          "tool": "say",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/complete",
+          "tool": "write_note",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/accepted-close",
+          "tool": "write_note",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool write_note: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "write_note/notaccepted-close",
+          "tool": "write_note",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool write_note: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": false
+        },
+        {
+          "name": "write_note/truncated200",
+          "tool": "write_note",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool write_note",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "write_note/error422",
+          "tool": "write_note",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/error429",
+          "tool": "write_note",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/complete",
+          "tool": "say_signed",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "55349767d6eed69b2ed8d12950556b1c7442aac0ad7e88c38c4c86ebdd08f958",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/accepted-close",
+          "tool": "say_signed",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "517a1aad2744fde5e51a7621c716bb0e7d0c1d32e722237405d2de1a3458186f",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool say_signed: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "say_signed/notaccepted-close",
+          "tool": "say_signed",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "4096978591aa87629df47d18bc55712a18daad04ab41c0a8e2a806ed0916e65a",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool say_signed: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": false
+        },
+        {
+          "name": "say_signed/truncated200",
+          "tool": "say_signed",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "6cf8e878a03b5b7a31a1f2fa84960850e45831efe1b84e300784e28bb7bc96d5",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool say_signed",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "say_signed/error422",
+          "tool": "say_signed",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "f4fe4a3cbde5726acc0f04e3214b60f8b7e2c4c2813ac5056c259b17755f8c37",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/error429",
+          "tool": "say_signed",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "f3ae58aae7a2fca5862af9569d7c6f9cfd49dcfc4811908e080aa2695f61fd5d",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/complete",
+          "tool": "claim_room",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "fd4bbc11ce8ef2cf1227d048621a0719ae391d4a965cf582fb4d7f0cf113949b",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/accepted-close",
+          "tool": "claim_room",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "65627e7f4fe5e3730c42d33ba12a2d56479b34b2e42a56123e8f633a5aef4cb4",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool claim_room: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "claim_room/notaccepted-close",
+          "tool": "claim_room",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "cc581286536dc3d1730e49fc711d2c58c95cffa9013f793b8b81f8306a086bfc",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool claim_room: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": false
+        },
+        {
+          "name": "claim_room/truncated200",
+          "tool": "claim_room",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "6cbf2ea23467ae067aceee4657efacb8edf4fa4205f0aa20ec5b81bb07a32011",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool claim_room",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "claim_room/error422",
+          "tool": "claim_room",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "bf2ee073b4f0c8195f677d21f0d8b2c08279472ae8694ad94c35560539a8c2cb",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/error429",
+          "tool": "claim_room",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "13cb471e8fde93d094e1d079e315d6172bb3919578ede8d277f38543e706dd7f",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/complete",
+          "tool": "set_room_allow",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "32ae5798e1bd2a4e89408218b19476bcdf151d16faaecf344a9af263525f5042",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/accepted-close",
+          "tool": "set_room_allow",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "3624b1c8cd1c539b7b8e1d5248658e824fd6612e4dfec9c311072cf53f514963",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool set_room_allow: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "set_room_allow/notaccepted-close",
+          "tool": "set_room_allow",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "c8c4ba2433048cc690766178dc58c73d91ab262351c010dc40c7ecb59008b3eb",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool set_room_allow: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": false
+        },
+        {
+          "name": "set_room_allow/truncated200",
+          "tool": "set_room_allow",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "1618e63cc4a805117356fea85cbcaca0dda9552d6e9d7fc89a741a5c4e2dd370",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool set_room_allow",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "set_room_allow/error422",
+          "tool": "set_room_allow",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "5d15d03fbaea1236acba1bc413d61c24b791ead84524e1b97e8309e28a009a3d",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/error429",
+          "tool": "set_room_allow",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "c45f3bd63402a9e8507429b464a829dfef21743878f0338762862919d7c4804b",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "read_room/complete",
+          "tool": "read_room",
+          "mode": "complete",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "fixture read\n",
+          "matched": true
+        },
+        {
+          "name": "read_room/accepted-close",
+          "tool": "read_room",
+          "mode": "accepted-close",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool read_room: cannot reach http://127.0.0.1:52180: Remote end closed connection without response",
+          "matched": true
+        },
+        {
+          "name": "read_room/truncated200",
+          "tool": "read_room",
+          "mode": "truncated200",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool read_room",
+          "matched": false
+        },
+        {
+          "name": "read_room/error429",
+          "tool": "read_room",
+          "mode": "error429",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool read_room: 429 fixture refusal; no retry",
+          "matched": true
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "cases": 34,
+      "matched": 28,
+      "mismatched": 6,
+      "mcp_HTTP_requests": 67,
+      "origin_POST_requests": 30,
+      "origin_GET_requests": 34,
+      "disposable_signatures_verified": 18,
+      "process_stopped": true,
+      "rows": [
+        {
+          "name": "say/complete",
+          "tool": "say",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say/accepted-close",
+          "tool": "say",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say/notaccepted-close",
+          "tool": "say",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say/truncated200",
+          "tool": "say",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool say",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "say/error422",
+          "tool": "say",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say/error429",
+          "tool": "say",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/complete",
+          "tool": "write_note",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/accepted-close",
+          "tool": "write_note",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/notaccepted-close",
+          "tool": "write_note",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/truncated200",
+          "tool": "write_note",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool write_note",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "write_note/error422",
+          "tool": "write_note",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/error429",
+          "tool": "write_note",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/complete",
+          "tool": "say_signed",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "c166ad4a077309abd124b67c769fc8ca696ed2ba418206b174b6b8fa1b8aa712",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/accepted-close",
+          "tool": "say_signed",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "9c13ccccd4b9c2f87546077923f72b8ceef35ee43fbd8e628f2760d4166d16fe",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/notaccepted-close",
+          "tool": "say_signed",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "2b21733bc9bbfd24937d383b794898af38b9b41ffe4e6199f64cfe30dc06bbef",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/truncated200",
+          "tool": "say_signed",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "de15200c8a1c66d1f9a25c598ae0d1954595fd945dd1cd6d922cb1ed02a0b501",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool say_signed",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "say_signed/error422",
+          "tool": "say_signed",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "dfa69d3d26b82f2c0b76b4bd3c69415ebebe105ea8ffdb65e7ac87dafe832396",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/error429",
+          "tool": "say_signed",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "a545080a7445b37d221ef2995c9a69f189275a1e370471a86fb8e757a136ebda",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/complete",
+          "tool": "claim_room",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "109e77830e7161bf804b3ff9dcaf69975cb8073b43b8b4755499061a213e46cb",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/accepted-close",
+          "tool": "claim_room",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "142a850d1ddebc6943f0fc7d560f7d0bcdfcc23fd057a1cc3c018ea5375ae4e3",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/notaccepted-close",
+          "tool": "claim_room",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "35eecb5d11fc5b3041753beb81147e9952a3771a0baecade810cc3c7562b9d9a",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/truncated200",
+          "tool": "claim_room",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "6bcd89e243bbb1d99f0d33d51f957919f13db1a009dd6ed93d0f47a25f0072fc",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool claim_room",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "claim_room/error422",
+          "tool": "claim_room",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "001bbda904047743dca308249dd9ff002f67c5b7d21154dac2b7769d6d279d87",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/error429",
+          "tool": "claim_room",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "5745e6746d6cf4bb08dfba91339db35407379897e9f31c6f6fdaf8e256033b6a",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/complete",
+          "tool": "set_room_allow",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "b9b911f87edb90a9e6d0ef42a560a940aefee2fa4b4f833cb645d5de373772f1",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/accepted-close",
+          "tool": "set_room_allow",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "a0921b06655cf224f30154e0511d370ced65945b5a6ef6fc37c54adbe86f13b6",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/notaccepted-close",
+          "tool": "set_room_allow",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "b4554435265e5d587b2f6f4506b4591edd1c157a3f3856e57d1c8a1527f6a9f3",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: no complete response from http://127.0.0.1:52339; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/truncated200",
+          "tool": "set_room_allow",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "0d0cd6af8973b91dcdfe195028c7c8a8940483bfa850d5150966fbd9ae827cdf",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool set_room_allow",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": false
+        },
+        {
+          "name": "set_room_allow/error422",
+          "tool": "set_room_allow",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "3fb3ba16831b31c7012a5be395f06d7f6bffe068f682c562e7620dbcec2af880",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/error429",
+          "tool": "set_room_allow",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "8a627368376c054b81f6bb23138f4468fe575526cfdd9100915fac0d6a4a018c",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "read_room/complete",
+          "tool": "read_room",
+          "mode": "complete",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "fixture read\n",
+          "matched": true
+        },
+        {
+          "name": "read_room/accepted-close",
+          "tool": "read_room",
+          "mode": "accepted-close",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool read_room: cannot reach http://127.0.0.1:52339: Remote end closed connection without response",
+          "matched": true
+        },
+        {
+          "name": "read_room/truncated200",
+          "tool": "read_room",
+          "mode": "truncated200",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": false,
+          "tool_text": "Error executing tool read_room",
+          "matched": false
+        },
+        {
+          "name": "read_room/error429",
+          "tool": "read_room",
+          "mode": "error429",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool read_room: 429 fixture refusal; no retry",
+          "matched": true
+        }
+      ]
+    },
+    {
+      "version": "proposed",
+      "cases": 34,
+      "matched": 34,
+      "mismatched": 0,
+      "mcp_HTTP_requests": 67,
+      "origin_POST_requests": 30,
+      "origin_GET_requests": 34,
+      "disposable_signatures_verified": 18,
+      "process_stopped": true,
+      "rows": [
+        {
+          "name": "say/complete",
+          "tool": "say",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say/accepted-close",
+          "tool": "say",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say/notaccepted-close",
+          "tool": "say",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say/truncated200",
+          "tool": "say",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (response body incomplete: IncompleteRead(15 bytes read, 100 more expected))",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say/error422",
+          "tool": "say",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say/error429",
+          "tool": "say",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/r/fixture",
+              "payload_sha256": "1c54b854f88ab48d158c20008f9f631f2a25cab489cf5747545d864a11b14377",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/complete",
+          "tool": "write_note",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/accepted-close",
+          "tool": "write_note",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/notaccepted-close",
+          "tool": "write_note",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/truncated200",
+          "tool": "write_note",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (response body incomplete: IncompleteRead(15 bytes read, 100 more expected))",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/error422",
+          "tool": "write_note",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "write_note/error429",
+          "tool": "write_note",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/kv/fixture/note",
+              "payload_sha256": "f81f9d18df69dc9a5ad0f8b0bdd5b490f66949270c9674dd064906ce1101bb8e",
+              "signature_verified": false,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/fixture/note"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool write_note: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/complete",
+          "tool": "say_signed",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "fec41218eb9657837a46523da1d5862e2740eed8835c901fcfcf44296e5d874b",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/accepted-close",
+          "tool": "say_signed",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "514a6fcf15c865079e75489c097608b77a6baa6837d6fb3117fd8ebf2d3614cf",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/notaccepted-close",
+          "tool": "say_signed",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "0a9f14d156015a52883be1dd9c1bf5902fd376fadac57cce3850cb2bb5162b1e",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/truncated200",
+          "tool": "say_signed",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "d5ccf520de04ce7bec7114c6403d9660ae0c0089fe6359f50391c5bde977621e",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (response body incomplete: IncompleteRead(15 bytes read, 100 more expected))",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/error422",
+          "tool": "say_signed",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "9ff3c15087377db81bd82df301a4c7971a075b5701853781bf10801593bdf6b7",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "say_signed/error429",
+          "tool": "say_signed",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/r/mb-fixture",
+              "payload_sha256": "4b965e6d01d183ffda12f65642ca29444de47cf66801522c0ba0f878ab3a08c0",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/r/mb-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool say_signed: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/complete",
+          "tool": "claim_room",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "66b071b2b8a9027756895e16f3f1f704ff01c8e14c76333d5ff8505196dd4f60",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/accepted-close",
+          "tool": "claim_room",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "d4e4d395234a82947e5bbb437d0a952ca074f729d145735140ec81cea42838ae",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/notaccepted-close",
+          "tool": "claim_room",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "335af29eecaaaa36fc7a3eb4a5017a74d6b7aa739e605c6c20b04d66ed4aa50a",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/truncated200",
+          "tool": "claim_room",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "0055d63604f21eb39bdfcd8e0c8324a58936e6dfc3fc45cacd9aad365b6fa1b2",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (response body incomplete: IncompleteRead(15 bytes read, 100 more expected))",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/error422",
+          "tool": "claim_room",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "53e69d0bd524db70ed6b6d7719d23318e85501a4a8fc2bee4c934a87247a5b2a",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "claim_room/error429",
+          "tool": "claim_room",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/kv/room-owners/d-fixture",
+              "payload_sha256": "1622185575c64783de3afc547655c8c7e50fffb52225313d4e4eb91870cfe66e",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-owners/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool claim_room: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/complete",
+          "tool": "set_room_allow",
+          "mode": "complete",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "fb4f07e68aa79e6c0e05ee7ce6160fd578fbd9283fa4b37084bc0a79b75988fa",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "fixture stored\n",
+          "is_error": false,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/accepted-close",
+          "tool": "set_room_allow",
+          "mode": "accepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "38d016951a1d91d4dce6856b04939648df68e1a032e16c4205134b9bdc492521",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/notaccepted-close",
+          "tool": "set_room_allow",
+          "mode": "notaccepted-close",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "b851b16e610bec40bba6c4a5f8f01eb91f548838baa39e16c74845a8894dd58c",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (Remote end closed connection without response)",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/truncated200",
+          "tool": "set_room_allow",
+          "mode": "truncated200",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "7a6bf2359d48032f90436dcaa60a288d092fc6b2122050b5c65c7938dde47468",
+              "signature_verified": true,
+              "fixture_accepted": true
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 1,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: no complete response from http://127.0.0.1:60438; the write was not confirmed. Check whether it landed before retrying. (response body incomplete: IncompleteRead(15 bytes read, 100 more expected))",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 1\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/error422",
+          "tool": "set_room_allow",
+          "mode": "error422",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "4bf26bc02f3a844e2fb19d65193f3c77547750f431f9273ccc94bdaba6be7b58",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: 422 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "set_room_allow/error429",
+          "tool": "set_room_allow",
+          "mode": "error429",
+          "posts": [
+            {
+              "path": "/kv/room-allow/d-fixture",
+              "payload_sha256": "ff0ce91721aa8ea29662792267a42e691f9ba5a7d0515ab39bb78bba57108f54",
+              "signature_verified": true,
+              "fixture_accepted": false
+            }
+          ],
+          "gets": [
+            "/kv/room-allow/d-fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "observer": true,
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool set_room_allow: 429 fixture refusal; no retry",
+          "is_error": true,
+          "later_readback": "fixture accepted-count: 0\n",
+          "matched": true
+        },
+        {
+          "name": "read_room/complete",
+          "tool": "read_room",
+          "mode": "complete",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "fixture read\n",
+          "matched": true
+        },
+        {
+          "name": "read_room/accepted-close",
+          "tool": "read_room",
+          "mode": "accepted-close",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool read_room: cannot reach http://127.0.0.1:60438: Remote end closed connection without response",
+          "matched": true
+        },
+        {
+          "name": "read_room/truncated200",
+          "tool": "read_room",
+          "mode": "truncated200",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool read_room: cannot reach http://127.0.0.1:60438: response body incomplete: IncompleteRead(13 bytes read, 100 more expected)",
+          "matched": true
+        },
+        {
+          "name": "read_room/error429",
+          "tool": "read_room",
+          "mode": "error429",
+          "posts": [],
+          "gets": [
+            "/r/fixture"
+          ],
+          "accepted": 0,
+          "fixture_errors": [],
+          "diagnostic_matches": true,
+          "tool_text": "Error executing tool read_room: 429 fixture refusal; no retry",
+          "matched": true
+        }
+      ]
+    }
+  ],
+  "checker_sha256": "fd21cc740b5b396d18fa4bca02438acf5ea940847ff4919c19ba9e97b5a97995",
+  "proposed_fetch_sha256": "52b01d99d12cd54a23f86ecbdc980a137fc486f31544d8017572378b530f4c4e",
+  "runtime": {
+    "python": "3.12.14",
+    "mcp": "2.2.0",
+    "starlette": "1.7.0",
+    "uvicorn": "0.54.0",
+    "cryptography": "50.0.1",
+    "PyNaCl": "1.6.2"
+  },
+  "source_blobs_unchanged": 18,
+  "whole_MCP_modules_executed": true,
+  "SDK_and_transport_mocked": false,
+  "origin_is_nonpersisting_local_fixture": true,
+  "actual_server_storage_or_owner_policy_tested": false,
+  "full_Linux_repository_original_tests_or_upstream_CI": false,
+  "protected_user_key_or_wallet_access": false,
+  "live_service_test_writes": 0
+}

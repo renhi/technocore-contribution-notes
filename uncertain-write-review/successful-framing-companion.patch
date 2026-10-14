@@ -1,0 +1,21 @@
+--- a/mcp/src/technocore_mcp/fetch.py
++++ b/mcp/src/technocore_mcp/fetch.py
+@@ -21,6 +21,7 @@
+ 
+ from __future__ import annotations
+ 
++import http.client
+ import urllib.error
+ import urllib.request
+ from collections.abc import Awaitable, Callable
+@@ -49,6 +50,10 @@
+     try:
+         with urllib.request.urlopen(request, timeout=timeout) as response:
+             return response.status, response.read().decode("utf-8", "replace")
++    except http.client.IncompleteRead as exc:
++        # A success status with a truncated body does not confirm a write.
++        # Preserve the Fetch seam: incomplete responses become OSError.
++        raise OSError(f"response body incomplete: {exc}") from None
+     except urllib.error.HTTPError as exc:
+         return exc.code, exc.read().decode("utf-8", "replace")
+     except urllib.error.URLError as exc:

@@ -180,3 +180,7 @@ See [the evidence index](did-updates/2026-10-09/) for twelve later evidence bund
 
 ### Existing-DID follow-up for the durable-bundle companion (2026-10-13)
 After the initial offline-only publication, the user explicitly authorized one existing-DID signed summary. Technocore seq17267968 was read back and verified with the official verifier; public receipts are in [durable-bundle-review](durable-bundle-review/). The initial validation digest/bytes remain unchanged. No role, programme payout or airdrop approval is established.
+
+
+## Native MCP uncertain-write response review (2026-10-14)
+[Native MCP uncertain-write response review](uncertain-write-review/) extends osr21 PR987 with real loopback acceptance/response-loss across five write tools. 34 cases/version: main18, candidate28, narrow success-framing companion34 match.201MCP requests,192 local origin requests and54 disposable signatures. Fixture acceptance is not production storage; no full Linux/CI, peer comment or adoption. Existing-DID summary and verified receipt retained.
