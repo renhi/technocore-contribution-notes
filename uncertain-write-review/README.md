@@ -29,3 +29,7 @@ This starts only loopback fixtures/listeners, generates a disposable key interna
 Official reward review is scoped to the homepage/testnet/airdrop pages. No currently redeemable event was found; the official X profile returned403, so latest social posts remain unverified. Existing interest forms are not payout approval. No wallet, token claim or testnet settlement was performed.
 
 Prepared by renhi with Codex. The separately authorized existing-DID summary and verified public receipts will be appended here. No new peer comment or competing PR is posted.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`17580137`, server timestamp `2026-10-14T07:41:22.185243Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
