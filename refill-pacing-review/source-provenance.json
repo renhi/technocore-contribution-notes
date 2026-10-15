@@ -1,0 +1,85 @@
+{
+  "retrieved_at": "2026-10-15T03:15:31.834866+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr": 979,
+  "head": "67809ef383eaea13c0290e1b5337f6023da0385d",
+  "author": "noviceborsaeng",
+  "state": "open",
+  "merged": false,
+  "files": [
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/limit.py",
+      "git_blob": "5ee19eeb0a00913f3af9666cd7d9f4f89e45d292",
+      "sha256": "74869f5aeaf23c92a93e89bf8c6a51a1888d47b53f1a7675a4e6d82c8d5e32bc"
+    },
+    {
+      "version": "main",
+      "commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/config.py",
+      "git_blob": "dc1143b3d9bd66c71bebcdf729151c14e4d3ca6c",
+      "sha256": "0927bf331b631db488a542f16542bde0195ac7fc22dca01d1ebf9f070c2181e3"
+    },
+    {
+      "version": "candidate",
+      "commit": "67809ef383eaea13c0290e1b5337f6023da0385d",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "candidate",
+      "commit": "67809ef383eaea13c0290e1b5337f6023da0385d",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "candidate",
+      "commit": "67809ef383eaea13c0290e1b5337f6023da0385d",
+      "path": "src/limit.py",
+      "git_blob": "0da40a67a56eabe19ee12bd445d590549435f84d",
+      "sha256": "97e940c36bcd26066e8a77ee6eee3e6a91726a21054f0f710d1ea1a1b62ee4ce"
+    },
+    {
+      "version": "candidate",
+      "commit": "67809ef383eaea13c0290e1b5337f6023da0385d",
+      "path": "src/config.py",
+      "git_blob": "dc1143b3d9bd66c71bebcdf729151c14e4d3ca6c",
+      "sha256": "0927bf331b631db488a542f16542bde0195ac7fc22dca01d1ebf9f070c2181e3"
+    }
+  ],
+  "prior_comments": [
+    {
+      "author": "noviceborsaeng",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/979#issuecomment-6131554540"
+    },
+    {
+      "author": "finegel",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/979#issuecomment-6135384389"
+    }
+  ],
+  "prior_reviews": [
+    {
+      "author": "WIZARDspace",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/979#pullrequestreview-5495831529"
+    }
+  ],
+  "credit": "noviceborsaeng original period fix; WIZARDspace/finegel prior high-rate finding and integer-floor proposal. Independent native real-clock pacing follow-up, not a new bug discovery.",
+  "production_test_requests": 0
+}

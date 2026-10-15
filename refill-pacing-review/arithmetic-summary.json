@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-15T03:18:58.089673+00:00",
+  "budgets_per_version": 1200,
+  "method": "Exact Fraction oracle derives requested pacing from the actual printed phrase; safe interval is >=60/per_min. It does not mirror ceil/floor implementation.",
+  "native_method": "Selected unchanged take/client_ip/refill_rate/limited/budget_note plus exact state declarations; whole genuine config, real Starlette/Uvicorn sockets and unmocked monotonic/sleep. Burst1, one caller, no other traffic.",
+  "versions": [
+    {
+      "version": "main",
+      "safe": 696,
+      "unsafe_low": 29,
+      "unsafe_high": 475,
+      "observed_early_refusals": 4,
+      "timing_boundary_inconclusive": 0
+    },
+    {
+      "version": "candidate",
+      "safe": 725,
+      "unsafe_low": 0,
+      "unsafe_high": 475,
+      "observed_early_refusals": 1,
+      "timing_boundary_inconclusive": 2
+    },
+    {
+      "version": "proposed",
+      "safe": 1200,
+      "unsafe_low": 0,
+      "unsafe_high": 0,
+      "observed_early_refusals": 0,
+      "timing_boundary_inconclusive": 0
+    }
+  ],
+  "rate_scope": "Integer budgets1..1200/min only; rates beyond that, daily fractional budgets or multi-client fairness not certified.",
+  "distinct_conditions_not_bugs": true,
+  "previous_findings_credited": true
+}

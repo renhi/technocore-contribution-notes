@@ -1,0 +1,66 @@
+{
+  "prepared_at": "2026-10-15T03:19:01.023926+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "pr": 979,
+  "head": "67809ef383eaea13c0290e1b5337f6023da0385d",
+  "credit": "noviceborsaeng original period fix; WIZARDspace/finegel prior high-rate finding and integer-floor proposal. Independent native real-clock pacing follow-up, not a new bug discovery.",
+  "budgets_per_version": 1200,
+  "main_safe_advice": 696,
+  "candidate_safe_advice": 725,
+  "proposed_safe_advice": 1200,
+  "main_unsafe_low_rate": 29,
+  "candidate_unsafe_low_rate": 0,
+  "candidate_unsafe_high_rate": 475,
+  "native_scenarios_per_version": 6,
+  "native_HTTP_requests_total": 54,
+  "observed_early_refusals": {
+    "main": 4,
+    "candidate": 1,
+    "proposed": 0
+  },
+  "elapsed_checks_passed": 18,
+  "selected_functions": [
+    "budget_note",
+    "client_ip",
+    "limited",
+    "refill_rate",
+    "take"
+  ],
+  "all_source_blobs_verified_unchanged": 8,
+  "clock_or_sleep_mocked": false,
+  "runtime": {
+    "python": "3.12.14",
+    "starlette": "1.7.0",
+    "uvicorn": "0.54.0"
+  },
+  "checks": {
+    "ruff_lint": {
+      "passed": true,
+      "stdout": "All checks passed!"
+    },
+    "ruff_format": {
+      "passed": true,
+      "stdout": "1 file already formatted"
+    },
+    "syntax": true,
+    "companion_patch_applies": true
+  },
+  "limitations": [
+    "Known prior rounding issue; many failing budgets are manifestations of the same two branches, not separate vulnerabilities.",
+    "Five exact functions and state assignments selected by AST; full Linux-dependent limit/store/app modules and original tests are not imported or run. No fake store/fcntl module.",
+    "Whole config module is loaded, text callback is a fixture PlainTextResponse factory, not the official app adapter.",
+    "Real-clock isolated burst1 fixture uses advertised refill cadence, NOT Retry-After. Retry-After rounding and PR887 are separate and not fixed/tested here.",
+    "Actual arrival timestamps and1ms margin retained; oversleep can hide early advice, so native observations alone do not prove a universal invariant.",
+    "Exact mathematical coverage is limited to integer1..1200/min and independent Fraction parsing; not arbitrary huge/fractional inputs or actual deployed config.",
+    "Companion uses WIZARDspace/finegel integer-floor suggestion, not newly invented fix; not applied to original PR.",
+    "No production requests, storage/auth/rate-limit bypass, Worker/CDN/proxy/concurrency/fairness/full Linux/upstream CI or official adoption.",
+    "No protected key in tests; existing protected DID used separately only for authorized summary. No wallet/settled compute/reward qualification."
+  ],
+  "artifact_sha256": {
+    "check_refill_pacing.py": "232896169fc65802014068377660e2693c202f6dd9a4537a39b58c6d19be22bf",
+    "source-provenance.json": "1d29442863793bedc960c6ade2f631c9a0a8600dd743b4ebff0518058c2a4eb5",
+    "native-results.json": "6c85e1db3b73c7d23850cb80942866a44feda904d46c13829bbbff1dffc93301",
+    "safe-rate-companion.patch": "d527b62688ad7000cdd181f5571eb0b791e5d52bf0b73252558e47afa385b82f",
+    "arithmetic-summary.json": "893176d61e5decb9afef7e6da1bf6542627fd9bce9e2e1ed8dcb3f5901e045b8"
+  }
+}

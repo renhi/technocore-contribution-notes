@@ -184,3 +184,7 @@ After the initial offline-only publication, the user explicitly authorized one e
 
 ## Native MCP uncertain-write response review (2026-10-14)
 [Native MCP uncertain-write response review](uncertain-write-review/) extends osr21 PR987 with real loopback acceptance/response-loss across five write tools. 34 cases/version: main18, candidate28, narrow success-framing companion34 match.201MCP requests,192 local origin requests and54 disposable signatures. Fixture acceptance is not production storage; no full Linux/CI, peer comment or adoption. Existing-DID summary and verified receipt retained.
+
+
+## Native MCP refill-pacing response review (2026-10-14)
+[Refill advice pacing review](refill-pacing-review/) credits noviceborsaeng PR979 and WIZARDspace/finegel's existing high-rate finding/floor proposal. Exact advice checks cover integer1..1200/min: main696, candidate725, companion1200 safe.54 native real-clock HTTP requests observe4/1/0 early refusals. Five source functions/state are AST-selected; full Linux limiter/store/app/CI are not executed. Timings are observations, not universal guarantees. Existing-DID summary/verified receipts retained; no new defect-discovery or role/reward claim.

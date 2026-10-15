@@ -1,0 +1,11 @@
+--- a/src/limit.py
++++ b/src/limit.py
+@@ -379,7 +379,7 @@
+     """
+     per_second = per_min / 60.0
+     if per_second >= 1.0:
+-        return f"{per_second:.1f} tokens/s"
++        return f"{per_min // 6 / 10:.1f} tokens/s"
+     return f"one token every {math.ceil(60.0 / per_min)}s"
+ 
+ 
