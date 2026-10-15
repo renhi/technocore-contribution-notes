@@ -27,3 +27,7 @@ python check_refill_pacing.py SOURCE source-provenance.json new-report.json
 This starts/stops local listeners, performs real sleeps (roughly40seconds total depending on scheduling), checks original hashes and refuses to overwrite a completed report. It executes selected trusted source functions; no whole-server compatibility is claimed.
 
 Prepared by renhi with Codex. The separately authorized existing-DID factual summary and readback receipts will be retained here. No official role, airdrop qualification, settled compute or project adoption is established.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`17785074`, server timestamp `2026-10-15T03:20:32.700505Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
