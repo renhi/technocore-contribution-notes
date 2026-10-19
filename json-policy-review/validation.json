@@ -1,0 +1,53 @@
+{
+  "completed_at": "2026-10-19T05:14:32.967360+00:00",
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "PR926": {
+    "head": "3f7eb94069e323d7512d4bfc67f4ba4a2fcc9a8e",
+    "state": "open",
+    "merged": false
+  },
+  "PR996": {
+    "head": "2a6f1436d480b620b79416bb61eb56226c6ee03b",
+    "state": "open",
+    "merged": false
+  },
+  "credit": "Issue925; maho0638/Jennycruzy PR926 helper; boomelant nested-policy distinction; ShalyX PR996; WIZARDspace/bdunn77 previous independent reviews. No claim to first discovery.",
+  "cases_per_version": 44,
+  "decoder_executions": 132,
+  "explicit_policy_checks": 114,
+  "matched_policy_checks": 114,
+  "additional_depth_observations": 18,
+  "depth_observations_returned_dict": 18,
+  "original_source_blobs_verified_unchanged": 8,
+  "actual_HTTP_requests": 0,
+  "full_app_or_store_imported": false,
+  "full_read_json_executed": false,
+  "Linux_full_suite_or_upstream_CI": false,
+  "public_service_test_writes": 0,
+  "quality": {
+    "checker_pinned_Ruff_lint": true,
+    "checker_pinned_Ruff_format": true,
+    "checker_syntax": true
+  },
+  "transport_probe": {
+    "checked_at": "2026-10-19T05:13:58.380295+00:00",
+    "url": "https://technocore.chat/auth.md",
+    "method": "GET",
+    "writes_dispatched": 0,
+    "error_type": "URLError",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  "private_key_used_in_validation": false,
+  "new_peer_comments": 0,
+  "new_PRs": 0,
+  "upstream_adoption": "unconfirmed",
+  "airdrop_eligibility": "unconfirmed",
+  "artifact_sha256": {
+    "README.md": "350f7b68f461acc63d5889caa5ba29117f9a6d767a71193f23d278fd9ca4b7f3",
+    "check_decoder_policy.py": "c37bcb0f00e7b0111aee33a51316064db08619bad891cd5a9d3fdd70ba88f787",
+    "cases_json_policy.py": "1b495f4ccb8e6da6885533b227415afd822ab8d380db2cba24667cce2f271f1e",
+    "offline-results.json": "4520f3851ed8934d97099f5da356551e8bb6a6b4ca2dc28681f8e5fbb5c98026",
+    "source-provenance.json": "24a3fc396890d28b9690465a8d1649cc5d63a92b04ac2371a8054fa5c1b04ce1",
+    "event-review.json": "e9b9cb10294fc98d19da354c61d592ef4a081ccf3be21b622a084d96bed10606"
+  }
+}

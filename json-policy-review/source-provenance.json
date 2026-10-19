@@ -1,0 +1,74 @@
+{
+  "retrieved_at": "2026-10-19T05:10:17.768324+00:00",
+  "files": [
+    {
+      "label": "all-depth",
+      "ref": "2a6f1436d480b620b79416bb61eb56226c6ee03b",
+      "path": "src/app.py",
+      "sha": "c2e9c6bf15a2367061e85d557c3fe935ad893c3e",
+      "sha256": "659a496ab5a3eef1936765c41aec21334e45d9e6182dd8f48f2a4077c7ddd584"
+    },
+    {
+      "label": "root-only",
+      "ref": "3f7eb94069e323d7512d4bfc67f4ba4a2fcc9a8e",
+      "path": "src/app.py",
+      "sha": "938b7b05399ef59b4acbd7242fc46c5ad54568d5",
+      "sha256": "b09dcfe5cec1c16108d853f63c1481e8a212de81ae852fe81e651df97a2332e1"
+    },
+    {
+      "label": "root-only",
+      "ref": "3f7eb94069e323d7512d4bfc67f4ba4a2fcc9a8e",
+      "path": "src/strictjson.py",
+      "sha": "ec6925bc9225712e18a6af30b2c636fa26bf12b4",
+      "sha256": "30394c3266313c7fa5f3dfd27c104eb897c1342111d4e51a776fe1ef0adbd451"
+    },
+    {
+      "label": "main",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "src/app.py",
+      "sha": "d60fe0e5dabaa355f66f8b9eea46f15d90b6d98c",
+      "sha256": "1727d167afd24e2ad053e34e00181675b874b861ab3bd9608e460d03396f347f"
+    },
+    {
+      "label": "main",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "AGENTS.md",
+      "sha": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "label": "main",
+      "ref": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+      "path": "pyproject.toml",
+      "sha": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "label": "all-depth",
+      "ref": "2a6f1436d480b620b79416bb61eb56226c6ee03b",
+      "path": "src/manual.md",
+      "sha": "f9c35dd4a7946ad467009fcc41cffa2c47460885",
+      "sha256": "11afbefad5b915006af637d919148c1f3fa4e37503e9c2810f02bcc6b2492970"
+    },
+    {
+      "label": "root-only",
+      "ref": "3f7eb94069e323d7512d4bfc67f4ba4a2fcc9a8e",
+      "path": "src/manual.md",
+      "sha": "b2653f29e66af075fb721f1178ee003aa4be2a72",
+      "sha256": "f851aa105f065a4b01b5acb61488580847c99593d8f98c4ce3b1dabd43066b17"
+    }
+  ],
+  "main": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "PR926": {
+    "head": "3f7eb94069e323d7512d4bfc67f4ba4a2fcc9a8e",
+    "state": "open",
+    "merged": false
+  },
+  "PR996": {
+    "head": "2a6f1436d480b620b79416bb61eb56226c6ee03b",
+    "state": "open",
+    "merged": false
+  },
+  "credit": "Issue925; maho0638/Jennycruzy PR926 helper; boomelant nested-policy distinction; ShalyX PR996; WIZARDspace/bdunn77 previous independent reviews. No claim to first discovery.",
+  "scope": "Unchanged AST-selected post-upload decoder statements; complete strictjson module. Offline Windows checks only; no actual app/store import, HTTP requests, storage or production calls."
+}

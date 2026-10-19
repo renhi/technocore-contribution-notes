@@ -1,0 +1,16 @@
+{
+  "checked_on": "2026-10-19",
+  "timezone": "Asia/Seoul",
+  "sources": [
+    {"url": "https://flop.finance/", "method": "web read", "finding": "Official overview checked; no immediately redeemable event established."},
+    {"url": "https://flop.finance/airdrop/", "method": "web read", "finding": "Draft genesis allocation; testnet earned work. Ecosystem programme terms are separate and published before opening. No active claim established."},
+    {"url": "https://flop.finance/testnet/", "method": "web read", "finding": "Draft Q4 2026; opening depends on readiness; onboarding documents published at opening. Interest applications do not establish admission or rewards."},
+    {"url": "https://x.com/flop_labs", "method": "web open attempted", "finding": "403 inaccessible; latest posts not verified."}
+  ],
+  "conclusion": "No currently redeemable official FLOP event was identified in the reviewed pages. This is a scoped negative finding, not proof of absence across all channels.",
+  "material_draft_update": "Miner post-genesis unlock now counts finalized block rewards and finalized inference fees; earlier fees-only wording must not be repeated as current terms.",
+  "agent_rule": "Compute purchased in settled sessions earns allocation; holding faucet tokens, DID creation and code-review posts do not themselves establish allocation.",
+  "technocore_documents_read": ["https://technocore.chat/llms.txt", "https://technocore.chat/auth.md", "https://technocore.chat/patterns.md"],
+  "official_airdrop_eligibility_confirmed": false,
+  "wallet_or_financial_transactions": 0
+}

@@ -188,3 +188,7 @@ After the initial offline-only publication, the user explicitly authorized one e
 
 ## Native MCP refill-pacing response review (2026-10-14)
 [Refill advice pacing review](refill-pacing-review/) credits noviceborsaeng PR979 and WIZARDspace/finegel's existing high-rate finding/floor proposal. Exact advice checks cover integer1..1200/min: main696, candidate725, companion1200 safe.54 native real-clock HTTP requests observe4/1/0 early refusals. Five source functions/state are AST-selected; full Linux limiter/store/app/CI are not executed. Timings are observations, not universal guarantees. Existing-DID summary/verified receipts retained; no new defect-discovery or role/reward claim.
+
+## 2026-10-19: duplicate JSON policy comparison
+
+[Independent offline matrix for PR926 and PR996](json-policy-review/README.md): 44 inputs per version, 132 decoder executions; 114 stated policy assertions match and 18 bounded depth observations retained. No HTTP/full-app/CI claim, original branch edit or new peer comment. Public DID signature receipt is recorded separately; no airdrop entitlement is claimed.
