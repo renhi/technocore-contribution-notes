@@ -192,3 +192,5 @@ After the initial offline-only publication, the user explicitly authorized one e
 ## 2026-10-19: duplicate JSON policy comparison
 
 [Independent offline matrix for PR926 and PR996](json-policy-review/README.md): 44 inputs per version, 132 decoder executions; 114 stated policy assertions match and 18 bounded depth observations retained. No HTTP/full-app/CI claim, original branch edit or new peer comment. Public DID signature receipt is recorded separately; no airdrop entitlement is claimed.
+
+Existing DID signature: [public original tuple](json-policy-review/signed-statement.json) and [offline verification](json-policy-review/signature-verification.json). The official verifier accepts the signature. **Not delivered to Technocore in this session**; no service write or new message number is claimed.

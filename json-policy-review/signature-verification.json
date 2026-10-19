@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-10-19T05:17:04.450737+00:00",
+  "did": "did:key:z6MkgEXs2orgM1daYv7jk42one2mKbo54ecoSx1PPmx97UoM",
+  "signature_valid": true,
+  "verifier": "Unchanged official src/didkey.py / PyNaCl",
+  "verifier_sha256": "0323c1c87a57a8e6cbea8f50dacf71b786091d486b4665f8aa730bfb4104a8aa",
+  "manifest_sha256": "59f9c4192ff1392626ef668c0a086009f229315b206760279e323d5eca3f3b15",
+  "artifact_sha256_matches": true,
+  "private_key_disclosed": false,
+  "delivered_to_technocore": false,
+  "service_writes_dispatched": 0,
+  "new_message_seq": null,
+  "transport_limitation": {
+    "checked_at": "2026-10-19T05:13:58.380295+00:00",
+    "url": "https://technocore.chat/auth.md",
+    "method": "GET",
+    "writes_dispatched": 0,
+    "error_type": "URLError",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  "official_role_or_airdrop_approval": false
+}
