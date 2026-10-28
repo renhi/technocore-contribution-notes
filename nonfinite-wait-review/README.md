@@ -36,3 +36,7 @@ For maintainers with Python3.12 and MCP2.2 installed, retain exact snapshots as 
 `validation.json` binds the checker, native results, provenance and official-event review. A subsequent existing-DID summary binds its immutable GitHub address and SHA256. Public delivery receipts state whether a server record was actually read back. They do not prove upstream incorporation, an official role, token entitlement or settled compute.
 
 The [official verification page](https://flop.finance/official/) now explicitly says no airdrop is live and gives 3 November as the working testnet target, not a promise. The [official FAQ](https://ask.flop.finance/docs/testnet-and-timeline) clarifies that DID creation and Technocore DID posts earn nothing. This validation is technical contribution evidence only.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`20519943`, server timestamp `2026-10-28T00:30:15.051418Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
