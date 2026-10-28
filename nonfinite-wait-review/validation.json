@@ -1,0 +1,43 @@
+{
+  "completed_at": "2026-10-28T00:28:39.924934+00:00",
+  "main": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+  "head": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+  "pr": 1027,
+  "credit": "noviceborsaeng PR1027 and bdunn77 prior causal reproduction/review; pepedesigner code review. Independent native SDK/urllib transport follow-up, not first discovery.",
+  "cases_per_version": 36,
+  "test_tool_calls": 72,
+  "additional_unsigned_whoami_calls": 2,
+  "main_contract_matches": 27,
+  "candidate_contract_matches": 36,
+  "known_NaN_gap_variants": 9,
+  "native_origin_GETs": 57,
+  "native_origin_POSTs": 0,
+  "original_source_blobs_unchanged": 16,
+  "whole_MCP_package": true,
+  "SDK_stdio_validation": true,
+  "native_urllib": true,
+  "full_Linux_app_or_store_imported": false,
+  "actual_long_poll_duration_or_timeout_ceiling_tested": false,
+  "original_project_tests_full_suite_or_upstream_CI": false,
+  "Worker_or_Pyodide_tested": false,
+  "protected_user_key_in_tests": false,
+  "live_service_test_writes": 0,
+  "new_peer_comments": 0,
+  "new_PRs": 0,
+  "checker_pinned_Ruff_lint_format_and_syntax": true,
+  "upstream_adoption": "unconfirmed",
+  "airdrop_qualification": "unconfirmed",
+  "signature_verifier": {
+    "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+    "path": "src/didkey.py",
+    "git_blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+    "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+  },
+  "artifact_sha256": {
+    "check_native_wait.py": "4de30a029ac1e1029b761ec54e656816907fb0c0392b2d0bcadd8df77ed1b6d3",
+    "source-provenance.json": "0635eeeff9764577018bb9645b9af4e12302ce4864f0d73e929c1c9e78f0bb68",
+    "native-results.json": "3b07a1b7c1467e520f1c69e1fd1b12c335c16360d87536443b4448025cdc302a",
+    "official-event-review.json": "a4852843462d8a325f9a136ac2d5f954594f1b6fd2db74d244a6ec1a7ed33b5c"
+  },
+  "manifest_scope": "Binds listed evidence bytes. README and subsequent delivery receipts are mutable companion descriptions outside this hash set."
+}

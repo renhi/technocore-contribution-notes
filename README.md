@@ -194,3 +194,7 @@ After the initial offline-only publication, the user explicitly authorized one e
 [Independent offline matrix for PR926 and PR996](json-policy-review/README.md): 44 inputs per version, 132 decoder executions; 114 stated policy assertions match and 18 bounded depth observations retained. No HTTP/full-app/CI claim, original branch edit or new peer comment. Public DID signature receipt is recorded separately; no airdrop entitlement is claimed.
 
 Existing DID signature: [public original tuple](json-policy-review/signed-statement.json) and [offline verification](json-policy-review/signature-verification.json). The official verifier accepts the signature. **Not delivered to Technocore in this session**; no service write or new message number is claimed.
+
+
+## Native MCP non-finite wait validation (2026-10-28)
+[Native wait review](nonfinite-wait-review/) credits noviceborsaeng PR1027 and bdunn77 prior causal review. Two complete unchanged packages, SDK stdio and native urllib: main27/36, candidate36/36; 72wait calls and57local GETs. Nine baseline variants share the known NaN-timeout gap. Immediate synthetic origin; no real hold/deadline, fullLinux/CI/Worker claim. Existing-DID delivery receipts recorded separately. Official event review says no airdrop live; target testnet3November is provisional.

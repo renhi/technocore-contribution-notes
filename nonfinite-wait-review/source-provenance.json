@@ -1,0 +1,135 @@
+{
+  "retrieved_at": "2026-10-28T00:23:02.801948+00:00",
+  "main": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+  "pr": 1027,
+  "head": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+  "author": "noviceborsaeng",
+  "state": "open",
+  "merged": false,
+  "files": [
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "tests/test_mcp.py",
+      "git_blob": "07f7fc3303acca6d807c96c36a8810a77c336d11",
+      "sha256": "768425a2ac9846bab37f1f8584eb686b7ccb8d0b225c0f98a317afe1c2dfdcd5"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "src/app.py",
+      "git_blob": "d60fe0e5dabaa355f66f8b9eea46f15d90b6d98c",
+      "sha256": "1727d167afd24e2ad053e34e00181675b874b861ab3bd9608e460d03396f347f"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "mcp/src/technocore_mcp/__init__.py",
+      "git_blob": "7e8392fa506ebf84c724b212a98db81e599d8292",
+      "sha256": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "mcp/src/technocore_mcp/server.py",
+      "git_blob": "c402a78660a873d3d372abbcd421b92031b2655e",
+      "sha256": "53faacbae8feadc6a6d1824cefb34f06aa203ebb6d65ac9bb8947fac81f342c7"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "mcp/src/technocore_mcp/fetch.py",
+      "git_blob": "1f15780264a35f145e6e7ff3132605cd4286b87b",
+      "sha256": "439194d28ccd1310365a74c18fda24a2c413ec411656f575973a0e4e2e64a7cd"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "mcp/src/technocore_mcp/signing.py",
+      "git_blob": "0dfaae290cb2b2fd242701248c21f3fab9d5e731",
+      "sha256": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba"
+    },
+    {
+      "version": "candidate",
+      "commit": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "candidate",
+      "commit": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "candidate",
+      "commit": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+      "path": "tests/test_mcp.py",
+      "git_blob": "fd1e764ce42bbd7e3971e3a0a490289ececbbd4b",
+      "sha256": "ee1e004025dd738e94583d91331af24d31278042a5486ab435c02f274355c3ee"
+    },
+    {
+      "version": "candidate",
+      "commit": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+      "path": "src/app.py",
+      "git_blob": "d60fe0e5dabaa355f66f8b9eea46f15d90b6d98c",
+      "sha256": "1727d167afd24e2ad053e34e00181675b874b861ab3bd9608e460d03396f347f"
+    },
+    {
+      "version": "candidate",
+      "commit": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+      "path": "mcp/src/technocore_mcp/__init__.py",
+      "git_blob": "7e8392fa506ebf84c724b212a98db81e599d8292",
+      "sha256": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009"
+    },
+    {
+      "version": "candidate",
+      "commit": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+      "path": "mcp/src/technocore_mcp/server.py",
+      "git_blob": "a0f4a5dfa7f27c4533beaa215a221f7de7d2fad7",
+      "sha256": "b9b9c05da0057f27410ee6ba82a45e3dc9d83a9590b0e32f2954242d44893ffd"
+    },
+    {
+      "version": "candidate",
+      "commit": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+      "path": "mcp/src/technocore_mcp/fetch.py",
+      "git_blob": "1f15780264a35f145e6e7ff3132605cd4286b87b",
+      "sha256": "439194d28ccd1310365a74c18fda24a2c413ec411656f575973a0e4e2e64a7cd"
+    },
+    {
+      "version": "candidate",
+      "commit": "c092ef74b591fdf75776351a5f59c5032dc59bfc",
+      "path": "mcp/src/technocore_mcp/signing.py",
+      "git_blob": "0dfaae290cb2b2fd242701248c21f3fab9d5e731",
+      "sha256": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba"
+    }
+  ],
+  "credit": "noviceborsaeng PR1027 and bdunn77 prior causal reproduction/review; pepedesigner code review. Independent native SDK/urllib transport follow-up, not first discovery.",
+  "prior_comments": [
+    {
+      "author": "bdunn77",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/1027#issuecomment-6358195094"
+    },
+    {
+      "author": "pepedesigner",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/1027#issuecomment-6457114257"
+    }
+  ],
+  "prior_reviews": []
+}

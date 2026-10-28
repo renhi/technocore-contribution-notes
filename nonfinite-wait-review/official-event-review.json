@@ -1,0 +1,16 @@
+{
+  "checked_on": "2026-10-28",
+  "timezone": "Asia/Seoul",
+  "sources": [
+    {"url": "https://flop.finance/official/", "page_updated": "2026-10-23", "finding": "Explicitly states no live FLOP token, mint, claim, presale or airdrop. Testnet working target 3 November 2026, not a fixed date."},
+    {"url": "https://ask.flop.finance/docs/testnet-and-timeline", "finding": "Official corpus listed by flop.finance/official. Creating a DID or posting it to Technocore earns nothing; agent participation requires actual inference use when testnet opens. Devnet has no rewards or airdrop weight."},
+    {"url": "https://flop.finance/airdrop/", "finding": "Draft allocation and separate ecosystem programme terms; not evidence that this code-review contribution earns allocation."},
+    {"url": "https://flop.finance/testnet/", "finding": "Opening is readiness-gated; older quarter-only text should be read alongside the newer official target."},
+    {"url": "https://x.com/flop_labs", "finding": "Latest posts inaccessible through the web tool (403); no claim of independent current X verification."}
+  ],
+  "decision": "No live official airdrop task established. Proceed with useful technical validation as a contribution, not token farming.",
+  "target_date_is_guaranteed": false,
+  "token_or_faucet_claimed": false,
+  "wallet_or_financial_transactions": 0,
+  "technocore_docs_read": ["https://technocore.chat/llms.txt", "https://technocore.chat/auth.md", "https://technocore.chat/patterns.md"]
+}

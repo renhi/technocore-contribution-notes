@@ -1,0 +1,2059 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "win32",
+  "mcp": "2.2.0",
+  "pydantic": "2.13.5",
+  "versions": [
+    {
+      "label": "main",
+      "tool_cases": 36,
+      "desired_contract_matches": 27,
+      "expected_observations_match": true,
+      "origin_GETs": 24,
+      "rows": [
+        {
+          "case": 0,
+          "arguments": {
+            "room": "wait-case-00",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.0470000000204891,
+          "matches_desired_contract": false,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 1,
+          "arguments": {
+            "room": "wait-case-01",
+            "since": 1,
+            "seconds": "NaN"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": false,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 2,
+          "arguments": {
+            "room": "wait-case-02",
+            "since": 1,
+            "seconds": "+nan"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": false,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 3,
+          "arguments": {
+            "room": "wait-case-03",
+            "since": 1,
+            "seconds": "-nan"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.01600000006146729,
+          "matches_desired_contract": false,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 4,
+          "arguments": {
+            "room": "wait-case-04",
+            "since": 1,
+            "seconds": " nan "
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": false,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 5,
+          "arguments": {
+            "room": "wait-case-05",
+            "since": 1,
+            "seconds": "inf"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-05",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "inf"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 6,
+          "arguments": {
+            "room": "wait-case-06",
+            "since": 1,
+            "seconds": "+inf"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-06",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "inf"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.030999999959021807,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 7,
+          "arguments": {
+            "room": "wait-case-07",
+            "since": 1,
+            "seconds": "Infinity"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-07",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "inf"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 8,
+          "arguments": {
+            "room": "wait-case-08",
+            "since": 1,
+            "seconds": "-inf"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-08",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-inf"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 9,
+          "arguments": {
+            "room": "wait-case-09",
+            "since": 1,
+            "seconds": "-Infinity"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-09",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-inf"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 10,
+          "arguments": {
+            "room": "wait-case-10",
+            "since": 1,
+            "seconds": "0"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-10",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "0.0"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.01600000006146729,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 11,
+          "arguments": {
+            "room": "wait-case-11",
+            "since": 1,
+            "seconds": "-0"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-11",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-0.0"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 12,
+          "arguments": {
+            "room": "wait-case-12",
+            "since": 1,
+            "seconds": "0.001"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0.001; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-12",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "0.001"
+                ]
+              },
+              "fixture_effective_wait": 0.001
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 13,
+          "arguments": {
+            "room": "wait-case-13",
+            "since": 1,
+            "seconds": "9.5"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=9.5; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-13",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "9.5"
+                ]
+              },
+              "fixture_effective_wait": 9.5
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 14,
+          "arguments": {
+            "room": "wait-case-14",
+            "since": 1,
+            "seconds": "10"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-14",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "10.0"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.03200000000651926,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 15,
+          "arguments": {
+            "room": "wait-case-15",
+            "since": 1,
+            "seconds": "60"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-15",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "60.0"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.030999999959021807,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 16,
+          "arguments": {
+            "room": "wait-case-16",
+            "since": 1,
+            "seconds": "300"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-16",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "300.0"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 17,
+          "arguments": {
+            "room": "wait-case-17",
+            "since": 1,
+            "seconds": "1e300"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-17",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1e+300"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 18,
+          "arguments": {
+            "room": "wait-case-18",
+            "since": 1,
+            "seconds": "-1e300"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-18",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-1e+300"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 19,
+          "arguments": {
+            "room": "wait-case-19",
+            "since": 1,
+            "seconds": "-1"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-19",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-1.0"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.01600000006146729,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 20,
+          "arguments": {
+            "room": "wait-case-20",
+            "since": 1,
+            "seconds": "1e-300"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=1e-300; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-20",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1e-300"
+                ]
+              },
+              "fixture_effective_wait": 1e-300
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 21,
+          "arguments": {
+            "room": "wait-case-21",
+            "since": 1,
+            "seconds": 0
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-21",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "0.0"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.030999999959021807,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 22,
+          "arguments": {
+            "room": "wait-case-22",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=1; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-22",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.03200000000651926,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 23,
+          "arguments": {
+            "room": "wait-case-23",
+            "since": 1,
+            "seconds": 2.5
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=2.5; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-23",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "2.5"
+                ]
+              },
+              "fixture_effective_wait": 2.5
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 24,
+          "arguments": {
+            "room": "wait-case-24",
+            "since": 1,
+            "seconds": null
+          },
+          "fixture_status": 200,
+          "input_valid": false,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 1 validation error for wait_for_messageArguments\nseconds\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.13/v/float_type",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 25,
+          "arguments": {
+            "room": "wait-case-25",
+            "since": 1,
+            "seconds": "not-a-number"
+          },
+          "fixture_status": 200,
+          "input_valid": false,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 1 validation error for wait_for_messageArguments\nseconds\n  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='not-a-number', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/float_parsing",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 26,
+          "arguments": {
+            "room": "wait-case-26",
+            "since": 1,
+            "seconds": ""
+          },
+          "fixture_status": 200,
+          "input_valid": false,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 1 validation error for wait_for_messageArguments\nseconds\n  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/float_parsing",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 27,
+          "arguments": {
+            "room": "wait-case-27",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 400,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": false,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 28,
+          "arguments": {
+            "room": "wait-case-28",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 400,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 400 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-28",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 29,
+          "arguments": {
+            "room": "wait-case-29",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 403,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": false,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 30,
+          "arguments": {
+            "room": "wait-case-30",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 403,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 403 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-30",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.01600000006146729,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 31,
+          "arguments": {
+            "room": "wait-case-31",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 422,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": false,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 32,
+          "arguments": {
+            "room": "wait-case-32",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 422,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 422 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-32",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 33,
+          "arguments": {
+            "room": "wait-case-33",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 429,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": false,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 34,
+          "arguments": {
+            "room": "wait-case-34",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 429,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 429 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-34",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.01600000006146729,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 35,
+          "arguments": {
+            "room": "wait-case-35",
+            "since": 1
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-35",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "10.0"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        }
+      ],
+      "whoami_unsigned_confirmed": true,
+      "executed_whole_package_path_and_hashes_verified_in_child": true,
+      "child_and_listener_closed": true
+    },
+    {
+      "label": "candidate",
+      "tool_cases": 36,
+      "desired_contract_matches": 36,
+      "expected_observations_match": true,
+      "origin_GETs": 33,
+      "rows": [
+        {
+          "case": 0,
+          "arguments": {
+            "room": "wait-case-00",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-00",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "nan"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.06299999996554106,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 1,
+          "arguments": {
+            "room": "wait-case-01",
+            "since": 1,
+            "seconds": "NaN"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-01",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "nan"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.030999999959021807,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 2,
+          "arguments": {
+            "room": "wait-case-02",
+            "since": 1,
+            "seconds": "+nan"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-02",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "nan"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 3,
+          "arguments": {
+            "room": "wait-case-03",
+            "since": 1,
+            "seconds": "-nan"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-03",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "nan"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 4,
+          "arguments": {
+            "room": "wait-case-04",
+            "since": 1,
+            "seconds": " nan "
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-04",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "nan"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 5,
+          "arguments": {
+            "room": "wait-case-05",
+            "since": 1,
+            "seconds": "inf"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-05",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "inf"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 6,
+          "arguments": {
+            "room": "wait-case-06",
+            "since": 1,
+            "seconds": "+inf"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-06",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "inf"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.01600000006146729,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 7,
+          "arguments": {
+            "room": "wait-case-07",
+            "since": 1,
+            "seconds": "Infinity"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-07",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "inf"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.030999999959021807,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 8,
+          "arguments": {
+            "room": "wait-case-08",
+            "since": 1,
+            "seconds": "-inf"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-08",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-inf"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.03200000000651926,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 9,
+          "arguments": {
+            "room": "wait-case-09",
+            "since": 1,
+            "seconds": "-Infinity"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-09",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-inf"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.030999999959021807,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 10,
+          "arguments": {
+            "room": "wait-case-10",
+            "since": 1,
+            "seconds": "0"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-10",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "0.0"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.03100000007543713,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 11,
+          "arguments": {
+            "room": "wait-case-11",
+            "since": 1,
+            "seconds": "-0"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-11",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-0.0"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 12,
+          "arguments": {
+            "room": "wait-case-12",
+            "since": 1,
+            "seconds": "0.001"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0.001; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-12",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "0.001"
+                ]
+              },
+              "fixture_effective_wait": 0.001
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 13,
+          "arguments": {
+            "room": "wait-case-13",
+            "since": 1,
+            "seconds": "9.5"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=9.5; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-13",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "9.5"
+                ]
+              },
+              "fixture_effective_wait": 9.5
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.03100000007543713,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 14,
+          "arguments": {
+            "room": "wait-case-14",
+            "since": 1,
+            "seconds": "10"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-14",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "10.0"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 15,
+          "arguments": {
+            "room": "wait-case-15",
+            "since": 1,
+            "seconds": "60"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-15",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "60.0"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 16,
+          "arguments": {
+            "room": "wait-case-16",
+            "since": 1,
+            "seconds": "300"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-16",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "300.0"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 17,
+          "arguments": {
+            "room": "wait-case-17",
+            "since": 1,
+            "seconds": "1e300"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-17",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1e+300"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.03100000007543713,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 18,
+          "arguments": {
+            "room": "wait-case-18",
+            "since": 1,
+            "seconds": "-1e300"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-18",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-1e+300"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.030999999959021807,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 19,
+          "arguments": {
+            "room": "wait-case-19",
+            "since": 1,
+            "seconds": "-1"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-19",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "-1.0"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.01600000006146729,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 20,
+          "arguments": {
+            "room": "wait-case-20",
+            "since": 1,
+            "seconds": "1e-300"
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=1e-300; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-20",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1e-300"
+                ]
+              },
+              "fixture_effective_wait": 1e-300
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 21,
+          "arguments": {
+            "room": "wait-case-21",
+            "since": 1,
+            "seconds": 0
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=0; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-21",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "0.0"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 22,
+          "arguments": {
+            "room": "wait-case-22",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=1; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-22",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 23,
+          "arguments": {
+            "room": "wait-case-23",
+            "since": 1,
+            "seconds": 2.5
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=2.5; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-23",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "2.5"
+                ]
+              },
+              "fixture_effective_wait": 2.5
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 24,
+          "arguments": {
+            "room": "wait-case-24",
+            "since": 1,
+            "seconds": null
+          },
+          "fixture_status": 200,
+          "input_valid": false,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 1 validation error for wait_for_messageArguments\nseconds\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.13/v/float_type",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 25,
+          "arguments": {
+            "room": "wait-case-25",
+            "since": 1,
+            "seconds": "not-a-number"
+          },
+          "fixture_status": 200,
+          "input_valid": false,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 1 validation error for wait_for_messageArguments\nseconds\n  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='not-a-number', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/float_parsing",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 26,
+          "arguments": {
+            "room": "wait-case-26",
+            "since": 1,
+            "seconds": ""
+          },
+          "fixture_status": 200,
+          "input_valid": false,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 1 validation error for wait_for_messageArguments\nseconds\n  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/float_parsing",
+          "origin_requests": [],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 27,
+          "arguments": {
+            "room": "wait-case-27",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 400,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 400 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-27",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "nan"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 28,
+          "arguments": {
+            "room": "wait-case-28",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 400,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 400 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-28",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.01600000006146729,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 29,
+          "arguments": {
+            "room": "wait-case-29",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 403,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 403 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-29",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "nan"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 30,
+          "arguments": {
+            "room": "wait-case-30",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 403,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 403 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-30",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015000000013969839,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 31,
+          "arguments": {
+            "room": "wait-case-31",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 422,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 422 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-31",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "nan"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.01600000006146729,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 32,
+          "arguments": {
+            "room": "wait-case-32",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 422,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 422 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-32",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.015999999945051968,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 33,
+          "arguments": {
+            "room": "wait-case-33",
+            "since": 1,
+            "seconds": "nan"
+          },
+          "fixture_status": 429,
+          "input_valid": true,
+          "is_nan": true,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 429 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-33",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "nan"
+                ]
+              },
+              "fixture_effective_wait": 0.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.0,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 34,
+          "arguments": {
+            "room": "wait-case-34",
+            "since": 1,
+            "seconds": 1
+          },
+          "fixture_status": 429,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": true,
+          "reply": "Error executing tool wait_for_message: 429 local fixture refusal; preserve this body; do not retry",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-34",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "1.0"
+                ]
+              },
+              "fixture_effective_wait": 1.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.030999999959021807,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        },
+        {
+          "case": 35,
+          "arguments": {
+            "room": "wait-case-35",
+            "since": 1
+          },
+          "fixture_status": 200,
+          "input_valid": true,
+          "is_nan": false,
+          "sdk_is_error": false,
+          "reply": "local immediate fixture; effective_wait=10; messages=0\n",
+          "origin_requests": [
+            {
+              "method": "GET",
+              "path": "/r/wait-case-35",
+              "query": {
+                "since": [
+                  "1"
+                ],
+                "wait": [
+                  "10.0"
+                ]
+              },
+              "fixture_effective_wait": 10.0
+            }
+          ],
+          "elapsed_seconds_observed_not_deadline_test": 0.03100000007543713,
+          "matches_desired_contract": true,
+          "matches_expected_baseline_or_candidate_observation": true
+        }
+      ],
+      "whoami_unsigned_confirmed": true,
+      "executed_whole_package_path_and_hashes_verified_in_child": true,
+      "child_and_listener_closed": true
+    }
+  ],
+  "tool_case_calls": 72,
+  "additional_whoami_calls": 2,
+  "origin_GETs": 57,
+  "origin_POSTs": 0,
+  "all_source_blobs_unchanged": true,
+  "protected_user_key_loaded": false,
+  "scope": "Whole unmodified MCP package with actual SDK stdio validation and native urllib to local immediate HTTP fixture. Unchanged AST-selected service _seconds with fixture ceiling10, not whole app/store. No actual long-poll timing, timeout ceilings, Linux/full repository suite, Worker or production evidence."
+}
