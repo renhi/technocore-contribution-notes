@@ -39,3 +39,7 @@ For a reviewer with Node24, retain the exact main/candidate snapshots from `sour
 `validation.json` binds the checker, native report, source provenance and official-event review. The README and subsequent delivery receipts remain companion descriptions outside that manifest's hash set. The user's existing DID signs a summary containing an immutable manifest URL and SHA256; a delivery receipt is only marked verified after actual service readback.
 
 [Official verification](https://flop.finance/official/) still says no airdrop is live; the [operator testnet profile](https://ask.flop.finance/networks/testnet) has no verified public enrollment/release. Development documentation is not an opened reward programme. This technical contribution and DID signature are not token entitlement or settled compute.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`20726596`, server timestamp `2026-10-29T06:01:31.708405Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
