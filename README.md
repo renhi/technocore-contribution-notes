@@ -198,3 +198,7 @@ Existing DID signature: [public original tuple](json-policy-review/signed-statem
 
 ## Native MCP non-finite wait validation (2026-10-28)
 [Native wait review](nonfinite-wait-review/) credits noviceborsaeng PR1027 and bdunn77 prior causal review. Two complete unchanged packages, SDK stdio and native urllib: main27/36, candidate36/36; 72wait calls and57local GETs. Nine baseline variants share the known NaN-timeout gap. Immediate synthetic origin; no real hold/deadline, fullLinux/CI/Worker claim. Existing-DID delivery receipts recorded separately. Official event review says no airdrop live; target testnet3November is provisional.
+
+
+## Native health response-body validation (2026-10-29)
+[Health response-body review](health-body-review/) credits almondous PR957 and zeycan1 PR705/prior findings. Whole Worker logic with local routing/Cache bindings, native Node fetch and unchanged8s AbortSignal timeout: main11/14, candidate14/14;30Worker invocations and31local GETs. Three known body-guard variants trigger baseline fallback; cache-operation failures retain existing policy. No Cloudflare/fullLinux/CI/deployment claim. Existing-DID delivery receipts recorded separately; no live airdrop established.

@@ -1,0 +1,104 @@
+{
+  "retrieved_at": "2026-10-29T05:55:50.409154+00:00",
+  "main": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+  "pr": 957,
+  "head": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+  "base": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc",
+  "state": "open",
+  "draft": false,
+  "merged": false,
+  "author": "almondous",
+  "files": [
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "edge/src/worker.js",
+      "git_blob": "c20a2153bda16ac10ee94601cb9dfe7b8cf3660a",
+      "sha256": "235e491516d209b5454a5b9c0e13a1eb3158973a3d32582041044ab7a4e8dd21"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "edge/snapshot.py",
+      "git_blob": "39e36bcd03cda797877e8018eca295c11e49dbd8",
+      "sha256": "b4ecee619f4c2f02f6118ddd530a06d8e280582f5a59efff2c506a690df04128"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "edge/wrangler.jsonc",
+      "git_blob": "8c9dbd0a4ca6a4b3a08b0c8a395cc3ec1f216edb",
+      "sha256": "265a6dd5206fc3d1e4eb9ff9b908ac977e08fbfe2cdb12d71e89d6f692bf58fa"
+    },
+    {
+      "version": "candidate",
+      "commit": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "candidate",
+      "commit": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "candidate",
+      "commit": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+      "path": "edge/src/worker.js",
+      "git_blob": "a8195bbc2ce8d3880df1d8e86ce184bcc793bbb3",
+      "sha256": "fb95ec05915c826d8e4155f88156145d1420455049260ee63453133ef0f20d42"
+    },
+    {
+      "version": "candidate",
+      "commit": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+      "path": "edge/snapshot.py",
+      "git_blob": "39e36bcd03cda797877e8018eca295c11e49dbd8",
+      "sha256": "b4ecee619f4c2f02f6118ddd530a06d8e280582f5a59efff2c506a690df04128"
+    },
+    {
+      "version": "candidate",
+      "commit": "fbcbbf3ab5c3f831ab5a81c4fcd4dfe2af3fd57c",
+      "path": "edge/wrangler.jsonc",
+      "git_blob": "8c9dbd0a4ca6a4b3a08b0c8a395cc3ec1f216edb",
+      "sha256": "265a6dd5206fc3d1e4eb9ff9b908ac977e08fbfe2cdb12d71e89d6f692bf58fa"
+    }
+  ],
+  "credit": "almondous PR957 and offered supplement, zeycan1 PR705 complete-response guard and prior native finding; independent unmodified Worker/native HTTP follow-up, not first discovery. PR754 CORS work is a separate concern.",
+  "prior_comments": [
+    {
+      "author": "github-actions[bot]",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/957#issuecomment-5990737714"
+    },
+    {
+      "author": "bdunn77",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/957#issuecomment-6012986857"
+    },
+    {
+      "author": "pepedesigner",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/957#issuecomment-6457090648"
+    }
+  ],
+  "prior_reviews": [],
+  "signature_verifier": {
+    "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+    "git_blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+    "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+  }
+}

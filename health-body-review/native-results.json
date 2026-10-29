@@ -1,0 +1,766 @@
+{
+  "node": "v24.22.1",
+  "platform": "win32",
+  "versions": [
+    {
+      "version": "main",
+      "worker_sha256": "235e491516d209b5454a5b9c0e13a1eb3158973a3d32582041044ab7a4e8dd21",
+      "adapted_module_sha256": "1dc6d4e1a8dd572aa090ff8e35ef67a4ab8b72da9ffd396719702b955b7427c3",
+      "cases": 14,
+      "contract_matches": 11,
+      "expected_observations_match": true,
+      "worker_invocations": 15,
+      "origin_GETs": 17,
+      "listener_closed": true,
+      "rows": [
+        {
+          "mode": "healthy",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=0",
+              "elapsed_ms": 43.620000000000005
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 71.58120000000002,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "empty",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=1",
+              "elapsed_ms": 4.508399999999995
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 5.593200000000024,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "origin-503",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 503,
+              "body": "503 fixture refusal\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=2",
+              "elapsed_ms": 0.9187000000000012
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 1.6399000000000115,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "origin-404",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 404,
+              "body": "404 fixture refusal\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=3",
+              "elapsed_ms": 0.6171999999999684
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 1.3716999999999757,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "origin-429",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 429,
+              "body": "429 fixture refusal\n",
+              "cache_control": "no-store",
+              "retry_after": "1"
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=4",
+              "elapsed_ms": 0.6369000000000256
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 1.4120000000000346,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "body-reset",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "fallback healthy\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=5",
+              "elapsed_ms": 0.6179000000000201
+            },
+            {
+              "method": "GET",
+              "url": "/healthz?case=5",
+              "elapsed_ms": 43.79090000000002
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 44.564099999999996,
+          "matches_desired_health_body_contract": false,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "short-content-length",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "fallback healthy\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=6",
+              "elapsed_ms": 1.467800000000011
+            },
+            {
+              "method": "GET",
+              "url": "/healthz?case=6",
+              "elapsed_ms": 38.20539999999994
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 39.30919999999992,
+          "matches_desired_health_body_contract": false,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "header-stall",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 503,
+              "body": "origin unavailable\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=7",
+              "elapsed_ms": 1.876800000000003
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 8013.549800000001,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "body-stall",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "fallback healthy\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=8",
+              "elapsed_ms": 6.963800000001356
+            },
+            {
+              "method": "GET",
+              "url": "/healthz?case=8",
+              "elapsed_ms": 8052.4365
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 8054.850399999999,
+          "matches_desired_health_body_contract": false,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "delayed-complete",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=9",
+              "elapsed_ms": 1.0820999999996275
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 43.34100000000035,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "cache-hit",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "cached\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 1.57129999999961,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "cache-match-failure",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=11",
+              "elapsed_ms": 1.4438999999983935
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 2.9675999999999476,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "cache-put-failure",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "fallback healthy\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=12",
+              "elapsed_ms": 0.8607999999985623
+            },
+            {
+              "method": "GET",
+              "url": "/healthz?case=12",
+              "elapsed_ms": 3.418499999999767
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 5.046299999998155,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "cache-reuse",
+          "worker_invocations": 2,
+          "responses": [
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            },
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=13",
+              "elapsed_ms": 1.1107999999985623
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 2,
+          "asset_calls": 0,
+          "elapsed_ms": 5.005000000001019,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "worker_sha256": "fb95ec05915c826d8e4155f88156145d1420455049260ee63453133ef0f20d42",
+      "adapted_module_sha256": "f613cafb6d86ac76e1e688be95479c71b9c00dc7608eb8d49475202875f74645",
+      "cases": 14,
+      "contract_matches": 14,
+      "expected_observations_match": true,
+      "worker_invocations": 15,
+      "origin_GETs": 14,
+      "listener_closed": true,
+      "rows": [
+        {
+          "mode": "healthy",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=0",
+              "elapsed_ms": 4.619299999998475
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 6.443299999998999,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "empty",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=1",
+              "elapsed_ms": 2.790499999999156
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 4.191299999998591,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "origin-503",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 503,
+              "body": "503 fixture refusal\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=2",
+              "elapsed_ms": 0.8391000000010536
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 1.8199000000022352,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "origin-404",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 404,
+              "body": "404 fixture refusal\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=3",
+              "elapsed_ms": 0.664600000000064
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 1.580500000000029,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "origin-429",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 429,
+              "body": "429 fixture refusal\n",
+              "cache_control": "no-store",
+              "retry_after": "1"
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=4",
+              "elapsed_ms": 0.7321999999985565
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 1.8086999999977706,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "body-reset",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 503,
+              "body": "origin unavailable\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=5",
+              "elapsed_ms": 0.7872999999999593
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 42.903299999998126,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "short-content-length",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 503,
+              "body": "origin unavailable\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=6",
+              "elapsed_ms": 1.0465000000003783
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 30.247200000001612,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "header-stall",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 503,
+              "body": "origin unavailable\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=7",
+              "elapsed_ms": 2.8903000000027532
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 8010.4604,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "body-stall",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 503,
+              "body": "origin unavailable\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=8",
+              "elapsed_ms": 4.724799999999959
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 8005.080499999996,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "delayed-complete",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=9",
+              "elapsed_ms": 6.357300000003306
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 47.523300000000745,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "cache-hit",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "cached\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 0.8827999999994063,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "cache-match-failure",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=11",
+              "elapsed_ms": 1.7042999999976018
+            }
+          ],
+          "cache_put_attempts": 0,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 3.1710999999995693,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "cache-put-failure",
+          "worker_invocations": 1,
+          "responses": [
+            {
+              "status": 200,
+              "body": "fallback healthy\n",
+              "cache_control": "no-store",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=12",
+              "elapsed_ms": 1.2344999999986612
+            },
+            {
+              "method": "GET",
+              "url": "/healthz?case=12",
+              "elapsed_ms": 4.161700000004203
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 1,
+          "asset_calls": 0,
+          "elapsed_ms": 5.2546000000002095,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        },
+        {
+          "mode": "cache-reuse",
+          "worker_invocations": 2,
+          "responses": [
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            },
+            {
+              "status": 200,
+              "body": "ok\n",
+              "cache_control": "public, max-age=0, s-maxage=10",
+              "retry_after": null
+            }
+          ],
+          "origin_requests": [
+            {
+              "method": "GET",
+              "url": "/healthz?case=13",
+              "elapsed_ms": 0.8866999999954714
+            }
+          ],
+          "cache_put_attempts": 1,
+          "cache_match_attempts": 2,
+          "asset_calls": 0,
+          "elapsed_ms": 2.8971999999994296,
+          "matches_desired_health_body_contract": true,
+          "matches_expected_version_observation": true
+        }
+      ]
+    }
+  ],
+  "cases": 28,
+  "worker_invocations": 30,
+  "origin_GETs": 31,
+  "origin_POSTs": 0,
+  "native_fetch_and_abort_timeout_unmodified": true,
+  "origin_timeout_ms": 8000,
+  "all_source_blobs_unchanged": true,
+  "protected_key_loaded": false,
+  "scope": "Whole Worker with only generated routing import replaced and local Cache/ASSETS bindings. Native Node HTTP/fetch/AbortSignal; unchanged8s. Not Cloudflare workerd/deployment/TLS/CDN, actual Linux origin, general fallback bound or proof of long-term cache TTL. Only200body failures are targeted; cache-operation failures retain existing fallback policy."
+}
