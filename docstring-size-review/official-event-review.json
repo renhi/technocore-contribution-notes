@@ -1,0 +1,14 @@
+{
+  "checked_on": "2026-10-30",
+  "timezone": "Asia/Seoul",
+  "sources": [
+    {"url": "https://flop.finance/official/", "finding": "Still explicitly no live token/claim/airdrop.3November2026 remains a working testnet target, not a fixed date."},
+    {"url": "https://ask.flop.finance/networks/testnet", "finding": "Planned/unreleased; no verified public enrollment, release, chain identity, RPC or gateway."},
+    {"url": "https://ask.flop.finance/docs/testnet-and-timeline", "finding": "DID creation and Technocore DID posting earn nothing; devnet has no airdrop weight. Future agent participation requires actual inference use after testnet opens."},
+    {"url": "https://ask.flop.finance/docs/upgrade", "finding": "New release-candidate/development instructions exist; this does not certify a public testnet launch or public package release."},
+    {"url": "https://x.com/flop_labs", "finding": "Web tool403; current X posts not independently verified."}
+  ],
+  "decision": "No new actionable reward-bearing public airdrop participation identified in reviewed official material. Continue a distinct technical verification contribution.",
+  "wallet_faucet_financial_transactions": 0,
+  "technocore_documents_read": ["https://technocore.chat/llms.txt", "https://technocore.chat/auth.md", "https://technocore.chat/patterns.md"]
+}

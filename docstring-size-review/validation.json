@@ -1,0 +1,57 @@
+{
+  "completed_at": "2026-10-30T01:10:32.034726+00:00",
+  "main": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+  "head": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+  "pr": 1052,
+  "credit": "almondous PR1052 token-span fix and original regression suite; independent Windows full-tool/CLI and explicit-oracle matrix follow-up, not first discovery.",
+  "measurement_cases_per_version": 85,
+  "main_measurement_matches": 17,
+  "candidate_measurement_matches": 85,
+  "explicit_token_density_cases_per_version": 84,
+  "matrix_executions": 170,
+  "synthetic_CLI_cases_per_version": 32,
+  "main_CLI_matches": 26,
+  "candidate_CLI_matches": 32,
+  "synthetic_CLI_executions": 64,
+  "exact_original_tests_per_version": 21,
+  "main_original_passed": 8,
+  "main_original_failed": 13,
+  "candidate_original_passed": 21,
+  "original_tests_unmodified": true,
+  "source_blobs_verified_unchanged": 21,
+  "real_file_measurement_dictionaries_equal": 6,
+  "actual_snapshot_CLI_executions": 6,
+  "actual_caps_exit_codes": [
+    0,
+    0
+  ],
+  "actual_check_exit_codes": [
+    1,
+    1
+  ],
+  "inherited_ratchet": "store.py1029->1030, cap1030; identical on both, not a cap violation",
+  "official_baseline_policy_or_source_modified": false,
+  "update_baseline_run": false,
+  "whole_tool_normal_import_and_native_CLI": true,
+  "server_source_files_only_read_not_imported": true,
+  "full_repository_tests_CI_ty_coverage": false,
+  "checker_pinned_Ruff_lint_format_syntax": true,
+  "HTTP_requests": 0,
+  "protected_user_key_loaded_in_tests": false,
+  "new_peer_comments": 0,
+  "new_PRs": 0,
+  "upstream_adoption": "unconfirmed",
+  "airdrop_qualification": "unconfirmed",
+  "signature_verifier": {
+    "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+    "git_blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+    "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+  },
+  "artifact_sha256": {
+    "check_size_policy.py": "bffc1eb319a092a74181362529fc15c40cdd230352470428408437e0f02baee1",
+    "source-provenance.json": "fbfaf6ca25bd400ad779c006db0ee696d1ca2c0830bc58f9a33dde29649e1c96",
+    "native-results.json": "008f2974c050748c4c8d0a2edffe846879f153fb2ba1487e0cc894619f1d107e",
+    "official-event-review.json": "164d7ae7aed79cc8235ee1192a7459456b58b6a5d621c3f57f13505d8687ddb0"
+  },
+  "manifest_scope": "Listed evidence bytes; README and subsequent delivery receipts are mutable companion descriptions."
+}

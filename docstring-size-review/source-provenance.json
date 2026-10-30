@@ -1,0 +1,173 @@
+{
+  "retrieved_at": "2026-10-30T01:03:09.550190+00:00",
+  "main": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+  "pr": 1052,
+  "head": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+  "state": "open",
+  "draft": false,
+  "merged": false,
+  "author": "almondous",
+  "files": [
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "sz.py",
+      "git_blob": "d241b91e9c8a57de6719aae95b61f9ccd5687bad",
+      "sha256": "cf5a5baf8f53e64e3f856e9276c64897bef44c04670ab37349314022388e550d"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "sz-baseline.json",
+      "git_blob": "323bb0d541139c124724e1f5e3fa2117dd01cb39",
+      "sha256": "b42f63cad1011a739c76b0ff1dc90000f1241019c3819563dba09d9beb45b3c9"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "AGENTS.md",
+      "git_blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "pyproject.toml",
+      "git_blob": "77a4de6d4c8ecb471d7f0b8f510cbc5d4f01ced9",
+      "sha256": "6f85f42a7b97e4bfa4b49581ecefbff01d22b38bde24aaee049ad51f807b1713"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "sz.py",
+      "git_blob": "7910fe166ba0ef7871032e48002f468b22018b22",
+      "sha256": "8362d4ae611f2c01cc07351f6cb3a466abf981294906fe54c121ffb55b4e1cd9"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "sz-baseline.json",
+      "git_blob": "323bb0d541139c124724e1f5e3fa2117dd01cb39",
+      "sha256": "b42f63cad1011a739c76b0ff1dc90000f1241019c3819563dba09d9beb45b3c9"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "tests/unit/test_size_docstrings.py",
+      "git_blob": "f923474f75862450a0f50cab25a92f369b850c45",
+      "sha256": "b7856b7b28ab9df11915fadbe56a7d39c862a419bfb75bbaca392ba8c8abd3fd"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "src/app.py",
+      "git_blob": "d60fe0e5dabaa355f66f8b9eea46f15d90b6d98c",
+      "sha256": "1727d167afd24e2ad053e34e00181675b874b861ab3bd9608e460d03396f347f"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "src/config.py",
+      "git_blob": "dc1143b3d9bd66c71bebcdf729151c14e4d3ca6c",
+      "sha256": "0927bf331b631db488a542f16542bde0195ac7fc22dca01d1ebf9f070c2181e3"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "src/didkey.py",
+      "git_blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+      "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "src/limit.py",
+      "git_blob": "5ee19eeb0a00913f3af9666cd7d9f4f89e45d292",
+      "sha256": "74869f5aeaf23c92a93e89bf8c6a51a1888d47b53f1a7675a4e6d82c8d5e32bc"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "src/store.py",
+      "git_blob": "67cd17b9d0563e2224f8d3c5129d12194c37c99c",
+      "sha256": "0eee2537081c44d34d34b63feeed89a235853c82764168c364ca14655e437249"
+    },
+    {
+      "version": "main",
+      "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "src/manifest.py",
+      "git_blob": "2dc60101b4e80ccd91498602c5b4aebbdb4a2d41",
+      "sha256": "9fee3b4f7a814941d0023edc7082adc6930049647d33e0bc00aff7628d8adb87"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "src/app.py",
+      "git_blob": "d60fe0e5dabaa355f66f8b9eea46f15d90b6d98c",
+      "sha256": "1727d167afd24e2ad053e34e00181675b874b861ab3bd9608e460d03396f347f"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "src/config.py",
+      "git_blob": "dc1143b3d9bd66c71bebcdf729151c14e4d3ca6c",
+      "sha256": "0927bf331b631db488a542f16542bde0195ac7fc22dca01d1ebf9f070c2181e3"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "src/didkey.py",
+      "git_blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+      "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "src/limit.py",
+      "git_blob": "5ee19eeb0a00913f3af9666cd7d9f4f89e45d292",
+      "sha256": "74869f5aeaf23c92a93e89bf8c6a51a1888d47b53f1a7675a4e6d82c8d5e32bc"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "src/store.py",
+      "git_blob": "67cd17b9d0563e2224f8d3c5129d12194c37c99c",
+      "sha256": "0eee2537081c44d34d34b63feeed89a235853c82764168c364ca14655e437249"
+    },
+    {
+      "version": "candidate",
+      "commit": "0ee11b31ffca4fd7236aa1a79a08341d4dd808ba",
+      "path": "src/manifest.py",
+      "git_blob": "2dc60101b4e80ccd91498602c5b4aebbdb4a2d41",
+      "sha256": "9fee3b4f7a814941d0023edc7082adc6930049647d33e0bc00aff7628d8adb87"
+    }
+  ],
+  "original_test_path": "tests/unit/test_size_docstrings.py",
+  "credit": "almondous PR1052 token-span fix and original regression suite; independent Windows full-tool/CLI and explicit-oracle matrix follow-up, not first discovery.",
+  "prior_comments": [],
+  "prior_reviews": [
+    {
+      "author": "WIZARDspace",
+      "url": "https://github.com/flop-labs/technocore-chat/pull/1052#pullrequestreview-5695340626"
+    }
+  ],
+  "signature_verifier": {
+    "commit": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+    "git_blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+    "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+  }
+}
