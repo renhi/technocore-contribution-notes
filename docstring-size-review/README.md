@@ -40,3 +40,7 @@ All21 fetched Git blobs, original-test bytes, normal module paths and tool/basel
 `validation.json` hashes the checker/results/provenance/official-event review. README and later delivery receipts remain mutable companion descriptions. The existing-DID summary binds the immutable manifest URL and SHA256; actual delivery is only confirmed after live record readback. No new peer comment, PR, source-branch edit, author incorporation or official role is claimed.
 
 The [official verification page](https://flop.finance/official/) still has no live airdrop, and the [public testnet profile](https://ask.flop.finance/networks/testnet) remains planned/unreleased with no verified public enrollment.3November is a working target. This technical verification and DID posting do not establish reward entitlement or settled compute.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`20844977`, server timestamp `2026-10-30T01:12:55.625201Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
