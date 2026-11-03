@@ -1,0 +1,563 @@
+[
+  {
+    "label": "base",
+    "cases": 20,
+    "matches": 5,
+    "rows": [
+      {
+        "arms": "blocking",
+        "mixes": "lobby",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "deferred",
+        "mixes": "spread",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "oppo,batched,none",
+        "mixes": "lobby,mixed,spread",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "every0,every1e-3,every-1,every+2",
+        "mixes": "mixed",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking,,batched,",
+        "mixes": ",lobby,",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "blockng",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking,blockng",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking, batched",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "Blocking",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking",
+        "mixes": "loby",
+        "expected_error": "unknown --mixes name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking",
+        "mixes": "lobby,loby",
+        "expected_error": "unknown --mixes name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking",
+        "mixes": "lobby, spread",
+        "expected_error": "unknown --mixes name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "everybad",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "everynan",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every+inf",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every-Infinity",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every1e309",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every0,everyNaN",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every1.2.3",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "label": "main",
+    "cases": 20,
+    "matches": 5,
+    "rows": [
+      {
+        "arms": "blocking",
+        "mixes": "lobby",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "deferred",
+        "mixes": "spread",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "oppo,batched,none",
+        "mixes": "lobby,mixed,spread",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "every0,every1e-3,every-1,every+2",
+        "mixes": "mixed",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking,,batched,",
+        "mixes": ",lobby,",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "blockng",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking,blockng",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking, batched",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "Blocking",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking",
+        "mixes": "loby",
+        "expected_error": "unknown --mixes name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking",
+        "mixes": "lobby,loby",
+        "expected_error": "unknown --mixes name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking",
+        "mixes": "lobby, spread",
+        "expected_error": "unknown --mixes name",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "everybad",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "everynan",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every+inf",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every-Infinity",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every1e309",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every0,everyNaN",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      },
+      {
+        "arms": "every1.2.3",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 0,
+        "run_calls": 1,
+        "matches": false,
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "label": "candidate",
+    "cases": 20,
+    "matches": 20,
+    "rows": [
+      {
+        "arms": "blocking",
+        "mixes": "lobby",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "deferred",
+        "mixes": "spread",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "oppo,batched,none",
+        "mixes": "lobby,mixed,spread",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "every0,every1e-3,every-1,every+2",
+        "mixes": "mixed",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "blocking,,batched,",
+        "mixes": ",lobby,",
+        "expected_error": null,
+        "code": 0,
+        "run_calls": 1,
+        "matches": true,
+        "stderr": ""
+      },
+      {
+        "arms": "blockng",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: unknown --arms name: 'blockng'\n"
+      },
+      {
+        "arms": "blocking,blockng",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: unknown --arms name: 'blockng'\n"
+      },
+      {
+        "arms": "blocking, batched",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: unknown --arms name: ' batched'\n"
+      },
+      {
+        "arms": "Blocking",
+        "mixes": "lobby",
+        "expected_error": "unknown --arms name",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: unknown --arms name: 'Blocking'\n"
+      },
+      {
+        "arms": "blocking",
+        "mixes": "loby",
+        "expected_error": "unknown --mixes name",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: unknown --mixes name: 'loby'\n"
+      },
+      {
+        "arms": "blocking",
+        "mixes": "lobby,loby",
+        "expected_error": "unknown --mixes name",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: unknown --mixes name: 'loby'\n"
+      },
+      {
+        "arms": "blocking",
+        "mixes": "lobby, spread",
+        "expected_error": "unknown --mixes name",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: unknown --mixes name: ' spread'\n"
+      },
+      {
+        "arms": "every",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: invalid --arms interval: 'every'\n"
+      },
+      {
+        "arms": "everybad",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: invalid --arms interval: 'everybad'\n"
+      },
+      {
+        "arms": "everynan",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: invalid --arms interval: 'everynan'\n"
+      },
+      {
+        "arms": "every+inf",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: invalid --arms interval: 'every+inf'\n"
+      },
+      {
+        "arms": "every-Infinity",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: invalid --arms interval: 'every-Infinity'\n"
+      },
+      {
+        "arms": "every1e309",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: invalid --arms interval: 'every1e309'\n"
+      },
+      {
+        "arms": "every0,everyNaN",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: invalid --arms interval: 'everyNaN'\n"
+      },
+      {
+        "arms": "every1.2.3",
+        "mixes": "spread",
+        "expected_error": "invalid --arms interval",
+        "code": 2,
+        "run_calls": 0,
+        "matches": true,
+        "stderr": "usage: counters.py [-h] [--procs PROCS] [--threads THREADS] [--writes WRITES]\n                   [--rounds ROUNDS] [--mixes MIXES] [--arms ARMS] [--raw]\n                   [--fsync {0,1}] [--burst BURST]\ncounters.py: error: invalid --arms interval: 'every1.2.3'\n"
+      }
+    ]
+  }
+]

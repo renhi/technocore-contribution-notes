@@ -210,3 +210,7 @@ Existing DID signature: [public original tuple](json-policy-review/signed-statem
 
 ## Repeated room-list query validation (2026-11-03)
 [PR729 evidence](rooms-query-review/): historical base and current main 6/22; proposed Worker 22/22 using a local HTTP origin and cache fixture.
+
+
+## Counter benchmark option validation (2026-11-03)
+[PR1056 evidence](counter-label-review/): base and current main 5/20; proposed argument handling 20/20. Workload entry point recorded locally; no workers started.

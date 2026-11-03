@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-03 KST",
+  "sources": [
+    "https://flop.finance/official/",
+    "https://docs.flop.network/networks/testnet",
+    "https://docs.flop.network/docs/testnet-and-timeline"
+  ],
+  "finding": "Public testnet still listed as planned/unreleased; no verified public enrollment or new actionable airdrop procedure. Official X inaccessible via web fetch (403)."
+}

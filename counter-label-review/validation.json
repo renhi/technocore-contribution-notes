@@ -1,0 +1,15 @@
+{
+  "main": "ae78d14d29ff2a33be6bdf31ea2fe4c9ff2f5fe7",
+  "head": "70a7bf2b56aafea820a6b10f1067df84deb4717b",
+  "pr": 1056,
+  "cases_per_version": 20,
+  "base_matches": 5,
+  "main_matches": 5,
+  "candidate_matches": 20,
+  "artifact_sha256": {
+    "check_counter_labels.py": "62f48652bde4074f054f0a4c3cf5100b5a1843d4783f94c2b8efd3555c4d32f5",
+    "source-provenance.json": "5d1b1fc4a51c59f121f703b2131c4006220cbc8aef20623c1d278bcd39d4ee8c",
+    "native-results.json": "2ee632ec81a3778efa5134556f7d061ee78641a702b906899fcf4c0ea10e1e5c",
+    "official-event-review.json": "8bb52d3384cf3097fa94e53cbe19af3a020d4811e29d775a054a5ca8306ed217"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "main": "ae78d14d29ff2a33be6bdf31ea2fe4c9ff2f5fe7",
+  "head": "70a7bf2b56aafea820a6b10f1067df84deb4717b",
+  "author": "zkasuran",
+  "files": [
+    {
+      "label": "main",
+      "ref": "ae78d14d29ff2a33be6bdf31ea2fe4c9ff2f5fe7",
+      "path": "bench/counters.py",
+      "blob": "9c46fd4db88e4dfcae0a8dd826dad6ef518bb70c",
+      "sha256": "16bf7a0cde425bf949de3c5134401d37e83f17f7d755e4839bd0e4b8c3775c54"
+    },
+    {
+      "label": "base",
+      "ref": "73a732497a19cac11aff4dcb527bae3c52b02f73",
+      "path": "bench/counters.py",
+      "blob": "9c46fd4db88e4dfcae0a8dd826dad6ef518bb70c",
+      "sha256": "16bf7a0cde425bf949de3c5134401d37e83f17f7d755e4839bd0e4b8c3775c54"
+    },
+    {
+      "label": "candidate",
+      "ref": "70a7bf2b56aafea820a6b10f1067df84deb4717b",
+      "path": "bench/counters.py",
+      "blob": "c40086160f6e9076e4af4ec8856cfa3fd0492b24",
+      "sha256": "0be34c6ac084e9cd77938f029e9050f887cf4771f6ef2ce26dedb48f66b46890"
+    },
+    {
+      "label": "verifier",
+      "ref": "ae78d14d29ff2a33be6bdf31ea2fe4c9ff2f5fe7",
+      "path": "src/didkey.py",
+      "blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+      "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+    }
+  ]
+}
