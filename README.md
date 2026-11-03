@@ -206,3 +206,7 @@ Existing DID signature: [public original tuple](json-policy-review/signed-statem
 
 ## Standalone size-policy validation (2026-10-30)
 [Docstring size review](docstring-size-review/) credits almondous PR1052. Whole unchanged tools/nativeCLI: explicit measurement oracles main17/85,candidate85/85; syntheticpolicy decisions26/32 vs32/32. Exact original21tests main8pass13fail,candidate21pass; six actual source measurement dictionaries identical. Caps pass both; identical inherited store1029-to1030 ratchet atcap1030 remains. No baseline/policy edit or fullrepository/CI claim. Existing-DID delivery receipts recorded separately; no live airdrop established.
+
+
+## Repeated room-list query validation (2026-11-03)
+[PR729 evidence](rooms-query-review/): historical base and current main 6/22; proposed Worker 22/22 using a local HTTP origin and cache fixture.

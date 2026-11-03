@@ -1,0 +1,42 @@
+{
+  "main": "ae78d14d29ff2a33be6bdf31ea2fe4c9ff2f5fe7",
+  "head": "67012fddcd6aa610355d01c03e1196ecbc2d7925",
+  "author": "almondous",
+  "files": [
+    {
+      "label": "main",
+      "ref": "ae78d14d29ff2a33be6bdf31ea2fe4c9ff2f5fe7",
+      "path": "edge/src/worker.js",
+      "blob": "c20a2153bda16ac10ee94601cb9dfe7b8cf3660a",
+      "sha256": "235e491516d209b5454a5b9c0e13a1eb3158973a3d32582041044ab7a4e8dd21"
+    },
+    {
+      "label": "base",
+      "ref": "2670ebb11ead1ab9b67307e518f8e8479fc9db47",
+      "path": "edge/src/worker.js",
+      "blob": "d8830cb92da002c1336028e08e7139602bb0bc28",
+      "sha256": "436002ea348e2478fdcc1f0f59a1817c009addb6090dcf88e9102eed816a4c00"
+    },
+    {
+      "label": "candidate",
+      "ref": "67012fddcd6aa610355d01c03e1196ecbc2d7925",
+      "path": "edge/src/worker.js",
+      "blob": "fa1b7a93fce108d41f3d9e6a55deadb8cb52f61c",
+      "sha256": "91bfaed5bdd3d9f5e2062fdbf4870d39c3fe8aebc6f9b00c7b6ade6b128f923a"
+    },
+    {
+      "label": "verifier",
+      "ref": "ae78d14d29ff2a33be6bdf31ea2fe4c9ff2f5fe7",
+      "path": "src/didkey.py",
+      "blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+      "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+    },
+    {
+      "label": "policy",
+      "ref": "ae78d14d29ff2a33be6bdf31ea2fe4c9ff2f5fe7",
+      "path": "edge/snapshot.py",
+      "blob": "39e36bcd03cda797877e8018eca295c11e49dbd8",
+      "sha256": "b4ecee619f4c2f02f6118ddd530a06d8e280582f5a59efff2c506a690df04128"
+    }
+  ]
+}

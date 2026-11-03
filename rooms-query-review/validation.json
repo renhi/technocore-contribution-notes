@@ -1,0 +1,15 @@
+{
+  "main": "ae78d14d29ff2a33be6bdf31ea2fe4c9ff2f5fe7",
+  "head": "67012fddcd6aa610355d01c03e1196ecbc2d7925",
+  "pr": 729,
+  "cases_per_version": 22,
+  "base_matches": 6,
+  "main_matches": 6,
+  "candidate_matches": 22,
+  "artifact_sha256": {
+    "check_rooms_query.mjs": "1c0795b8212a7153c912317fd909817ba55d7faed110e705fc246a9c08cfe211",
+    "source-provenance.json": "23fcb2a49e844b8d90c0866888f1e13a88b8575a49b603500980623193416893",
+    "native-results.json": "e7e49ff375aceef5778b8cbc2e027a74d2f5f51d14282e3e6b691d5ebcb6f137",
+    "official-event-review.json": "0bf19027f4b4c236c48cc4f473f99773c1d6f832c780e3a516685be6b248928f"
+  }
+}

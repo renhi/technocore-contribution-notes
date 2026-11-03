@@ -1,0 +1,865 @@
+{
+  "node": "v24.22.1",
+  "versions": [
+    {
+      "label": "base",
+      "cases": 22,
+      "matches": 6,
+      "rows": [
+        {
+          "query": "limit=1&limit=2",
+          "key": "limit=2",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=1",
+            "/rooms?limit=2"
+          ],
+          "puts": [
+            "/rooms?limit=1",
+            "/rooms?limit=2"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=2&limit=1",
+          "key": "limit=1",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=2",
+            "/rooms?limit=1"
+          ],
+          "puts": [
+            "/rooms?limit=2",
+            "/rooms?limit=1"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=2&limit=2",
+          "key": "limit=2",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=2"
+          ],
+          "puts": [
+            "/rooms?limit=2"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "format=json&format=text",
+          "key": "",
+          "matches": false,
+          "requests": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "format=text&format=json",
+          "key": "format=json",
+          "matches": false,
+          "requests": [
+            "/rooms",
+            "/rooms?format=json"
+          ],
+          "puts": [
+            "/rooms",
+            "/rooms?format=json"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "format=json&format=json",
+          "key": "format=json",
+          "matches": true,
+          "requests": [
+            "/rooms?format=json"
+          ],
+          "puts": [
+            "/rooms?format=json"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=1&format=text&limit=3&format=json",
+          "key": "format=json&limit=3",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=1",
+            "/rooms?format=json&limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=1",
+            "/rooms?format=json&limit=3"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=3&format=json&limit=1&format=text",
+          "key": "limit=1",
+          "matches": false,
+          "requests": [
+            "/rooms?format=json&limit=3",
+            "/rooms?limit=1"
+          ],
+          "puts": [
+            "/rooms?format=json&limit=3",
+            "/rooms?limit=1"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=1&limit=2&limit=3",
+          "key": "limit=3",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=1",
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=1",
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=%2B2&limit=4",
+          "key": "limit=4",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=%2B2&limit=4",
+            "/rooms?limit=4"
+          ],
+          "puts": [
+            "/rooms?limit=4"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=4&limit=%2B2",
+          "key": null,
+          "matches": false,
+          "requests": [
+            "/rooms?limit=4"
+          ],
+          "puts": [
+            "/rooms?limit=4"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=&limit=3",
+          "key": "limit=3",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=&limit=3",
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=3&limit=",
+          "key": null,
+          "matches": false,
+          "requests": [
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=201&limit=0",
+          "key": "limit=1",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=200",
+            "/rooms?limit=1"
+          ],
+          "puts": [
+            "/rooms?limit=200",
+            "/rooms?limit=1"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=0&limit=201",
+          "key": "limit=200",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=1",
+            "/rooms?limit=200"
+          ],
+          "puts": [
+            "/rooms?limit=1",
+            "/rooms?limit=200"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=2&%6cimit=3",
+          "key": "limit=3",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=2",
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=2",
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "format=json&format=",
+          "key": "",
+          "matches": false,
+          "requests": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=0004",
+          "key": "limit=4",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=4"
+          ],
+          "puts": [
+            "/rooms?limit=4"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "noise=1&limit=2",
+          "key": "limit=2",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=2"
+          ],
+          "puts": [
+            "/rooms?limit=2"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "",
+          "key": "",
+          "matches": true,
+          "requests": [
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=1000000000",
+          "key": null,
+          "matches": true,
+          "requests": [
+            "/rooms?limit=1000000000",
+            "/rooms?limit=1000000000"
+          ],
+          "puts": [],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "format=json&format=JSON",
+          "key": "",
+          "matches": false,
+          "requests": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": false
+        }
+      ]
+    },
+    {
+      "label": "main",
+      "cases": 22,
+      "matches": 6,
+      "rows": [
+        {
+          "query": "limit=1&limit=2",
+          "key": "limit=2",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=1",
+            "/rooms?limit=2"
+          ],
+          "puts": [
+            "/rooms?limit=1",
+            "/rooms?limit=2"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=2&limit=1",
+          "key": "limit=1",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=2",
+            "/rooms?limit=1"
+          ],
+          "puts": [
+            "/rooms?limit=2",
+            "/rooms?limit=1"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=2&limit=2",
+          "key": "limit=2",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=2"
+          ],
+          "puts": [
+            "/rooms?limit=2"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "format=json&format=text",
+          "key": "",
+          "matches": false,
+          "requests": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "format=text&format=json",
+          "key": "format=json",
+          "matches": false,
+          "requests": [
+            "/rooms",
+            "/rooms?format=json"
+          ],
+          "puts": [
+            "/rooms",
+            "/rooms?format=json"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "format=json&format=json",
+          "key": "format=json",
+          "matches": true,
+          "requests": [
+            "/rooms?format=json"
+          ],
+          "puts": [
+            "/rooms?format=json"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=1&format=text&limit=3&format=json",
+          "key": "format=json&limit=3",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=1",
+            "/rooms?format=json&limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=1",
+            "/rooms?format=json&limit=3"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=3&format=json&limit=1&format=text",
+          "key": "limit=1",
+          "matches": false,
+          "requests": [
+            "/rooms?format=json&limit=3",
+            "/rooms?limit=1"
+          ],
+          "puts": [
+            "/rooms?format=json&limit=3",
+            "/rooms?limit=1"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=1&limit=2&limit=3",
+          "key": "limit=3",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=1",
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=1",
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=%2B2&limit=4",
+          "key": "limit=4",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=%2B2&limit=4",
+            "/rooms?limit=4"
+          ],
+          "puts": [
+            "/rooms?limit=4"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=4&limit=%2B2",
+          "key": null,
+          "matches": false,
+          "requests": [
+            "/rooms?limit=4"
+          ],
+          "puts": [
+            "/rooms?limit=4"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=&limit=3",
+          "key": "limit=3",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=&limit=3",
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=3&limit=",
+          "key": null,
+          "matches": false,
+          "requests": [
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=201&limit=0",
+          "key": "limit=1",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=200",
+            "/rooms?limit=1"
+          ],
+          "puts": [
+            "/rooms?limit=200",
+            "/rooms?limit=1"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=0&limit=201",
+          "key": "limit=200",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=1",
+            "/rooms?limit=200"
+          ],
+          "puts": [
+            "/rooms?limit=1",
+            "/rooms?limit=200"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=2&%6cimit=3",
+          "key": "limit=3",
+          "matches": false,
+          "requests": [
+            "/rooms?limit=2",
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=2",
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "format=json&format=",
+          "key": "",
+          "matches": false,
+          "requests": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": false
+        },
+        {
+          "query": "limit=0004",
+          "key": "limit=4",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=4"
+          ],
+          "puts": [
+            "/rooms?limit=4"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "noise=1&limit=2",
+          "key": "limit=2",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=2"
+          ],
+          "puts": [
+            "/rooms?limit=2"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "",
+          "key": "",
+          "matches": true,
+          "requests": [
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=1000000000",
+          "key": null,
+          "matches": true,
+          "requests": [
+            "/rooms?limit=1000000000",
+            "/rooms?limit=1000000000"
+          ],
+          "puts": [],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "format=json&format=JSON",
+          "key": "",
+          "matches": false,
+          "requests": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms?format=json",
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": false
+        }
+      ]
+    },
+    {
+      "label": "candidate",
+      "cases": 22,
+      "matches": 22,
+      "rows": [
+        {
+          "query": "limit=1&limit=2",
+          "key": "limit=2",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=2"
+          ],
+          "puts": [
+            "/rooms?limit=2"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=2&limit=1",
+          "key": "limit=1",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=1"
+          ],
+          "puts": [
+            "/rooms?limit=1"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=2&limit=2",
+          "key": "limit=2",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=2"
+          ],
+          "puts": [
+            "/rooms?limit=2"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "format=json&format=text",
+          "key": "",
+          "matches": true,
+          "requests": [
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "format=text&format=json",
+          "key": "format=json",
+          "matches": true,
+          "requests": [
+            "/rooms?format=json"
+          ],
+          "puts": [
+            "/rooms?format=json"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "format=json&format=json",
+          "key": "format=json",
+          "matches": true,
+          "requests": [
+            "/rooms?format=json"
+          ],
+          "puts": [
+            "/rooms?format=json"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=1&format=text&limit=3&format=json",
+          "key": "format=json&limit=3",
+          "matches": true,
+          "requests": [
+            "/rooms?format=json&limit=3"
+          ],
+          "puts": [
+            "/rooms?format=json&limit=3"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=3&format=json&limit=1&format=text",
+          "key": "limit=1",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=1"
+          ],
+          "puts": [
+            "/rooms?limit=1"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=1&limit=2&limit=3",
+          "key": "limit=3",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=%2B2&limit=4",
+          "key": "limit=4",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=4"
+          ],
+          "puts": [
+            "/rooms?limit=4"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=4&limit=%2B2",
+          "key": null,
+          "matches": true,
+          "requests": [
+            "/rooms?limit=4&limit=%2B2",
+            "/rooms?limit=4&limit=%2B2"
+          ],
+          "puts": [],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=&limit=3",
+          "key": "limit=3",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=3&limit=",
+          "key": null,
+          "matches": true,
+          "requests": [
+            "/rooms?limit=3&limit=",
+            "/rooms?limit=3&limit="
+          ],
+          "puts": [],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=201&limit=0",
+          "key": "limit=1",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=1"
+          ],
+          "puts": [
+            "/rooms?limit=1"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=0&limit=201",
+          "key": "limit=200",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=200"
+          ],
+          "puts": [
+            "/rooms?limit=200"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=2&%6cimit=3",
+          "key": "limit=3",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=3"
+          ],
+          "puts": [
+            "/rooms?limit=3"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "format=json&format=",
+          "key": "",
+          "matches": true,
+          "requests": [
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=0004",
+          "key": "limit=4",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=4"
+          ],
+          "puts": [
+            "/rooms?limit=4"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "noise=1&limit=2",
+          "key": "limit=2",
+          "matches": true,
+          "requests": [
+            "/rooms?limit=2"
+          ],
+          "puts": [
+            "/rooms?limit=2"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "",
+          "key": "",
+          "matches": true,
+          "requests": [
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "limit=1000000000",
+          "key": null,
+          "matches": true,
+          "requests": [
+            "/rooms?limit=1000000000",
+            "/rooms?limit=1000000000"
+          ],
+          "puts": [],
+          "bodyAndTypeMatch": true
+        },
+        {
+          "query": "format=json&format=JSON",
+          "key": "",
+          "matches": true,
+          "requests": [
+            "/rooms"
+          ],
+          "puts": [
+            "/rooms"
+          ],
+          "bodyAndTypeMatch": true
+        }
+      ]
+    }
+  ]
+}
