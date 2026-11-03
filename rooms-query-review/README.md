@@ -7,3 +7,7 @@ Across 22 cases per snapshot, the historical PR base and current main each match
 The whole Worker runs with native Node fetch over loopback HTTP. Only the generated routing import and platform Cache binding are supplied locally. The origin is a small last-occurrence fixture, not the actual Linux service. Tests do not exercise Cloudflare deployment, stale refresh, full CI, or real room data. Current main differs from the PR's historical base, so these are three distinct snapshots, not proof of merge compatibility. Exact refs and hashes are retained. No protected key was used in testing.
 
 The official FLOP web guidance still did not establish actionable enrollment on November 3. Technical review and DID posting do not establish reward eligibility.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`21419250`, server timestamp `2026-11-03T02:51:32.446919Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
