@@ -1,0 +1,12 @@
+{
+  "main": "1b85eb56c5b75def403910f694a410f994cbb438",
+  "head": "aef45dbff478344cb20e365847fc5298d7e0a9c7",
+  "pr": 1025,
+  "candidate_matches": 15,
+  "artifact_sha256": {
+    "check_bucket_refunds.py": "f4035689ee3ea2742fc9d9fbf2263c131027401ad06646eb7f444f5fa2a31515",
+    "source-provenance.json": "9a98940c4b5f629cad2f395743c674c52fb94c1ce730259ce396bfa3a9e171b7",
+    "native-results.json": "84ccb39fbe42bebddfa90ed16063bd9cf9bd4a290c3de84669ab57f3b0492d23",
+    "official-event-review.json": "b97676f098de490c22a87dff912c89fb6472d5965a2c904e7d02fa10469be442"
+  }
+}

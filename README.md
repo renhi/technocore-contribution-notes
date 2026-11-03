@@ -214,3 +214,7 @@ Existing DID signature: [public original tuple](json-policy-review/signed-statem
 
 ## Counter benchmark option validation (2026-11-03)
 [PR1056 evidence](counter-label-review/): base and current main 5/20; proposed argument handling 20/20. Workload entry point recorded locally; no workers started.
+
+
+## Bounded bucket refund validation (2026-11-03)
+[PR1025 evidence](bucket-refund-review/): current main 6/15, candidate 15/15. Isolated take/refund checks.
