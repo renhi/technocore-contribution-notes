@@ -1,0 +1,186 @@
+{
+  "retrieved_at": "2026-11-04T10:29:16.851817+00:00",
+  "pr": 183,
+  "main": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+  "head": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+  "base": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+  "author": "crazywriter1",
+  "files": [
+    {
+      "label": "base",
+      "ref": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+      "path": "AGENTS.md",
+      "blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "label": "base",
+      "ref": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+      "path": "src/app.py",
+      "blob": "22194e35493fd2171b349522370d00af14e932d5",
+      "sha256": "18a775c798372c93e8471ed2d5995fd3114c2c1c572bd257e072c2592cd25831"
+    },
+    {
+      "label": "base",
+      "ref": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+      "path": "src/humans.html",
+      "blob": "ad95d065d74443359f7997f38a5df6dccb331ede",
+      "sha256": "ba959dde52c977be7ec7acbff448c479c1c12f6db1d11507a15bbb0eb4bc545f"
+    },
+    {
+      "label": "base",
+      "ref": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+      "path": "tests/test_mcp.py",
+      "blob": "c26eb2a9b440d96e71f946f859e2b809fa36c6eb",
+      "sha256": "3e11d94cafdd8bfab3982ce1c772a1ac31838b8d7c0d56c431ecdccd8c47a7a0"
+    },
+    {
+      "label": "base",
+      "ref": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+      "path": "mcp/src/technocore_mcp/__init__.py",
+      "blob": "7e8392fa506ebf84c724b212a98db81e599d8292",
+      "sha256": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009"
+    },
+    {
+      "label": "base",
+      "ref": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+      "path": "mcp/src/technocore_mcp/server.py",
+      "blob": "6a0165007146ca1d53f9009d7aa5a8535a1fcae7",
+      "sha256": "e299bc04a1a4ba01260105259aad6c0bc193dea63cafa3b50558fb83980fbf23"
+    },
+    {
+      "label": "base",
+      "ref": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+      "path": "mcp/src/technocore_mcp/fetch.py",
+      "blob": "1f15780264a35f145e6e7ff3132605cd4286b87b",
+      "sha256": "439194d28ccd1310365a74c18fda24a2c413ec411656f575973a0e4e2e64a7cd"
+    },
+    {
+      "label": "base",
+      "ref": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+      "path": "mcp/src/technocore_mcp/signing.py",
+      "blob": "0dfaae290cb2b2fd242701248c21f3fab9d5e731",
+      "sha256": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba"
+    },
+    {
+      "label": "main",
+      "ref": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+      "path": "AGENTS.md",
+      "blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "label": "main",
+      "ref": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+      "path": "src/app.py",
+      "blob": "d60fe0e5dabaa355f66f8b9eea46f15d90b6d98c",
+      "sha256": "1727d167afd24e2ad053e34e00181675b874b861ab3bd9608e460d03396f347f"
+    },
+    {
+      "label": "main",
+      "ref": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+      "path": "src/humans.html",
+      "blob": "43e180ff87a4389b95e20b8b37af110952bab8f7",
+      "sha256": "10fc10072b78869df99f8775ddd0e8692abd9831c4eb98fb0018b6f2bc63353f"
+    },
+    {
+      "label": "main",
+      "ref": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+      "path": "tests/test_mcp.py",
+      "blob": "ed62d6f455067da5053e2da7fbdf84875517088e",
+      "sha256": "1e8566c7bf98f42b31131009215ef96b999b97a78917c12d64c85dbcab9e2147"
+    },
+    {
+      "label": "main",
+      "ref": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+      "path": "mcp/src/technocore_mcp/__init__.py",
+      "blob": "7e8392fa506ebf84c724b212a98db81e599d8292",
+      "sha256": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009"
+    },
+    {
+      "label": "main",
+      "ref": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+      "path": "mcp/src/technocore_mcp/server.py",
+      "blob": "eeb616e35ce409346c62f25a75210581a15b37b5",
+      "sha256": "97b977b363baffb17483c7df99823038fe81a9dd0f9c4d05e61d52ac6353dbba"
+    },
+    {
+      "label": "main",
+      "ref": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+      "path": "mcp/src/technocore_mcp/fetch.py",
+      "blob": "1f15780264a35f145e6e7ff3132605cd4286b87b",
+      "sha256": "439194d28ccd1310365a74c18fda24a2c413ec411656f575973a0e4e2e64a7cd"
+    },
+    {
+      "label": "main",
+      "ref": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+      "path": "mcp/src/technocore_mcp/signing.py",
+      "blob": "0dfaae290cb2b2fd242701248c21f3fab9d5e731",
+      "sha256": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba"
+    },
+    {
+      "label": "candidate",
+      "ref": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+      "path": "AGENTS.md",
+      "blob": "597ca661a235f5f80bd970c60774881c615748c6",
+      "sha256": "fb5027e6ccf52ccfbb45f49f64d044176d06238b0e89d3caa7d31fa4134f558a"
+    },
+    {
+      "label": "candidate",
+      "ref": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+      "path": "src/app.py",
+      "blob": "22194e35493fd2171b349522370d00af14e932d5",
+      "sha256": "18a775c798372c93e8471ed2d5995fd3114c2c1c572bd257e072c2592cd25831"
+    },
+    {
+      "label": "candidate",
+      "ref": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+      "path": "src/humans.html",
+      "blob": "0c2e7d7fad0c683dd8694b756f9adcba660d90a9",
+      "sha256": "9ea8829b47a895404d69be6efdee95a7f05682389f63524f64ea538b1756d155"
+    },
+    {
+      "label": "candidate",
+      "ref": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+      "path": "tests/test_mcp.py",
+      "blob": "66791bbe029681922a6e089c19a240967ecb0767",
+      "sha256": "09c0a1251419d22c4e02014400af49fa1a6552f876cc5290770576c24d000700"
+    },
+    {
+      "label": "candidate",
+      "ref": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+      "path": "mcp/src/technocore_mcp/__init__.py",
+      "blob": "7e8392fa506ebf84c724b212a98db81e599d8292",
+      "sha256": "bf9fe2964ddc872fc37a982d1f3b2f10c740ae35ade0d7dd6b05e2f19cc6a009"
+    },
+    {
+      "label": "candidate",
+      "ref": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+      "path": "mcp/src/technocore_mcp/server.py",
+      "blob": "c82128e253ea1880fc678b128439b00c75fff83b",
+      "sha256": "8e2f8d4d605898c6c9a5713a9b1e7ec27c4ee5814aca0666ebdf0c8c7d8e222c"
+    },
+    {
+      "label": "candidate",
+      "ref": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+      "path": "mcp/src/technocore_mcp/fetch.py",
+      "blob": "1f15780264a35f145e6e7ff3132605cd4286b87b",
+      "sha256": "439194d28ccd1310365a74c18fda24a2c413ec411656f575973a0e4e2e64a7cd"
+    },
+    {
+      "label": "candidate",
+      "ref": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+      "path": "mcp/src/technocore_mcp/signing.py",
+      "blob": "0dfaae290cb2b2fd242701248c21f3fab9d5e731",
+      "sha256": "92b7e0774effc8e07dedada0edb56c5e2764356ff6648cbe69afee7a727396ba"
+    },
+    {
+      "label": "verifier",
+      "ref": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+      "path": "src/didkey.py",
+      "blob": "d5b8d7f0f295b3c31070bb09fd7a9e73c1397385",
+      "sha256": "30dd6c3e7285051d578ac7f2c205e218c3d270b19e0d4dbd246e7a281e5e49d6"
+    }
+  ],
+  "credit": "Original PR183 implementation and existing tests; independent transport/CAS boundary validation, not a first discovery."
+}

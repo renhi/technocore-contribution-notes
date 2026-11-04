@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-04 KST",
+  "sources": [
+    "https://flop.finance/official/",
+    "https://docs.flop.network/networks/testnet",
+    "https://flop.finance/testnet/",
+    "https://flop.finance/airdrop/",
+    "https://x.com/flop_labs"
+  ],
+  "finding": "No verified public reward-bearing testnet activation or newly actionable airdrop enrollment in the reviewed official pages. Operator profile remains planned/unreleased without verified public network identity/admission. Official claim page says no live token or airdrop.",
+  "qualifications": "X returned 403, so latest X announcements could not be directly verified. Older November 3 working targets are not proof of activation. Previously supplied Devnet announcement says no rewards/airdrop weight and testnet date not set; public Devnet must not be conflated with testnet."
+}

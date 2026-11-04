@@ -1,0 +1,18 @@
+{
+  "main": "20629ab2913f30601c4cd59b20d04031105bdc7b",
+  "head": "0c7ab94d71143944ac87a35f262fd4c1dbd681b2",
+  "base": "9861d01cb42e10a5ffdffe3880338feaa4f56b3f",
+  "pr": 183,
+  "candidate_matches": 38,
+  "cases_per_version": 38,
+  "base_matches": 6,
+  "main_matches": 6,
+  "full_upstream_ci": false,
+  "artifact_sha256": {
+    "check_note_cas.py": "c9546bbb124719a9dbfebf0ec2c34005798e508856886a3fbfdaf5ea0d2c08e2",
+    "fetch_sources.py": "e82cb074f4cbcd7c85c7443183c80c8926ba9d6884755090e283ef5495811953",
+    "source-provenance.json": "a705f08e4fa708c298b5a55b56bed76915dc87a021a884a656d894aedaea9c85",
+    "native-results.json": "a3af127641ac3d2d8254f9b71b960e53c08b295bcde6626e55ff8f9890bc728c",
+    "official-event-review.json": "b45e5bf6f0b3deea8fa52469c0a94becfd2b8e78adb8f41a8316eb3047de0cc1"
+  }
+}

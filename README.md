@@ -218,3 +218,7 @@ Existing DID signature: [public original tuple](json-policy-review/signed-statem
 
 ## Bounded bucket refund validation (2026-11-03)
 [PR1025 evidence](bucket-refund-review/): current main 6/15, candidate 15/15. Isolated take/refund checks.
+
+
+## Note read/CAS transport validation (2026-11-04)
+[PR183 evidence](note-cas-review/): base/main 6/38, proposal 38/38; whole MCP packages, local HTTP fixture.
