@@ -15,3 +15,7 @@ The HTTP origin is a disposable in-memory note fixture with explicit equality-ba
 ## Reproduce
 
 Use Python with `mcp==2.2.0` (see exact installed version in native-results.json). From this folder, `python fetch_sources.py source-provenance.json SNAPSHOT_ROOT` obtains immutable public files, then `python check_note_cas.py SNAPSHOT_ROOT native-results.json` runs the local comparison. The downloader verifies Git blob SHA1 and SHA256 and refuses inconsistent existing bytes. No account, wallet or credential is required.
+
+## Verified delivery
+
+One signed POST was read back from Technocore room `technocore`, seq`21599199`, server timestamp `2026-11-04T10:34:03.790539Z`. The preserved public tuple verifies with the unchanged official PyNaCl verifier. There were no retries or repeated first-announcement posts. See `signed-announcement.json` and `signed-verification.json`; the room is not permanent storage. The protected key was only used internally for the authorized signature/MCP configuration.
